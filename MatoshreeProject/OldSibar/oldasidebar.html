@@ -1,0 +1,667 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Matoshree Interior</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="50x50" href="Img_logo/MI Logo 2.png" />
+    <link href="AMatrix/assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="AMatrix/assets/libs/flot/css/float-chart.css" rel="stylesheet" />
+    <link href="AMatrix/assets/libs/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
+    <link href="AMatrix/assets/extra-libs/calendar/calendar.css" rel="stylesheet" />
+    <link href="AMatrix/assets/extra-libs/DataTables/DataTables-1.10.16/css/dataTables.foundation.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="AMatrix/dist/css/style.min.css" rel="stylesheet" />
+    <!-- External CSS -->
+    <link href="Scripts/ExternalCss.css" rel="stylesheet" />
+
+    <!-- tinyeditor CSS -->
+    <script src="Scripts/tinymce/tinymce.min.js"></script>
+
+    <!-- Select CSS -->
+    <link href="AMatrix/assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Datetime CSS -->
+    <link href="AMatrix/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
+        <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+            <!-- ============================================================== -->
+            <!-- Topbar header - style you can find in pages.scss -->
+            <!-- ============================================================== -->
+            <header class="topbar" data-navbarbg="skin5">
+                <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                    <div class="navbar-header" data-logobg="skin5">
+                        <!-- ============================================================== -->
+                        <!-- Logo -->
+                        <!-- ============================================================== -->
+                        <a class="navbar-brand" href="Dashboard.aspx">
+                            <!-- Logo icon -->
+                            <b class="logo-icon ps-2">
+                                <!-- Dark Logo icon -->
+                                <img src="Img_logo\MI Logo 2.png" alt="homepage" class="light-logo" width="45" />
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            <span class="logo-text ms-2">
+                                <!-- dark Logo text -->
+                                <img src="Img_logo\MI Logo.png" alt="homepage" class="light-logo" style="width: 100%; height: 40px;" />
+                            </span>
+                            <!-- Logo icon -->
+                            <!-- <b class="logo-icon"> -->
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- </b> -->
+                            <!--End Logo icon -->
+                        </a>
+                        <!-- ============================================================== -->
+                        <!-- End Logo -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Toggle which is visible on mobile only -->
+                        <!-- ============================================================== -->
+                        <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                        <!-- ============================================================== -->
+                        <!-- toggle and nav items -->
+                        <!-- ============================================================== -->
+                        <ul class="navbar-nav float-start me-auto">
+                            <li class="nav-item d-none d-lg-block">
+                                <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a>
+                            </li>
+                            <!-- ============================================================== -->
+                            <!-- create new -->
+                            <!-- ============================================================== -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-none d-md-block">Create New <i class="fa fa-angle-down"></i></span>
+                                    <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Create Invoice</a></li>
+                                    <li><a class="dropdown-item" href="#">Create Estimate</a></li>
+                                    <li><a class="dropdown-item" href="#">Record Expense</a></li>
+                                    <li><a class="dropdown-item" href="New_Praposal.aspx">New Proposal</a></li>
+                                    <li><a class="dropdown-item" href="NewProject.aspx">New Project</a></li>
+                                    <li><a class="dropdown-item" href="#">Create Task</a></li>
+                                    <li><a class="dropdown-item" href="NewCustomer.aspx">Create Customer</a></li>
+                                    <li><a class="dropdown-item" href="#">Create Contract</a></li>
+                                    <li><a class="dropdown-item" href="#">Create Lead</a></li>
+                                    <li><a class="dropdown-item" href="#">Setup New Goal</a></li>
+                                    <li><a class="dropdown-item" href="#">Create Knowledge Base Article</a></li>
+                                    <li><a class="dropdown-item" href="#">Create Survey</a></li>
+                                    <li><a class="dropdown-item" href="#">Open Ticket</a></li>
+                                    <li><a class="dropdown-item" href="New_Staff_Member.aspx">Create Staff Member</a></li>
+                                </ul>
+                            </li>
+                            <!-- ============================================================== -->
+                            <!-- Search -->
+                            <!-- ============================================================== -->
+                            <li class="nav-item search-box">
+                                <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-magnify fs-4"></i></a>
+                                <div class="app-search position-absolute">
+                                    <input type="text" class="form-control" placeholder="Search &amp; enter" />
+                                    <a class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- ============================================================== -->
+                        <!-- Right side toggle and nav items -->
+                        <!-- ============================================================== -->
+                        <ul class="navbar-nav float-end">
+                            <!-- ============================================================== -->
+                            <!-- Comment -->
+                            <!-- ============================================================== -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="mdi mdi-bell font-24"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">alert 1</a></li>
+                                    <li><a class="dropdown-item" href="#">alert 2</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="BasicSetting.aspx">Setting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ============================================================== -->
+                            <!-- End Comment -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- Messages -->
+                            <!-- ============================================================== -->
+                            <%--
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#" id="2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="font-24 mdi mdi-comment-processing"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end mailbox animated bounceInDown" aria-labelledby="2">
+                                    <ul class="list-style-none">
+                                        <li>
+                                            <div class="">
+                                                <!-- Message -->
+                                                <a href="javascript:void(0)" class="link border-top">
+                                                    <div class="d-flex no-block align-items-center p-10">
+                                                        <span class="btn btn-success btn-circle d-flex align-items-center justify-content-center "><i class="mdi mdi-calendar text-white fs-4"></i></span>
+                                                        <div class="ms-2">
+                                                            <h5 class="mb-0">Event today</h5>
+                                                            <span class="mail-desc">Just a reminder that event</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="javascript:void(0)" class="link border-top">
+                                                    <div class="d-flex no-block align-items-center p-10">
+                                                        <span class="btn btn-info btn-circle d-flex align-items-center justify-content-center"><i class="mdi mdi-settings fs-4"></i></span>
+                                                        <div class="ms-2">
+                                                            <h5 class="mb-0">Settings</h5>
+                                                            <span class="mail-desc">You can customize this template</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="javascript:void(0)" class="link border-top">
+                                                    <div class="d-flex no-block align-items-center p-10">
+                                                        <span class="btn btn-primary btn-circle d-flex align-items-center justify-content-center"><i class="mdi mdi-account fs-4"></i></span>
+                                                        <div class="ms-2">
+                                                            <h5 class="mb-0">Pavan kumar</h5>
+                                                            <span class="mail-desc">Just see the my admin!</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="javascript:void(0)" class="link border-top">
+                                                    <div class="d-flex no-block align-items-center p-10">
+                                                        <span class=" btn btn-danger btn-circle d-flex align-items-center justify-content-center"><i class="mdi mdi-link fs-4"></i></span>
+                                                        <div class="ms-2">
+                                                            <h5 class="mb-0">Luanch Admin</h5>
+                                                            <span class="mail-desc">Just see the my new admin!</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </li>--%>
+                            <!-- ============================================================== -->
+                            <!-- End Messages -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- User profile and search -->
+                            <!-- ============================================================== -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="AMatrix/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31" />
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="MyProfile.aspx"><i class="mdi mdi-account me-1 ms-1"></i>My Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="EditProfile.aspx"><i class="mdi mdi-account-edit me-1 ms-1"></i>Edit Profile</a>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="LinkbtnLogout" runat="server" Text="Logout" OnClick="LinkbtnLogout_Click" ForeColor="Black" class="dropdown-item"><i class="fa fa-power-off me-1 ms-1"></i>Logout</asp:LinkButton>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a>
+                                    <asp:Label ID="lblUserID" runat="server" Text="" Visible="false" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                    <asp:Label ID="lblEmailID" runat="server" Text="" Visible="false" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                    <asp:Label ID="lblLastName" runat="server" Text="" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                    <asp:Label ID="lblRole" runat="server" Text="" Visible="false" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-none d-md-block">
+                                        <asp:Label ID="lblFirstName" runat="server" Text="" CssClass="form-label"></asp:Label>
+                                    </span>
+                                    <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>
+                                </a>
+                            </li>
+                            <!-- ============================================================== -->
+                            <!-- User profile and search -->
+                            <!-- ============================================================== -->
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- ============================================================== -->
+            <!-- End Topbar header -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <aside class="left-sidebar" data-sidebarbg="skin5">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav" class="pt-4" runat="server">
+                            <li class="sidebar-item" id="DashboardID" runat="server">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Dashboard.aspx" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">DASHBOARD</span></a>
+                            </li>
+                            <li class="sidebar-item" id="CustomerID" runat="server">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Customer.aspx" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">CUSTOMERS</span></a>
+                            </li>
+                            <li class="sidebar-item" id="VendorID" runat="server">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Vendor.aspx" aria-expanded="false"><i class="fas fa-handshake"></i><span class="hide-menu">VENDOR</span></a>
+                            </li>
+                            <li class="sidebar-item" id="TenderID" runat="server">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Tender.aspx" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">TENDER</span></a>
+                            </li>
+                            <li class="sidebar-item" id="ProjectsID" runat="server">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Projects.aspx" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">PROJECTS</span></a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">SALES</span></a>
+                                <ul aria-expanded="false" class="collapse first-level">
+                                    <li class="sidebar-item">
+                                        <a href="Estimates_Home.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Estimates</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Chart_List_Invoice.aspx" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu">Invoices</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Payments.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Payments</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Item_List.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Items</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">EXPENSES</span></a>
+                                <ul aria-expanded="false" class="collapse first-level">
+                                    <li class="sidebar-item">
+                                        <a href="Office_Expences.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Office Expenses</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Staff_Expenses.aspx" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu">Staff Expenses</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Project_Purchase.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Project Purchase</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="ViewPaymentRequest.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Payment Request</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Payment Approval</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">LEGAL</span></a>
+                                <ul aria-expanded="false" class="collapse first-level">
+                                    <li class="sidebar-item">
+                                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Contract</span></a>
+                                        <ul aria-expanded="false" class="collapse first-level">
+                                            <li class="sidebar-item">
+                                                <a href="Contract.aspx" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu">Customer</span></a>
+                                            </li>
+                                            <li class="sidebar-item">
+                                                <a href="Contract_Vendor.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Vendor</span></a>
+                                            </li>
+                                            <li class="sidebar-item">
+                                                <a href="Contract_Staff.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Staff</span></a>
+                                            </li>
+                                            <li class="sidebar-item">
+                                                <a href="Contract_Contact.aspx" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Partner</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Purchase Order</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu">Work Order</span></a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="TaskDetailsStaff.aspx" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">TASKS</span></a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Ticket_Details.aspx" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">SUPPORT</span></a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-star-variant"></i><span class="hide-menu">STAFF</span></a>
+                                <ul aria-expanded="false" class="collapse first-level">
+                                    <li class="sidebar-item">
+                                        <a href="Setup_StaffDetails.aspx" class="sidebar-link"><i class="mdi mdi-account"></i><span class="hide-menu">Create</span></a>
+                                    </li>
+
+                                    <li class="sidebar-item">
+                                        <a href="Roles.aspx" class="sidebar-link"><i class="mdi mdi-account-settings-variant"></i><span class="hide-menu">Roles</span></a>
+                                    </li>
+
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link"><i class="mdi mdi-account-settings-variant"></i><span class="hide-menu">Salary</span></a>
+                                    </li>
+
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link"><i class="mdi mdi-account-settings-variant"></i><span class="hide-menu">Attendence</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="TaskDetailsStaff.aspx" aria-expanded="false"><i class="mdi mdi-human"></i><span class="hide-menu">PATNER</span></a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">SETUP</span></a>
+                                <ul aria-expanded="false" class="collapse first-level">
+
+                                    <li class="sidebar-item">
+                                        <a href="Mail_Lists.aspx" class="sidebar-link"><i class="mdi mdi-email-outline"></i><span class="hide-menu">Email Templates</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Setting.aspx" class="sidebar-link"><i class="mdi mdi-settings"></i><span class="hide-menu">Settings</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i><span class="hide-menu">REPORTS</span></a>
+                                <ul aria-expanded="false" class="collapse first-level">
+                                    <li class="sidebar-item">
+                                        <a href="Report_Sales.aspx" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Sales</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Reports_Expenses.aspx" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu">Expenses</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Expenses_vs_Income.aspx" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu">Expenses vs Income</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="Reports_Leads.aspx" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu">Leads</span></a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="KB_Articles.aspx" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu">KB Articles</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <!-- End Sidebar scroll-->
+            </aside>
+            <!-- ============================================================== -->
+            <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Page wrapper  -->
+            <!-- ============================================================== -->
+            <div class="page-wrapper">
+                <%--<!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="page-breadcrumb">
+                    <div class="row">
+                        <div class="col-12 d-flex no-block align-items-center">
+                            <h4 class="page-title">Dashboard</h4>
+                            <div class="ms-auto text-end">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            Library
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->--%>
+                <!-- ============================================================== -->
+                <!-- Container fluid  -->
+                <!-- ============================================================== -->
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!-- ============================================================== -->
+                <!-- End Container fluid  -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- footer -->
+                <!-- ============================================================== -->
+                <footer class="footer text-center">
+                    All Rights Reserved by Lissom Technologies Private Limited.
+                </footer>
+                <!-- ============================================================== -->
+                <!-- End footer -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Page wrapper  -->
+            <!-- ============================================================== -->
+        </div>
+    </form>
+    <!-- All Jquery -->
+    <script src="AMatrix/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="AMatrix/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="AMatrix/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="AMatrix/assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="AMatrix/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="AMatrix/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="AMatrix/dist/js/custom.min.js"></script>
+    <!-- Charts js Files -->
+    <script src="AMatrix/assets/libs/flot/excanvas.js"></script>
+    <script src="AMatrix/assets/libs/flot/jquery.flot.js"></script>
+    <script src="AMatrix/assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="AMatrix/assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="AMatrix/assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="AMatrix/assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="AMatrix/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="AMatrix/dist/js/pages/chart/chart-page-init.js"></script>
+    <script src="AMatrix/dist/js/jquery-ui.min.js"></script>
+    <!-- Charts js -->
+    <script src="AMatrix/assets/libs/chart/matrix.interface.js"></script>
+    <script src="AMatrix/assets/libs/chart/jquery.peity.min.js"></script>
+    <script src="AMatrix/assets/libs/chart/matrix.charts.js"></script>
+    <script src="AMatrix/assets/libs/chart/jquery.flot.pie.min.js"></script>
+    <script src="AMatrix/dist/js/pages/chart/chart-page-init.js"></script>
+    <!-- Calender js -->
+    <script src="AMatrix/assets/libs/moment/min/moment.min.js"></script>
+    <script src="AMatrix/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="AMatrix/dist/js/pages/calendar/cal-init.js"></script>
+    <script src="AMatrix/assets/libs/chart/turning-series.js"></script>
+
+    <!-- Select js -->
+    <script src="AMatrix/assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="AMatrix/assets/libs/select2/dist/js/select2.min.js"></script>
+    <!-- DatePicker js -->
+
+    <script src="AMatrix/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- DatePicker js -->
+    <!----Fount----->
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fa-brands.css" rel="stylesheet" />
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fa-brands.min.css" rel="stylesheet" />
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fa-regular.css" rel="stylesheet" />
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fa-regular.min.css" rel="stylesheet" />
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="AMatrix/dist/css/icons/font-awesome/css/fontawesome.min.css" rel="stylesheet" />
+    <!-- Table js -->
+    <%--
+    <script src="Content/richtexteditor/res/patch.js"></script>--%>
+    <script src="AMatrix/assets/extra-libs/DataTables/datatables.min.js"></script>
+
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='table']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='secondtable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='thirdtable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='fourthtable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='fifthtable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='sixthtable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='seventhtable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='InvoicePagehtable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='PaymentsPagetable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='ItemsPagetable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='LeadsPagetable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+    <script type="text/javascript" defer="defer">
+        $(document).ready(function () {
+            $("table[id^='SupportPagetable']").DataTable({
+                "scrollY": "400px",
+                "scrollX": "100%",
+                "scrollCollapse": true,
+                "searching": true,
+                "paging": true
+            });
+        });
+    </script>
+
+
+</body>
+</html>

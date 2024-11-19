@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Touchspin", "subtitle": 'Home'})
+          <p>
+            We have used thirdparty plugin js of bootstrap touchspin and you
+            can find the official website here:
+            <a href="https://www.virtuosoft.eu/code/bootstrap-touchspin/">Bootstrap Touchspin</a>
+          </p>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <!-- ---------------------
+                                                  start Normal Touchspin
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Normal Touchspin</h5>
+                  </div>
+                  <form class="mt-3">
+                    <input id="demo3" type="text" value="-1" name="demo3" />
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Normal Touchspin
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <!-- ---------------------
+                                                  start Postfix Touchspin
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Postfix Touchspin</h5>
+                  </div>
+                  <form class="mt-3">
+                    <input id="demo1" type="text" value="55" name="demo1" />
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Postfix Touchspin
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <!-- ---------------------
+                                                  start Prefix Touchspin
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Prefix Touchspin</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-group">
+                      <input id="demo2" type="text" value="0" name="demo2" class="col-md-8 form-control" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Prefix Touchspin
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                  start Vertical button alignment
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Vertical button alignment</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-group">
+                      <input id="demo_vertical" type="text" value="" name="demo_vertical" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Vertical button alignment
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                  start Vertical buttons with custom icons
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Vertical buttons with custom icons</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-group">
+                      <input id="demo_vertical2" type="text" value="" name="demo_vertical2" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Vertical buttons with custom icons
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                  start Touchspin With Button (small)
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Touchspin With Link Button</h5>
+                  </div>
+                  <form class="mt-3">
+                    <div class="form-group">
+                      <div class="input-group input-group-sm">
+                        <input id="demo4" type="text" value="" name="demo4" class="input-sm" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Touchspin With Button (small)
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                  start Prefix Touchspin (large)
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Prefix Touchspin (large)</h5>
+                  </div>
+                  <form class="form-horizontal mt-3">
+                    <div class="form-group">
+                      <div class="input-group input-group-sm">
+                        <input id="demo4_2" type="text" value="" name="demo4_2" class="form-control input-sm" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Prefix Touchspin (large)
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                  start Button Group
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Button Group</h5>
+                  </div>
+                  <form class="form-horizontal mt-3">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input id="demo5" type="text" class="form-control" name="demo5" value="50" />
+                        <div class="btn-group">
+                          <button type="button" class="btn bg-primary-subtle text-primary rounded-0">
+                            Action
+                          </button>
+                          <button type="button" class="btn bg-primary-subtle text-primary rounded-start-0 dropdown-toggle rounded-end dropdown-toggle-split"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                            <a class="dropdown-item" href="javascript:void(0)">Another action</a>
+                            <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Button Group
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                  start Change Button Class
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Change Button Class</h5>
+                  </div>
+                  <form class="form-horizontal mt-3">
+                    <div class="form-group">
+                      <input id="demo6" type="text" value="" name="demo6" class="input-sm" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Change Button Class
+                                              ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="@@webRoot/assets/js/forms/form-bootstrap-touchspin.init.js"></script>
+</body>
+
+</html>

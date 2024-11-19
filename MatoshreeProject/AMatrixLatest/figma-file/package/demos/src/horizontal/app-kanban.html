@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="horizontal">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Kanban", "subtitle": 'Home'})
+          <div class="action-btn layout-top-spacing mb-7 d-flex align-items-center justify-content-between flex-wrap gap-6">
+            <h5 class="mb-0 fs-5">Improving Work Processes</h5>
+            <button id="add-list" class="btn btn-primary">Add List</button>
+          </div>
+          <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="add-task-title modal-title" id="addTaskModalTitleLabel1">Add Task</h5>
+                  <h5 class="edit-task-title modal-title" id="addTaskModalTitleLabel2">Edit Task</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="compose-box">
+                    <div class="compose-content" id="addTaskModalTitle">
+                      <div class="addTaskAccordion" id="add_task_accordion">
+                        <div class="task-content task-text-progress">
+                          <div id="collapseTwo" class="collapse show" data-parent="#add_task_accordion">
+                            <div class="task-content-body">
+                              <form action="javascript:void(0);">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="task-title mb-4 d-flex">
+                                      <input id="kanban-title" type="text" placeholder="Task" class="form-control"
+                                        name="task">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="task-badge d-flex">
+                                      <textarea id="kanban-text" placeholder="Task Text" class="form-control"
+                                        name="taskText"></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                  <div class="d-flex gap-6">
+                    <button data-btn-action="addTask" class="btn add-tsk btn-primary">Add Task</button>
+                    <button data-btn-action="editTask" class="btn edit-tsk btn-success"
+                      style="display: none;">Save</button>
+                    <button class="btn bg-danger-subtle text-danger d-flex align-items-center gap-1"
+                      data-bs-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="addListModal" tabindex="-1" role="dialog" aria-labelledby="addListModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title add-list-title" id="addListModalTitleLabel1">Add List</h5>
+                  <h5 class="modal-title edit-list-title" id="addListModalTitleLabel2">Edit List</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="compose-box">
+                    <div class="compose-content" id="addListModalTitle">
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="list-title d-flex align-items-center">
+                              <input id="item-name" type="text" placeholder="List Name" class="form-control"
+                                name="task">
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                  <div class="d-flex gap-6">
+                    <button class="btn bg-danger-subtle text-danger d-flex align-items-center gap-1"
+                      data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn add-list btn-primary">Add List</button>
+                    <button class="btn edit-list btn-success" style="display: none;">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="deleteConformation" tabindex="-1" role="dialog"
+            aria-labelledby="deleteConformationLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content" id="deleteConformationLabel">
+                <div class="modal-header">
+                  <div
+                    class="icon round-40 d-flex align-items-center justify-content-center bg-light-danger text-danger me-2 rounded-circle">
+                    <i class="ti ti-trash fs-6"></i>
+                  </div>
+                  <h5 class="modal-title fw-semibold" id="exampleModalLabel">Delete the task?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="mb-0">If you delete the task it will be gone forever. Are you sure you want to
+                    proceed?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn bg-danger-subtle text-danger" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-danger" data-remove="task">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row scrumboard" id="cancel-row">
+            <div class="col-lg-12 layout-spacing pb-3">
+              <div data-simplebar>
+                <div class="task-list-section">
+                  <div data-item="item-todo" class="task-list-container" data-action="sorting">
+                    <div class="connect-sorting connect-sorting-todo">
+                      <div class="task-container-header">
+                        <h6 class="item-head mb-0 fs-4 fw-semibold" data-item-title="Todo">Todo</h6>
+                        <div class="hstack gap-2">
+                          <div class="add-kanban-title">
+                            <a class="addTask d-flex align-items-center justify-content-center gap-1 lh-sm"
+                              data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add Task">
+                              <i class="ti ti-plus text-dark"></i>
+                            </a>
+                          </div>
+                          <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <i class="ti ti-dots-vertical text-dark"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                              <a class="dropdown-item list-edit" href="javascript:void(0);">Edit</a>
+                              <a class="dropdown-item list-delete" href="javascript:void(0);">Delete</a>
+                              <a class="dropdown-item list-clear-all" href="javascript:void(0);">Clear All</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="connect-sorting-content" data-sortable="true">
+                        <div data-draggable="true" class="card img-task">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="This is first task">
+                                  This is first task</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-content p-0">
+                              <img src="@@webRoot/assets/images/backgrounds/kanban-img-1.jpg" class="img-fluid"
+                                alt="scrumboard">
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-success fs-1">Design</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card img-task">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Lets do some task on pd">
+                                  Lets do some task on pd</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-content">
+                              <p class="mb-0"
+                                data-item-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, o eiusmod tempor incid.">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, o eiusmod tempor incid.
+                              </p>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-warning fs-1">Development</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card img-task">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Do some projects on React Native with Flutter">
+                                  Do some projects on React Native with Flutter</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-primary fs-1">Mobile</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-item="item-inprogress" class="task-list-container" data-action="sorting">
+                    <div class="connect-sorting connect-sorting-inprogress">
+                      <div class="task-container-header">
+                        <h6 class="item-head mb-0 fs-4 fw-semibold" data-item-title="In Progress">In Progress</h6>
+                        <div class="hstack gap-2">
+                          <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <i class="ti ti-dots-vertical text-dark"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                              <a class="dropdown-item list-edit" href="javascript:void(0);">Edit</a>
+                              <a class="dropdown-item list-delete" href="javascript:void(0);">Delete</a>
+                              <a class="dropdown-item list-clear-all" href="javascript:void(0);">Clear All</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="connect-sorting-content" data-sortable="true">
+                        <div data-draggable="true" class="card">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Design navigation changes">
+                                  Design navigation changes</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-primary fs-1">Mobile</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card img-task">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Battle with fire">
+                                  Battle with fire</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-content p-0">
+                              <img src="@@webRoot/assets/images/backgrounds/kanban-img-2.jpg" class="img-fluid"
+                                alt="scrumboard">
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-success fs-1">Design</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="First design concept">
+                                  First design concept</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-primary fs-1">Mobile</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-item="item-pending" class="task-list-container" data-action="sorting">
+                    <div class="connect-sorting connect-sorting-pending">
+                      <div class="task-container-header">
+                        <h6 class="item-head mb-0 fs-4 fw-semibold" data-item-title="Pending">Pending</h6>
+                        <div class="hstack gap-2">
+                          <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <i class="ti ti-dots-vertical text-dark"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                              <a class="dropdown-item list-edit" href="javascript:void(0);">Edit</a>
+                              <a class="dropdown-item list-delete" href="javascript:void(0);">Delete</a>
+                              <a class="dropdown-item list-clear-all" href="javascript:void(0);">Clear All</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="connect-sorting-content" data-sortable="true">
+                        <div data-draggable="true" class="card img-task">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Persona development">
+                                  Persona development</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-content">
+                              <p class="mb-0"
+                                data-item-text="Create user personas based on the research data to represent different user groups and their characteristics, gols, and behaviors..">
+                                Create user personas based on the research data to represent different user groups and
+                                their
+                                characteristics, gols, and behaviors..
+                              </p>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-warning fs-1">UX stage</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card img-task">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Redesign overview">
+                                  Redesign overview</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-content p-0">
+                              <img src="@@webRoot/assets/images/backgrounds/my-card.jpg" class="img-fluid"
+                                alt="scrumboard">
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-success fs-1">Design</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-item="item-pending" class="task-list-container" data-action="sorting">
+                    <div class="connect-sorting connect-sorting-done">
+                      <div class="task-container-header">
+                        <h6 class="item-head mb-0 fs-4 fw-semibold" data-item-title="Done">Done</h6>
+                        <div class="hstack gap-2">
+                          <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <i class="ti ti-dots-vertical text-dark"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                              <a class="dropdown-item list-edit" href="javascript:void(0);">Edit</a>
+                              <a class="dropdown-item list-delete" href="javascript:void(0);">Delete</a>
+                              <a class="dropdown-item list-clear-all" href="javascript:void(0);">Clear All</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="connect-sorting-content" data-sortable="true">
+                        <div data-draggable="true" class="card img-task">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Usability testing">
+                                  Usability testing</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-content p-0">
+                              <img src="@@webRoot/assets/images/backgrounds/weatherbg.jpg" class="img-fluid"
+                                alt="scrumboard">
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-info fs-1">Research</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Introduce new navigation">
+                                  Introduce new navigation</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-danger fs-1">Data science</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Branding visual identity">
+                                  Branding visual identity</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-primary fs-1">Branding</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-draggable="true" class="card">
+                          <div class="card-body">
+                            <div class="task-header">
+                              <div class="">
+                                <h4 class="" data-item-title="Competitor research">
+                                  Competitor research</h4>
+                              </div>
+                              <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1"
+                                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <i class="ti ti-dots-vertical text-dark"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-1">
+                                  <a class="dropdown-item kanban-item-edit cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-pencil fs-5"></i>Edit</a>
+                                  <a class="dropdown-item kanban-item-delete cursor-pointer d-flex align-items-center gap-1"
+                                    href="javascript:void(0);"><i class="ti ti-trash fs-5"></i>Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="task-content">
+                              <p class="mb-0"
+                                data-item-text="research competitors and identify weakness and strengths each of them. comparing their product features, quelity...">
+                                research competitors and identify weakness and strengths each of them. comparing their
+                                product features, quelity...
+                              </p>
+                            </div>
+                            <div class="task-body">
+                              <div class="task-bottom">
+                                <div class="tb-section-1">
+                                  <span class="hstack gap-2 fs-2" data-item-date="24 July"><i
+                                      class="ti ti-calendar fs-5"></i> 24 July </span>
+                                </div>
+                                <div class="tb-section-2">
+                                  <span class="badge rounded-pill text-bg-warning fs-1">UX stages</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
+  <script src="@@webRoot/assets/js/apps/kanban.js"></script>
+</body>
+
+</html>

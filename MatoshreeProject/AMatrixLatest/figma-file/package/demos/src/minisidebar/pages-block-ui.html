@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Block-UI", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-md-4 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">Block Element</h4>
+                    <p>Block content components.</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100 
+                        font-weight-medium
+                        bg-success-subtle
+                        text-success
+                        block-card
+                      ">
+                      Block Card
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">Block Layout Area</h4>
+                    <p>Block layout areas.</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-warning-subtle
+                        text-warning
+                        block-sidenav
+                      ">
+                      Block Sidebar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">Block Whole Page</h4>
+                    <p>Block Whole Page</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-danger-subtle
+                        text-danger
+                        block-default
+                      ">
+                      Block Page
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">Block Without Message</h4>
+                    <p>Block Wihtout Message.</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-info-subtle
+                        text-info
+                        without-msg
+                      ">
+                      Block Wihtout Message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">Block Without Overlay</h4>
+                    <p>Block Without Overlay.</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-warning-subtle
+                        text-warning
+                        without-overlay
+                      ">
+                      Block Without Overlay
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">Click Overlay To Unblock</h4>
+                    <p>Click Overlay To Unblock</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-danger-subtle
+                        text-danger
+                        overlay-unblock
+                      ">
+                      Click Overlay To Unblock
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">Growl Notification</h4>
+                    <p>Growl Notification.</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-success-subtle
+                        text-success
+                        growl
+                      ">
+                      Growl Notification
+                    </button>
+                    <div class="growl-notification-example" style="display: none; cursor: default">
+                      Growl Notification Example
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">OnBlock Callback</h4>
+                    <p>OnBlock Callback</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-success-subtle
+                        text-success
+                        onblock
+                      ">
+                      OnBlock
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">OnUnblock Callback</h4>
+                    <p>
+                      useful when using fadeOut option as it is invoked when all
+                      the blocking elements have been removed.
+                    </p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-warning-subtle
+                        text-warning
+                        onunblock
+                      ">
+                      OnUnblock
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h4 class="card-title">OnOverlay Click Callback</h4>
+                    <p>OnOverlay Click Callback.</p>
+                    <button class="
+                        btn
+                        d-block
+                        w-100
+                        font-weight-medium
+                        bg-danger-subtle
+                        text-danger
+                        onoverlay-click
+                      ">
+                      OnOverlay Click
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/block-ui/jquery.blockUI.js"></script>
+  <script src="@@webRoot/assets/js/plugins/block-ui.js"></script>
+</body>
+
+</html>

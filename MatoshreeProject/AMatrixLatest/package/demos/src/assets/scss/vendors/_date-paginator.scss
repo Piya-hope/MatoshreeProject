@@ -1,0 +1,52 @@
+body {
+
+    .datepaginator-sm .pagination li a,
+    .datepaginator-lg .pagination li a,
+    .datepaginator .pagination li a {
+        padding: 0 5px;
+        height: 75px;
+        border: 1px solid var(--bs-border-color);
+        float: left;
+        position: relative;
+    }
+
+    .datepaginator {
+        .pagination {
+            .dp-item {
+                padding: 15px 0 !important;
+            }
+        }
+    }
+
+    .dp-item {
+        color: inherit;
+    }
+
+    .glyphicon.glyphicon-calendar {
+        display: none;
+    }
+
+    .datepaginator .dp-selected,
+    .datepaginator-lg .dp-selected,
+    .datepaginator-sm .dp-selected {
+        background-color: var(--bs-primary) !important;
+    }
+
+    .dp-off {
+        background-color: var(--bs-gray-100) !important;
+    }
+
+    .dp-divider {
+        border: 2px solid var(--bs-border-color) !important;
+    }
+
+    .dp-nav.dp-nav-left::before{
+        content: "⬅️";
+        color: var(--bs-body-color);
+    }
+
+    .dp-nav.dp-nav-right::before {
+        content: "➡️";
+        color: var(--bs-body-color);
+    }
+}

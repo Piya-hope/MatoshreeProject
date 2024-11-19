@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Cards", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-sm-6 col-lg-4 col-xl-2">
+              <a href="./page-user-profile.html" class="p-4 text-center bg-primary-subtle card shadow-none rounded-2">
+                <img src="@@webRoot/assets/images/svgs/icon-user-male.svg" width="50" height="50" class="mb-6 mx-auto" alt="">
+                <p class="fw-semibold text-primary mb-1">Profile</p>
+                <h4 class="fw-semibold text-primary mb-0">3,685</h4>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-2">
+              <a href="javascript:void(0)" class="p-4 text-center bg-warning-subtle card shadow-none rounded-2">
+                <img src="@@webRoot/assets/images/svgs/icon-briefcase.svg" width="50" height="50" class="mb-6 mx-auto" alt="">
+                <p class="fw-semibold text-warning mb-1">Blog</p>
+                <h4 class="fw-semibold text-warning mb-0">256</h4>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-2">
+              <a href="./app-calendar.html" class="p-4 text-center bg-info-subtle card shadow-none rounded-2">
+                <img src="@@webRoot/assets/images/svgs/icon-mailbox.svg" width="50" height="50" class="mb-6 mx-auto" alt="">
+                <p class="fw-semibold text-info mb-1">Calendar</p>
+                <h4 class="fw-semibold text-info mb-0">932</h4>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-2">
+              <a href="./app-email.html" class="p-4 text-center bg-danger-subtle card shadow-none rounded-2">
+                <img src="@@webRoot/assets/images/svgs/icon-favorites.svg" width="50" height="50" class="mb-6 mx-auto" alt="">
+                <p class="fw-semibold text-danger mb-1">Email</p>
+                <h4 class="fw-semibold text-danger mb-0">$348K</h4>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-2">
+              <a href="./app-chat.html" class="p-4 text-center bg-success-subtle card shadow-none rounded-2">
+                <img src="@@webRoot/assets/images/svgs/icon-speech-bubble.svg" width="50" height="50" class="mb-6 mx-auto"
+                  alt="">
+                <p class="fw-semibold text-success mb-1">Chats</p>
+                <h4 class="fw-semibold text-success mb-0">96</h4>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-2">
+              <a href="./app-contact.html" class="p-4 text-center bg-info-subtle card shadow-none rounded-2">
+                <img src="@@webRoot/assets/images/svgs/icon-connect.svg" width="50" height="50" class="mb-6 mx-auto" alt="">
+                <p class="fw-semibold text-info mb-1">Contacts</p>
+                <h4 class="fw-semibold text-info mb-0">48</h4>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card rounded-2 overflow-hidden hover-img">
+                <div class="position-relative">
+                  <a href="javascript:void(0)"><img src="@@webRoot/assets/images/blog/blog-img1.jpg"
+                      class="card-img-top rounded-0" alt="..."></a>
+                  <span
+                    class="badge text-bg-light text-dark fs-2 rounded-4 lh-sm mb-9 me-9 py-1 px-2 fw-semibold position-absolute bottom-0 end-0">2
+                    min Read</span>
+                  <img src="@@webRoot/assets/images/profile/user-1.jpg" alt=""
+                    class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
+                    height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Georgeanna Ramero">
+                </div>
+                <div class="card-body p-4">
+                  <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm  mt-3">Social</span>
+                  <a class="d-block my-4 fs-5 text-dark fw-semibold" href="">As yen tumbles, gadget-loving Japan goes
+                    for secondhand iPhones</a>
+                  <div class="d-flex align-items-center gap-4">
+                    <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,125</div>
+                    <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>3</div>
+                    <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>Mon, Dec 19
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card rounded-2 overflow-hidden hover-img">
+                <div class="position-relative">
+                  <a href="javascript:void(0)"><img src="@@webRoot/assets/images/blog/blog-img2.jpg"
+                      class="card-img-top rounded-0" alt="..."></a>
+                  <span
+                    class="badge text-bg-light text-dark fs-2 rounded-4 lh-sm mb-9 me-9 py-1 px-2 fw-semibold position-absolute bottom-0 end-0">2
+                    min Read</span>
+                  <img src="@@webRoot/assets/images/profile/user-2.jpg" alt=""
+                    class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
+                    height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Georgeanna Ramero">
+                </div>
+                <div class="card-body p-4">
+                  <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm  mt-3">Gadget</span>
+                  <a class="d-block my-4 fs-5 text-dark fw-semibold" href="">Intel loses bid to revive antitrust case
+                    against patent foe Fortress</a>
+                  <div class="d-flex align-items-center gap-4">
+                    <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>4,150</div>
+                    <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>38</div>
+                    <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>Sun, Dec 18
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card rounded-2 overflow-hidden hover-img">
+                <div class="position-relative">
+                  <a href="javascript:void(0)"><img src="@@webRoot/assets/images/blog/blog-img3.jpg"
+                      class="card-img-top rounded-0" alt="..."></a>
+                  <span
+                    class="badge text-bg-light text-dark fs-2 rounded-4 lh-sm mb-9 me-9 py-1 px-2 fw-semibold position-absolute bottom-0 end-0">2
+                    min Read</span>
+                  <img src="@@webRoot/assets/images/profile/user-3.jpg" alt=""
+                    class="img-fluid rounded-circle position-absolute bottom-0 start-0 mb-n9 ms-9" width="40"
+                    height="40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Georgeanna Ramero">
+                </div>
+                <div class="card-body p-4">
+                  <span class="badge text-bg-light fs-2 rounded-4 py-1 px-2 lh-sm  mt-3">Health</span>
+                  <a class="d-block my-4 fs-5 text-dark fw-semibold" href="">COVID outbreak deepens as more lockdowns
+                    loom in China</a>
+                  <div class="d-flex align-items-center gap-4">
+                    <div class="d-flex align-items-center gap-2"><i class="ti ti-eye text-dark fs-5"></i>9,480</div>
+                    <div class="d-flex align-items-center gap-2"><i class="ti ti-message-2 text-dark fs-5"></i>12</div>
+                    <div class="d-flex align-items-center fs-2 ms-auto"><i class="ti ti-point text-dark"></i>Sat, Dec 17
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="card rounded-2 overflow-hidden">
+                <div class="position-relative">
+                  <a href="javascript:void(0)"><img src="@@webRoot/assets/images/products/s4.jpg"
+                      class="card-img-top rounded-0" alt="..."></a>
+                  <a href="javascript:void(0)"
+                    class="btn btn-primary rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute bottom-0 end-0 me-3 mb-n3">
+                    <i class="ti ti-basket"></i>
+                  </a>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="fw-semibold fs-4 mb-2">Boat Headphone</h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <h5 class="fw-semibold fs-4 mb-0">$285</h5>
+                      <p class="mb-0 text-decoration-line-through">$375</p>
+                    </div>
+                    <ul class="d-flex align-items-center gap-1 mb-0">
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card rounded-2 overflow-hidden">
+                <div class="position-relative">
+                  <a href="javascript:void(0)"><img src="@@webRoot/assets/images/products/s5.jpg"
+                      class="card-img-top rounded-0" alt="..."></a>
+                  <a href="javascript:void(0)"
+                    class="btn btn-primary rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute bottom-0 end-0 me-3 mb-n3">
+                    <i class="ti ti-basket"></i>
+                  </a>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="fw-semibold fs-4 mb-2">MacBook Air Pro</h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <h5 class="fw-semibold fs-4 mb-0">$900</h5>
+                      <p class="mb-0 text-decoration-line-through">$650</p>
+                    </div>
+                    <ul class="d-flex align-items-center gap-1 mb-0">
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card rounded-2 overflow-hidden">
+                <div class="position-relative">
+                  <a href="javascript:void(0)"><img src="@@webRoot/assets/images/products/s7.jpg"
+                      class="card-img-top rounded-0" alt="..."></a>
+                  <a href="javascript:void(0)"
+                    class="btn btn-primary rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute bottom-0 end-0 me-3 mb-n3">
+                    <i class="ti ti-basket"></i>
+                  </a>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="fw-semibold fs-4 mb-2">Red Valvet Dress</h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <h5 class="fw-semibold fs-4 mb-0">$200</h5>
+                      <p class="mb-0 text-decoration-line-through">$150</p>
+                    </div>
+                    <ul class="d-flex align-items-center gap-1 mb-0">
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card rounded-2 overflow-hidden">
+                <div class="position-relative">
+                  <a href="javascript:void(0)"><img src="@@webRoot/assets/images/products/s11.jpg"
+                      class="card-img-top rounded-0" alt="..."></a>
+                  <a href="javascript:void(0)"
+                    class="btn btn-primary rounded-circle p-2 d-flex align-items-center justify-content-center position-absolute bottom-0 end-0 me-3 mb-n3">
+                    <i class="ti ti-basket"></i>
+                  </a>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="fw-semibold fs-4 mb-2">Cute Soft Teddybear</h5>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <h5 class="fw-semibold fs-4 mb-0">$345</h5>
+                      <p class="mb-0 text-decoration-line-through">$205</p>
+                    </div>
+                    <ul class="d-flex align-items-center gap-1 mb-0">
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-warning"><i class="ti ti-star"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card rounded-2 overflow-hidden">
+                <div class="row">
+                  <div class="col-6 pe-0">
+                    <div class="p-4 mb-7">
+                      <h5 class="fw-semibold fs-5 mb-1">Uptown Funk</h5>
+                      <p class="mb-0">Jon Bon Jovi</p>
+                    </div>
+                    <ul class="d-flex align-items-center justify-content-between mb-0 list-unstyled px-3 pb-7">
+                      <li><a href="javascript:void(0)" class="text-muted p-2"><i
+                            class="ti ti-player-skip-back fs-5"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-danger p-2"><i
+                            class="ti ti-player-play fs-5"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-muted p-2"><i
+                            class="ti ti-player-skip-forward fs-5"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 ps-0">
+                    <div class="position-relative w-100 h-100">
+                      <img src="@@webRoot/assets/images/blog/blog-img5.jpg" class="w-100 h-100 rounded-0" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card rounded-2 overflow-hidden">
+                <div class="row">
+                  <div class="col-6 pe-0">
+                    <div class="p-4 mb-7">
+                      <h5 class="fw-semibold fs-5 mb-1">Blank Space</h5>
+                      <p class="mb-0">Madonna</p>
+                    </div>
+                    <ul class="d-flex align-items-center justify-content-between mb-0 list-unstyled px-3 pb-7">
+                      <li><a href="javascript:void(0)" class="text-muted p-2"><i
+                            class="ti ti-player-skip-back fs-5"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-danger p-2"><i
+                            class="ti ti-player-play fs-5"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-muted p-2"><i
+                            class="ti ti-player-skip-forward fs-5"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 ps-0">
+                    <div class="position-relative w-100 h-100">
+                      <img src="@@webRoot/assets/images/blog/blog-img4.jpg" class="w-100 h-100 rounded-0" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card rounded-2 overflow-hidden">
+                <div class="row">
+                  <div class="col-6 pe-0">
+                    <div class="p-4 mb-7">
+                      <h5 class="fw-semibold fs-5 mb-1">Lean On</h5>
+                      <p class="mb-0">Jennifer Lopez</p>
+                    </div>
+                    <ul class="d-flex align-items-center justify-content-between mb-0 list-unstyled px-3 pb-7">
+                      <li><a href="javascript:void(0)" class="text-muted p-2"><i
+                            class="ti ti-player-skip-back fs-5"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-danger p-2"><i
+                            class="ti ti-player-play fs-5"></i></a></li>
+                      <li><a href="javascript:void(0)" class="text-muted p-2"><i
+                            class="ti ti-player-skip-forward fs-5"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 ps-0">
+                    <div class="position-relative w-100 h-100">
+                      <img src="@@webRoot/assets/images/blog/blog-img3.jpg" class="w-100 h-100 rounded-0" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body p-4 d-flex align-items-center gap-3">
+                  <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="" class="rounded-circle" width="40" height="40">
+                  <div>
+                    <h5 class="fw-semibold mb-0">Betty Adams</h5>
+                    <span class="fs-2 d-flex align-items-center"><i class="ti ti-map-pin text-dark fs-3 me-1"></i>Sint
+                      Maarten</span>
+                  </div>
+                  <button class="btn btn-primary py-1 px-2 ms-auto">Follow</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body p-4 d-flex align-items-center gap-3">
+                  <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="" class="rounded-circle" width="40" height="40">
+                  <div>
+                    <h5 class="fw-semibold mb-0">Leo Pratt</h5>
+                    <span class="fs-2 d-flex align-items-center"><i
+                        class="ti ti-map-pin text-dark fs-3 me-1"></i>Bulgaria</span>
+                  </div>
+                  <button class="btn btn-primary py-1 px-2 ms-auto">Follow</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body p-4 d-flex align-items-center gap-3">
+                  <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="" class="rounded-circle" width="40" height="40">
+                  <div>
+                    <h5 class="fw-semibold mb-0">Charles Nunez</h5>
+                    <span class="fs-2 d-flex align-items-center"><i
+                        class="ti ti-map-pin text-dark fs-3 me-1"></i>Nepal</span>
+                  </div>
+                  <button class="btn btn-primary py-1 px-2 ms-auto">Follow</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body p-4">
+                  <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="" class="img-fluid rounded-circle mb-4"
+                    width="80" height="80">
+                  <h5 class="mb-2 fw-semibold fs-4">Andrew Grant</h5>
+                  <div class="d-flex align-items-center gap-4 mb-4">
+                    <div class="d-flex align-items-center">
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-1.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-2.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-3.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                    </div>
+                    <p class="mb-0">3 mutual friends</p>
+                  </div>
+                  <button class="btn bg-primary-subtle text-primary mb-3 w-100">Add Friend</button>
+                  <button class="btn bg-secondary-subtle text-secondary w-100">Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body p-4">
+                  <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="" class="img-fluid rounded-circle mb-4"
+                    width="80" height="80">
+                  <h5 class="mb-2 fw-semibold fs-4">Leo Pratt</h5>
+                  <div class="d-flex align-items-center gap-4 mb-4">
+                    <div class="d-flex align-items-center">
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-1.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-2.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-3.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                    </div>
+                    <p class="mb-0">3 mutual friends</p>
+                  </div>
+                  <button class="btn bg-primary-subtle text-primary mb-3 w-100">Add Friend</button>
+                  <button class="btn bg-secondary-subtle text-secondary w-100">Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body p-4">
+                  <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="" class="img-fluid rounded-circle mb-4"
+                    width="80" height="80">
+                  <h5 class="mb-2 fw-semibold fs-4">Charles Nunez</h5>
+                  <div class="d-flex align-items-center gap-4 mb-4">
+                    <div class="d-flex align-items-center">
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-1.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-2.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-3.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                    </div>
+                    <p class="mb-0">3 mutual friends</p>
+                  </div>
+                  <button class="btn bg-primary-subtle text-primary mb-3 w-100">Add Friend</button>
+                  <button class="btn bg-secondary-subtle text-secondary w-100">Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="card">
+                <div class="card-body p-4">
+                  <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="" class="img-fluid rounded-circle mb-4"
+                    width="80" height="80">
+                  <h5 class="mb-2 fw-semibold fs-4">Lora Powers</h5>
+                  <div class="d-flex align-items-center gap-4 mb-4">
+                    <div class="d-flex align-items-center">
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-1.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-2.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                      <a href="#">
+                        <img src="@@webRoot/assets/images/profile/user-3.jpg"
+                          class="rounded-circle me-n2 card-hover border border-white" width="32" height="32">
+                      </a>
+                    </div>
+                    <p class="mb-0">3 mutual friends</p>
+                  </div>
+                  <button class="btn bg-primary-subtle text-primary mb-3 w-100">Add Friend</button>
+                  <button class="btn bg-secondary-subtle text-secondary w-100">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card hover-img">
+                <div class="card-body p-4 text-center border-bottom">
+                  <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="" class="rounded-circle mb-3" width="80"
+                    height="80">
+                  <h5 class="fw-semibold mb-0 fs-5">Betty Adams</h5>
+                  <span class="text-dark fs-2">Medical Secretary</span>
+                </div>
+                <ul class="px-2 py-2 list-unstyled d-flex align-items-center justify-content-center mb-0">
+                  <li class="position-relative">
+                    <a class="text-primary d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold"
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-danger d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-info d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-github"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-secondary d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card hover-img">
+                <div class="card-body p-4 text-center border-bottom">
+                  <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="" class="rounded-circle mb-3" width="80"
+                    height="80">
+                  <h5 class="fw-semibold mb-0 fs-5">Leo Pratt</h5>
+                  <span class="text-dark fs-2">Telecom Analyst</span>
+                </div>
+                <ul class="px-2 py-2 list-unstyled d-flex align-items-center justify-content-center mb-0">
+                  <li class="position-relative">
+                    <a class="text-primary d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold"
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-danger d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-info d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-github"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-secondary d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card hover-img">
+                <div class="card-body p-4 text-center border-bottom">
+                  <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="" class="rounded-circle mb-3" width="80"
+                    height="80">
+                  <h5 class="fw-semibold mb-0 fs-5">Charles Nunez</h5>
+                  <span class="text-dark fs-2">Environmental Specialist</span>
+                </div>
+                <ul class="px-2 py-2 list-unstyled d-flex align-items-center justify-content-center mb-0">
+                  <li class="position-relative">
+                    <a class="text-primary d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold"
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-danger d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-info d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-github"></i>
+                    </a>
+                  </li>
+                  <li class="position-relative">
+                    <a class="text-secondary d-flex align-items-center justify-content-center p-2 fs-5 rounded-circle fw-semibold "
+                      href="javascript:void(0)">
+                      <i class="ti ti-brand-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-semibold mb-4">Settings</h5>
+                  <div class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom">
+                    <div class="d-flex align-items-center">
+                      <div class="text-bg-primary rounded-2 d-flex align-items-center justify-content-center p-6">
+                        <i class="ti ti-volume text-white fs-7"></i>
+                      </div>
+                    </div>
+                    <div class="position-relative w-100">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="mb-0 fw-semibold fs-4">Sound</h6>
+                        <span>45%</span>
+                      </div>
+                      <input type="range" class="form-range pt-2" id="customRange1">
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 pb-3 border-bottom mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="text-bg-secondary rounded-2 d-flex align-items-center justify-content-center p-6">
+                        <i class="ti ti-message text-white fs-7"></i>
+                      </div>
+                    </div>
+                    <div class="position-relative w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="mb-2 fw-semibold fs-4">Sound</h6>
+                        <span>Turn on chat during call%</span>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <button class="btn bg-danger-subtle text-danger me-3">Cencel</button>
+                    <button class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center justify-content-between mb-6">
+                    <h6 class="mb-0 fw-semibold fs-4 mb-0">Andrew Grant</h6>
+                    <i class="ti ti-gift text-info fs-6"></i>
+                  </div>
+                  <img src="@@webRoot/assets/images/products/s1.jpg" alt=""
+                    class="img-fluid rounded-4 w-100 object-fit-cover mb-4" style="height: 160px;">
+                  <button class="btn btn-primary w-100 fw-normal py-8">Gift to Friend ($50.00)</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center justify-content-between mb-6">
+                    <h6 class="mb-0 fw-semibold fs-4 mb-0">Leo Pratt</h6>
+                    <i class="ti ti-gift text-info fs-6"></i>
+                  </div>
+                  <img src="@@webRoot/assets/images/products/s2.jpg" alt=""
+                    class="img-fluid rounded-4 w-100 object-fit-cover mb-4" style="height: 160px;">
+                  <button class="btn btn-primary w-100 fw-normal py-8">Gift to Friend ($50.00)</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-semibold">Payment Gateways</h5>
+                  <p class="card-subtitle mb-7 pb-8">Platform for Income</p>
+                  <div class="position-relative">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-primary-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-paypal.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">PayPal</h6>
+                          <p class="fs-3 mb-0">Big Brands</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 fw-semibold">+$6,235</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-success-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-office-bag.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Wallet</h6>
+                          <p class="fs-3 mb-0">Bill payment</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 fw-semibold text-muted">+$345</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-warning-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-master-card.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Credit card</h6>
+                          <p class="fs-3 mb-0">Money reversed</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 fw-semibold">+$2,235</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-7 pb-8">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-danger-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-pie.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Refund</h6>
+                          <p class="fs-3 mb-0">Bill payment</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 fw-semibold text-muted">-$32</h6>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100">View all transactions</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-semibold">Upcoming Activity</h5>
+                  <p class="card-subtitle mb-7 pb-8">In New year</p>
+                  <div class="position-relative">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-primary-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-map-pin.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Trip to singapore</h6>
+                          <p class="fs-3 mb-0">working on</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 text-muted">5 mins</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex">
+                        <div class="p-8 bg-info-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-database.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Archived Data</h6>
+                          <p class="fs-3 mb-0">working on</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 text-muted">10 mins</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-warning-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-phone.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Meeting with client</h6>
+                          <p class="fs-3 mb-0">pending</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 text-muted">10 mins</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-danger-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-screen-share.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Screening Task Team</h6>
+                          <p class="fs-3 mb-0">working on</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 text-muted">20 mins</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex">
+                        <div
+                          class="p-8 bg-success-subtle rounded-2 d-flex align-items-center justify-content-center me-6">
+                          <img src="@@webRoot/assets/images/svgs/icon-mail.svg" alt="" class="img-fluid" width="24"
+                            height="24">
+                        </div>
+                        <div>
+                          <h6 class="mb-1 fs-4 fw-semibold">Send envelope to John</h6>
+                          <p class="fs-3 mb-0">done</p>
+                        </div>
+                      </div>
+                      <h6 class="mb-0 fw-semibold text-muted">20 mins</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card w-100">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold mb-7">Recent Transactions</h5>
+                  <ul class="timeline-widget mb-0 position-relative mb-n5">
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">09:30</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1">Payment received from John Doe of $385.90</div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">10:00 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-info flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New sale recorded <a
+                          href="javascript:void(0)" class="text-primary d-block fw-normal ">#ML-3467</a>
+                      </div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1">Payment was made of $64.95 to Michael</div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New sale recorded <a
+                          href="javascript:void(0)" class="text-primary d-block fw-normal ">#ML-3467</a>
+                      </div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-danger flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New arrival recorded <a
+                          href="javascript:void(0)" class="text-primary d-block fw-normal ">#ML-3467</a>
+                      </div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1">Payment Done</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+</body>
+
+</html>

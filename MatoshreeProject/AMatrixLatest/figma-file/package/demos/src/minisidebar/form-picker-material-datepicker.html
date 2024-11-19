@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-datetimepicker/2.7.1/css/bootstrap-material-datetimepicker.min.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Material-Datepicker", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-12">
+              <!-- Card -->
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Material Date picker</h4>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-3">
+                    Use
+                    <mark><code>.bootstrapMaterialDatePicker</code></mark> to
+                    create it.
+                  </h6>
+                  <div class="row">
+                    <div class="col-12">
+                      <label class="mt-3 font-weight-medium mb-1">Default Material Date Picker</label>
+                      <input type="text" class="form-control" placeholder="2023-06-04" id="mdate" />
+                      <label class="mt-3 font-weight-medium mb-1">Default Material Date Timepicker</label>
+                      <input type="text" id="date-format" class="form-control"
+                        placeholder="Saturday 24 June 2023 - 21:44" />
+                    </div>
+                    <div class="col-12">
+                      <label class="mt-3 font-weight-medium mb-1">Time Picker</label>
+                      <input class="form-control" id="timepicker" placeholder="Check time" />
+                      <label class="mt-3 font-weight-medium mb-1">Min Date set</label>
+                      <input type="text" class="form-control" placeholder="set min date" id="min-date" />
+                    </div>
+                    <div class="col-12">
+                      <label class="mt-3 font-weight-medium mb-1">French Locales (Week starts at Monday)</label>
+                      <input class="form-control" id="date-fr" placeholder="Date de début" />
+                      <label class="mt-3 font-weight-medium mb-1">Events</label>
+                      <input type="text" class="form-control" placeholder="Start Date" id="date-start" />
+                      <input type="text" class="form-control mt-3" placeholder="End Date" id="date-end" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/assets/js/extra-libs/moment/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-datetimepicker/2.7.1/js/bootstrap-material-datetimepicker.min.js"></script>
+  <script src="@@webRoot/assets/js/forms/material-datepicker-init.js"></script>
+</body>
+
+</html>

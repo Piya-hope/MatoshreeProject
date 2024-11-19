@@ -1,0 +1,110 @@
+// dashboard 2
+
+.weight-border {
+    border-top: 2px solid $success;
+    height: 2px;
+    width: 100px;
+    display: inline-block;
+  }
+  
+  .bottom-text {
+    position: absolute;
+    bottom: 1.57rem;
+  }
+  
+  @media (max-width: 767px) {
+    .bottom-text {
+      right: 1.57rem;
+    }
+  }
+  .calendar-schedule-table {
+    width: 100%;
+    td {
+      padding: 15px 10px;
+      text-align: center;
+      font-weight: 400;
+      .month-option {
+        text-align: left;
+        color: $white;
+        font-weight: 400;
+      }
+      &.cal-active {
+        border-radius: $border-radius;
+        background: var(--bs-primary) !important;
+      }
+    }
+  }
+  
+  .mailbox-widget {
+  
+    border-bottom: 0 !important;
+    .nav-item {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      margin: 0;
+      text-align: center;
+      justify-content: flex-start;
+    }
+    .nav-link {
+      position: relative;
+      background: var(--bs-purple) !important;
+      color:$white !important;
+      font-weight: 400;
+      border: 1px dotted rgba($white, 0.3);
+      padding:10px 30px;
+      font-size: 15px;
+      border-radius: $border-radius;
+      &:hover {
+        color: $white;
+      }
+    }
+    .nav-item.show .nav-link,
+    .nav-link.active {
+      background-color: rgba($white, 0.1) !important;
+      border: 1px solid transparent;
+      border-bottom: 2px solid  var(--bs-secondary) !important;
+    }
+  }
+  
+  .weather-report {
+    .weather-type {
+      color: $gray-200;
+    }
+    &.active {
+      border-bottom: 2px solid $danger;
+      .weather-type {
+        color: $danger;
+      }
+    }
+  }
+  
+  .demo-container .flot-x-axis,
+  .demo-container .flot-text {
+    display: none;
+  }
+  
+  .demo-placeholder {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.2em;
+  }
+
+  
+// For Bootstrap Datepicker
+.datepicker .day,
+.datepicker .dow {
+  padding: 5px 10px;
+}
+
+.primary-carousel {
+  .p-img {
+    height: 390px;
+  }
+  .read-more {
+    position: absolute;
+    bottom: 40px;
+  }  
+}
+

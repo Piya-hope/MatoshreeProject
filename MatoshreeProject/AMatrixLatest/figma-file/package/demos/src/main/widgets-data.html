@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Widgets-Data", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <a href="#" class="stretched-link"></a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <div
+                        class="bg-warning-subtle text-warning rounded d-flex align-items-center p-8 justify-content-center">
+                        <i class="ti ti-basket fs-8"></i>
+                      </div>
+                    </div>
+                    <div class="col-9 d-flex align-items-center justify-content-end text-end">
+                      <div>
+                        <h4 class="card-title">+259</h4>
+                        <h6 class="card-subtitle mb-0">Sales Change</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress mt-3 text-bg-light">
+                    <div class="progress-bar text-bg-warning" role="progressbar" style="width: 26%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <a href="#" class="stretched-link"></a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <div
+                        class="bg-primary-subtle text-primary rounded d-flex align-items-center p-8 justify-content-center">
+                        <i class="ti ti-chart-pie fs-8"></i>
+                      </div>
+                    </div>
+                    <div class="col-9 d-flex align-items-center justify-content-end text-end">
+                      <div>
+                        <h4 class="card-title">750$</h4>
+                        <h6 class="card-subtitle mb-0">Weekly Income</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress mt-3 text-bg-light">
+                    <div class="progress-bar text-bg-primary" role="progressbar" style="width: 26%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <a href="#" class="stretched-link"></a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <div
+                        class="bg-danger-subtle text-danger rounded d-flex align-items-center p-8 justify-content-center">
+                        <i class="ti ti-user-plus fs-8"></i>
+                      </div>
+                    </div>
+                    <div class="col-9 d-flex align-items-center justify-content-end text-end">
+                      <div>
+                        <h4 class="card-title">+6.5K</h4>
+                        <h6 class="card-subtitle mb-0">New Users</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress mt-3 text-bg-light">
+                    <div class="progress-bar text-bg-danger" role="progressbar" style="width: 26%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <a href="#" class="stretched-link"></a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <div
+                        class="bg-success-subtle text-success rounded d-flex align-items-center p-8 justify-content-center">
+                        <i class="ti ti-bell fs-8"></i>
+                      </div>
+                    </div>
+                    <div class="col-9 d-flex align-items-center justify-content-end text-end">
+                      <div>
+                        <h4 class="card-title">156</h4>
+                        <h6 class="card-subtitle mb-0">
+                          New Notifications
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress mt-3 text-bg-light">
+                    <div class="progress-bar text-bg-success" role="progressbar" style="width: 26%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <a href="#" class="stretched-link"></a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <div class="bg-info-subtle text-info rounded d-flex align-items-center p-8 justify-content-center">
+                        <i class="ti ti-brand-messenger fs-8"></i>
+                      </div>
+                    </div>
+                    <div class="col-9 d-flex align-items-center justify-content-end text-end">
+                      <div>
+                        <h4 class="card-title">15+</h4>
+                        <h6 class="card-subtitle mb-0">Latest Messages</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress mt-3 text-bg-light">
+                    <div class="progress-bar text-bg-info" role="progressbar" style="width: 26%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <a href="#" class="stretched-link"></a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-3">
+                      <div
+                        class="bg-secondary-subtle text-secondary rounded d-flex align-items-center p-8 justify-content-center">
+                        <i class="ti ti-brand-drops fs-8"></i>
+                      </div>
+                    </div>
+                    <div class="col-9 d-flex align-items-center justify-content-end text-end">
+                      <div>
+                        <h4 class="card-title">1500</h4>
+                        <h6 class="card-subtitle mb-0">
+                          Wainting for downloads
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress mt-3 text-bg-light">
+                    <div class="progress-bar text-bg-secondary" role="progressbar" style="width: 26%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="p-4 d-flex align-items-stretch h-100">
+                  <div class="row">
+                    <div class="col-4 col-md-3 d-flex align-items-center">
+                      <img src="@@webRoot/assets/images/products/s1.jpg" class="rounded img-fluid">
+                    </div>
+                    <div class="col-8 col-md-9 d-flex align-items-center">
+                      <div>
+                        <a href="javascript:void(0)" class="text-dark fs-4 link lh-sm">50% sell on wrist
+                          watch</a>
+                        <h6 class="card-subtitle mt-2 mb-0 fw-normal text-muted">
+                          By Daniel Jubile
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="p-4 d-flex align-items-stretch h-100">
+                  <div class="row">
+                    <div class="col-4 col-md-3 d-flex align-items-center">
+                      <img src="@@webRoot/assets/images/products/s2.jpg" class="rounded img-fluid">
+                    </div>
+                    <div class="col-8 col-md-9 d-flex align-items-center">
+                      <div>
+                        <a href="javascript:void(0)" class="text-dark fs-4 link lh-sm">Small Cabin Luggage
+                          (57 cm) </a>
+                        <h6 class="card-subtitle mt-2 mb-0 fw-normal text-muted">
+                          By John Smith
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="p-4 d-flex align-items-stretch h-100">
+                  <div class="row">
+                    <div class="col-4 col-md-3 d-flex align-items-center">
+                      <img src="@@webRoot/assets/images/products/s3.jpg" class="rounded img-fluid">
+                    </div>
+                    <div class="col-8 col-md-9 d-flex align-items-center">
+                      <div>
+                        <a href="javascript:void(0)" class="text-dark fs-4 link lh-sm">Women Black Heels
+                          Sandal</a>
+                        <h6 class="card-subtitle mt-2 mb-0 fw-normal text-muted">
+                          By Nancy Deo
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="p-4 d-flex align-items-stretch h-100">
+                  <div class="row">
+                    <div class="col-4 col-md-3 d-flex align-items-center">
+                      <img src="@@webRoot/assets/images/products/s4.jpg" class="rounded img-fluid">
+                    </div>
+                    <div class="col-8 col-md-9 d-flex align-items-center">
+                      <div>
+                        <a href="javascript:void(0)" class="text-dark fs-4 link lh-sm">Boat BassHeads 900
+                          Wireless Headset </a>
+                        <h6 class="card-subtitle mt-2 mb-0 fw-normal text-muted">
+                          Yellow , On the Ear
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="p-4 d-flex align-items-stretch h-100">
+                  <div class="row">
+                    <div class="col-4 col-md-3 d-flex align-items-center">
+                      <img src="@@webRoot/assets/images/products/s5.jpg" class="rounded img-fluid">
+                    </div>
+                    <div class="col-8 col-md-9 d-flex align-items-center">
+                      <div>
+                        <a href="javascript:void(0)" class="text-dark fs-4 link lh-sm">Beauty Blender
+                          original makeup blender</a>
+                        <h6 class="card-subtitle mt-2 mb-0 fw-normal text-muted">
+                          By Nancy Deo
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="p-4 d-flex align-items-stretch h-100">
+                  <div class="row">
+                    <div class="col-4 col-md-3 d-flex align-items-center">
+                      <img src="@@webRoot/assets/images/products/s6.jpg" class="rounded img-fluid">
+                    </div>
+                    <div class="col-8 col-md-9 d-flex align-items-center">
+                      <div>
+                        <a href="javascript:void(0)" class="text-dark fs-4 link lh-sm">Canvas Shoes For
+                          Men</a>
+                        <h6 class="card-subtitle mt-2 mb-0 fw-normal text-muted">
+                          Absolute Comfort
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-success">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h3 class="mb-0 fs-6">$18090</h3>
+                      <span class="text-muted">Income</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-info">
+                      <i class="ti ti-users fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h3 class="mb-0 fs-6">2690</h3>
+                      <span class="text-muted">Users</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-danger">
+                      <i class="ti ti-calendar fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h3 class="mb-0 fs-6">20 march</h3>
+                      <span class="text-muted">My birthday</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-success">
+                      <i class="ti ti-settings fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h3 class="mb-0 fs-6">6540</h3>
+                      <span class="text-muted">Manage notifications</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div>
+                      <h3 class="fs-6">86%</h3>
+                      <h6 class="card-subtitle mb-1 text-muted">Total Product</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-success display-6"><i class="ti ti-box"></i></span>
+                    </div>
+                  </div>
+                  <div class="progress text-bg-light">
+                    <div class="progress-bar text-bg-success" role="progressbar" style="width: 85%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <div>
+                      <h3 class="fs-6">40%</h3>
+                      <h6 class="card-subtitle mb-1 text-muted">Pending Product</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-info display-6"><i class="ti ti-cast"></i></span>
+                    </div>
+                  </div>
+                  <div class="progress text-bg-light">
+                    <div class="progress-bar text-bg-info" role="progressbar" style="width: 40%; height: 6px;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="d-flex align-items-center mb-3">
+                        <div>
+                          <h3 class="fs-6">56%</h3>
+                          <h6 class="card-subtitle mb-1 text-muted">Selling</h6>
+                        </div>
+                        <div class="ms-auto">
+                          <span class="text-primary display-6"><i class="ti ti-clipboard"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="progress text-bg-light">
+                        <div class="progress-bar text-bg-primary" role="progressbar" style="width: 56%; height: 6px;"
+                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="d-flex align-items-center mb-3">
+                        <div>
+                          <h3 class="fs-6">26%</h3>
+                          <h6 class="card-subtitle mb-1 text-muted">Buying</h6>
+                        </div>
+                        <div class="ms-auto">
+                          <span class="text-danger display-6"><i class="ti ti-copy"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="progress text-bg-light">
+                        <div class="progress-bar text-bg-danger" role="progressbar" style="width: 26%; height: 6px;"
+                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Column -->
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top img-responsive" src="@@webRoot/assets/images/blog/blog-img4.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center mb-3">
+                    <span class="d-flex align-items-center"><i class="ti ti-calendar me-1 fs-5"></i> 20 May 2023</span>
+                    <div class="ms-auto">
+                      <a href="javascript:void(0)" class="link text-muted"><i
+                          class="ti ti-message-circle me-1 fs-5"></i> 3 Comments</a>
+                    </div>
+                  </div>
+                  <h3 class="fs-6">
+                    Featured Hydroflora Pots Garden &amp; Outdoors
+                  </h3>
+                  <p class="mb-0 mt-2 text-muted">
+                    Titudin venenatis ipsum ac feugiat. Vestibulum ullamcorper quam.
+                  </p>
+                  <div class="text-end">
+                    <button class="btn btn-primary rounded-pill mt-3">
+                      Read more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top img-responsive" src="@@webRoot/assets/images/blog/blog-img5.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center mb-3">
+                    <span class="d-flex align-items-center"><i class="ti ti-calendar me-1 fs-5"></i> 19 May 2023</span>
+                    <div class="ms-auto">
+                      <a href="javascript:void(0)" class="link text-muted"><i
+                          class="ti ti-message-circle me-1 fs-5"></i> 16 Comments</a>
+                    </div>
+                  </div>
+                  <h3 class="fs-6">
+                    Featured Hydroflora Pots Garden &amp; Outdoors
+                  </h3>
+                  <p class="mb-0 mt-2 text-muted">
+                    Titudin venenatis ipsum ac feugiat. Vestibulum ullamcorper quam.
+                  </p>
+                  <div class="text-end">
+                    <button class="btn btn-primary rounded-pill mt-3">
+                      Read more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-4">
+              <div class="card">
+                <img class="card-img-top img-responsive" src="@@webRoot/assets/images/blog/blog-img6.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center mb-3">
+                    <span class="d-flex align-items-center"><i class="ti ti-calendar me-1 fs-5"></i> 19 May 2023</span>
+                    <div class="ms-auto">
+                      <a href="javascript:void(0)" class="link text-muted"><i
+                          class="ti ti-message-circle me-1 fs-5"></i> 16 Comments</a>
+                    </div>
+                  </div>
+                  <h3 class="fs-6">
+                    Featured Hydroflora Pots Garden &amp; Outdoors
+                  </h3>
+                  <p class="mb-0 mt-2 text-muted">
+                    Titudin venenatis ipsum ac feugiat. Vestibulum ullamcorper quam.
+                  </p>
+                  <div class="text-end">
+                    <button class="btn btn-primary rounded-pill mt-3">
+                      Read more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+          </div>
+          <div class="row">
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <h3 class="fs-6">26%</h3>
+                      <h6 class="card-subtitle mb-2 text-muted text-muted">Total Product</h6>
+                    </div>
+                    <div class="col-12">
+                      <div class="progress text-bg-light">
+                        <div class="progress-bar text-bg-success" role="progressbar" style="width: 85%; height: 6px;"
+                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <h3 class="fs-6">60%</h3>
+                      <h6 class="card-subtitle mb-2 text-muted text-muted">Pending Product</h6>
+                    </div>
+                    <div class="col-12">
+                      <div class="progress text-bg-light">
+                        <div class="progress-bar text-bg-info" role="progressbar" style="width: 40%; height: 6px;"
+                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <h3 class="fs-6">63%</h3>
+                      <h6 class="card-subtitle mb-2 text-muted text-muted">Selling Products</h6>
+                    </div>
+                    <div class="col-12">
+                      <div class="progress text-bg-light">
+                        <div class="progress-bar text-bg-danger" role="progressbar" style="width: 56%; height: 6px;"
+                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <h3 class="fs-6">29%</h3>
+                      <h6 class="card-subtitle text-muted mb-2">Buying Products</h6>
+                    </div>
+                    <div class="col-12">
+                      <div class="progress text-bg-light">
+                        <div class="progress-bar text-bg-dark" role="progressbar" style="width: 26%; height: 6px;"
+                          aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <img class="card-img-top" src="@@webRoot/assets/images/backgrounds/weather.jpg" alt="Card image cap"
+                  style="max-height: 450px">
+                <div class="card-img-overlay">
+                  <div class="text-white">
+                    <span><i class="ti ti-sun-high display-4"></i></span>
+                    <br>
+                    <span class="display-6">20°
+                      <span class="fs-6">C</span>
+                    </span>
+                    <span class="fs-6">/</span>
+                    <span class="fs-6">7°
+                      <span class="font-size-16">C</span>
+                    </span>
+                    <p class="fs-3 mb-0">THURSDAY 01.08.2018</p>
+                  </div>
+                </div>
+                <div class="card-footer text-bg-white">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="row text-center">
+                        <div class="col-6 col-md-2 border-end">
+                          <div class="mb-2">TUE</div>
+                          <i class="ti ti-cloud fs-7 mb-2"></i>
+                          <div>
+                            24°
+                            <span>C</span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-2 border-end">
+                          <div class="mb-2">WED</div>
+                          <i class="ti ti-cloud fs-7 mb-2"></i>
+                          <div>
+                            21°
+                            <span>C</span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-2 border-end">
+                          <div class="mb-2">THU</div>
+                          <i class="ti ti-sun-high fs-7 mb-2"></i>
+                          <div>
+                            25°
+                            <span>C</span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-2 border-end">
+                          <div class="mb-2">FRI</div>
+                          <i class="ti ti-cloud-fog fs-7 mb-2"></i>
+                          <div>
+                            20°
+                            <span>C</span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-2 border-end">
+                          <div class="mb-2">SAT</div>
+                          <i class="ti ti-cloud-storm fs-7 mb-2"></i>
+                          <div>
+                            18°
+                            <span>C</span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-2">
+                          <div class="mb-2">SUN</div>
+                          <i class="ti ti-cloud-rain fs-7 mb-2"></i>
+                          <div>
+                            14°
+                            <span>C</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-bottom border-info">
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <h2 class="fs-7">120</h2>
+                      <h6 class="fw-medium text-info mb-0">News Feed</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-info display-6"><i class="ti ti-file-text"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-bottom border-primary">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <h2 class="fs-7">150</h2>
+                      <h6 class="fw-medium text-primary mb-0">Invoices</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-primary display-6"><i class="ti ti-clipboard"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-bottom border-success">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <h2 class="fs-7">450</h2>
+                      <h6 class="fw-medium text-success mb-0">Revenue</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-success display-6"><i class="ti ti-credit-card"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-bottom border-danger">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <h2 class="fs-7">100</h2>
+                      <h6 class="fw-medium text-danger mb-0">Sales</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-danger display-6"><i class="ti ti-chart-pie"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-start border-danger">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-danger display-6"><i class="ti ti-users"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">290</h2>
+                      <h6 class="fw-medium text-danger mb-0">New Customers</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-start border-info">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-info display-6"><i class="ti ti-message-circle"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">120</h2>
+                      <h6 class="fw-medium text-info mb-0">New Messages</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-start border-primary">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-primary display-6"><i class="ti ti-bell"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">600</h2>
+                      <h6 class="fw-medium text-primary mb-0">New Notification</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-start border-success">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-success display-6"><i class="ti ti-briefcase"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">270</h2>
+                      <h6 class="fw-medium text-success mb-0">New Projects</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-top border-success">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <h2 class="fs-7">120</h2>
+                      <h6 class="fw-medium text-success mb-0">Top Locations</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-success display-6"><i class="ti ti-map"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-top border-dark">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <h2 class="fs-7">201</h2>
+                      <h6 class="fw-medium text-dark mb-0">Top Activity Pages</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-dark display-6"><i class="ti ti-archive"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-top border-info">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <h2 class="fs-7">140</h2>
+                      <h6 class="fw-medium text-info mb-0">Top Sales</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-info display-6"><i class="ti ti-chart-bar"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-top border-primary">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <h2 class="fs-7">160</h2>
+                      <h6 class="fw-medium text-primary mb-0">Top Feeds</h6>
+                    </div>
+                    <div class="ms-auto">
+                      <span class="text-primary display-6"><i class="ti ti-rss"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-end border-dark">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-dark display-6"><i class="ti ti-cast"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">360</h2>
+                      <h6 class="fw-medium text-dark mb-0">Device Variations</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-end border-info">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-info display-6"><i class="ti ti-currency-dollar"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">120</h2>
+                      <h6 class="fw-medium text-info mb-0">Net Income</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-end border-primary">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-primary display-6"><i class="ti ti-clock-hour-4"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">471</h2>
+                      <h6 class="fw-medium text-primary mb-0">Sales Performance</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card border-end border-success">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <div>
+                      <span class="text-success display-6"><i class="ti ti-box-multiple"></i></span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7">150</h2>
+                      <h6 class="fw-medium text-success mb-0">Monthly Sales</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card-group mb-4">
+                <!-- Column -->
+                <div class="card text-bg-success">
+                  <div class="card-body text-center text-white">
+                    <div class="p-3">
+                      <h2 class="text-white fs-7">27° C</h2>
+                      <h5 class="fw-light mt-3 text-white">Lester, London</h5>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="card text-bg-success">
+                  <div class="card-body text-center text-white">
+                    <span class="display-6"><i class="ti ti-cloud-rain"></i></span>
+                    <div class="mt-3">
+                      <h5 class="fw-light text-white">12.10.2018</h5>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card text-white">
+                <img class="card-img" src="@@webRoot/assets/images/backgrounds/weatherbg.jpg" alt="Card image">
+                <div class="card-img-overlay text-white">
+                  <div class="d-flex no-block align-items-center">
+                    <h5 class="font-weight-medium text-white">
+                      Lester, London
+                    </h5>
+                    <div class="ms-auto">
+                      <span><i class="ti ti-map-pin"></i></span>
+                    </div>
+                  </div>
+                  <span><i class="display-6 ti ti-wind"></i></span>
+                  <div class="d-inline-block ms-3">
+                    <span class="display-6">14°</span>
+                    <span class="font-24">C</span>
+                    <span class="fs-5">/ 7° C</span>
+                  </div>
+                  <div class="mt-2 mb-2">
+                    <h5 class="mb-0 text-white">WEDNESDAY</h5>
+                    <h6 class="text-white">1.8.2018</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card text-center overflow-hidden">
+                <div class="card-body text-bg-primary text-white p-10">
+                  <span><i class="display-6 ti ti-wind"></i></span>
+                  <div class="d-inline-block ms-3">
+                    <span class="display-6">14°</span>
+                    <span class="font-24">C</span>
+                    <span class="fs-5">/ 7° C</span>
+                  </div>
+                </div>
+                <div class="card-footer text-primary text-bg-white">5 May 2018</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card overflow-hidden">
+                <div class="card-body text-bg-info text-white text-center p-10">
+                  <div class="d-inline-block ms-3">
+                    <span class="display-6">4°</span>
+                    <span class="font-24">C</span>
+                    <span class="fs-5">/ 7° C</span>
+                  </div>
+                  <span class="ms-2"><i class="display-6 ti ti-cloud"></i></span>
+                </div>
+                <div class="card-footer text-info text-bg-white">
+                  <div class="d-flex no-block align-items-center">
+                    <h5 class="mb-0 fs-4">
+                      <i class="ti ti-cloud-rain"></i> 15kmph
+                    </h5>
+                    <div class="ms-auto">
+                      <h5 class="mb-0 fs-4">40%</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="card text-bg-dark text-white">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <a href="JavaScript: void(0);"><i class="ti ti-currency-ethereum display-6 text-white"
+                        title="ETH"></i></a>
+                    <div class="ms-3 mt-2">
+                      <h4 class=" mb-0 text-white">
+                        Ethereum
+                      </h4>
+                      <h5 class="text-white">$3589.00k</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card text-bg-primary">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <a href="JavaScript: void(0);"><i class="ti ti-currency-dogecoin display-6 text-white"
+                        title="LTC"></i></a>
+                    <div class="ms-3 mt-2">
+                      <h4 class=" mb-0 text-white">
+                        Dash
+                      </h4>
+                      <h5 class="text-white">$900.00k</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card text-bg-danger">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <a href="JavaScript: void(0);"><i class="ti ti-currency-bitcoin display-6 text-white"
+                        title="BTC"></i></a>
+                    <div class="ms-3 mt-2">
+                      <h4 class=" mb-0 text-white">
+                        Bitcoin
+                      </h4>
+                      <h5 class="text-white">$284.50k</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="card text-bg-info">
+                <div class="card-body">
+                  <div class="d-flex no-block align-items-center">
+                    <a href="JavaScript: void(0);"><i class="ti ti-currency-ripple display-6 text-white"
+                        title="AMP"></i></a>
+                    <div class="ms-3 mt-2">
+                      <h4 class=" mb-0 text-white">
+                        Ripple
+                      </h4>
+                      <h5 class="text-white">$650.80k</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- col -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-bg-danger">
+                <div class="card-body">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-bitcoin display-6 text-white" title="BTC"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Bitcoin
+                            </h5>
+                            <h6 class="text-white">Realestate</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 0.08</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.06</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -20.10</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-bitcoin display-6 text-white me-3" title="BTC"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Bitcoin
+                            </h5>
+                            <h6 class="text-white">Realestate</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 2.08</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -3.06</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -21.01</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column active">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-bitcoin display-6 text-white me-3" title="BTC"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Bitcoin
+                            </h5>
+                            <h6 class="text-white">Realestate</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 0.12</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.06</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -0.08</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-bg-success">
+                <div class="card-body">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-currency-euro display-6 text-white me-3" title="EOS"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              EOS
+                            </h5>
+                            <h6 class="text-white">Banking</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 0.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -5.10</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -0.10</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-currency-euro display-6 text-white me-3" title="EOS"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              EOS
+                            </h5>
+                            <h6 class="text-white">Banking</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.08</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -1.01</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column active">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-currency-euro display-6 text-white me-3" title="EOS"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              EOS
+                            </h5>
+                            <h6 class="text-white">Banking</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 2.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.00</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -2.08</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-bg-dark">
+                <div class="card-body">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-ethereum display-6 text-white me-3"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Ethereum
+                            </h5>
+                            <h6 class="text-white">Exchange</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -5.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -20.10</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-ethereum display-6 text-white me-3"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Ethereum
+                            </h5>
+                            <h6 class="text-white">Exchange</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 2.08</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -1.08</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column active">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-ethereum display-6 text-white me-3"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Ethereum
+                            </h5>
+                            <h6 class="text-white">Exchange</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.02</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -3.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -10.00</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-bg-secondary">
+                <div class="card-body">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-currency-baht display-6 text-white me-3" title="BTM"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Bitmark
+                            </h5>
+                            <h6 class="text-white">Advertising</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 0.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -2.06</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -1.10</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-currency-baht display-6 text-white me-3" title="BTM"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Bitmark
+                            </h5>
+                            <h6 class="text-white">Advertising</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 2.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -3.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -2.01</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column active">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-currency-baht display-6 text-white me-3" title="BTM"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Bitmark
+                            </h5>
+                            <h6 class="text-white">Advertising</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 0.12</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -1s.08</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-bg-primary">
+                <div class="card-body">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-dogecoin display-6 text-white me-3" title="DASH"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Dash
+                            </h5>
+                            <h6 class="text-white">Trading</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.10</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -0.20</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-dogecoin display-6 text-white me-3" title="DASH"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Dash
+                            </h5>
+                            <h6 class="text-white">Trading</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.06</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -1.01</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column active">
+                        <div class="d-flex no-block align-items-center me-3">
+                          <i class="ti ti-currency-dogecoin display-6 text-white me-3" title="DASH"></i>
+                          <div class="mt-2">
+                            <h5 class="text-white ">
+                              Dash
+                            </h5>
+                            <h6 class="text-white">Trading</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-white mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.10</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -0.08</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-bg-light">
+                <div class="card-body">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-diamond display-6 text-dark me-3" title="GEMZ"></i>
+                          <div class="mt-2">
+                            <h5 class="text-dark ">
+                              GetGems
+                            </h5>
+                            <h6 class="text-dark">Exchange</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto1"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-dark mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.10</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -1.10</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-diamond display-6 text-dark me-3" title="GEMZ"></i>
+                          <div class="mt-2">
+                            <h5 class="text-dark ">
+                              GetGems
+                            </h5>
+                            <h6 class="text-dark">Exchange</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto1"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-dark mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 1.18</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.10</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -1.11</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column active">
+                        <div class="d-flex no-block al me-3ign-items-center">
+                          <i class="ti ti-diamond display-6 text-dark me-3" title="GEMZ"></i>
+                          <div class="mt-2">
+                            <h5 class="text-dark ">
+                              GetGems
+                            </h5>
+                            <h6 class="text-dark">Exchange</h6>
+                          </div>
+                          <div class="ms-auto mt-3">
+                            <div class="crypto1"></div>
+                          </div>
+                        </div>
+                        <div class="row text-center text-dark mt-4">
+                          <div class="col-4">
+                            <span class="fs-3">% 1h</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> 12.16</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 24h</span>
+                            <p class=""><i class="ti ti-arrow-down fs-5"></i> -1.10</p>
+                          </div>
+                          <div class="col-4">
+                            <span class="fs-3">% 7d</span>
+                            <p class=""><i class="ti ti-arrow-up fs-5"></i> -2.18</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-success">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h4 class="mb-0 fs-5">Total Income</h4>
+                      <span class="text-muted">Income</span>
+                    </div>
+                    <div class="ms-auto align-self-center">
+                      <h2 class="fs-7 mb-0">$2900</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-info">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h4 class="mb-0 fs-5">Total Products</h4>
+                      <span class="text-muted">Users</span>
+                    </div>
+                    <div class="ms-auto align-self-center">
+                      <h2 class="fs-7 mb-0">$2690</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-danger">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h4 class="mb-0 fs-5">Total Members</h4>
+                      <span class="text-muted">My birthday</span>
+                    </div>
+                    <div class="ms-auto align-self-center">
+                      <h2 class="fs-7 mb-0">20 March</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-row">
+                    <div
+                      class="round-40 rounded-circle text-white d-flex align-items-center justify-content-center text-bg-warning">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3 align-self-center">
+                      <h4 class="mb-0 fs-5">Total Tasks</h4>
+                      <span class="text-muted">pending</span>
+                    </div>
+                    <div class="ms-auto align-self-center">
+                      <h2 class="fs-7 mb-0">6540</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+          </div>
+          <div class="row">
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card text-bg-success">
+                <div class="card-body text-white">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle d-flex align-items-center justify-content-center bg-success-subtle text-success">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h4 class="mb-0 text-white fs-6">Total Income</h4>
+                      <span class="text-white-50">Income</span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7 mb-0 text-white">
+                        $2900
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card text-bg-info">
+                <div class="card-body text-white">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle d-flex align-items-center justify-content-center bg-info-subtle text-info">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h4 class="mb-0 text-white fs-6">Total Products</h4>
+                      <span class="text-white-50">Users</span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7 mb-0 text-white">
+                        $2690
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card text-bg-primary">
+                <div class="card-body text-white">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle d-flex align-items-center justify-content-center bg-info-subtle text-primary">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h4 class="mb-0 text-white fs-6">Total Members</h4>
+                      <span class="text-white-50">My birthday</span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7 mb-0 text-white">
+                        20 March
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6">
+              <div class="card text-bg-danger">
+                <div class="card-body text-white">
+                  <div class="d-flex flex-row align-items-center">
+                    <div
+                      class="round-40 rounded-circle d-flex align-items-center justify-content-center bg-danger-subtle text-danger">
+                      <i class="ti ti-credit-card fs-6"></i>
+                    </div>
+                    <div class="ms-3">
+                      <h4 class="mb-0 text-white fs-6">Total Tasks</h4>
+                      <span class="text-white-50">pending</span>
+                    </div>
+                    <div class="ms-auto">
+                      <h2 class="fs-7 mb-0 text-white">
+                        6540
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+</body>
+
+</html>

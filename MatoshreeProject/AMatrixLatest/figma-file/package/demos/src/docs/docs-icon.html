@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+  <head>
+    @@include("../main/partials/head.html")
+
+    <link
+      rel="stylesheet"
+      href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="@@webRoot/assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside class="left-sidebar with-vertical">
+        @@include("./partials/sidebar.html")
+      </aside>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar position-relative">
+          <div
+            class="navbar navbar-header d-flex align-items-center justify-content-between p-3 fixed-top"
+          >
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <!-- Logo icon -->
+            <a href="@@webRoot/docs/index.html" class="text-nowrap logo-img d-xl-none d-block">
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="homepage">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2">
+                <!-- Light Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage">
+              </span>
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="fs-8 text-muted d-xl-none d-block sidebartoggler"
+                href="javascript:void(0)"
+                role="button"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div
+          class="body-wrapper"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example3"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid mt-4">
+            <div>
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <h4 class="mb-4 pb-2 fs-5">Icons</h3>
+                <div class="mt-4 card">
+                    <div class="card-body">
+                        <h4 class="card-title">1. Tabler Icons</h4>
+                        <a href="https://tabler-icons.io/" class="fw-normal mb-4 d-block">https://tabler-icons.io/</a>
+                        <div class="card mb-0">
+                          <div class="p-4 text-center">
+                            <div class="list-group-horizontal">
+                              <i class="ti ti-mood-happy text-dark fs-6"></i>
+                              <i class="ti ti-mood-happy text-dark fs-7"></i>
+                              <i class="ti ti-mood-happy text-dark fs-8"></i>
+                              <i class="ti ti-mood-happy text-dark fs-9"></i>
+                              <i class="ti ti-mood-happy text-dark fs-10"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <pre>
+                            <code class="language-html py-0">
+    // ----------------------------------------------------
+    // File: package/scss/style.scss
+    // ----------------------------------------------------  
+    
+    @import "icons/tabler-icons/tabler-icons.css";
+    
+    // ----------------------------------------------------------------------
+    
+    &#x3C;div class=&#x22;list-group-horizontal&#x22;&#x3E;
+      &#x3C;i class=&#x22;ti ti-mood-happy text-dark fs-6&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;i class=&#x22;ti ti-mood-happy text-dark fs-7&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;i class=&#x22;ti ti-mood-happy text-dark fs-8&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;i class=&#x22;ti ti-mood-happy text-dark fs-9&#x22;&#x3E;&#x3C;/i&#x3E;
+      &#x3C;i class=&#x22;ti ti-mood-happy text-dark fs-10&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/div&#x3E;
+                            </code>
+                        </pre> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    @@include("../main/partials/scripts.html")
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <!-- End JS -->
+  </body>
+</html>

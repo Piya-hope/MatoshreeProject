@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Form Detail", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- ---------------------
+                                  start Form with view only
+                              ---------------- -->
+              <div class="card">
+                <div class="card-header text-bg-primary">
+                  <h5 class="mb-0 text-white">Form with view only</h5>
+                </div>
+                <form class="form-horizontal">
+                  <div class="form-body">
+                    <div class="card-body">
+                      <h5 class="card-title mb-0">Person Info</h5>
+                    </div>
+                    <hr class="m-0" />
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">First Name:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">John</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Last Name:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">Doe</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                      </div>
+                      <!--/row-->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Gender:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">Male</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Date of Birth:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">11/06/1987</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                      </div>
+                      <!--/row-->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Category:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">Category1</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Membership:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">Free</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                      </div>
+                      <!--/row-->
+                     
+                    </div>
+                    <hr class="m-0" />
+                    <div class="card-body">
+                      <h5 class="card-title mb-0">Address</h5>
+                    </div>
+                    <hr class="m-0" />
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Address:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">
+                                E104, Dharti-2, Near silverstar mall
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">City:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">Bhavnagar</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">State:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">Gujarat</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                      </div>
+                      <!--/row-->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Post Code:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">457890</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="form-label text-end col-md-3">Country:</label>
+                            <div class="col-md-9">
+                              <p class="form-control-static">India</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--/span-->
+                      </div>
+                    </div>
+                    <div class="form-actions border-top">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="row">
+                              <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" class="btn btn-primary">
+                                  <i class="ti ti-edit fs-5"></i>
+                                  Edit
+                                </button>
+                                <button type="button" class="btn bg-danger-subtle text-danger ms-6">
+                                  Cancel
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- ---------------------
+                                  start Form with view only
+                              ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+</body>
+
+</html>

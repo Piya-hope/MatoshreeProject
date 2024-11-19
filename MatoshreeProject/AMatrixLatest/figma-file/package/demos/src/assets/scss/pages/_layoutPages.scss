@@ -1,0 +1,139 @@
+// ###############################################
+// Sticky inner left part
+// ###############################################
+.layout-left-part {
+  position: absolute;
+  height: 100%;
+  width: $left-part-width;
+  background: var(--bs-body-bg);
+
+  //border-right: 1px solid $border-color;
+  &.fixed-left-part {
+    position: fixed;
+    top: $topbar-height;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  .show-left-part {
+    position: absolute;
+    top: 45%;
+    right: -41px;
+  }
+
+  .lstick {
+    margin-left: -16px;
+  }
+}
+.reverse-mode .layout-left-part {
+  right: 0;
+}
+
+.dashboard-part.right-part {
+  overflow-x: hidden !important;
+}
+
+.right-part {
+  width: $right-part-width;
+  height: $right-part-height;
+  margin-left: $left-part-width;
+}
+
+.reverse-mode {
+  .left-part {
+    right: 0;
+
+    &.dashboard-right-part {
+      top: $topbar-height;
+    }
+  }
+
+  .show-left-part {
+    right: auto;
+    left: -41px;
+  }
+
+  .right-part {
+    margin-left: 0;
+    margin-right: $left-part-width;
+  }
+}
+
+// Mobile Screen
+//
+@media (max-width: 767px) {
+
+  //
+  // Main wrapper
+  #main-wrapper {
+
+    // Sidebar type=mini-sidebar
+    // ###############################################
+    &[data-sidebartype="mini-sidebar"] {
+
+      // Left sidebar
+      //
+      .left-sidebar,
+      .left-sidebar .sidebar-footer {
+        left: -$sidebar-width-full;
+      }
+    }
+
+    // Open sidebar
+    // ###############################################
+    &.show-sidebar {
+
+      .left-sidebar,
+      .left-sidebar .sidebar-footer {
+        left: 0;
+      }
+    }
+
+    // Sidebar position fixed with vertical layout && both with fixed
+    // ###############################################
+    &[data-layout="vertical"][data-sidebar-position="fixed"],
+    &[data-layout="vertical"][data-header-position="fixed"][data-sidebar-position="fixed"] {
+
+      // Topbar
+      //
+      .topbar .top-navbar {
+        .navbar-collapse {
+          position: relative;
+          top: $topbar-height;
+        }
+      }
+    }
+  }
+
+  // Sticky inner sidebar
+  //
+  .left-part {
+    position: fixed;
+    left: -$left-part-width;
+    background: $body-bg;
+    z-index: 1;
+    transition: 0.1s ease-in;
+
+    // On visible state
+    //
+    &.show-panel {
+      left: 0;
+    }
+  }
+
+  .reverse-mode .left-part {
+    right: -$left-part-width;
+    left: auto;
+
+    // On visible state
+    //
+    &.show-panel {
+      right: 0;
+    }
+  }
+
+  .right-part {
+    width: 100%;
+    margin-left: 0;
+  }
+}

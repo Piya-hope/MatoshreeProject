@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("./partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive"
+    aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast"
+        aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("./partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 text-bg-primary">
+        <div class="with-vertical">@@include("./partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("./partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+      <aside class="left-sidebar with-horizontal">
+        @@include("./partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          <!-- -------------------------------------------------------------- -->
+          <!-- Breadcrumb -->
+          <!-- -------------------------------------------------------------- -->
+          @@include("./partials/breadcrumb.html", {"title": "Dashboard", "subtitle": 'Home'})
+          <!-- -------------------------------------------------------------- -->
+          <!-- Breadcrumb End -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="row">
+            <div class="col-lg-8 col-md-12">
+              <!-- Row -->
+              <div class="row">
+                <!-- Column -->
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body p-4">
+                      <h4 class="card-title">Product A Sales</h4>
+                      <div class="d-flex gap-3 flex-row mb-4">
+                        <div class="">
+                          <h6 class="fw-light">Montly</h6>
+                          <h6 class="mb-0">20.40%</h6>
+                        </div>
+                        <div class="">
+                          <h6 class="fw-light">Daily</h6>
+                          <h6 class="mb-0">5.40%</h6>
+                        </div>
+                      </div>
+                      <div id="product-a-sales"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body p-4">
+                      <h4 class="card-title">Product B Sales</h4>
+                      <div class="d-flex gap-3 flex-row mb-4">
+                        <div class="">
+                          <h6 class="fw-light">Montly</h6>
+                          <h6 class="mb-0">20.40%</h6>
+                        </div>
+                        <div class="">
+                          <h6 class="fw-light">Daily</h6>
+                          <h6 class="mb-0">5.40%</h6>
+                        </div>
+                      </div>
+                      <div id="product-b-sales"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body p-4">
+                      <h4 class="card-title">Product C Sales</h4>
+                      <div class="d-flex gap-3 flex-row mb-4">
+                        <div class="">
+                          <h6 class="fw-light">Montly</h6>
+                          <h6 class="mb-0">20.40%</h6>
+                        </div>
+                        <div class="">
+                          <h6 class="fw-light">Daily</h6>
+                          <h6 class="mb-0">5.40%</h6>
+                        </div>
+                      </div>
+                      <div id="product-c-sales"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+              </div>
+              <!-- Row -->
+              <!-- Row -->
+              <div class="row">
+                <!-- Column -->
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="d-flex flex-wrap">
+                            <div>
+                              <h3 class="card-title">Sales Overview</h3>
+                              <p class="card-subtitle">
+                                Ample Admin Vs Pixel Admin
+                              </p>
+                            </div>
+                            <div class="ms-auto">
+                              <ul class="d-flex align-items-center gap-3 mb-0">
+                                <li class="d-flex">
+                                  <div class="text-primary d-flex align-items-center gap-2 fs-3">
+                                    <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Ample
+                                  </div>
+                                </li>
+                                <li class="d-flex ">
+                                  <div class="text-secondary d-flex align-items-center gap-2 fs-3">
+                                    <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Pixel
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div id="sales-overview"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 class="card-title">Product Sales</h3>
+                      <div id="product-sales" class="mt-5"></div>
+                    </div>
+                    <div class="card-body text-center border-top mt-3">
+                      <ul class="list-inline mb-0 hstack justify-content-center">
+                        <li class="list-inline-item px-2 me-0">
+                          <h6 class="text-info">
+                            <i class="fa fa-circle font-10 me-2"></i>Mobile
+                          </h6>
+                        </li>
+                        <li class="list-inline-item px-2 me-0">
+                          <h6 class="text-primary">
+                            <i class="fa fa-circle font-10 me-2"></i>Desktop
+                          </h6>
+                        </li>
+                        <li class="list-inline-item px-2 me-0">
+                          <h6 class="text-success">
+                            <i class="fa fa-circle font-10 me-2"></i>Tablet
+                          </h6>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="card text-bg-primary w-100 overflow-hidden">
+                    <div class="card-body">
+                      <div class="hstack gap-6 mb-7">
+                        <div
+                          class="bg-white bg-opacity-20 round-48 rounded-circle d-flex align-items-center justify-content-center">
+                          <iconify-icon icon="solar:chart-2-linear" class="fs-7 icon-center text-white"></iconify-icon>
+                        </div>
+                        <div>
+                          <h3 class="card-title text-white">Download count</h3>
+                          <h6 class="card-subtitle text-white fw-normal opacity-70">March 2023</h6>
+                        </div>
+                      </div>
+                      <div class="row align-items-center">
+                        <div class="col-5">
+                          <h2 class="mb-0 text-white text-nowrap">35487</h2>
+                        </div>
+                        <div class="col-7">
+                          <div id="download-count"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card w-100">
+                <div class="card-body p-2">
+                  <div class="rounded bg-primary-subtle hstack justify-content-between px-9 py-7">
+                    <h4 class="mb-0">New Delhi</h4>
+                    <p class="mb-0">Sunday 15 march</p>
+                  </div>
+                  <div class="hstack gap-6 px-9 pt-4 pb-3">
+                    <div
+                      class="bg-primary-subtle round-48 rounded-circle d-flex align-items-center justify-content-center">
+                      <iconify-icon icon="solar:cloud-sun-2-linear"
+                        class="fs-7 icon-center text-primary"></iconify-icon>
+                    </div>
+                    <div class="me-lg-4">
+                      <h3 class="text-primary mb-0 fs-14">32 °C</h3>
+                      <p class="mb-0">Sunny Rainy </p>
+                    </div>
+                    <div>
+                      <h3 class="mb-0 fs-14">25 °C</h3>
+                      <p class="mb-0">Tonight</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                <!-- Column -->
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header bg-white d-flex align-items-center">
+                      <h4 class="card-title mb-0">Product Overview</h4>
+                      <div class="card-actions hstack gap-2 ms-auto">
+                        <a href="#" class="text-muted fs-5 d-flex" data-action="collapse"><i class="ti ti-minus"></i></a>
+                        <a href="#" class="text-muted fs-5 d-flex btn-minimize" data-action="expand"><i
+                            class="ti ti-arrows-maximize"></i></a>
+                        <a href="#" class="btn-close" data-action="close"></a>
+                      </div>
+                    </div>
+                    <div class="card-body collapse show">
+                      <div class="table-responsive no-wrap">
+                        <table class="table product-overview v-middle">
+                          <thead>
+                            <tr>
+                              <th class="border-0">Customer</th>
+                              <th class="border-0">Photo</th>
+                              <th class="border-0">Quantity</th>
+                              <th class="border-0">Date</th>
+                              <th class="border-0">Status</th>
+                              <th class="border-0">Actions</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Steave Jobs</td>
+                              <td>
+                                <img src="@@webRoot/assets/images/gallery/chair.jpg" alt="iMac" width="80" />
+                              </td>
+                              <td>20</td>
+                              <td>10-7-2023</td>
+                              <td>
+                                <span class="
+                                    px-2
+                                    py-1
+                                    badge
+                                    text-bg-success
+                                    font-weight-100
+                                  ">Paid</span>
+                              </td>
+                              <td>
+                                <a href="#" class="
+                                    btn btn-sm bg-primary-subtle
+                                    text-primary
+                                  ">
+                                  <i data-feather="eye" class="feather-sm"></i>
+                                </a>
+                                <a href="#" class="
+                                    btn btn-sm bg-danger-subtle
+                                    text-danger
+                                  ">
+                                  <i data-feather="trash-2" class="feather-sm"></i>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Varun Dhavan</td>
+                              <td>
+                                <img src="@@webRoot/assets/images/gallery/chair2.jpg" alt="iPhone" width="80" />
+                              </td>
+                              <td>25</td>
+                              <td>09-7-2023</td>
+                              <td>
+                                <span class="
+                                    px-2
+                                    py-1
+                                    badge
+                                    text-bg-warning
+                                    font-weight-100
+                                  ">Pending</span>
+                              </td>
+                              <td>
+                                <a href="#" class="
+                                    btn btn-sm bg-primary-subtle
+                                    text-primary
+                                  ">
+                                  <i data-feather="eye" class="feather-sm"></i>
+                                </a>
+                                <a href="#" class="
+                                    btn btn-sm bg-danger-subtle
+                                    text-danger
+                                  ">
+                                  <i data-feather="trash-2" class="feather-sm"></i>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Ritesh Desh</td>
+                              <td>
+                                <img src="@@webRoot/assets/images/gallery/chair3.jpg" alt="apple_watch" width="80" />
+                              </td>
+                              <td>12</td>
+                              <td>08-7-2023</td>
+                              <td>
+                                <span class="
+                                    px-2
+                                    py-1
+                                    badge
+                                    text-bg-success
+                                    font-weight-100
+                                  ">Paid</span>
+                              </td>
+                              <td>
+                                <a href="#" class="
+                                    btn btn-sm bg-primary-subtle
+                                    text-primary
+                                  ">
+                                  <i data-feather="eye" class="feather-sm"></i>
+                                </a>
+                                <a href="#" class="
+                                    btn btn-sm bg-danger-subtle
+                                    text-danger
+                                  ">
+                                  <i data-feather="trash-2" class="feather-sm"></i>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Hrithik</td>
+                              <td>
+                                <img src="@@webRoot/assets/images/gallery/chair4.jpg" alt="mac_mouse" width="80" />
+                              </td>
+                              <td>18</td>
+                              <td>02-7-2023</td>
+                              <td>
+                                <span class="
+                                    px-2
+                                    py-1
+                                    badge
+                                    text-bg-danger
+                                    font-weight-100
+                                  ">Failed</span>
+                              </td>
+                              <td>
+                                <a href="#" class="
+                                    btn btn-sm bg-primary-subtle
+                                    text-primary
+                                  ">
+                                  <i data-feather="eye" class="feather-sm"></i>
+                                </a>
+                                <a href="#" class="
+                                    btn btn-sm bg-danger-subtle
+                                    text-danger
+                                  ">
+                                  <i data-feather="trash-2" class="feather-sm"></i>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Column -->
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <!-- Column -->
+              <div class="card earning-widget">
+                <div class="card-header d-flex align-items-center">
+                  <h4 class="card-title mb-0">Earning</h4>
+                  <div class="card-actions hstack gap-2 ms-auto">
+                        <a href="#" class="text-muted fs-5 d-flex" data-action="collapse"><i class="ti ti-minus"></i></a>
+                        <a href="#" class="text-muted fs-5 d-flex btn-minimize" data-action="expand"><i
+                            class="ti ti-arrows-maximize"></i></a>
+                        <a href="#" class="btn-close" data-action="close"></a>
+                      </div>
+                </div>
+                <div class="
+                    card-body
+                    border-top
+                    collapse
+                    show
+                    table-responsive
+                    no-wrap
+                    p-0
+                  ">
+                  <div class="message-box contact-box position-relative">
+                    <div class="message-widget contact-widget position-relative">
+                      <!-- contact -->
+                      <a href="#" class="py-9 hstack px-7 gap-8">
+                        <div class="user-img position-relative d-inline-block">
+                          <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="user"
+                            class="rounded-circle w-100" />
+                          <span class="
+                              profile-status
+                              pull-right
+                              d-inline-block
+                              position-absolute
+                              text-bg-secondary
+                              rounded-circle
+                            "></span>
+                        </div>
+                        <div class="v-middle d-md-flex align-items-center w-100">
+                          <div class="text-truncate">
+                            <h5 class="mb-1 text-dark font-weight-medium">
+                              James Smith
+                            </h5>
+                            <span class="text-muted fs-3">Web Designer</span>
+                          </div>
+                          <div class="ms-auto">
+                            <span class="badge px-2 py-1 bg-primary-subtle text-primary">$2300</span>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- contact -->
+                      <a href="#" class="py-9 hstack px-7 gap-8">
+                        <div class="user-img position-relative d-inline-block">
+                          <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user"
+                            class="rounded-circle w-100" />
+                          <span class="
+                              profile-status
+                              pull-right
+                              d-inline-block
+                              position-absolute
+                              text-bg-light-indigo
+                              rounded-circle
+                            "></span>
+                        </div>
+                        <div class="v-middle d-md-flex align-items-center w-100">
+                          <div class="text-truncate">
+                            <h5 class="mb-1 text-dark font-weight-medium">
+                              Joseph Garciar
+                            </h5>
+                            <span class="text-muted fs-3">Web Developer</span>
+                          </div>
+                          <div class="ms-auto">
+                            <span class="badge px-2 py-1 bg-secondary-subtle text-secondary">$3300</span>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- contact -->
+                      <a href="#" class="py-9 pb-7 hstack px-7 gap-8">
+                        <div class="user-img position-relative d-inline-block">
+                          <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="user"
+                            class="rounded-circle w-100" />
+                          <span class="
+                              profile-status
+                              pull-right
+                              d-inline-block
+                              position-absolute
+                              text-bg-light-indigo
+                              rounded-circle
+                            "></span>
+                        </div>
+                        <div class="v-middle d-md-flex align-items-center w-100">
+                          <div class="text-truncate">
+                            <h5 class="mb-1 text-dark font-weight-medium">
+                              Maria Rodriguez
+                            </h5>
+                            <span class="text-muted fs-3">Web Manager</span>
+                          </div>
+                          <div class="ms-auto">
+                            <span class="badge px-2 py-1 bg-danger-subtle text-danger">$4300</span>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- contact -->
+                      <a href="#" class="py-9 pb-7 hstack px-7 gap-8">
+                        <div class="user-img position-relative d-inline-block">
+                          <img src="@@webRoot/assets/images/profile/user-5.jpg" alt="user"
+                            class="rounded-circle w-100" />
+                          <span class="
+                              profile-status
+                              pull-right
+                              d-inline-block
+                              position-absolute
+                              text-bg-light-indigo
+                              rounded-circle
+                            "></span>
+                        </div>
+                        <div class="v-middle d-md-flex align-items-center w-100">
+                          <div class="text-truncate">
+                            <h5 class="mb-1 text-dark font-weight-medium">
+                              Chris gyle
+                            </h5>
+                            <span class="text-muted fs-3">Project Manager</span>
+                          </div>
+                          <div class="ms-auto">
+                            <span class="badge px-2 py-1 bg-success-subtle text-success">$2300</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column -->
+              <div class="card overflow-hidden">
+                <div class="card-header bg-white d-flex align-items-center">
+                  <h4 class="card-title mb-0">Discount</h4>
+                  <div class="card-actions hstack gap-2 ms-auto">
+                        <a href="#" class="text-muted fs-5 d-flex" data-action="collapse"><i class="ti ti-minus"></i></a>
+                        <a href="#" class="text-muted fs-5 d-flex btn-minimize" data-action="expand"><i
+                            class="ti ti-arrows-maximize"></i></a>
+                        <a href="#" class="btn-close" data-action="close"></a>
+                      </div>
+                </div>
+                <div class="card-body collapse show text-bg-secondary">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column active">
+                        <i class="ti ti-shopping-cart fs-7 text-white"></i>
+                        <p class="text-white">25th Jan</p>
+                        <h3 class="text-white fw-light">
+                          Now Get <span class="font-bold">50% Off</span><br />
+                          on buy
+                        </h3>
+                        <div class="text-white mt-3">
+                          <i>- Ecommerce site</i>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <i class="ti ti-shopping-cart fs-7 text-white"></i>
+                        <p class="text-white">25th Jan</p>
+                        <h3 class="text-white fw-light">
+                          Now Get <span class="font-bold">50% Off</span><br />
+                          on buy
+                        </h3>
+                        <div class="text-white mt-3">
+                          <i>- Ecommerce site</i>
+                        </div>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <i class="ti ti-shopping-cart fs-7 text-white"></i>
+                        <p class="text-white">25th Jan</p>
+                        <h3 class="text-white fw-light">
+                          Now Get <span class="font-bold">50% Off</span><br />
+                          on buy
+                        </h3>
+                        <div class="text-white mt-3">
+                          <i>- Ecommerce site</i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column -->
+              <!-- Column -->
+              <div class="card">
+                <div class="card-header bg-white d-flex align-items-center">
+                  <h4 class="card-title mb-0">Monthly Wineer</h4>
+                  <div class="card-actions hstack gap-2 ms-auto">
+                        <a href="#" class="text-muted fs-5 d-flex" data-action="collapse"><i class="ti ti-minus"></i></a>
+                        <a href="#" class="text-muted fs-5 d-flex btn-minimize" data-action="expand"><i
+                            class="ti ti-arrows-maximize"></i></a>
+                        <a href="#" class="btn-close" data-action="close"></a>
+                      </div>
+                </div>
+                <div class="card-body collapse show border-top p-2">
+                  <img class="card-img-top w-100 profile-bg-height rounded overflow-hidden"
+                    src="@@webRoot/assets/images/backgrounds/profile-bg.jpg" height="111" alt="Card image cap" />
+                  <div class="card-body little-profile text-center p-9">
+                    <div class="pro-img">
+                      <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user" class="rounded-circle shadow-sm"
+                        width="112" />
+                    </div>
+                    <h3 class="mb-1 fs-14">Angela Dominic</h3>
+                    <p class="fs-3">Web Designer &amp; Developer</p>
+                    <a href="javascript:void(0)" class="
+                        waves-effect waves-dark
+                        btn btn-primary btn-md btn-rounded mb-4
+                      ">Follow</a>
+                    <div class="row gx-lg-4 text-center pt-9 justify-content-center border-top">
+                      <div class="col-4">
+                        <h3 class="mb-0 fs-14">1099</h3>
+                        <small class="text-muted fs-3">Articles</small>
+                      </div>
+                      <div class="col-4">
+                        <h3 class="mb-0 fs-14">23,469</h3>
+                        <small class="text-muted fs-3">Followers</small>
+                      </div>
+                      <div class="col-4">
+                        <h3 class="mb-0 fs-14">6035</h3>
+                        <small class="text-muted fs-3">Following</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column -->
+              <div class="card">
+                <div class="card-header bg-white d-flex align-items-center">
+                  <h4 class="card-title mb-0">New items</h4>
+                  <div class="card-actions hstack gap-2 ms-auto">
+                        <a href="#" class="text-muted fs-5 d-flex" data-action="collapse"><i class="ti ti-minus"></i></a>
+                        <a href="#" class="text-muted fs-5 d-flex btn-minimize" data-action="expand"><i
+                            class="ti ti-arrows-maximize"></i></a>
+                        <a href="#" class="btn-close" data-action="close"></a>
+                      </div>
+                </div>
+                <div class="card-body p-0 collapse show text-center">
+                  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item flex-column active">
+                        <img src="@@webRoot/assets/images/gallery/chair.jpg" alt="user" />
+                        <h4 class="mb-4">Brand New Chair</h4>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <img src="@@webRoot/assets/images/gallery/chair2.jpg" alt="user" />
+                        <h4 class="mb-4">Brand New Chair</h4>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <img src="@@webRoot/assets/images/gallery/chair3.jpg" alt="user" />
+                        <h4 class="mb-4">Brand New Chair</h4>
+                      </div>
+                      <div class="carousel-item flex-column">
+                        <img src="@@webRoot/assets/images/gallery/chair4.jpg" alt="user" />
+                        <h4 class="mb-4">Brand New Chair</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("./partials/customizer.html")
+    </div>
+    @@include("./partials/header-components/dd-searchbar.html")
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("./partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/assets/js/dashboards/dashboard6.js"></script>
+</body>
+
+</html>

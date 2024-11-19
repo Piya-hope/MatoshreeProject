@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Form Input Grid", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap 5 Default Switch
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Bootstrap 5 Default Switch
+                    </h5>
+                  </div>
+                  <div class="form-check form-switch py-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                  </div>
+                  <div class="form-check form-switch py-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                  </div>
+                  <div class="form-check form-switch py-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled />
+                    <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+                  </div>
+                  <div class="form-check form-switch py-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked
+                      disabled />
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch
+                      checkbox input</label>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap 5 Default Switch
+                                              ---------------- -->
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap Switch -  Size
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">Bootstrap Switch - Size</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Just add
+                    <mark><code>data-size="Size"</code></mark> attribute to
+                    the
+                    <mark><code>&lt;input type="checkbox"...&gt;</code></mark>. Size values:
+                    <mark><code>mini, small, normal, large</code></mark>.
+                  </p>
+                  <div class="mb-4 bt-switch d-flex flex-wrap gap-6">
+                    <input type="checkbox" checked data-size="mini" />
+                    <input type="checkbox" checked data-size="small" />
+                    <input type="checkbox" checked data-size="normal" />
+                    <input type="checkbox" checked data-size="large" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap Switch -  Size
+                                              ---------------- -->
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap switch - Disabled/Readonly
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Bootstrap switch - Disabled/Readonly
+                    </h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Just add <mark><code>disabled</code></mark> or
+                    <mark><code>readonly</code></mark> attribute to the
+                    <mark><code>&lt;input type="checkbox"...&gt;</code></mark>.
+                  </p>
+                  <div class="bt-switch d-flex flex-wrap gap-6">
+                    <input type="checkbox" checked disabled data-on-color="primary" data-off-color="info" />
+                    <input type="checkbox" readonly data-on-color="info" data-off-color="success" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap switch - Disabled/Readonly
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap Switch -  Colors
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">Bootstrap Switch - Colors</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Just add
+                    <mark><code>data-on-color="Color"</code></mark> &amp;
+                    <mark><code>data-off-color="Color"</code></mark> to the
+                    <mark><code>&lt;input type="checkbox"...&gt;</code></mark>. Color values:
+                    <mark><code>primary, info, success, warning, danger,
+                        default</code></mark>.
+                  </p>
+                  <div class="mb-4 bt-switch d-flex gap-6 flex-wrap">
+                    <input type="checkbox" checked data-on-color="primary" data-off-color="info" />
+                    <input type="checkbox" checked data-on-color="info" data-off-color="success" />
+                    <input type="checkbox" checked data-on-color="success" data-off-color="warning" />
+                    <input type="checkbox" checked data-on-color="warning" data-off-color="danger" />
+                    <input type="checkbox" checked data-on-color="danger" data-off-color="default" />
+                    <input type="checkbox" checked data-on-color="default" data-off-color="primary" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap Switch -  Colors
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap switch - Radio Buttons
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Bootstrap switch - Radio Buttons
+                    </h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Just add class <mark><code>radio-switch</code></mark> to
+                    the <mark><code>&lt;input type="radio"...&gt;</code></mark>. If you want to change the class name,
+                    you have to
+                    change jquery according to that.
+                  </p>
+                  <div class="bt-switch d-flex gap-6 flex-column">
+                    <div class="mb-1">
+                      <label class="form-label me-6" for="option1">Option 1</label>
+                      <input id="option1" type="radio" name="radiobt" value="option1" class="radio-switch" />
+                    </div>
+                    <div class="mb-1">
+                      <label class="form-label me-6" for="option2">Option 2</label>
+                      <input id="option2" type="radio" name="radiobt" value="option2" class="radio-switch" />
+                    </div>
+                    <div class="mb-1">
+                      <label class="form-label me-6" for="option3">Option 3</label>
+                      <input id="option3" type="radio" name="radiobt" value="option3" class="radio-switch" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap switch - Radio Buttons
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap switch - With Text
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Bootstrap switch - With Text
+                    </h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Just add
+                    <mark><code>data-on-text="Text"</code></mark> &amp;
+                    <mark><code>data-off-text="Text"</code></mark> to the
+                    <mark><code>&lt;input type="checkbox"...&gt;</code></mark>.
+                  </p>
+                  <div class="bt-switch d-flex flex-wrap gap-6">
+                    <input type="checkbox" checked data-on-color="success" data-off-color="info" data-on-text="Yes"
+                      data-off-text="No" />
+                    <input type="checkbox" checked data-on-color="info" data-off-color="success" data-on-text="1"
+                      data-off-text="0" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap switch - With Text
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap switch - With Long Text
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Bootstrap switch - With Long Text
+                    </h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Just add
+                    <mark><code>data-on-text="Long Text"</code></mark> &amp;
+                    <mark><code>data-off-text="Long Text"</code></mark> to the
+                    <mark><code>&lt;input type="checkbox"...&gt;</code></mark>.
+                  </p>
+                  <div class="bt-switch d-flex flex-wrap gap-6">
+                    <input type="checkbox" checked data-on-color="danger" data-off-color="warning"
+                      data-on-text="Explicit" data-off-text="Implicit" />
+                    <input type="checkbox" checked data-on-color="warning" data-off-color="danger"
+                      data-on-text="Enabled" data-off-text="Disabled" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap switch - With Long Text
+                                              ---------------- -->
+            </div>
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Bootstrap switch - With Label Text
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Bootstrap switch - With Label Text
+                    </h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Just add <mark><code>data-on-text="Text"</code></mark> or
+                    <mark><code>data-off-text="Text"</code></mark> to the
+                    <mark><code>&lt;input type="checkbox"...&gt;</code></mark>.
+                  </p>
+                  <div class="bt-switch d-flex flex-wrap gap-6">
+                    <input type="checkbox" checked data-on-color="danger" data-off-color="success"
+                      data-on-text="Radio" />
+                    <input type="checkbox" checked data-on-color="success" data-off-color="danger"
+                      data-off-text="Waves" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Bootstrap switch - With Label Text
+                                              ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="@@webRoot/assets/js/forms/bootstrap-switch.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+  <head>
+    @@include("../main/partials/head.html")
+
+    <link
+      rel="stylesheet"
+      href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="@@webRoot/assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside class="left-sidebar with-vertical">
+        @@include("./partials/sidebar.html")
+      </aside>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar position-relative">
+          <div
+            class="navbar navbar-header d-flex align-items-center justify-content-between p-3 fixed-top"
+          >
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <!-- Logo icon -->
+            <a href="@@webRoot/docs/index.html" class="text-nowrap logo-img d-xl-none d-block">
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="homepage">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2">
+                <!-- Light Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage">
+              </span>
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="fs-8 text-muted d-xl-none d-block sidebartoggler"
+                href="javascript:void(0)"
+                role="button"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div
+          class="body-wrapper"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example3"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid mt-4">
+            <div>
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <div class="d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-4 pb-2 fs-5">Bootstrap UI</h3>
+              </div>
+              <div class="card">
+                <div class="card-body border-bottom">
+                  <h4 class="card-title mb-0">Bootstrap Badges</h4>
+                </div>
+                <div class="p-8">
+                  <div class="card mb-0">
+                    <div class="p-4">
+                      <h1>
+                        Example heading
+                        <span class="badge bg-secondary">New</span>
+                      </h1>
+                      <h2>
+                        Example heading
+                        <span class="badge bg-success">New</span>
+                      </h2>
+                      <h3>
+                        Example heading <span class="badge bg-info">New</span>
+                      </h3>
+                      <h4>
+                        Example heading
+                        <span class="badge bg-primary">New</span>
+                      </h4>
+                      <h5>
+                        Example heading
+                        <span class="badge bg-danger">New</span>
+                      </h5>
+                      <h6>
+                        Example heading
+                        <span class="badge bg-warning">New</span>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 pb-8">
+                  
+                  
+                  <pre class="mt-0">                                    <code class="language-html">
+  &#x3C;h1&#x3E; Example heading &#x3C;span class=&#x22;badge bg-secondary&#x22;&#x3E;New&#x3C;/span&#x3E; &#x3C;/h1&#x3E;
+  &#x3C;h2&#x3E; Example heading &#x3C;span class=&#x22;badge bg-success&#x22;&#x3E;New&#x3C;/span&#x3E; &#x3C;/h2&#x3E;
+  &#x3C;h3&#x3E; Example heading &#x3C;span class=&#x22;badge bg-info&#x22;&#x3E;New&#x3C;/span&#x3E; &#x3C;/h3&#x3E;
+  &#x3C;h4&#x3E; Example heading &#x3C;span class=&#x22;badge bg-primary&#x22;&#x3E;New&#x3C;/span&#x3E; &#x3C;/h4&#x3E;
+  &#x3C;h5&#x3E; Example heading &#x3C;span class=&#x22;badge bg-danger&#x22;&#x3E;New&#x3C;/span&#x3E; &#x3C;/h5&#x3E;
+  &#x3C;h6&#x3E; Example heading &#x3C;span class=&#x22;badge bg-warning&#x22;&#x3E;New&#x3C;/span&#x3E; &#x3C;/h6&#x3E;
+  
+                                  </code>
+                              </pre>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body border-bottom">
+                  <h4 class="card-title mb-0">Pill badges</h4>
+                </div>
+                <div class="p-8">
+                  <div class="card mb-0">
+                    <div class="p-4 text-center">
+                      <span class="badge me-2 badge-pill bg-secondary">Default</span>
+                      <span class="badge me-2 badge-pill bg-primary">Primary</span>
+                      <span class="badge me-2 badge-pill bg-success">Success</span>
+                      <span class="badge me-2 badge-pill bg-info">Info</span>
+                      <span class="badge me-2 badge-pill bg-warning">Warning</span>
+                      <span class="badge badge-pill bg-danger">Danger</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 pb-8">
+                  
+                  
+                  <pre class="mt-0">                                    <code class="language-html">
+  &#x3C;span class=&#x22;badge me-2 badge-pill bg-secondary&#x22;&#x3E;Default&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;badge me-2 badge-pill bg-primary&#x22;&#x3E;Primary&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;badge me-2 badge-pill bg-success&#x22;&#x3E;Success&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;badge me-2 badge-pill bg-info&#x22;&#x3E;Info&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;badge me-2 badge-pill bg-warning&#x22;&#x3E;Warning&#x3C;/span&#x3E;
+  &#x3C;span class=&#x22;badge badge-pill bg-danger&#x22;&#x3E;Danger&#x3C;/span&#x3E;
+                                      </code>
+                                  </pre>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body border-bottom">
+                  <h4 class="card-title mb-0">Button Badges</h4>
+                </div>
+                <div class="p-8">
+                  <div class="card mb-0">
+                    <div class="p-4 text-center">
+                      <button type="button" class="btn btn-light-primary text-primary font-medium">
+                        Notifications <span class="badge bg-success">4</span>
+                      </button>
+                      <button type="button" class="btn btn-light-primary text-primary font-medium">
+                        Profile <span class="badge bg-danger">9</span>
+                        <span class="sr-only">unread messages</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 pb-8">
+                  
+                  
+                  <pre class="mt-0">                                    <code class="language-html">
+  &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-light-primary text-primary font-medium&#x22;&#x3E;
+    Notifications &#x3C;span class=&#x22;badge bg-success&#x22;&#x3E;4&#x3C;/span&#x3E;
+  &#x3C;/button&#x3E;
+  &#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-light-primary text-primary font-medium&#x22;&#x3E;
+    Profile &#x3C;span class=&#x22;badge bg-danger&#x22;&#x3E;9&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;sr-only&#x22;&#x3E;unread messages&#x3C;/span&#x3E;
+  &#x3C;/button&#x3E;
+  
+                                  </code>
+                              </pre>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body border-bottom">
+                  <h4 class="card-title mb-0">Collapse (Toggle)</h4>
+                </div>
+                <div class="p-8">
+                  <div class="card mb-0">
+                    <div class="p-4 text-center">
+                      <p>
+                        <a class="
+                            btn btn-light-info
+                            font-medium
+                            text-info
+                            px-4
+                            rounded-pill
+                          " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                          Link with href
+                        </a>
+                        <button class="
+                            btn btn-light-warning
+                            font-medium
+                            text-warning
+                            px-4
+                            rounded-pill
+                          " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          Button with data-bs-target
+                        </button>
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod
+                          high life accusamus terry richardson ad squid. Nihil
+                          anim keffiyeh helvetica, craft beer labore wes
+                          anderson cred nesciunt sapiente ea proident.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 pb-8">
+                  
+                  
+                  <pre class="mt-0">                                    <code class="language-html">
+  &#x3C;p&#x3E;
+    &#x3C;a class=&#x22;btn btn-light-info font-medium text-info px-4 rounded-pill&#x22; data-bs-toggle=&#x22;collapse&#x22; href=&#x22;#collapseExample&#x22; role=&#x22;button&#x22; aria-expanded=&#x22;false&#x22; aria-controls=&#x22;collapseExample&#x22;&#x3E;
+        Link with href
+    &#x3C;/a&#x3E;
+    &#x3C;button class=&#x22;btn btn-light-warning font-medium text-warning px-4 rounded-pill&#x22; type=&#x22;button&#x22; data-bs-toggle=&#x22;collapse&#x22; data-bs-target=&#x22;#collapseExample&#x22; aria-expanded=&#x22;false&#x22; aria-controls=&#x22;collapseExample&#x22;&#x3E;
+        Button with data-bs-target
+    &#x3C;/button&#x3E;
+  &#x3C;/p&#x3E;
+  &#x3C;div class=&#x22;collapse&#x22; id=&#x22;collapseExample&#x22;&#x3E;
+      &#x3C;div class=&#x22;card card-body&#x22;&#x3E;
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+                                  </code>
+                              </pre>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body border-bottom">
+                  <h4 class="card-title mb-0">Active & Disabled Pagination</h4>
+                </div>
+                <div class="p-8">
+                  <div class="card mb-0">
+                    <div class="p-4 text-center">
+                      <nav aria-label="...">
+                        <ul class="pagination">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1">Previous</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">1</a>
+                          </li>
+                          <li class="page-item active">
+                            <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 pb-8">
+                  
+                  
+                  <pre class="mt-0">                                    <code class="language-html">
+  &#x3C;nav aria-label=&#x22;...&#x22;&#x3E;
+  &#x3C;ul class=&#x22;pagination&#x22;&#x3E;
+      &#x3C;li class=&#x22;page-item disabled&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22; tabindex=&#x22;-1&#x22;&#x3E;Previous&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;1&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;page-item active&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;2 &#x3C;span class=&#x22;sr-only&#x22;&#x3E;(current)&#x3C;/span&#x3E;&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;3&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;Next&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+  &#x3C;/nav&#x3E;
+                                        </code>
+                                    </pre>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body border-bottom">
+                  <h4 class="card-title mb-0">Pagination Sizing</h4>
+                </div>
+                <div class="p-8">
+                  <div class="card mb-0">
+                    <div class="p-4">
+                      <h4>Small Pagination</h4>
+                      <!-- Small -->
+                      <nav aria-label="...">
+                        <ul class="pagination pagination-sm">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1">Previous</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                      
+                      <h4>Pagination Alignment</h4>
+                      <!-- Alignment -->
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1">Previous</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                      
+                      <h4>Large Pagination</h4>
+                      <!-- Large -->
+                      <nav aria-label="...">
+                        <ul class="pagination pagination-lg">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1">Previous</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 pb-8">
+                  
+                  
+                  <pre class="mt-0">                                  <code class="language-html" style="height: 300px;">
+  &#x3C;h4&#x3E;Small Pagination&#x3C;/h4&#x3E; &#x3C;!-- Small --&#x3E;
+  &#x3C;nav aria-label=&#x22;...&#x22;&#x3E;
+      &#x3C;ul class=&#x22;pagination pagination-sm&#x22;&#x3E;
+          &#x3C;li class=&#x22;page-item disabled&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22; tabindex=&#x22;-1&#x22;&#x3E;Previous&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;1&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;2&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;3&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;Next&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+  &#x3C;/nav&#x3E;
+  &#x3C;h4&#x3E;Pagination Alignment&#x3C;/h4&#x3E; &#x3C;!-- Alignment --&#x3E;
+  &#x3C;nav aria-label=&#x22;Page navigation example&#x22;&#x3E;
+      &#x3C;ul class=&#x22;pagination justify-content-center&#x22;&#x3E;
+          &#x3C;li class=&#x22;page-item disabled&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22; tabindex=&#x22;-1&#x22;&#x3E;Previous&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;1&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;2&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;3&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;Next&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+  &#x3C;/nav&#x3E;
+  &#x3C;h4&#x3E;Large Pagination&#x3C;/h4&#x3E; &#x3C;!-- Large --&#x3E;
+  &#x3C;nav aria-label=&#x22;...&#x22;&#x3E;
+      &#x3C;ul class=&#x22;pagination pagination-lg&#x22;&#x3E;
+          &#x3C;li class=&#x22;page-item disabled&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22; tabindex=&#x22;-1&#x22;&#x3E;Previous&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;1&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;2&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;3&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;page-item&#x22;&#x3E; &#x3C;a class=&#x22;page-link&#x22; href=&#x22;javascript:void(0)&#x22;&#x3E;Next&#x3C;/a&#x3E; &#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+  &#x3C;/nav&#x3E;
+                                    </code>
+                                  </pre>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body border-bottom">
+                  <h4 class="card-title mb-0">Image with round corner</h4>
+                </div>
+                <div class="p-8">
+                  <div class="card mb-0">
+                    <div class="p-4 text-center">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h4 class="card-title">Image Rounded</h4>
+                          <img src="../package/dist/images/big/img8.jpg" alt="image" class="img-fluid rounded mb-4">
+                        </div>
+                        <div class="col-md-4">
+                          <h4 class="card-title">Image Circle</h4>
+                          <img src="../package/dist/images/big/img8.jpg" alt="image" class="img-fluid rounded-circle mb-4">
+                        </div>
+                        <div class="col-md-4">
+                          <h4 class="card-title">Image with thumbnail</h4>
+                          <img src="../package/dist/images/big/img8.jpg" alt="image" class="img-fluid img-thumbnail">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-8 pb-8">
+                  <pre class="mt-0">                                    
+                    <code class="language-html">
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+      &lt;h4 class=&quot;card-title&quot;&gt;Image Rounded&lt;/h4&gt;
+      &lt;img src=&quot;../package/dist/images/big/img8.jpg&quot; alt=&quot;image&quot; class=&quot;img-fluid rounded mb-4&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+      &lt;h4 class=&quot;card-title&quot;&gt;Image Circle&lt;/h4&gt;
+      &lt;img src=&quot;../package/dist/images/big/img8.jpg&quot; alt=&quot;image&quot; class=&quot;img-fluid rounded-circle mb-4&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+      &lt;h4 class=&quot;card-title&quot;&gt;Image with thumbnail&lt;/h4&gt;
+      &lt;img src=&quot;../package/dist/images/big/img8.jpg&quot; alt=&quot;image&quot; class=&quot;img-fluid img-thumbnail&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+                      </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    @@include("../main/partials/scripts.html")
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <!-- End JS -->
+  </body>
+</html>

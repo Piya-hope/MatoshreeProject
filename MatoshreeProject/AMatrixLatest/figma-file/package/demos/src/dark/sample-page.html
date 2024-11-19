@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html")
+    <title>Modernize Free Partials</title>
+  </head>
+
+  <body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper">
+      <!-- Sidebar Start -->
+      @@include("partials/sidebar.html", { "page": "dashboard", })
+      <!--  Sidebar End -->
+      <!--  Main wrapper -->
+      <div class="body-wrapper">
+        <!--  Header Start -->
+        @@include("partials/header.html")
+        <!--  Header End -->
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold mb-4">Sample Page</h5>
+              <p class="mb-0">This is a sample page</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include("partials/scripts.html")
+  </body>
+</html>

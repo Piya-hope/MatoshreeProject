@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="horizontal">
+
+<head>
+  @@include("./partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <!-- Owl Carousel  -->
+  <link rel="stylesheet" href="@@webRoot/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("./partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 text-bg-primary">
+        <div class="with-vertical">@@include("./partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("./partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+      <aside class="left-sidebar with-horizontal">
+        @@include("./partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="" data-simplebar>
+          <!-- -------------------------------------------------------------- -->
+          <!-- Left Part  -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="layout-left-part fixed-left-part">
+            <!-- Mobile toggle button -->
+            <a class="
+                  btn btn-primary
+                  show-left-part
+                  d-flex align-items-center d-md-none
+                " href="javascript:void(0)">
+              <iconify-icon icon="ri:arrow-right-circle-line"></iconify-icon>
+            </a>
+            <!-- Mobile toggle button -->
+
+            <div class="scrollable position-relative" style="height: 100%" data-simplebar>
+              <div class="p-3">
+                <h5 class="">Card example</h5>
+                <img src="@@webRoot/assets/images/profile/user-1.jpg" class="img-fluid rounded" alt="users" />
+                <p class="mt-2">
+                  This is example text to build on the card title and make up the
+                  bulk of the card's content.
+                </p>
+                <button type="button" class="btn waves-effect waves-light btn-primary">
+                  Info
+                </button>
+              </div>
+              <hr />
+              <div class="p-3">
+                <h5 class="card-title">Form example</h5>
+                <form class="mt-3">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                  </div>
+                  <div class="form-check mr-sm-2 mb-3">
+                    <input type="checkbox" class="form-check-input" id="checkbox0" value="check" />
+                    <label class="form-check-label" for="checkbox0">Check Me Out !</label>
+                  </div>
+                  <button type="submit" class="btn btn-secondary">Submit</button>
+                </form>
+              </div>
+              <hr />
+              <div class="p-3">
+                <h5 class="card-title">Recent News</h5>
+                <ul class="list-unstyled mt-3">
+                  <li class="d-flex">
+                    <a href=""><img class="d-flex me-3 rounded" src="@@webRoot/assets/images/profile/user-2.jpg" width="60"
+                        alt="Generic placeholder image" /></a>
+                    <div class="media-body">
+                      <h6 class="mb-1">Here is the title you can add</h6>
+                      <span>2 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="d-flex my-4">
+                    <a href=""><img class="d-flex me-3 rounded" src="@@webRoot/assets/images/profile/user-3.jpg" width="60"
+                        alt="Generic placeholder image" /></a>
+                    <div class="media-body">
+                      <h6 class="mb-1">Here is the title you can add</h6>
+                      <span>3 hours ago</span>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <a href=""><img class="d-flex me-3 rounded" src="@@webRoot/assets/images/profile/user-4.jpg" width="60"
+                        alt="Generic placeholder image" /></a>
+                    <div class="media-body">
+                      <h6 class="mb-1">Here is the title you can add</h6>
+                      <span>4 hours ago</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- -------------------------------------------------------------- -->
+          <!-- End Left Part  -->
+          <!-- -------------------------------------------------------------- -->
+          <!-- -------------------------------------------------------------- -->
+          <!-- Right Part  Mail Compose -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="right-part overflow-auto">
+            <div class="p-4 pt-0">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    This is the sample page with sticky inner left part
+                  </h4>
+                  Here is the example that you can copy whole part of this left
+                  and right part panel, so you just need to use this page for your
+                  further developement
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  this left and right part panel, so you just need to use.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- -------------------------------------------------------------- -->
+          <!-- footer -->
+          <!-- -------------------------------------------------------------- -->
+
+          <!-- -------------------------------------------------------------- -->
+          <!-- End footer -->
+          <!-- -------------------------------------------------------------- -->
+        </div>
+
+      </div>
+      @@include("./partials/customizer.html")
+    </div>
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/script-auth.html")
+</body>
+
+</html>

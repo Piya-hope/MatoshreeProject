@@ -1,0 +1,11 @@
+<div>
+	<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">ID</th><th scope="col">Exp_Name</th><th scope="col">Exp_Amount</th><th scope="col">Exp_Category</th><th scope="col">Exp_SubCategory</th><th scope="col">Exp_Date</th><th scope="col">Exp_Type</th><th scope="col">Exp_Payment</th><th scope="col">BillNo</th><th scope="col">CreatedBy</th><th scope="col">Other</th>
+		</tr><tr>
+			<td>1</td><td>Office Dasara Party Function 2024</td><td>15400</td><td>office expenses</td><td>office</td><td>17/01/2024 00:00:00</td><td>Regular</td><td>Bank</td><td>INV-009</td><td>PriyankaD</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>3</td><td>Office Rent Feb</td><td>50000</td><td>office expenses</td><td>office</td><td>17/01/2024 00:00:00</td><td>Regular</td><td>Cash</td><td>3444420</td><td>PriyankaD</td><td>&nbsp;</td>
+		</tr>
+	</table>
+</div>

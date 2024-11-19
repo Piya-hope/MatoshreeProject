@@ -1,0 +1,128 @@
+.timeline-widget {
+    .timeline-item {
+        min-height: 70px;
+
+        .timeline-time {
+            padding: 6px 16px 6px 0;
+            min-width: 90px;
+        }
+
+        .timeline-badge-wrap {
+            .timeline-badge {
+                width: 12px;
+                height: 12px;
+                border-radius: 50px;
+                background-color: transparent;
+            }
+
+            .timeline-badge-border {
+                width: 1px;
+                height: 100%;
+                background-color: var(--bs-border-color);
+            }
+        }
+
+        .timeline-desc {
+            padding: 6px 16px;
+        }
+
+        .timeline-badge.badge-primary {
+            border: 2px solid var(--bs-primary);
+        }
+    }
+}
+
+/*******************/
+/*Comment widgets*/
+/*******************/
+
+.comment-widgets {
+    .comment-row {
+        background: transparent;
+
+        &:hover,
+        &.active {
+            background: rgba(0, 0, 0, 0.025);
+        }
+    }
+    &.no-line{
+        &:before{
+            display: none;
+        }
+    }
+}
+
+.comment-text {
+
+    &:hover .comment-footer,
+    &.active .comment-footer {
+        .action-icons {
+            visibility: visible;
+        }
+    }
+}
+
+.comment-footer {
+    .action-icons {
+        visibility: hidden;
+
+        a {
+            color: var(--bs-secondary-color);
+
+            &:hover,
+            &.active {
+                color: var(--bs-info);
+            }
+        }
+    }
+}
+
+
+/*******************/
+/*table-stylish widgets*/
+/*******************/
+.stylish-table {
+    tbody tr {
+        border-left: 4px solid transparent;
+
+        &:hover,
+        &.active {
+            border-left: 4px solid var(--bs-info);
+        }
+    }
+
+    tbody td {
+        small {
+            line-height: 12px;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .w-xs-100 {
+      width: 100% !important;
+    }
+  }
+
+
+/*******************/
+/*To do widgets*/
+/*******************/
+
+.todo-list {
+    li {
+        .assignedto {
+            li {
+                margin-right: 2px;
+
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+
+.comment-footer.d-md-flex{
+    display: flex !important;
+}

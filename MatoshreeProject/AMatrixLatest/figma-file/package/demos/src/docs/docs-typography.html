@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+  <head>
+    @@include("../main/partials/head.html")
+
+    <link
+      rel="stylesheet"
+      href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="@@webRoot/assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside class="left-sidebar with-vertical">
+        @@include("./partials/sidebar.html")
+      </aside>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar position-relative">
+          <div
+            class="navbar navbar-header d-flex align-items-center justify-content-between p-3 fixed-top"
+          >
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <!-- Logo icon -->
+            <a href="@@webRoot/docs/index.html" class="text-nowrap logo-img d-xl-none d-block">
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="homepage">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2">
+                <!-- Light Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage">
+              </span>
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="fs-8 text-muted d-xl-none d-block sidebartoggler"
+                href="javascript:void(0)"
+                role="button"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div
+          class="body-wrapper"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example3"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid mt-4">
+            <div>
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <h4 class="mb-4 pb-2 fs-5">Typography</h3>
+                <div class="mt-4 card">
+                    <div class="card-body">
+                        <h4 class="card-title">Google fonts</h4>
+                        <h5 class="card-subtitle mt-2 text-muted">1) Change the google fonts link as per your choice : <span class="text-dark fw-bold">scss/style.css</span></h5>
+                        <div class="py-3 bg-white">
+                          <div class="bg-light-primary p-3 rounded mb-4">
+                            <h5>Note:</h5>
+                            To run a gulp, go to the package folder where package.json exist. open cmd there and run gulp as shown below. If you don't know how to install gulp then refer this link
+                            <a href="./docs-start.html" class="text-dark fw-bold">Gulp</a>
+                          </div>
+<pre>
+<code class="language-js py-0">
+gulp
+</code>
+</pre>
+                        </div>
+<pre>
+<code class="language-html py-0">
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+</code>
+</pre>
+                        <h5 class="card-subtitle mt-4 text-muted">2) Change Font family : <span class="text-dark fw-bold">scss/variables.scss</span></h5>
+<pre>
+<code class="language-js py-0">
+$font-family-sans-serif: "Poppins", sans-serif !default;
+</code>
+</pre>
+                        <div class="alert alert-success fw-normal mt-3">
+                          Now, save your variable.scss and check in browser
+                        </div>
+                        <div class="alert alert-info fw-normal mb-0">
+                          If you want to change fonts of the theme then
+                          <span class="text-dark fw-bold">put the URL</span>
+                          of your fonts and
+                          <span class="text-dark fw-bold">change font family</span>
+                          in the
+                          <span class="text-dark fw-bold">variable.scss</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    @@include("../main/partials/scripts.html")
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <!-- End JS -->
+  </body>
+</html>

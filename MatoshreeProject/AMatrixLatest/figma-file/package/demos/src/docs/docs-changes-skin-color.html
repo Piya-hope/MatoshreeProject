@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+  <head>
+    @@include("../main/partials/head.html")
+
+    <link
+      rel="stylesheet"
+      href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="@@webRoot/assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside class="left-sidebar with-vertical">
+        @@include("./partials/sidebar.html")
+      </aside>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar position-relative">
+          <div
+            class="navbar navbar-header d-flex align-items-center justify-content-between p-3 fixed-top"
+          >
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <!-- Logo icon -->
+            <a href="@@webRoot/docs/index.html" class="text-nowrap logo-img d-xl-none d-block">
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="homepage">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2">
+                <!-- Light Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage">
+              </span>
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="fs-8 text-muted d-xl-none d-block sidebartoggler"
+                href="javascript:void(0)"
+                role="button"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div
+          class="body-wrapper"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example3"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid mt-4">
+            <div>
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <div class="d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-4 pb-2 fs-5">Change Global Skin Color</h3>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">
+                        How to Change Global Skin Colors ?
+                      </h4>
+                      <div class="pb-2">                      
+                        <div class="bg-light-primary p-3 rounded mb-4">
+                          <h5>Note:</h5>
+                          To run a gulp, go to the package folder where package.json exist. open cmd there and run gulp as shown below. If you don't know how to install gulp then refer this
+                          <a href="./docs-start.html" class="text-dark fw-bold">Gulp</a>
+                        </div>
+                        <pre>
+                          <code class="language-js">
+  gulp
+                          </code>
+                        </pre>
+                      </div>
+                      <pre>									
+                        <code class="language-css">
+  // -------------------------------------------------------------------------------------
+  // File: package/demos/src/assets/scss/variables/_variables.scss
+  // -------------------------------------------------------------------------------------
+                          
+  $primary: $blue !default; // Change here
+  $secondary: #43CED7 !default; // Change here
+  
+                          </code>
+                        </pre>
+                        <pre>									
+                          <code class="language-css">
+  // ---------------------------------------------------------------------------------------
+  // For the Blue Theme - Primary-Secondary Color
+  // ---------------------------------------------------------------------------------------
+  
+  // ---------------------------------------------------------------------------------------
+  // File: package/demos/src/assets/scss/variables/_variables-blue.scss
+  // ---------------------------------------------------------------------------------------
+  $primary: #1B84FF; // Change here
+  $light-primary: rgba($primary, 0.1);
+  $secondary: #43CED7; // Change here
+  $light-secondary: rgba($secondary, 0.1);
+  
+  &:root {
+    --bs-primary: #{$primary};
+    --bs-primary-rgb: 27, 132, 255; // Change here
+    --bs-light-primary: #{$light-primary};
+    --bs-primary-bg-subtle: #{$light-primary};
+  
+    --bs-secondary: #{$secondary};
+    --bs-secondary-rgb: 67, 206, 215; // Change here
+    --bs-light-secondary: #{$light-secondary};
+    --bs-secondary-bg-subtle: #{$light-secondary};
+  
+    .btn-primary {
+      --bs-btn-bg: #{$primary};
+      --bs-btn-border-color: #{$primary};
+      --bs-btn-hover-bg: #1874dd;
+      --bs-btn-hover-border-color: #1874dd;
+    }
+  
+    .btn-secondary {
+      --bs-btn-bg: #{$secondary};
+      --bs-btn-border-color: #{$secondary};
+      --bs-btn-hover-bg: #35a4ac;
+      --bs-btn-hover-border-color: #35a4ac;
+    }
+  }
+  
+                      </code>
+                    </pre>
+  
+                    <pre>									
+                      <code class="language-css">
+  // ---------------------------------------------------------------------------------------
+  // For the Aqua Theme - Primary-Secondary Color
+  // ---------------------------------------------------------------------------------------
+  
+  // ---------------------------------------------------------------------------------------
+  // File: package/demos/src/assets/scss/variables/_variables-aqua.scss
+  // ---------------------------------------------------------------------------------------
+  $primary: #0074ba;
+  $light-primary: rgba($primary, 0.1);
+  $secondary: #47d7bc;
+  $light-secondary: rgba($secondary, 0.1);
+  
+  &:root {
+    --bs-primary: #{$primary};
+    --bs-primary-rgb: 0, 116, 186;
+    --bs-light-primary: #{$light-primary};
+    --bs-primary-bg-subtle: #{$light-primary};
+    
+    --bs-secondary: #{$secondary};
+    --bs-secondary-rgb: 71, 215, 188;
+    --bs-light-secondary: #{$light-secondary};
+    --bs-secondary-bg-subtle: #{$light-secondary};
+  
+    .btn-primary {
+      --bs-btn-bg: #{$primary};
+      --bs-btn-border-color: #{$primary};
+      --bs-btn-hover-bg: #00639e;
+      --bs-btn-hover-border-color: #00639e;
+    }
+  
+    .btn-secondary {
+      --bs-btn-bg: #{$secondary};
+      --bs-btn-border-color: #{$secondary};
+      --bs-btn-hover-bg: #3cb7a0;
+      --bs-btn-hover-border-color: #3cb7a0;
+    }
+  }
+  
+                    </code>
+                  </pre>
+  
+                  <pre>									
+                    <code class="language-css">
+  // ---------------------------------------------------------------------------------------
+  // For the Cyan Theme - Primary-Secondary Color
+  // ---------------------------------------------------------------------------------------
+  
+  // ---------------------------------------------------------------------------------------
+  // File: package/demos/src/assets/scss/variables/_variables-cyan.scss
+  // ---------------------------------------------------------------------------------------
+  $primary: #01c0c8;
+  $light-primary: rgba($primary, 0.1);
+  $secondary: #fb9678;
+  $light-secondary: rgba($secondary, 0.1);
+  
+  &:root {
+    --bs-primary: #{$primary};
+    --bs-primary-rgb: 1, 192, 200;
+    --bs-light-primary: #{$light-primary};
+    --bs-primary-bg-subtle: #{$light-primary};
+    
+    --bs-secondary: #{$secondary};
+    --bs-secondary-rgb: 251, 150, 120;
+    --bs-light-secondary: #{$light-secondary};
+    --bs-secondary-bg-subtle: #{$light-secondary};
+  
+    .btn-primary {
+      --bs-btn-bg: #{$primary};
+      --bs-btn-border-color: #{$primary};
+      --bs-btn-hover-bg: #01a3aa;
+      --bs-btn-hover-border-color: #01a3aa;
+    }
+  
+    .btn-secondary {
+        --bs-btn-bg: #{$secondary};
+        --bs-btn-border-color: #{$secondary};
+        --bs-btn-hover-bg: #d58066;
+        --bs-btn-hover-border-color: #d58066;
+      }
+  }
+  
+                  </code>
+                </pre>
+  
+                <pre>									
+                  <code class="language-css">
+  // ---------------------------------------------------------------------------------------
+  // For the Green Theme - Primary-Secondary Color
+  // ---------------------------------------------------------------------------------------
+  
+  // ---------------------------------------------------------------------------------------
+  // File: package/demos/src/assets/scss/variables/_variables-green.scss
+  // ---------------------------------------------------------------------------------------
+  $primary: #0a7ea4;
+    $light-primary: rgba($primary, 0.1);
+    $secondary: #ccda4e;
+    $light-secondary: rgba($secondary, 0.1);
+  
+    &:root {
+      --bs-primary: #{$primary};
+      --bs-primary-rgb: 10, 126, 164;
+      --bs-light-primary: #{$light-primary};
+      --bs-primary-bg-subtle: #{$light-primary};
+      
+      --bs-secondary: #{$secondary};
+      --bs-secondary-rgb: 204, 218, 78;
+      --bs-light-secondary: #{$light-secondary};
+      --bs-secondary-bg-subtle: #{$light-secondary};
+  
+      .btn-primary {
+        --bs-btn-bg: #{$primary};
+        --bs-btn-border-color: #{$primary};
+        --bs-btn-hover-bg: #096b8b;
+        --bs-btn-hover-border-color: #096b8b;
+      }
+  
+      .btn-secondary {
+        --bs-btn-bg: #{$secondary};
+        --bs-btn-border-color: #{$secondary};
+        --bs-btn-hover-bg: #d4e069;
+        --bs-btn-hover-border-color: #d4e069;
+      }
+    }
+  
+                </code>
+              </pre>
+  
+              <pre>									
+                <code class="language-css">
+  // ---------------------------------------------------------------------------------------
+  // For the Orange Theme - Primary-Secondary Color
+  // ---------------------------------------------------------------------------------------
+  
+  // ---------------------------------------------------------------------------------------
+  // File: package/demos/src/assets/scss/variables/_variables-orange.scss
+  // ---------------------------------------------------------------------------------------
+  $primary: #fa896b;
+  $light-primary: rgba($primary, 0.1);
+  $secondary: #0074ba;
+  $light-secondary: rgba($secondary, 0.1);
+  
+  &:root {
+    --bs-primary: #{$primary};
+    --bs-primary-rgb: 250, 137, 107;
+    --bs-light-primary: #{$light-primary};
+    --bs-primary-bg-subtle: #{$light-primary};
+  
+    --bs-secondary: #{$secondary};
+    --bs-secondary-rgb: 0, 116, 186;
+    --bs-light-secondary: #{$light-secondary};
+    --bs-secondary-bg-subtle: #{$light-secondary};
+  
+    .btn-primary {
+      --bs-btn-bg: #{$primary};
+      --bs-btn-border-color: #{$primary};
+      --bs-btn-hover-bg: #d5745b;
+      --bs-btn-hover-border-color: #d5745b;
+    }
+  
+    .btn-secondary {
+      --bs-btn-bg: #{$secondary};
+      --bs-btn-border-color: #{$secondary};
+      --bs-btn-hover-bg: #00639e;
+      --bs-btn-hover-border-color: #00639e;
+    }
+  }
+  
+              </code>
+            </pre>
+  
+            <pre>									
+              <code class="language-css">
+  // ---------------------------------------------------------------------------------------
+  // For the Purple Theme - Primary-Secondary Color
+  // ---------------------------------------------------------------------------------------
+  
+  // ---------------------------------------------------------------------------------------
+  // File: package/demos/src/assets/scss/variables/_variables-purple.scss
+  // ---------------------------------------------------------------------------------------
+  $primary: #763ebd;
+    $light-primary: rgba($primary, 0.1);
+    $secondary: #95cfd5;
+    $light-secondary: rgba($secondary, 0.1);
+  
+    &:root {
+      --bs-primary: #{$primary};
+      --bs-primary-rgb: 118, 62, 189;
+      --bs-light-primary: #{$light-primary};
+      --bs-primary-bg-subtle: #{$light-primary};
+  
+      --bs-secondary: #{$secondary};
+      --bs-secondary-rgb: 149, 207, 213;
+      --bs-light-secondary: #{$light-secondary};
+      --bs-secondary-bg-subtle: #{$light-secondary};
+  
+      .btn-primary {
+        --bs-btn-bg: #{$primary};
+        --bs-btn-border-color: #{$primary};
+        --bs-btn-hover-bg: #6435a1;
+        --bs-btn-hover-border-color: #6435a1;
+      }
+  
+      .btn-secondary {
+        --bs-btn-bg: #{$secondary};
+        --bs-btn-border-color: #{$secondary};
+        --bs-btn-hover-bg: #7fb0b5;
+        --bs-btn-hover-border-color: #7fb0b5;
+      }
+    }
+  
+            </code>
+          </pre>
+                      <div class="alert alert-success fw-normal mt-4">
+                        Now, save files and check in browser
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    @@include("../main/partials/scripts.html")
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <!-- End JS -->
+  </body>
+</html>

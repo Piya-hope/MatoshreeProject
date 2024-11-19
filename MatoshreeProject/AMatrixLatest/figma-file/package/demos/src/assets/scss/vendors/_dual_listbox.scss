@@ -1,0 +1,28 @@
+.bootstrap-duallistbox-container.moveonselect .moveall,
+.bootstrap-duallistbox-container.moveonselect .removeall,
+.bootstrap-duallistbox-container .btn-group .btn {
+    border-radius: var(--bs-border-radius) !important;
+    margin-bottom: 10px;
+
+    &:hover {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+    }
+}
+
+.bootstrap-duallistbox-container .buttons {
+    gap: 12px;
+}
+
+.bootstrap-duallistbox-container .filter {
+    margin: 5px 0 5px 0;
+}
+
+.bootstrap-duallistbox-container .clear1, .bootstrap-duallistbox-container .clear2 {
+    font-size: 13px;
+    margin-bottom: 5px;
+    &:hover {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+    }
+}

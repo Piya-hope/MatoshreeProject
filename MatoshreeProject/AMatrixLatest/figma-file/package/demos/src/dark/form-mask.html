@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Mask", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-sm-12 col-lg-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Input masks</h4>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label class="form-label">Date Mask
+                      <small class="text-muted">dd/mm/yyyy</small></label>
+                    <input type="text" class="form-control date-inputmask" id="date-mask" placeholder="Enter Date" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Phone
+                      <small class="text-muted">(999) 999-9999</small></label>
+                    <input type="text" class="form-control phone-inputmask" id="phone-mask"
+                      placeholder="Enter Phone Number" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">International Number
+                      <small class="text-muted">+19 999 999 999</small></label>
+                    <input type="text" class="form-control international-inputmask" id="international-mask"
+                      placeholder="International Phone Number" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Phone / xEx
+                      <small class="text-muted">(999) 999-9999 / x999999</small></label>
+                    <input type="text" class="form-control xphone-inputmask" id="xphone-mask"
+                      placeholder="Enter Phone Number" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Purchase Order
+                      <small class="text-muted">aaaa 9999-****</small></label>
+                    <input type="text" class="form-control purchase-inputmask" id="purchase-mask"
+                      placeholder="Enter Purchase Order" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Credit Card Number
+                      <small class="text-muted">9999 9999 9999 9999</small></label>
+                    <input type="text" class="form-control cc-inputmask" id="cc-mask"
+                      placeholder="Enter Credit Card Number" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">SSN <small
+                        class="text-muted">999-99-9999</small></label>
+                    <input type="text" class="form-control ssn-inputmask" id="ssn-mask"
+                      placeholder="Enter Social Security Number" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">ISBN
+                      <small class="text-muted">999-99-999-9999-9</small></label>
+                    <input type="text" class="form-control isbn-inputmask" id="isbn-mask" placeholder="Enter ISBN" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Percentage <small class="text-muted">99%</small></label>
+                    <input type="text" class="form-control percentage-inputmask" id="percentage-mask"
+                      placeholder="Enter Value in %" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Currency<small class="text-muted">$9999</small>
+                    </label>
+                    <input type="text" class="form-control currency-inputmask" id="currency-mask"
+                      placeholder="Enter Currency in USD" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Decimal using RadixPoint<small
+                        class="text-muted">123.654658</small>
+                    </label>
+                    <input type="text" class="form-control decimal-inputmask" id="decimal-mask"
+                      placeholder="Enter Decimal Value" style="text-align: right" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Email<small class="text-muted">xxx@xxx.xxx</small>
+                    </label>
+                    <input type="text" class="form-control email-inputmask" id="email-mask"
+                      placeholder="Enter Email Address" />
+                  </div>
+                  <div class="mb-3">
+                    <label>Optional masks<small class="text-muted">(99) 9999[9]-9999</small>
+                    </label>
+                    <input type="text" class="form-control optional-inputmask" id="optional-mask"
+                      placeholder="With Optional Mask" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">RTL attribute<small
+                        class="text-muted">dd/mm/yyyy</small>
+                    </label>
+                    <input type="text" class="form-control date-inputmask" id="date-mask-rtl" placeholder="Enter Date"
+                      style="text-align: right" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">3 Number and 3 Lettter<small
+                        class="text-muted">123-ABC</small></label>
+                    <input class="form-control" id="num-letter" data-inputmask-clearmaskonlostfocus="false"
+                      placeholder="Enter First 3 number and after that 3 letter" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Date and Time in Once<small
+                        class="text-muted">yyyy-mm-dd'T'HH:MM:ss</small></label>
+                    <input class="form-control" id="date-time-once" data-inputmask-clearmaskonlostfocus="false"
+                      data-inputmask="'alias': 'datetime'" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/inputmask/dist/jquery.inputmask.min.js"></script>
+  <script src="@@webRoot/assets/js/forms/mask.init.js"></script>
+</body>
+
+</html>

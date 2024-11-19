@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Breadcrumb", "subtitle": 'Home'})
+          <div class="row">
+            <!-- ----------------------------------------- -->
+            <!-- 1. Default Breadcrumb -->
+            <!-- ----------------------------------------- -->
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                    start Default Breadcrumb
+                                                ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Default Breadcrumb</h5>
+                  </div>
+                  <nav class="py-2" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Home
+                      </li>
+                    </ol>
+                  </nav>
+
+                  <nav class="py-2" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Library
+                      </li>
+                    </ol>
+                  </nav>
+
+                  <nav class="py-2" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                    end Default Breadcrumb
+                                                ---------------- -->
+            </div>
+            <!-- ----------------------------------------- -->
+            <!-- 2. Custom Dividers -->
+            <!-- ----------------------------------------- -->
+            <div class="col-lg-6">
+              <!-- ---------------------
+                                                    start Custom Dividers
+                                                ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Custom Dividers</h5>
+                  </div>
+                  <nav class="py-2" style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Library
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav class="py-2" style="--bs-breadcrumb-divider: ':'" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Library
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav class="py-2" style="--bs-breadcrumb-divider: '-'" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Library
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                    end Custom Dividers
+                                                ---------------- -->
+            </div>
+            <!-- ----------------------------------------- -->
+            <!-- 3. Colored Breadcrumb -->
+            <!-- ----------------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                    start Colored Breadcrumb
+                                                ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Colored Breadcrumb</h5>
+                  </div>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb bg-info-subtle px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-info d-flex align-items-center"><i class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-info">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-info font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb bg-primary-subtle px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-primary d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-primary">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-primary font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb bg-warning-subtle px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-warning d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-warning">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-warning font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb bg-danger-subtle px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-danger d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-danger">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-danger font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb bg-success-subtle px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-success d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-success">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-success font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                    end Colored Breadcrumb
+                                                ---------------- -->
+            </div>
+            <!-- ----------------------------------------- -->
+            <!-- 4. Colored Border Breadcrumb -->
+            <!-- ----------------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                    start Colored Border Breadcrumb
+                                                ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-4">
+                    <h5 class="mb-0">Colored Border Breadcrumb</h5>
+                  </div>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb border border-info px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-info d-flex align-items-center"><i class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-info">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-info font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb border border-primary px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-primary d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-primary">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-primary font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb border border-warning px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-warning d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-warning">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-warning font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb border border-danger px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-danger d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-danger">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-danger font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                  <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb border border-success px-3 py-2 rounded">
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-success d-flex align-items-center"><i
+                            class="ti ti-home fs-4 mt-1"></i></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#" class="text-success">Library</a>
+                      </li>
+                      <li class="breadcrumb-item active text-success font-medium" aria-current="page">
+                        Data
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                    end Colored Border Breadcrumb
+                                                ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+</body>
+
+</html>

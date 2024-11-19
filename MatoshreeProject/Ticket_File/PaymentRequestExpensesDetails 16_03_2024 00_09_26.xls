@@ -1,0 +1,13 @@
+<div>
+	<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Exp_id</th><th scope="col">Exp_Name</th><th scope="col">Exp_Amount</th><th scope="col">Exp_Category</th><th scope="col">Exp_SubCategory</th><th scope="col">Exp_Date</th><th scope="col">Exp_Reference</th><th scope="col">Exp_Payment</th><th scope="col">BillNo</th><th scope="col">Other</th>
+		</tr><tr>
+			<td>1</td><td>Request 90000</td><td>90000</td><td>Payment Request</td><td>Payment Request</td><td>18/01/2024 00:00:00</td><td>&nbsp;</td><td>Cash</td><td>56159218</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>2</td><td>exp non96</td><td>56100</td><td>office expenses</td><td>office</td><td>18/01/2024 00:00:00</td><td>&nbsp;</td><td>Online</td><td>561512218</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>3</td><td>taskar 566e</td><td>10000</td><td>Regular Expenses</td><td>Tea And Snacks</td><td>18/01/2024 00:00:00</td><td>&nbsp;</td><td>Cash</td><td>IML56159918</td><td>&nbsp;</td>
+		</tr>
+	</table>
+</div>

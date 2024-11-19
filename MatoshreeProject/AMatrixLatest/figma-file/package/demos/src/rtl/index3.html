@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("./partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/jvectormap/jquery-jvectormap.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("./partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("./partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("./partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+      <aside class="left-sidebar with-horizontal">
+        @@include("./partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          <!-- -------------------------------------------------------------- -->
+          <!-- Breadcrumb -->
+          <!-- -------------------------------------------------------------- -->
+          @@include("./partials/breadcrumb.html", {"title": "Dashboard", "subtitle": 'Home'})
+          <!-- -------------------------------------------------------------- -->
+          <!-- Breadcrumb End -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="card">
+                    <div class="card-body p-9">
+                      <p class="card-subtitle">Online Revenue</p>
+                      <h3 class="card-title mb-1 fs-6">$2376</h3>
+                      <div id="online-revenue"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card text-bg-secondary">
+                    <div class="card-body my-2 text-center">
+                      <h6 class="text-white">Ad. Expense</h6>
+                      <h2 class="mb-0 text-white fs-10">12.5m</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card upgrade-plan">
+                <div class="card-body position-relative z-1">
+                  <p class="text-white">Grab the top deal.</p>
+                  <h3 class="text-white fs-15 fw-semibold">Upgrade Plan</h3>
+                  <div class="hstack gap-9 my-9 pb-2">
+                    <div class="hstack gap-2">
+                      <div class="round-36 bg-white bg-opacity-20 rounded-circle hstack justify-content-center">
+                        <i class="ti ti-user fs-5 text-white"></i>
+                      </div>
+                      <div>
+                        <p class="mb-0 fs-2 text-white text-opacity-60">Team</p>
+                        <h6 class="mb-0 fs-2 text-white fw-semibold">Up to 240</h6>
+                      </div>
+                    </div>
+                    <div class="hstack gap-2">
+                      <div class="round-36 bg-white bg-opacity-20 rounded-circle hstack justify-content-center">
+                        <i class="ti ti-circles-relation fs-5 text-white"></i>
+                      </div>
+                      <div>
+                        <p class="mb-0 fs-2 text-white text-opacity-60">Progress</p>
+                        <h6 class="mb-0 fs-2 text-white fw-semibold">Almost 85%</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-primary bg-white bg-opacity-20 border-0">Upgrade Plan</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card material-pro-bg shadow-none">
+                <div class="card-body p-4">
+                  <div class="hstack gap-6">
+                    <button type="button" class="btn p-0 round-60 bg-white rounded-circle hstack justify-content-center" data-bs-toggle="modal" data-bs-target="#materialpro">
+                      <iconify-icon icon="solar:play-bold" class="fs-6 text-dark"></iconify-icon>
+                    </button>
+                    <div class="modal fade" id="materialpro" tabindex="-1" aria-labelledby="materialproLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content overflow-hidden">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body p-0">
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/VqMd-khMzy4?si=5ScByqdd-U86YOx1" 
+                              title="YouTube video player" frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen >
+                            </iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-1 fw-semibold">Material Pro</h5>
+                      <p class="mb-0 fs-3">The real story</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card">
+                <div class="card-body p-9">
+                  <h3 class="card-title mb-9">Highlights</h3>
+                  <div class="hstack justify-content-between gap-6 py-6 border-bottom">
+                    <h6 class="mb-0">Daily Sales</h6>
+                    <div class="hstack gap-6">
+                      <iconify-icon icon="solar:arrow-right-up-linear" class="fs-6 text-secondary"></iconify-icon>
+                      <h6 class="mb-0">Daily Sales</h6>
+                    </div>
+                  </div>
+                  <div class="hstack justify-content-between gap-6 py-6 border-bottom">
+                    <h6 class="mb-0">Avg. Clients</h6>
+                    <div class="hstack gap-6">
+                      <iconify-icon icon="solar:arrow-right-up-linear" class="fs-6 text-danger"></iconify-icon>
+                      <h6 class="mb-0">400</h6>
+                    </div>
+                  </div>
+                  <div class="hstack justify-content-between gap-6 py-6 border-bottom">
+                    <h6 class="mb-0">Pending Tasks</h6>
+                    <div class="hstack gap-6">
+                      <iconify-icon icon="solar:arrow-left-down-linear" class="fs-6 text-secondary"></iconify-icon>
+                      <h6 class="mb-0">4.3 <span class="text-body">/37</span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card text-bg-purple">
+                <div class="card-body p-9">
+                  <h3 class="card-title mb-2 fs-6 text-white">Design Meetings</h3>
+                  <p class="card-subtitle text-white pb-2">2 Hours Left</p>
+                  <div class="hstack justify-content-between mt-5">
+                    <ul class="hstack mb-0">
+                      <li class="">
+                        <a href="javascript:void(0)" class="">
+                          <img src="@@webRoot/assets/images/profile/user-2.jpg"
+                            class="rounded-circle border border-2 border-purple" width="40" height="40" alt="">
+                        </a>
+                      </li>
+                      <li class="ms-n2">
+                        <a href="javascript:void(0)" class="">
+                          <img src="@@webRoot/assets/images/profile/user-9.jpg"
+                            class="rounded-circle border border-2 border-purple" width="40" height="40" alt="">
+                        </a>
+                      </li>
+                      <li class="ms-n2">
+                        <a href="javascript:void(0)"
+                          class="text-bg-dark fs-2 rounded-circle border border-2 border-purple d-flex align-items-center justify-content-center round-40">
+                          +54
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="hstack justify-content-center rounded-circle text-bg-warning round-40">
+                      <iconify-icon icon="solar:arrow-right-up-linear" class="fs-6 text-white"></iconify-icon>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Column -->
+            <div class="col-lg-8">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center flex-wrap mb-9">
+                    <div>
+                      <h3 class="card-title">Newsletter Campaign</h3>
+                      <div class="card-subtitle">
+                        Overview of Newsletter Campaign
+                      </div>
+                    </div>
+                    <div class="ms-auto align-self-center">
+                      <ul class="d-flex align-items-center gap-3 mb-0">
+                        <li class="d-flex">
+                          <div class="text-primary d-flex align-items-center gap-2 fs-3">
+                            <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Open Rate
+                          </div>
+                        </li>
+                        <li class="d-flex ">
+                          <div class="text-secondary d-flex align-items-center gap-2 fs-3">
+                            <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Recurring
+                            Payments
+                          </div>
+                        </li>
+                      </ul>
+
+                    </div>
+                  </div>
+                  <div id="newsletter-campaign"></div>
+                  <div class="row text-center">
+                    <div class="col-lg-4 col-md-4 mt-4">
+                      <h2 class="mb-0">5098</h2>
+                      <small class="fs-3 text-muted">Total Sent</small>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mt-4">
+                      <h2 class="mb-0">4156</h2>
+                      <small class="fs-3 text-muted">Mail Open Rate</small>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mt-4">
+                      <h2 class="mb-0">1369</h2>
+                      <small class="fs-3 text-muted">Click Rate</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body pb-0">
+                  <h4 class="card-title">My Contacts</h4>
+                  <p class="card-subtitle mb-0 op-5">
+                    Checkout my contacts here
+                  </p>
+                </div>
+                <div class="message-box contact-box position-relative pb-4">
+                  <div class="message-widget contact-widget position-relative">
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-secondary
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            James Smith
+                          </h5>
+                          <span class="text-muted fs-3">you were in video call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-light-indigo
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            Joseph Garciar
+                          </h5>
+                          <span class="text-muted fs-3">you were in video call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-light-indigo
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            Maria Rodriguez
+                          </h5>
+                          <span class="text-muted fs-3">you missed john call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 pb-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-light-indigo
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            John Doe
+                          </h5>
+                          <span class="text-muted fs-3">you missed john call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card w-100">
+                <div class="card-body">
+                  <h4 class="card-title">Current Visitors</h4>
+                  <p class="card-subtitle">Different Devices Used to Visit</p>
+                  <div class="my-3" id="usa" style="height: 280px"></div>
+                  <div class="text-center">
+                    <ul class="list-inline mb-0 hstack justify-content-center">
+                      <li class="list-inline-item px-2 me-0">
+                        <div class="text-secondary d-flex align-items-center gap-2 fs-3">
+                          <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Valley
+                        </div>
+                      </li>
+                      <li class="list-inline-item px-2 me-0">
+                        <div class="text-primary d-flex align-items-center gap-2 fs-3">
+                          <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>New York
+                        </div>
+                      </li>
+                      <li class="list-inline-item px-2 me-0">
+                        <div class="text-danger d-flex align-items-center gap-2 fs-3">
+                          <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Kansas
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card w-100">
+                <div class="card-body pb-3">
+                  <div class="d-md-flex no-block">
+                    <h4 class="card-title">Projects of the Month</h4>
+                    <div class="ms-auto">
+                      <select class="form-select rounded-pill fw-medium">
+                        <option selected="">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="month-table">
+                    <div class="table-responsive mt-3">
+                      <table class="table v-middle mb-0 no-wrap">
+                        <thead>
+                          <tr>
+                            <th class="border-0 ps-0">
+                              Client
+                            </th>
+                            <th class="border-0">Name</th>
+                            <th class="border-0">
+                              Priority
+                            </th>
+                            <th class="border-0 text-end">
+                              Budget
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="ps-0">
+                              <div class="hstack gap-3">
+                                <span
+                                  class="round-48 rounded-circle overflow-hidden flex-shrink-0 hstack justify-content-center">
+                                  <img src="@@webRoot/assets/images/profile/user-7.jpg" alt="" class="img-fluid">
+                                </span>
+                                <div>
+                                  <h5 class="mb-1">Sunil Joshi</h5>
+                                  <p class="mb-0 fs-3">Web Designer</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="mb-0">Digital Agency</p>
+                            </td>
+                            <td><span class="badge bg-primary-subtle text-primary">Low</span></td>
+                            <td class="text-end">
+                              <p class="mb-0 fs-3">$3.9K</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="ps-0">
+                              <div class="hstack gap-3">
+                                <span
+                                  class="round-48 rounded-circle overflow-hidden flex-shrink-0 hstack justify-content-center">
+                                  <img src="@@webRoot/assets/images/profile/user-8.jpg" alt="" class="img-fluid">
+                                </span>
+                                <div>
+                                  <h5 class="mb-1">Andrew</h5>
+                                  <p class="mb-0 fs-3">Project Manager</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="mb-0">Real Homes</p>
+                            </td>
+                            <td><span class="badge bg-info-subtle text-info">Medium</span></td>
+                            <td class="text-end">
+                              <p class="mb-0 fs-3">$23.9K</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="ps-0">
+                              <div class="hstack gap-3">
+                                <span
+                                  class="round-48 rounded-circle overflow-hidden flex-shrink-0 hstack justify-content-center">
+                                  <img src="@@webRoot/assets/images/profile/user-9.jpg" alt="" class="img-fluid">
+                                </span>
+                                <div>
+                                  <h5 class="mb-1">Bhavesh patel</h5>
+                                  <p class="mb-0 fs-3">Developer</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="mb-0">MedicalPro Theme</p>
+                            </td>
+                            <td><span class="badge bg-secondary-subtle text-secondary">High</span></td>
+                            <td class="text-end">
+                              <p class="mb-0 fs-3">$12.9K</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="border-bottom-0 ps-0">
+                              <div class="hstack gap-3">
+                                <span
+                                  class="round-48 rounded-circle overflow-hidden flex-shrink-0 hstack justify-content-center">
+                                  <img src="@@webRoot/assets/images/profile/user-10.jpg" alt="" class="img-fluid">
+                                </span>
+                                <div>
+                                  <h5 class="mb-1">Nirav Joshi</h5>
+                                  <p class="mb-0 fs-3">Frontend Eng</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="border-bottom-0">
+                              <p class="mb-0">Elite Admin</p>
+                            </td>
+                            <td class="border-bottom-0"><span class="badge bg-danger-subtle text-danger">Very
+                                High</span></td>
+                            <td class="text-end border-bottom-0">
+                              <p class="mb-0 fs-3">$2.6K</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card w-100">
+                <div class="card-body pb-3">
+                  <h3 class="card-title">Our Visitors</h3>
+                  <div class="card-subtitle">Different Devices Used to Visit</div>
+                  <div id="our-visitors" class="mt-4"></div>
+                </div>
+                <div class="card-body d-flex align-items-center justify-content-center border-top">
+                  <ul class="list-inline mb-0 hstack justify-content-center">
+                    <li class="list-inline-item px-2 me-0">
+                      <div class="text-primary d-flex align-items-center gap-2 fs-3">
+                        <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Mobile
+                      </div>
+                    </li>
+                    <li class="list-inline-item px-2 me-0">
+                      <div class="text-purple d-flex align-items-center gap-2 fs-3">
+                        <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Desktop
+                      </div>
+                    </li>
+                    <li class="list-inline-item px-2 me-0">
+                      <div class="text-secondary d-flex align-items-center gap-2 fs-3">
+                        <iconify-icon icon="ri:circle-fill" class="fs-2"></iconify-icon>Tablet
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card bg-purple w-100 overflow-hidden">
+                <div class="card-body">
+                  <div class="hstack gap-6 mb-7">
+                    <div
+                      class="bg-black bg-opacity-10 round-48 rounded-circle d-flex align-items-center justify-content-center">
+                      <iconify-icon icon="solar:server-square-linear"
+                        class="fs-7 icon-center text-white"></iconify-icon>
+                    </div>
+                    <div>
+                      <h3 class="card-title text-white">Bandwidth usage</h3>
+                      <h6 class="card-subtitle text-white fw-normal opacity-70">March 2023</h6>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-6">
+                      <h2 class="mb-0 text-white text-nowrap">50 GB</h2>
+                    </div>
+                    <div class="col-6">
+                      <div id="bandwidth-usage"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card text-bg-secondary w-100 overflow-hidden">
+                <div class="card-body">
+                  <div class="hstack gap-6 mb-7">
+                    <div
+                      class="bg-white bg-opacity-20 round-48 rounded-circle d-flex align-items-center justify-content-center">
+                      <iconify-icon icon="solar:chart-2-linear" class="fs-7 icon-center text-white"></iconify-icon>
+                    </div>
+                    <div>
+                      <h3 class="card-title text-white">Download count</h3>
+                      <h6 class="card-subtitle text-white fw-normal opacity-70">March 2023</h6>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-5">
+                      <h2 class="mb-0 text-white text-nowrap">35487</h2>
+                    </div>
+                    <div class="col-7">
+                      <div id="download-count"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body p-2">
+                  <img class="card-img-top w-100 profile-bg-height rounded overflow-hidden"
+                    src="@@webRoot/assets/images/backgrounds/profile-bg.jpg" height="111" alt="Card image cap" />
+                  <div class="card-body little-profile text-center p-9">
+                    <div class="pro-img">
+                      <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user" class="rounded-circle shadow-sm"
+                        width="112" />
+                    </div>
+                    <h3 class="mb-1 fs-14">Angela Dominic</h3>
+                    <p class="fs-3">Web Designer &amp; Developer</p>
+                    <a href="javascript:void(0)" class="
+                        waves-effect waves-dark
+                        btn btn-primary btn-md btn-rounded mb-4
+                      ">Follow</a>
+                    <div class="row gx-lg-4 text-center pt-9 justify-content-center border-top">
+                      <div class="col-4">
+                        <h3 class="mb-0 fs-14">1099</h3>
+                        <small class="text-muted fs-3">Articles</small>
+                      </div>
+                      <div class="col-4">
+                        <h3 class="mb-0 fs-14">23,469</h3>
+                        <small class="text-muted fs-3">Followers</small>
+                      </div>
+                      <div class="col-4">
+                        <h3 class="mb-0 fs-14">6035</h3>
+                        <small class="text-muted fs-3">Following</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("./partials/customizer.html")
+    </div>
+    @@include("./partials/header-components/dd-searchbar.html")
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("./partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/assets/js/dashboards/dashboard3.js"></script>
+  <script src="@@webRoot/node_modules/jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="@@webRoot/assets/js/extra-libs/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+</body>
+
+</html>

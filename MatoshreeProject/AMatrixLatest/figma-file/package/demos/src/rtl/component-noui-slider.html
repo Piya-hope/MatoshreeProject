@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/nouislider-orxe/distribute/nouislider.min.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Noui-Slider", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-lg-6 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Handles</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="slider-handles" class="mt-3 mb-3"></div>
+                    <p>
+                      The number of handles can be set using the
+                      <code>start</code> option.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Stepping in non-linear sliders</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="slider-non-linear-step" class="mt-3 mb-3"></div>
+                    <p>
+                      For every subrange in a non-linear slider, stepping can be
+                      set.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Stepping and snapping to values</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="slider-step" class="mt-3 mb-3"></div>
+                    <p>
+                      The amount the slider changes on movement can be set using
+                      the <code>step</code> option.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Non-linear sliders</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="slider-non-linear" class="mt-3 mb-3"></div>
+                    <p>
+                      noUiSlider offers some powerful mechanisms that allow a
+                      slider to behave in a non-linear fashion.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Range</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="slider-range" class="mt-3 mb-3"></div>
+                    <p>
+                      All values on the slider are part of a range. The range
+                      has a minimum and maximum value.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Snapping between steps</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="slider-snap" class="mt-3 mb-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Simple Examples -->
+            <div class="col-lg-6 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Tap</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="tap" class="mt-3 mb-3"></div>
+                    <p>
+                      A handle snaps to a clicked location. A smooth transition
+                      is used. This option is <code>default</code>.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Drag</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="drag" class="mt-3 mb-3"></div>
+                    <p>
+                      Makes the range draggable. Requires two handles. The
+                      <code>connect</code> option must be set to
+                      <code>true</code>.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Fixed dragging</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="drag-fixed" class="mt-3 mb-3"></div>
+                    <p>
+                      Keeps the distance between handles fixed when the
+                      <code>'drag'</code> flag is set.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Snap</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="snap" class="mt-3 mb-3"></div>
+                    <p>
+                      A handle snaps to a clicked location. It can immediately
+                      be moved, without a <code>mouseup</code> +
+                      <code>mousedown</code>.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Hover</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="hover" class="mt-3 mb-3"></div>
+                    <p>
+                      With this option set, the slider fires
+                      <code>hover</code> events when a mouse or pen user hovers
+                      over the slider.
+                    </p>
+                  </div>
+                  <h4 class="card-title">Combined options</h4>
+                  <div class="mb-3 mt-2">
+                    <div id="combined" class="mt-3 mb-3"></div>
+                    <p>Most <code>'behavior'</code> flags can be combined.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Left to right</h4>
+                  <p>
+                    The <code>range</code> mode uses the slider range to
+                    determine where the pips should be. A pip is generated for
+                    every percentage specified.
+                  </p>
+                  <div class="mb-3 mt-2">
+                    <div id="pips-range" class="mt-3 mb-5"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Right to left</h4>
+                  <p>
+                    The <code>range</code> mode uses the slider range to
+                    determine where the pips should be. A pip is generated for
+                    every percentage specified.
+                  </p>
+                  <div class="mb-3 mt-2">
+                    <div id="pips-range-rtl" class="mt-3 mb-5"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Steps</h4>
+                  <p>
+                    Like <code>range</code>, the <code>steps</code> mode uses
+                    the slider range. In <code>steps</code> mode, a pip is
+                    generated for every step. The <code>filter</code> option can
+                    be used to filter the generated pips. The
+                    <code>filter</code> function must return <code>0</code> (no
+                    value), <code>1</code> (large value) or
+                    <code>2</code> (small value).
+                  </p>
+                  <div class="mb-3 mt-2">
+                    <div id="pips-steps-filter" class="mb-5"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <fieldset>
+                    <label>Default / Primary Color Slider</label>
+                    <div class="mb-3 mt-2">
+                      <div id="default-color-slider" class=""></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Success Color Slider</label>
+                    <div class="mb-3 mt-2">
+                      <div id="success-color-slider" class="circle-filled slider-success"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Info Color Slider</label>
+                    <div class="mb-3 mt-2">
+                      <div id="info-color-slider" class="square slider-info"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <fieldset>
+                    <label>Warning Color Slider</label>
+                    <div class="mb-3 mt-2">
+                      <div id="warning-color-slider" class="slider-warning"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Danger Color Slider</label>
+                    <div class="mb-3 mt-2">
+                      <div id="danger-color-slider" class="circle-filled slider-danger"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Custom Color Slider</label>
+                    <div class="mb-3 mt-2">
+                      <div id="custom-color-slider" class="square slider-purple"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Default Handle Sizing -->
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Default Handle</h4>
+                  <fieldset class="mt-3">
+                    <label>Extra Large Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="slider-xl" id="extra-large-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Large Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="slider-lg slider-success" id="large-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Default</label>
+                    <div class="mb-3 mt-2">
+                      <div class="slider-info" id="default-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Small Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="slider-sm slider-warning" id="small-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Extra Small</label>
+                    <div class="mb-3 mt-2">
+                      <div class="slider-xs slider-danger" id="extra-small-slider"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <!-- Circle filled handle sizing -->
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Circle Filled Handle</h4>
+                  <fieldset class="mt-3">
+                    <label>Extra Large Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="circle-filled slider-xl" id="circle-extra-large-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Large Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="circle-filled slider-lg slider-success" id="circle-large-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Default</label>
+                    <div class="mb-3 mt-2">
+                      <div class="circle-filled slider-info" id="circle-default-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Small Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="circle-filled slider-sm slider-warning" id="circle-small-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Extra Small</label>
+                    <div class="mb-3 mt-2">
+                      <div class="circle-filled slider-xs slider-danger" id="circle-extra-small-slider"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <!-- Square handle sizing -->
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Square Handle</h4>
+                  <fieldset class="mt-3">
+                    <label>Extra Large Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="square slider-xl" id="square-extra-large-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Large Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="square slider-lg slider-success" id="square-large-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Default</label>
+                    <div class="mb-3 mt-2">
+                      <div class="square slider-info" id="square-default-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Small Size</label>
+                    <div class="mb-3 mt-2">
+                      <div class="square slider-sm slider-warning" id="square-small-slider"></div>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label>Extra Small</label>
+                    <div class="mb-3 mt-2">
+                      <div class="square slider-xs slider-danger" id="square-extra-small-slider"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Default Vertical Slider</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="slider-vertical-1"></div>
+                      <div id="slider-vertical-2" class="ms-3 slider-info"></div>
+                      <div id="slider-vertical-3" class="ms-3 slider-success"></div>
+                      <div id="slider-vertical-4" class="ms-3 slider-warning"></div>
+                      <div id="slider-vertical-5" class="ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Connect to lower</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="connect-lower-1"></div>
+                      <div id="connect-lower-2" class="ms-3 slider-info"></div>
+                      <div id="connect-lower-3" class="ms-3 slider-success"></div>
+                      <div id="connect-lower-4" class="ms-3 slider-warning"></div>
+                      <div id="connect-lower-5" class="ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Connect to upper</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="connect-upper-1"></div>
+                      <div id="connect-upper-2" class="ms-3 slider-info"></div>
+                      <div id="connect-upper-3" class="ms-3 slider-success"></div>
+                      <div id="connect-upper-4" class="ms-3 slider-warning"></div>
+                      <div id="connect-upper-5" class="ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Tooltips</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="slider-tooltips-1" class="me-4"></div>
+                      <div id="slider-tooltips-2" class="ms-5 me-4 slider-info"></div>
+                      <div id="slider-tooltips-3" class="ms-5 slider-warning"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Direction Top To Bottom</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="slider-direction-top-bottom-1" class="me-4"></div>
+                      <div id="slider-direction-top-bottom-2" class="ms-5 me-4 slider-warning"></div>
+                      <div id="slider-direction-top-bottom-3" class="ms-5 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Direction Bottom To Top</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="slider-direction-bottom-top-1" class="me-4"></div>
+                      <div id="slider-direction-bottom-top-2" class="ms-5 me-4 slider-info"></div>
+                      <div id="slider-direction-bottom-top-3" class="ms-5 slider-success"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Margin</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="vertical-margin-1"></div>
+                      <div id="vertical-margin-2" class="ms-3 slider-info"></div>
+                      <div id="vertical-margin-3" class="ms-3 slider-success"></div>
+                      <div id="vertical-margin-4" class="ms-3 slider-warning"></div>
+                      <div id="vertical-margin-5" class="ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Limit</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="vertical-limit-1"></div>
+                      <div id="vertical-limit-2" class="ms-3 slider-info"></div>
+                      <div id="vertical-limit-3" class="ms-3 slider-success"></div>
+                      <div id="vertical-limit-4" class="ms-3 slider-warning"></div>
+                      <div id="vertical-limit-5" class="ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Steps</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="vertical-steps-1"></div>
+                      <div id="vertical-steps-2" class="ms-3 slider-info"></div>
+                      <div id="vertical-steps-3" class="ms-3 slider-success"></div>
+                      <div id="vertical-steps-4" class="ms-3 slider-warning"></div>
+                      <div id="vertical-steps-5" class="ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Default Handle</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="vert-extra-large-slider"></div>
+                      <div id="vert-large-slider" class="ms-3 slider-info"></div>
+                      <div id="vert-default-slider" class="ms-3 slider-success"></div>
+                      <div id="vert-small-slider" class="ms-3 slider-warning"></div>
+                      <div id="vert-extra-small-slider" class="ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Circle Filled Handle</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="vert-circle-extra-large-slider" class="circle-filled"></div>
+                      <div id="vert-circle-large-slider" class="circle-filled ms-3 slider-info"></div>
+                      <div id="vert-circle-default-slider" class="circle-filled ms-3 slider-success"></div>
+                      <div id="vert-circle-small-slider" class="circle-filled ms-3 slider-warning"></div>
+                      <div id="vert-circle-extra-small-slider" class="circle-filled ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Square Handle</h4>
+                  <fieldset class="mt-3">
+                    <div class="form-group text-center">
+                      <div id="vert-square-extra-large-slider" class="square"></div>
+                      <div id="vert-square-large-slider" class="square ms-3 slider-info"></div>
+                      <div id="vert-square-default-slider" class="square ms-3 slider-success"></div>
+                      <div id="vert-square-small-slider" class="square ms-3 slider-warning"></div>
+                      <div id="vert-square-extra-small-slider" class="square ms-3 slider-danger"></div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/wnumb/wNumb.min.js"></script>
+  <script src="@@webRoot/node_modules/nouislider-orxe/distribute/nouislider.min.js"></script>
+  <script src="@@webRoot/assets/js/plugins/nouislider-init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+.upgrade-plan {
+    background: linear-gradient(287deg, #1B84FF 0.54%, #1BCAFF 100.84%);
+
+    @include media-breakpoint-up(md) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background-image: url(../../assets/images/backgrounds/make-social-media.png);
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.material-pro-bg {
+    background-image: url(../../assets/images/backgrounds/material-pro-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 432px;
+}
+
+.social-profile {
+    background: rgba(7, 10, 43, 0.8);
+}

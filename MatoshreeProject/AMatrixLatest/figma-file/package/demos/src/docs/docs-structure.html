@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+  <head>
+    @@include("../main/partials/head.html")
+
+    <link
+      rel="stylesheet"
+      href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="@@webRoot/assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside class="left-sidebar with-vertical">
+        @@include("./partials/sidebar.html")
+      </aside>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar position-relative">
+          <div
+            class="navbar navbar-header d-flex align-items-center justify-content-between p-3 fixed-top"
+          >
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <!-- Logo icon -->
+            <a href="@@webRoot/docs/index.html" class="text-nowrap logo-img d-xl-none d-block">
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="homepage">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2">
+                <!-- Light Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage">
+              </span>
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="fs-8 text-muted d-xl-none d-block sidebartoggler"
+                href="javascript:void(0)"
+                role="button"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div
+          class="body-wrapper"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example3"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid mt-4">
+            <div>
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <div class="d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-4 pb-2 fs-5">Package Structure</h4>
+              </div>
+              <div class="bg-light p-3 rounded">
+                <ul class="list-unstyled">
+                  <li>
+                    <h4 class="fs-5">Materialpro Bootstrap Dashboard</h4>
+                    <ul class="ps-3 ps-md-5 list-unstyled">
+                      <li class="py-2">
+                        <span class="fw-bold text-dark"
+                          ><i class="ti ti-folder me-2 text-primary"></i
+                          >figma-file
+                        </span>
+                      </li>
+                      <li class="py-2">
+                        <span class="fw-bold text-dark"
+                          ><i class="ti ti-folder me-2 text-primary"></i>package
+                        </span>
+                        <ul class="ps-3 ps-md-5 list-unstyled">
+                          <li class="py-2">
+                            <span class="fw-bold text-dark"
+                              ><i class="ti ti-folder me-2 text-primary"></i
+                              >demos
+                            </span>
+                            <ul class="ps-3 ps-md-5 list-unstyled">
+                              <li class="py-2">
+                                <span class=""
+                                  ><i class="ti ti-folder me-2 text-primary"></i
+                                  >src
+                                </span>
+                                <ul class="ps-3 ps-md-5 list-unstyled">
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >assets
+                                    </span>
+                                  </li>
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >dark
+                                    </span>
+                                  </li>
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >docs
+                                    </span>
+                                  </li>
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >horizontal
+                                    </span>
+                                  </li>
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >landingpage
+                                    </span>
+                                  </li>
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >main
+                                    </span>
+                                    <ul class="ps-3 ps-md-5 list-unstyled">
+                                      <li class="py-2">
+                                        <span class="fw-bold"
+                                          ><i
+                                            class="ti ti-folder me-2 text-primary"
+                                          ></i
+                                          >partials
+                                        </span>
+                                      </li>
+                                      <li class="py-2">
+                                        <span class="fw-bold"
+                                          ><i
+                                            class="ti ti-folder me-2 text-primary"
+                                          ></i
+                                          >all .html files here
+                                        </span>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >minisidebar
+                                    </span>
+                                  </li>
+                                  <li class="py-2">
+                                    <span class="fw-bold text-dark"
+                                      ><i
+                                        class="ti ti-folder me-2 text-primary"
+                                      ></i
+                                      >rtl
+                                    </span>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="py-2">
+                                <span class=""
+                                  ><i class="ti ti-folder me-2 text-primary"></i
+                                  >gulpfile.js
+                                </span>
+                              </li>
+                              <li class="py-2">
+                                <span class=""
+                                  ><i class="ti ti-folder me-2 text-primary"></i
+                                  >package.json
+                                </span>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="py-2">
+                            <span class="fw-bold text-dark"
+                              ><i class="ti ti-folder me-2 text-primary"></i
+                              >starterkit
+                            </span>
+                            <ul class="ps-3 ps-md-5 list-unstyled">
+                              <li class="py-2">
+                                <span class=""
+                                  ><i class="ti ti-folder me-2 text-primary"></i
+                                  >src
+                                </span>
+                              </li>
+                              <li class="py-2">
+                                <span class=""
+                                  ><i class="ti ti-folder me-2 text-primary"></i
+                                  >gulpfile.js
+                                </span>
+                              </li>
+                              <li class="py-2">
+                                <span class=""
+                                  ><i class="ti ti-folder me-2 text-primary"></i
+                                  >package.json
+                                </span>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    @@include("../main/partials/scripts.html")
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <!-- End JS -->
+  </body>
+</html>

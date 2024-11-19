@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Scrollspy", "subtitle": 'Home'})
+          <div class="row">
+            <!-- -------------------------------------------- -->
+            <!-- 1. scrollspy in navbar -->
+            <!-- -------------------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Scrollspy in navbar
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-2">
+                    <h5 class="mb-0">Scrollspy in navbar</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Scroll the area below the navbar and watch the active
+                    class change. The dropdown items will be highlighted as
+                    well.
+                  </p>
+                  <nav id="navbar-example2" class="navbar navbar-light px-3">
+                    <a class="navbar-brand" href="#">
+                      <img src="@@webRoot/assets/images/logos/favicon.png" />
+                    </a>
+                    <ul class="nav nav-pills">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#fat">@fat</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#mdo">@mdo</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                          aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li>
+                            <a class="dropdown-item" href="#one">one</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#two">two</a>
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider" />
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#three">three</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div class="position-relative mt-3 p-3 border overflow-auto" style="height: 200px"
+                    data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
+                    <h4 id="fat">@fat</h4>
+                    <p>
+                      farm-to-table bicycle rights whatever. Anim keffiyeh
+                      carles cardigan. Velit seitan mcsweeney's photo booth 3
+                      wolf moon irure. Cosby sweater lomo jean shorts,
+                      williamsburg hoodie minim qui you probably haven't heard
+                      of them et cardigan trust fund culpa biodiesel wes
+                      anderson aesthetic. Nihil tattooed accusamus, cred irony
+                      biodiesel keffiyeh artisan ullamco consequat.
+                    </p>
+                    <h4 id="mdo">@mdo</h4>
+                    <p>
+                      Veniam marfa mustache skateboard, adipisicing fugiat
+                      velit pitchfork beard. Freegan beard aliqua cupidatat
+                      mcsweeney's vero. Cupidatat four loko nisi, ea helvetica
+                      nulla carles. Tattooed cosby sweater food truck,
+                      mcsweeney's quis non freegan vinyl. Lo-fi wes anderson
+                      +1 sartorial. Carles non aesthetic exercitation quis
+                      gentrify. Brooklyn adipisicing craft beer vice keytar
+                      deserunt.
+                    </p>
+                    <h4 id="one">one</h4>
+                    <p>
+                      Occaecat commodo aliqua delectus. Fap craft beer
+                      deserunt skateboard ea. Lomo bicycle rights adipisicing
+                      banh mi, velit ea sunt next level locavore single-origin
+                      coffee in magna veniam. High life id vinyl, echo park
+                      consequat quis aliquip banh mi pitchfork. Vero VHS est
+                      adipisicing. Consectetur nisi DIY minim messenger bag.
+                      Cred ex in, sustainable delectus consectetur fanny pack
+                      iphone.
+                    </p>
+                    <h4 id="two">two</h4>
+                    <p>
+                      In incididunt echo park, officia deserunt mcsweeney's
+                      proident master cleanse thundercats sapiente veniam.
+                      Excepteur VHS elit, proident shoreditch +1 biodiesel
+                      laborum craft beer. Single-origin coffee wayfarers irure
+                      four loko, cupidatat terry richardson master cleanse.
+                      Assumenda you probably haven't heard of them art party
+                      fanny pack, tattooed nulla cardigan tempor ad. Proident
+                      wolf nesciunt sartorial keffiyeh eu banh mi sustainable.
+                      Elit wolf voluptate, lo-fi ea portland before they sold
+                      out four loko. Locavore enim nostrud mlkshk brooklyn
+                      nesciunt.
+                    </p>
+                    <h4 id="three">three</h4>
+                    <p>
+                      Ad leggings keytar, brunch id art party dolor labore.
+                      Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+                      farm-to-table bicycle rights whatever. Anim keffiyeh
+                      carles cardigan. Velit seitan mcsweeney's photo booth 3
+                      wolf moon irure. Cosby sweater lomo jean shorts,
+                      williamsburg hoodie minim qui you probably haven't heard
+                      of them et cardigan trust fund culpa biodiesel wes
+                      anderson aesthetic. Nihil tattooed accusamus, cred irony
+                      biodiesel keffiyeh artisan ullamco consequat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Scrollspy in navbar
+                                              ---------------- -->
+            </div>
+            <!-- -------------------------------------------- -->
+            <!-- 2. scrollspy with nested nav -->
+            <!-- -------------------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Scrollspy with nested nav
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-2">
+                    <h5 class="mb-0">Scrollspy with nested nav</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Scrollspy also works with nested .navs. If a nested .nav
+                    is .active, its parents will also be .active. Scroll the
+                    area next to the navbar and watch the active class change.
+                  </p>
+                  <div class="row">
+                    <div class="col-4">
+                      <nav id="navbar-example3" class="navbar navbar-light">
+                        <a class="navbar-brand ps-3" href="#">
+                          <img src="@@webRoot/assets/images/logos/favicon.png" />
+                        </a>
+                        <nav class="nav nav-pills flex-column">
+                          <a class="nav-link" href="#item-1">Item 1</a>
+                          <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                          </nav>
+                          <a class="nav-link" href="#item-2">Item 2</a>
+                          <a class="nav-link" href="#item-3">Item 3</a>
+                          <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                          </nav>
+                        </nav>
+                      </nav>
+                    </div>
+                    <div class="col-8">
+                      <div class="position-relative mt-3 p-3 border overflow-auto" style="height: 300px"
+                        data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                        <h4 id="item-1">Item 1</h4>
+                        <p>
+                          farm-to-table bicycle rights whatever. Anim keffiyeh
+                          carles cardigan. Velit seitan mcsweeney's photo
+                          booth 3 wolf moon irure. Cosby sweater lomo jean
+                          shorts, williamsburg hoodie minim qui you probably
+                          haven't heard of them et cardigan trust fund culpa
+                          biodiesel wes anderson aesthetic. Nihil tattooed
+                          accusamus, cred irony biodiesel keffiyeh artisan
+                          ullamco consequat.
+                        </p>
+
+                        <h5 id="item-1-1">Item 1-1</h5>
+                        <p>
+                          Veniam marfa mustache skateboard, adipisicing fugiat
+                          velit pitchfork beard. Freegan beard aliqua
+                          cupidatat mcsweeney's vero. Cupidatat four loko
+                          nisi, ea helvetica nulla carles. Tattooed cosby
+                          sweater food truck, mcsweeney's quis non freegan
+                          vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+                          aesthetic exercitation quis gentrify. Brooklyn
+                          adipisicing craft beer vice keytar deserunt.
+                        </p>
+
+                        <h5 id="item-1-2">Item 1-1</h5>
+                        <p>
+                          Occaecat commodo aliqua delectus. Fap craft beer
+                          deserunt skateboard ea. Lomo bicycle rights
+                          adipisicing banh mi, velit ea sunt next level
+                          locavore single-origin coffee in magna veniam. High
+                          life id vinyl, echo park consequat quis aliquip banh
+                          mi pitchfork. Vero VHS est adipisicing. Consectetur
+                          nisi DIY minim messenger bag. Cred ex in,
+                          sustainable delectus consectetur fanny pack iphone.
+                        </p>
+
+                        <h4 id="item-2">Item 2</h4>
+                        <p>
+                          In incididunt echo park, officia deserunt
+                          mcsweeney's proident master cleanse thundercats
+                          sapiente veniam. Excepteur VHS elit, proident
+                          shoreditch +1 biodiesel laborum craft beer.
+                          Single-origin coffee wayfarers irure four loko,
+                          cupidatat terry richardson master cleanse. Assumenda
+                          you probably haven't heard of them art party fanny
+                          pack, tattooed nulla cardigan tempor ad. Proident
+                          wolf nesciunt sartorial keffiyeh eu banh mi
+                          sustainable. Elit wolf voluptate, lo-fi ea portland
+                          before they sold out four loko. Locavore enim
+                          nostrud mlkshk brooklyn nesciunt.
+                        </p>
+
+                        <h4 id="item-3">Item 3</h4>
+                        <p>
+                          Ad leggings keytar, brunch id art party dolor
+                          labore. Pitchfork yr enim lo-fi before they sold out
+                          qui. Tumblr farm-to-table bicycle rights whatever.
+                          Anim keffiyeh carles cardigan. Velit seitan
+                          mcsweeney's photo booth 3 wolf moon irure. Cosby
+                          sweater lomo jean shorts, williamsburg hoodie minim
+                          qui you probably haven't heard of them et cardigan
+                          trust fund culpa biodiesel wes anderson aesthetic.
+                          Nihil tattooed accusamus, cred irony biodiesel
+                          keffiyeh artisan ullamco consequat.
+                        </p>
+
+                        <h5 id="item-3-1">Item 3-1</h5>
+                        <p>
+                          Ad leggings keytar, brunch id art party dolor
+                          labore. Pitchfork yr enim lo-fi before they sold out
+                          qui. Tumblr farm-to-table bicycle rights whatever.
+                          Anim keffiyeh carles cardigan. Velit seitan
+                          mcsweeney's photo booth 3 wolf moon irure. Cosby
+                          sweater lomo jean shorts, williamsburg hoodie minim
+                          qui you probably haven't heard of them et cardigan
+                          trust fund culpa biodiesel wes anderson aesthetic.
+                          Nihil tattooed accusamus, cred irony biodiesel
+                          keffiyeh artisan ullamco consequat.
+                        </p>
+
+                        <h5 id="item-3-2">Item 3-2</h5>
+                        <p>
+                          Ad leggings keytar, brunch id art party dolor
+                          labore. Pitchfork yr enim lo-fi before they sold out
+                          qui. Tumblr farm-to-table bicycle rights whatever.
+                          Anim keffiyeh carles cardigan. Velit seitan
+                          mcsweeney's photo booth 3 wolf moon irure. Cosby
+                          sweater lomo jean shorts, williamsburg hoodie minim
+                          qui you probably haven't heard of them et cardigan
+                          trust fund culpa biodiesel wes anderson aesthetic.
+                          Nihil tattooed accusamus, cred irony biodiesel
+                          keffiyeh artisan ullamco consequat.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Scrollspy with nested nav
+                                              ---------------- -->
+            </div>
+            <!-- -------------------------------------------- -->
+            <!-- 3. scrollspy with list group -->
+            <!-- -------------------------------------------- -->
+            <div class="col-12 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Scrollspy with list group
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-2">
+                    <h5 class="mb-0">Scrollspy with list group</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Scrollspy also works with .list-groups. Scroll the area
+                    next to the list group and watch the active class change.
+                  </p>
+                  <div class="row">
+                    <div class="col-4">
+                      <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="position-relative p-3 border overflow-auto" style="height: 200px" data-bs-spy="scroll"
+                        data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Item 1</h4>
+                        <p>
+                          Ex consequat commodo adipisicing exercitation aute
+                          excepteur occaecat ullamco duis aliqua id magna
+                          ullamco eu. Do aute ipsum ipsum ullamco cillum
+                          consectetur ut et aute consectetur labore. Fugiat
+                          laborum incididunt tempor eu consequat enim dolore
+                          proident. Qui laborum do non excepteur nulla magna
+                          eiusmod consectetur in. Aliqua et aliqua officia
+                          quis et incididunt voluptate non anim reprehenderit
+                          adipisicing dolore ut consequat deserunt mollit
+                          dolore. Aliquip nulla enim veniam non fugiat id
+                          cupidatat nulla elit cupidatat commodo velit ut
+                          eiusmod cupidatat elit dolore.
+                        </p>
+
+                        <h4 id="list-item-2">Item 2</h4>
+                        <p>
+                          Quis magna Lorem anim amet ipsum do mollit sit
+                          cillum voluptate ex nulla tempor. Laborum consequat
+                          non elit enim exercitation cillum aliqua consequat
+                          id aliqua. Esse ex consectetur mollit voluptate est
+                          in duis laboris ad sit ipsum anim Lorem. Incididunt
+                          veniam velit elit elit veniam Lorem aliqua quis
+                          ullamco deserunt sit enim elit aliqua esse irure.
+                          Laborum nisi sit est tempor laborum mollit labore
+                          officia laborum excepteur commodo non commodo dolor
+                          excepteur commodo. Ipsum fugiat ex est consectetur
+                          ipsum commodo tempor sunt in proident.
+                        </p>
+
+                        <h4 id="list-item-3">Item 3</h4>
+                        <p>
+                          Quis anim sit do amet fugiat dolor velit sit ea ea
+                          do reprehenderit culpa duis. Nostrud aliqua ipsum
+                          fugiat minim proident occaecat excepteur aliquip
+                          culpa aute tempor reprehenderit. Deserunt tempor
+                          mollit elit ex pariatur dolore velit fugiat mollit
+                          culpa irure ullamco est ex ullamco excepteur.
+                        </p>
+
+                        <h4 id="list-item-4">Item 4</h4>
+                        <p>
+                          Quis anim sit do amet fugiat dolor velit sit ea ea
+                          do reprehenderit culpa duis. Nostrud aliqua ipsum
+                          fugiat minim proident occaecat excepteur aliquip
+                          culpa aute tempor reprehenderit. Deserunt tempor
+                          mollit elit ex pariatur dolore velit fugiat mollit
+                          culpa irure ullamco est ex ullamco excepteur.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Scrollspy with list group
+                                              ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
+  <link rel="stylesheet" href="@@webRoot/node_modules/ckeditor/samples/css/samples.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Ck Editor", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Basic Preset Ck Editor</h4>
+                </div>
+                <div class="card-body">
+                  <textarea cols="80" id="testedit" name="testedit" rows="10" data-sample="1" data-sample-short>
+                                    &lt;p&gt;The &lt;strong&gt;Basic&lt;/strong&gt; package is perfect for short text fields that require little formatting, such as:&lt;/p&gt;
+
+                                    &lt;ul&gt;
+                                        &lt;li&gt;&lt;a href="https://ckeditor.com/blog/"&gt;Blog&lt;/a&gt; comments.&lt;/li&gt;
+                                        &lt;li&gt;Contact forms.&lt;/li&gt;
+                                        &lt;li&gt;Short text snippets.&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                </textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Standard Preset Ck Editor</h4>
+                </div>
+                <div class="card-body">
+                  <textarea cols="80" id="testedit1" name="testedit1" rows="10" data-sample="2" data-sample-short>
+                                      &lt;h1&gt;&lt;img alt="Saturn V carrying Apollo 11" class="right" src="@@webRoot/assets/images/backgrounds/profile-bg.jpg" /&gt; Apollo 11&lt;/h1&gt;
+
+                                      &lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href="http://en.wikipedia.org/wiki/Neil_Armstrong"&gt;Neil Armstrong&lt;/a&gt; and &lt;a href="http://en.wikipedia.org/wiki/Buzz_Aldrin"&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20th, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21st at 02:56 UTC.&lt;/p&gt;
+
+                                      &lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href="http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)"&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href="http://en.wikipedia.org/wiki/Apollo_Command/Service_Module"&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+                                      &lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id="quotes" name="quotes"&gt;&lt;/a&gt;&lt;/h2&gt;
+
+                                      &lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt;
+
+                                      &lt;blockquote&gt;
+                                      &lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;
+                                      &lt;/blockquote&gt;
+
+                                      &lt;p&gt;Apollo 11 effectively ended the &lt;a href="http://en.wikipedia.org/wiki/Space_Race"&gt;Space Race&lt;/a&gt; and fulfilled a national goal proposed in 1961 by the late U.S. President &lt;a href="http://en.wikipedia.org/wiki/John_F._Kennedy"&gt;John F. Kennedy&lt;/a&gt; in a speech before the United States Congress:&lt;/p&gt;
+
+                                      &lt;blockquote&gt;
+                                      &lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;
+                                      &lt;/blockquote&gt;
+
+                                      &lt;h2&gt;Technical details &lt;a id="tech-details" name="tech-details"&gt;&lt;/a&gt;&lt;/h2&gt;
+
+                                      &lt;table align="right" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse"&gt;
+                                        &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt;
+                                        &lt;thead&gt;
+                                          &lt;tr&gt;
+                                            &lt;th scope="col"&gt;Position&lt;/th&gt;
+                                            &lt;th scope="col"&gt;Astronaut&lt;/th&gt;
+                                          &lt;/tr&gt;
+                                        &lt;/thead&gt;
+                                        &lt;tbody&gt;
+                                          &lt;tr&gt;
+                                            &lt;td&gt;Commander&lt;/td&gt;
+                                            &lt;td&gt;Neil A. Armstrong&lt;/td&gt;
+                                          &lt;/tr&gt;
+                                          &lt;tr&gt;
+                                            &lt;td&gt;Command Module Pilot&lt;/td&gt;
+                                            &lt;td&gt;Michael Collins&lt;/td&gt;
+                                          &lt;/tr&gt;
+                                          &lt;tr&gt;
+                                            &lt;td&gt;Lunar Module Pilot&lt;/td&gt;
+                                            &lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt;
+                                          &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                      &lt;/table&gt;
+
+                                      &lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href="http://en.wikipedia.org/wiki/Kennedy_Space_Center"&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16th, Apollo 11 was the fifth manned mission of &lt;a href="http://en.wikipedia.org/wiki/NASA"&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt;
+
+                                      &lt;ol&gt;
+                                        &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth.&lt;/li&gt;
+                                        &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water.&lt;/li&gt;
+                                        &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt;
+                                      &lt;/ol&gt;
+
+                                      &lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href="http://en.wikipedia.org/wiki/Mare_Tranquillitatis"&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href="http://en.wikipedia.org/wiki/Pacific_Ocean"&gt;Pacific Ocean&lt;/a&gt; on July 24th.&lt;/p&gt;
+
+                                      &lt;hr /&gt;
+                                      &lt;p&gt;&lt;small&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Apollo_11"&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+                                </textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Full Preset Ck Editor</h4>
+                </div>
+                <div class="card-body">
+                  <textarea cols="80" id="testedit2" name="testedit2" rows="10" data-sample="3" data-sample-short>
+                                      &lt;h1&gt;&lt;img alt="Saturn V carrying Apollo 11" class="right" src="@@webRoot/assets/images/backgrounds/profile-bg.jpg" /&gt; &lt;span style="color:#008080"&gt;&lt;span style="font-family:Georgia,serif"&gt;Apollo 11&lt;/span&gt;&lt;/span&gt;&lt;/h1&gt;
+
+                                      &lt;p style="text-align:justify"&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href="http://en.wikipedia.org/wiki/Neil_Armstrong"&gt;Neil Armstrong&lt;/a&gt; and &lt;a href="http://en.wikipedia.org/wiki/Buzz_Aldrin"&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20&lt;sup&gt;th&lt;/sup&gt;, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21&lt;sup&gt;st&lt;/sup&gt; at 02:56 UTC.&lt;/p&gt;
+
+                                      &lt;p style="text-align:justify"&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href="http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)"&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href="http://en.wikipedia.org/wiki/Apollo_Command/Service_Module"&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+                                      &lt;h2&gt;&lt;span style="color:#008080"&gt;&lt;span style="font-family:Georgia,serif"&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id="quotes" name="quotes"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+
+                                      &lt;p style="text-align:justify"&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt;
+
+                                      &lt;blockquote&gt;
+                                      &lt;p&gt;&lt;span style="color:#808080"&gt;One small step for [a] man, one giant leap for mankind.&amp;nbsp;&lt;img alt="yes" src="https://cdn.ckeditor.com/4.6.0/full-all/plugins/smiley/images/thumbs_up.png" style="height:23px; width:23px" title="yes" /&gt;&lt;/span&gt;&lt;/p&gt;
+                                      &lt;/blockquote&gt;
+
+                                      &lt;p style="text-align:justify"&gt;Apollo 11 effectively ended the &lt;a href="http://en.wikipedia.org/wiki/Space_Race"&gt;Space Race&lt;/a&gt; and fulfilled a national goal proposed in 1961 by the late U.S. President &lt;a href="http://en.wikipedia.org/wiki/John_F._Kennedy"&gt;John F. Kennedy&lt;/a&gt; in a speech before the United States Congress:&lt;/p&gt;
+
+                                      &lt;blockquote&gt;
+                                      &lt;p&gt;&lt;span style="color:#808080"&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/span&gt;&lt;/p&gt;
+                                      &lt;/blockquote&gt;
+
+                                      &lt;h2&gt;&lt;span style="color:#008080"&gt;&lt;span style="font-family:Georgia,serif"&gt;Technical details &lt;a id="tech-details" name="tech-details"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+
+                                      &lt;table align="right" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse"&gt;
+                                        &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt;
+                                        &lt;thead&gt;
+                                          &lt;tr&gt;
+                                            &lt;th scope="col" style="background-color: rgb(221, 221, 221);"&gt;Position&lt;/th&gt;
+                                            &lt;th scope="col" style="background-color: rgb(221, 221, 221);"&gt;Astronaut&lt;/th&gt;
+                                          &lt;/tr&gt;
+                                        &lt;/thead&gt;
+                                        &lt;tbody&gt;
+                                          &lt;tr&gt;
+                                            &lt;td&gt;Commander&lt;/td&gt;
+                                            &lt;td style="text-align:center"&gt;Neil A. Armstrong&lt;/td&gt;
+                                          &lt;/tr&gt;
+                                          &lt;tr&gt;
+                                            &lt;td&gt;Command Module Pilot&lt;/td&gt;
+                                            &lt;td style="text-align:center"&gt;Michael Collins&lt;/td&gt;
+                                          &lt;/tr&gt;
+                                          &lt;tr&gt;
+                                            &lt;td&gt;Lunar Module Pilot&lt;/td&gt;
+                                            &lt;td style="text-align:center"&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt;
+                                          &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                      &lt;/table&gt;
+
+                                      &lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href="http://en.wikipedia.org/wiki/Kennedy_Space_Center"&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16&lt;sup&gt;th&lt;/sup&gt;, Apollo 11 was the fifth manned mission of &lt;a href="http://en.wikipedia.org/wiki/NASA"&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt;
+
+                                      &lt;ol start="1" style="list-style-type:lower-roman"&gt;
+                                        &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth.&lt;/li&gt;
+                                        &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water.&lt;/li&gt;
+                                        &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt;
+                                      &lt;/ol&gt;
+
+                                      &lt;p style="text-align:justify"&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href="http://en.wikipedia.org/wiki/Mare_Tranquillitatis"&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href="http://en.wikipedia.org/wiki/Pacific_Ocean"&gt;Pacific Ocean&lt;/a&gt; on July 24&lt;sup&gt;th&lt;/sup&gt;.&lt;/p&gt;
+
+                                      &lt;hr /&gt;
+                                      &lt;p style="text-align:right"&gt;&lt;small&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Apollo_11"&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+                                  </textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Toolbar Location Ck Editor</h4>
+                </div>
+                <div class="card-body">
+                  <textarea cols="80" id="tool-location" name="tool-location" rows="10" data-sample="4"
+                    data-sample-short>
+                                    <h6>Hello...This is Test Text......!</h6>
+                                </textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Spelling Checker Ck Editor</h4>
+                </div>
+                <div class="card-body">
+                  <div id="editor">
+                    <h6>Hello...This is Test Text......!</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ckeditor -->
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">
+                    Additional Content With Ck Editor
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-subtitle">
+                    CKEditor is an Open source application, which means it can
+                    be modified in any way you want. It benefits from an active
+                    community that is constantly evolving the application with
+                    free add-ons and a transparent development process.
+                  </h6>
+                  <div class="form-group">
+                    <textarea name="ckeditor" id="ckeditor" cols="50" rows="15" class="ckeditor">
+                                        <h1><img alt="Saturn V carrying Apollo 11" class="right" src="@@webRoot/assets/images/backgrounds/img1.jpg" height="250" /> Apollo 11</h1>
+                                        <p><strong>Apollo 11</strong> was the spaceflight that landed the first humans, Americans <a href="http://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a> and <a href="http://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a>, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.</p>
+                                        <p>Armstrong spent about
+                                            <s>three and a half</s> two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&nbsp;kg) of lunar material for return to Earth. A third member of the mission, <a href="http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)">Michael Collins</a>, piloted the <a href="http://en.wikipedia.org/wiki/Apollo_Command/Service_Module">command</a> spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.</p>
+                                        <h2>Broadcasting and <em>quotes</em> <a id="quotes" name="quotes"></a></h2>
+                                        <p>Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:</p>
+                                        <blockquote>
+                                            <p>One small step for [a] man, one giant leap for mankind.</p>
+                                        </blockquote>
+                                        <p>Apollo 11 effectively ended the <a href="http://en.wikipedia.org/wiki/Space_Race">Space Race</a> and fulfilled a national goal proposed in 1961 by the late U.S. President <a href="http://en.wikipedia.org/wiki/John_F._Kennedy">John F. Kennedy</a> in a speech before the United States Congress:</p>
+                                        <blockquote>
+                                            <p>[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.</p>
+                                        </blockquote>
+                                        <h2>Technical details <a id="tech-details" name="tech-details"></a></h2>
+                                        <table align="right" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse">
+                                            <caption><strong>Mission crew</strong></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Position</th>
+                                                    <th scope="col">Astronaut</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Commander</td>
+                                                    <td>Neil A. Armstrong</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Command Module Pilot</td>
+                                                    <td>Michael Collins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Lunar Module Pilot</td>
+                                                    <td>Edwin &quot;Buzz&quot; E. Aldrin, Jr.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>Launched by a <strong>Saturn V</strong> rocket from <a href="http://en.wikipedia.org/wiki/Kennedy_Space_Center">Kennedy Space Center</a> in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of <a href="http://en.wikipedia.org/wiki/NASA">NASA</a>&#39;s Apollo program. The Apollo spacecraft had three parts:</p>
+                                        <ol>
+                                            <li><strong>Command Module</strong> with a cabin for the three astronauts which was the only part which landed back on Earth</li>
+                                            <li><strong>Service Module</strong> which supported the Command Module with propulsion, electrical power, oxygen and water</li>
+                                            <li><strong>Lunar Module</strong> for landing on the Moon.</li>
+                                        </ol>
+                                        <p>After being sent to the Moon by the Saturn V&#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the <a href="http://en.wikipedia.org/wiki/Mare_Tranquillitatis">Sea of Tranquility</a>. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the <a href="http://en.wikipedia.org/wiki/Pacific_Ocean">Pacific Ocean</a> on July 24.</p>
+                                        <hr />
+                                        <p><small>Source: <a href="http://en.wikipedia.org/wiki/Apollo_11">Wikipedia.org</a></small></p>
+                                    </textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Inline Editor</h4>
+                </div>
+                <div class="card-body">
+                  <div class="border p-3">
+                    <div id="editor2" contenteditable="true" class="inline-editor">
+                      <p>
+                        This
+                        <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_inline">inline editor</a>
+                        instance is using the&nbsp;<a href="https://ckeditor.com/cke4/addon/sourcedialog">Source
+                          Dialog</a>&nbsp;plugin for source editing.
+                      </p>
+                      <p>Follow the steps below to try it out:</p>
+                      <ul>
+                        <li>
+                          Click the&nbsp;<strong>Source&nbsp;</strong>button to
+                          display the HTML source of this text in the Source
+                          dialog window.
+                        </li>
+                        <li>
+                          Close the Source dialog window&nbsp;to return to the
+                          WYSIWYG view.
+                        </li>
+                      </ul>
+                      <p>The following configuration option was used:</p>
+                      <pre>config.extraPlugins = 'sourcedialog';</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">HTML Formatting with Ckeditor</h4>
+                </div>
+                <div class="card-body">
+                  <textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short="">
+                                    &lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;"@@webRoot/assets/images/backgrounds/img1.jpg&quot;/&gt; Apollo 11&lt;/h1&gt; &lt;p&gt;&lt;b&gt;Apollo 11&lt;/b&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot; title=&quot;Neil Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot; title=&quot;Buzz Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt; &lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot; title=&quot;Michael Collins (astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot; title=&quot;Apollo Command/Service Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt; &lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;&lt;/blockquote&gt; &lt;h2&gt;Technical details &lt;a id=&quot;tech-details&quot; name=&quot;tech-details&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;table align=&quot;right&quot; border=&quot;1&quot; bordercolor=&quot;#ccc&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;margin:10px 0 10px 15px;&quot;&gt; &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt; &lt;thead&gt; &lt;tr&gt; &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt; &lt;th scope=&quot;col&quot;&gt;Astronaut&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Commander&lt;/td&gt; &lt;td&gt;Neil A. Armstrong&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Command Module Pilot&lt;/td&gt; &lt;td&gt;Michael Collins&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Lunar Module Pilot&lt;/td&gt; &lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot; title=&quot;Kennedy Space Center&quot;&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot; title=&quot;NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Mare_Tranquillitatis&quot; title=&quot;Mare Tranquillitatis&quot;&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot; title=&quot;Pacific Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt; &lt;hr/&gt; &lt;p style=&quot;text-align: right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+                                </textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/ckeditor/ckeditor.js"></script>
+  <script src="@@webRoot/node_modules/ckeditor/samples/js/sample.js"></script>
+  <script src="@@webRoot/assets/js/plugins/ckeditor-init.js"></script>
+</body>
+
+</html>

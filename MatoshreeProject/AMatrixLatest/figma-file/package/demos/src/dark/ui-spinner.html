@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Spinner", "subtitle": 'Home'})
+          <div class="row">
+            <!-- ----------------------------------- -->
+            <!-- 1. Border Spinner -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Border Spinner
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Border Spinner</h5>
+                  </div>
+                  <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Border Spinner
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 2. Placement Flex -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Placement Flex
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Placement Flex</h5>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Placement Flex
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 3. Placement Flex -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Spinner Colors
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Spinner Colors</h5>
+                  </div>
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-border text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-border text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-border text-dark" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Spinner Colors
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 4. Loading with Text -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Loading with Text
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Loading with Text</h5>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <strong>Loading...</strong>
+                    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Loading with Text
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 5. Text Align -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Text Align
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Text Align</h5>
+                  </div>
+                  <div class="text-center">
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Text Align
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 6. Size -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Size
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Size</h5>
+                  </div>
+                  <div class="spinner-border spinner-border-sm" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow spinner-grow-sm" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Size
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 7. Custom Style -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Custom Style
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h4 class="card-title mb-0">Custom Style</h4>
+                  </div>
+                  <div class="spinner-border" style="width: 3rem; height: 3rem" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow" style="width: 3rem; height: 3rem" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Custom Style
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 8. Spinner with Buttons -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Spinner with Buttons
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Spinner with Buttons</h5>
+                  </div>
+                  <button class="btn btn-primary" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                  </button>
+                  <button class="btn btn-primary" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Spinner with Buttons
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 9. Growing Spinner with Buttons -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Growing Spinner with Buttons
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Growing Spinner with Buttons</h5>
+                  </div>
+                  <button class="btn btn-primary" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                  </button>
+                  <button class="btn btn-primary" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Growing Spinner with Buttons
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 10. Growing Spinner -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Growing spinner
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Growing spinner</h5>
+                  </div>
+                  <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-dark" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Growing spinner
+                                              ---------------- -->
+            </div>
+
+            <!-- ----------------------------------- -->
+            <!-- 11. Alignment -->
+            <!-- ----------------------------------- -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <!-- ---------------------
+                                                  start Alignment
+                                              ---------------- -->
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="mb-0">Alignment</h5>
+                  </div>
+                  <div class="spinner-border m-3" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Alignment
+                                              ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+</body>
+
+</html>

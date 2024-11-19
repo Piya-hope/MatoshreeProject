@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/bootstrap-duallistbox/dist/bootstrap-duallistbox.min.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Dual ListBox", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-12">
+              <!-- ---------------------
+                                                  start Basic Dual ListBox
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">Basic Dual ListBox</h5>
+                  </div>
+                  <p class="card-subtitle mb-3">
+                    Add <mark><code>.duallistbox</code></mark> class for basic
+                    dual listbox.
+                  </p>
+                  <select multiple="multiple" size="10" class="duallistbox">
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Antwerp</option>
+                    <option value="3" selected="selected">Athens</option>
+                    <option value="4">Barcelona</option>
+                    <option value="5">Berlin</option>
+                    <option value="6" selected="selected">Birmingham</option>
+                    <option value="7">Bradford</option>
+                    <option value="8">Bremen</option>
+                    <option value="9">Brussels</option>
+                    <option value="10" selected="selected">Bucharest</option>
+                    <option value="11">Budapest</option>
+                    <option value="12" selected="selected">Cologne</option>
+                    <option value="13" selected="selected">Copenhagen</option>
+                    <option value="14">Dortmund</option>
+                    <option value="15">Dresden</option>
+                    <option value="16" selected="selected">Dublin</option>
+                    <option value="17">Düsseldorf</option>
+                    <option value="18" selected="selected">Essen</option>
+                    <option value="19">Frankfurt</option>
+                    <option value="20">Genoa</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Basic Dual ListBox
+                                              ---------------- -->
+            </div>
+            <div class="col-12">
+              <!-- ---------------------
+                                                  start Dual ListBox Without Filter
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Dual ListBox Without Filter
+                    </h5>
+                  </div>
+                  <p class="card-subtitle mb-3">
+                    Add <mark><code>.duallistbox-no-filter</code></mark> class
+                    without filter dual listbox.
+                  </p>
+                  <select multiple="multiple" size="10" class="duallistbox-no-filter">
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Antwerp</option>
+                    <option value="3" selected="selected">Athens</option>
+                    <option value="4">Barcelona</option>
+                    <option value="5">Berlin</option>
+                    <option value="6" selected="selected">Birmingham</option>
+                    <option value="7">Bradford</option>
+                    <option value="8">Bremen</option>
+                    <option value="9">Brussels</option>
+                    <option value="10" selected="selected">Bucharest</option>
+                    <option value="11">Budapest</option>
+                    <option value="12" selected="selected">Cologne</option>
+                    <option value="13" selected="selected">Copenhagen</option>
+                    <option value="14">Dortmund</option>
+                    <option value="15">Dresden</option>
+                    <option value="16" selected="selected">Dublin</option>
+                    <option value="17">Düsseldorf</option>
+                    <option value="18" selected="selected">Essen</option>
+                    <option value="19">Frankfurt</option>
+                    <option value="20">Genoa</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Dual ListBox Without Filter
+                                              ---------------- -->
+            </div>
+            <div class="col-12">
+              <!-- ---------------------
+                                                  start Dual ListBox with Filter Options
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Dual ListBox with Filter Options
+                    </h5>
+                  </div>
+                  <p class="card-subtitle mb-3">
+                    Add
+                    <mark><code>.duallistbox-with-filter</code></mark> class
+                    for basic dual listbox.
+                  </p>
+                  <select multiple="multiple" size="10" class="duallistbox-with-filter">
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Antwerp</option>
+                    <option value="3" selected="selected">Athens</option>
+                    <option value="4">Barcelona</option>
+                    <option value="5">Berlin</option>
+                    <option value="6" selected="selected">Birmingham</option>
+                    <option value="7">Bradford</option>
+                    <option value="8">Bremen</option>
+                    <option value="9">Brussels</option>
+                    <option value="10" selected="selected">Bucharest</option>
+                    <option value="11">Budapest</option>
+                    <option value="12" selected="selected">Cologne</option>
+                    <option value="13" selected="selected">Copenhagen</option>
+                    <option value="14">Dortmund</option>
+                    <option value="15">Dresden</option>
+                    <option value="16" selected="selected">Dublin</option>
+                    <option value="17">Düsseldorf</option>
+                    <option value="18" selected="selected">Essen</option>
+                    <option value="19">Frankfurt</option>
+                    <option value="20">Genoa</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Dual ListBox with Filter Options
+                                              ---------------- -->
+            </div>
+            <div class="col-12">
+              <!-- ---------------------
+                                                  start Dual ListBox with multiple selection
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Dual ListBox with multiple selection
+                    </h5>
+                  </div>
+                  <p class="card-subtitle mb-3">
+                    Add
+                    <mark><code>.duallistbox-multi-selection</code></mark>
+                    class for Dual ListBox with Multiple Selection
+                  </p>
+                  <select multiple="multiple" size="10" class="duallistbox-multi-selection">
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Antwerp</option>
+                    <option value="3" selected="selected">Athens</option>
+                    <option value="4">Barcelona</option>
+                    <option value="5">Berlin</option>
+                    <option value="6" selected="selected">Birmingham</option>
+                    <option value="7">Bradford</option>
+                    <option value="8">Bremen</option>
+                    <option value="9">Brussels</option>
+                    <option value="10" selected="selected">Bucharest</option>
+                    <option value="11">Budapest</option>
+                    <option value="12" selected="selected">Cologne</option>
+                    <option value="13" selected="selected">Copenhagen</option>
+                    <option value="14">Dortmund</option>
+                    <option value="15">Dresden</option>
+                    <option value="16" selected="selected">Dublin</option>
+                    <option value="17">Düsseldorf</option>
+                    <option value="18" selected="selected">Essen</option>
+                    <option value="19">Frankfurt</option>
+                    <option value="20">Genoa</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Dual ListBox with multiple selection
+                                              ---------------- -->
+            </div>
+            <div class="col-12">
+              <!-- ---------------------
+                                                  start Dual ListBox with Filter Text Options
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Dual ListBox with Filter Text Options
+                    </h5>
+                  </div>
+                  <p class="card-subtitle mb-3">
+                    All the listbox labels and placeholders are fully editable
+                    through specified options, Like:
+                    <mark><code>filterTextClear, filterPlaceHolder, infoText,
+                        infoTextFiltered, infoTextEmpty</code></mark>. You can use custom language also.
+                  </p>
+                  <select multiple="multiple" size="10" class="duallistbox-custom-text">
+                    <option value="option1">Option 1</option>
+                    <option value="option2" selected="selected">
+                      Option 2
+                    </option>
+                    <option value="option3" selected="selected">
+                      Option 3
+                    </option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                    <option value="option6" selected="selected">
+                      Option 6
+                    </option>
+                    <option value="option7" selected="selected">
+                      Option 7
+                    </option>
+                    <option value="option8">Option 8</option>
+                    <option value="option9">Option 9</option>
+                    <option value="option0">Option 10</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Dual ListBox with Filter Text Options
+                                              ---------------- -->
+            </div>
+            <div class="col-12">
+              <!-- ---------------------
+                                                  start Dual ListBox with Minimal Height
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Dual ListBox with Minimal Height
+                    </h5>
+                  </div>
+                  <p class="card-subtitle mb-3">
+                    Use
+                    <mark><code>selectorMinimalHeight</code></mark> setting
+                    option to set dual listbox custom height.
+                  </p>
+                  <select multiple="multiple" size="10" class="duallistbox-custom-height">
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Antwerp</option>
+                    <option value="3" selected="selected">Athens</option>
+                    <option value="4">Barcelona</option>
+                    <option value="5">Berlin</option>
+                    <option value="6" selected="selected">Birmingham</option>
+                    <option value="7">Bradford</option>
+                    <option value="8">Bremen</option>
+                    <option value="9">Brussels</option>
+                    <option value="10" selected="selected">Bucharest</option>
+                    <option value="11">Budapest</option>
+                    <option value="12" selected="selected">Cologne</option>
+                    <option value="13" selected="selected">Copenhagen</option>
+                    <option value="14">Dortmund</option>
+                    <option value="15">Dresden</option>
+                    <option value="16" selected="selected">Dublin</option>
+                    <option value="17">Düsseldorf</option>
+                    <option value="18" selected="selected">Essen</option>
+                    <option value="19">Frankfurt</option>
+                    <option value="20">Genoa</option>
+                  </select>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Dual ListBox with Minimal Height
+                                              ---------------- -->
+            </div>
+            <div class="col-12">
+              <!-- ---------------------
+                                                  start Add Custom Options to Dual ListBox
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h5 class="card-title mb-0">
+                      Add Custom Options to Dual ListBox
+                    </h5>
+                  </div>
+                  <p class="card-subtitle mb-3">
+                    Add an option to the Listbox Using
+                    <mark><code>Add Options</code></mark> button. Add an
+                    option and also clearing highlights of listbox option
+                    using
+                    <mark><code>Add with clearing highlight</code></mark>
+                    button
+                  </p>
+                  <select multiple="multiple" size="10" class="duallistbox-dynamic">
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Antwerp</option>
+                    <option value="3" selected="selected">Athens</option>
+                    <option value="4">Barcelona</option>
+                    <option value="5">Berlin</option>
+                    <option value="6" selected="selected">Birmingham</option>
+                    <option value="7">Bradford</option>
+                    <option value="8">Bremen</option>
+                    <option value="9">Brussels</option>
+                    <option value="10" selected="selected">Bucharest</option>
+                    <option value="11">Budapest</option>
+                    <option value="12" selected="selected">Cologne</option>
+                    <option value="13" selected="selected">Copenhagen</option>
+                    <option value="14">Dortmund</option>
+                    <option value="15">Dresden</option>
+                    <option value="16" selected="selected">Dublin</option>
+                    <option value="17">Düsseldorf</option>
+                    <option value="18" selected="selected">Essen</option>
+                    <option value="19">Frankfurt</option>
+                    <option value="20">Genoa</option>
+                    <option value="21">Glasgow</option>
+                    <option value="22">Gothenburg</option>
+                    <option value="23" selected="selected">Hamburg</option>
+                    <option value="24">Hannover</option>
+                    <option value="25">Helsinki</option>
+                  </select>
+                  <div class="buttons d-flex flex-wrap gap-6 mt-3">
+                    <button type="button" class="btn bg-primary-subtle text-primary rounded-pill font-medium duallistbox-add">
+                      Add options
+                    </button>
+                    <button type="button"
+                      class="btn bg-primary-subtle text-primary rounded-pill font-medium duallistbox-add-clear">
+                      Add with clearing highlights
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Add Custom Options to Dual ListBox
+                                              ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/bootstrap-duallistbox/dist/jquery.bootstrap-duallistbox.min.js"></script>
+  <script src="@@webRoot/assets/js/forms/dual-listbox.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+﻿body {
+}
+
+.Prounded-6 {
+    border-radius: 6px;
+}
+
+.project-file-image {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.border-right {
+    border-right: 1px solid #f0f0f0;
+}
+
+.card-body-background {
+    background-color: #f1ecec;
+    border-radius: 1px;
+    color: #000000;
+}
+
+.dropdown-currency {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.border-right {
+    border-right: 1px solid #f0f0f0;
+}
+
+.hfivecolor {
+    color: blue;
+}
+
+.onoffswitchpr {
+    position: relative;
+    width: 52px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.marleft60 {
+    margin-left: 60%;
+}
+
+.marleft50 {
+    margin-left: 50%;
+}
+
+.bluecolor {
+    color: blue;
+}
+
+.greencolor {
+    color: green;
+}
+
+.redcolor {
+    color: red;
+}
+
+.font10 {
+   font:10px;
+}
+
+.font11 {
+    font: 11px;
+}
+
+.font12 {
+    font: 12px;
+}
+
+.font13 {
+    font: 13px;
+}
+
+.font14 {
+    font: 14px;
+}
+
+

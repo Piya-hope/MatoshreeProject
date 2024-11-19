@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="horizontal">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Treeview", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-4 col-12 mb-4 mb-md-0">
+                      <h4 class="card-title">Default</h4>
+                      <div id="treeview1"></div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-4 mb-md-0">
+                      <h4 class="card-title">Collapsed</h4>
+                      <div id="treeview2"></div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <h4 class="card-title">Tags as Badges</h4>
+                      <div id="treeview3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-4 col-12 mb-4 mb-md-0">
+                      <h4 class="card-title">Blue Theme</h4>
+                      <div id="treeview4"></div>
+                    </div>
+                    <div class="col-md-4 col-12 mb-4 mb-md-0">
+                      <h4 class="card-title">Custom Icons</h4>
+                      <div id="treeview5"></div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <h4 class="card-title">Expanded</h4>
+                      <div id="treeview6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Searchable Tree</h4>
+                  <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                      <h5>Input</h5>
+                      <!-- <form> -->
+                      <div class="mb-3">
+                        <label for="input-search" class="sr-only">Search Tree:</label>
+                        <input type="text" class="form-control" id="input-search" placeholder="Type to search..." />
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="chk-ignore-case" />
+                        <label class="form-check-label" for="chk-ignore-case">Ignore Case</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="chk-exact-match" />
+                        <label class="form-check-label" for="chk-exact-match">Exact Match</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="chk-reveal-results" />
+                        <label class="form-check-label" for="chk-reveal-results">Reveal Results</label>
+                      </div>
+                      <div class="hstack gap-6">
+                        <button type="button" class="btn btn-primary mt-3" id="btn-search">
+                          Search
+                        </button>
+                        <button type="button" class="btn bg-danger-subtle text-danger mt-3" id="btn-clear-search">
+                          Clear
+                        </button>
+                      </div>                     
+                      <!-- </form> -->
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                      <h5>Tree</h5>
+                      <div id="treeview-searchable"></div>
+                    </div>
+                    <div class="col-md-4">
+                      <h5>Results</h5>
+                      <div id="search-output"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/bootstrap-tree/dist/bootstrap-treeview.min.js"></script>
+  <script src="@@webRoot/assets/js/plugins/bootstrap-treeview-init.js"></script>
+</body>
+
+</html>

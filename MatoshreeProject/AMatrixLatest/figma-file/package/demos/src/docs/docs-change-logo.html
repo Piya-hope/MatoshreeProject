@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+  <head>
+    @@include("../main/partials/head.html")
+
+    <link
+      rel="stylesheet"
+      href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="@@webRoot/assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside class="left-sidebar with-vertical">
+        @@include("./partials/sidebar.html")
+      </aside>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar position-relative">
+          <div
+            class="navbar navbar-header d-flex align-items-center justify-content-between p-3 fixed-top"
+          >
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <!-- Logo icon -->
+            <a href="@@webRoot/docs/index.html" class="text-nowrap logo-img d-xl-none d-block">
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="homepage">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2">
+                <!-- Light Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage">
+              </span>
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="fs-8 text-muted d-xl-none d-block sidebartoggler"
+                href="javascript:void(0)"
+                role="button"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div
+          class="body-wrapper"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example3"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid mt-4">
+            <div>
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <div class="d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-4 pb-2 fs-5">Change Logo</h3>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Change Logo?</h4>
+<pre>										
+<code class="language-html">
+  // ----------------------------------------------------
+  // File: package/demos/src/main/partials/logo-sidebar.html
+  // ----------------------------------------------------    
+  &#x3C;div class=&#x22;brand-logo d-flex align-items-center justify-content-between&#x22;&#x3E;
+    &#x3C;a href=&#x22;@@webRoot/main/index.html&#x22; class=&#x22;text-nowrap logo-img&#x22;&#x3E;
+      &#x3C;b class=&#x22;logo-icon&#x22;&#x3E;
+        &#x3C;!--You can put here icon as well // &#x3C;i class=&#x22;wi wi-sunset&#x22;&#x3E;&#x3C;/i&#x3E; //--&#x3E;
+        &#x3C;!-- Dark Logo icon --&#x3E;
+        &#x3C;img
+          src=&#x22;@@webRoot/assets/images/logos/logo-light-icon.svg&#x22;
+          alt=&#x22;homepage&#x22;
+          class=&#x22;dark-logo&#x22;
+        /&#x3E;
+        &#x3C;!-- Light Logo icon --&#x3E;
+        &#x3C;img
+          src=&#x22;@@webRoot/assets/images/logos/logo-light-icon.svg&#x22;
+          alt=&#x22;homepage&#x22;
+          class=&#x22;light-logo&#x22;
+        /&#x3E;
+      &#x3C;/b&#x3E;
+      &#x3C;!--End Logo icon --&#x3E;
+      &#x3C;!-- Logo text --&#x3E;
+      &#x3C;span class=&#x22;logo-text&#x22;&#x3E;
+        &#x3C;!-- dark Logo text --&#x3E;
+        &#x3C;img
+          src=&#x22;@@webRoot/assets/images/logos/logo-light-text.svg&#x22;
+          alt=&#x22;homepage&#x22;
+          class=&#x22;dark-logo ps-2&#x22;
+        /&#x3E;
+        &#x3C;!-- Light Logo text --&#x3E;
+        &#x3C;img
+          src=&#x22;@@webRoot/assets/images/logos/logo-light-text.svg&#x22;
+          class=&#x22;light-logo ps-2&#x22;
+          alt=&#x22;homepage&#x22;
+        /&#x3E;
+      &#x3C;/span&#x3E;
+    &#x3C;/a&#x3E;
+  &#x3C;/div&#x3E;
+</code>
+</pre>
+                      <h6 class="fw-bold mt-4 mb-0 align-items-center">
+                        Put the image in
+                        <span class="text-dark fw-bold mx-1">src / assets / images / logos</span>
+                        Folder.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    @@include("../main/partials/scripts.html")
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <!-- End JS -->
+  </body>
+</html>

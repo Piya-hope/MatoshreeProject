@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("./partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/jvectormap/jquery-jvectormap.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("./partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("./partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("./partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+      <aside class="left-sidebar with-horizontal">
+        @@include("./partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          <!-- -------------------------------------------------------------- -->
+          <!-- Breadcrumb -->
+          <!-- -------------------------------------------------------------- -->
+          @@include("./partials/breadcrumb.html", {"title": "Dashboard", "subtitle": 'Home'})
+          <!-- -------------------------------------------------------------- -->
+          <!-- Breadcrumb End -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="card-group">
+            <!-- Column -->
+            <div class="card">
+              <div class="card-body text-center">
+                <h4 class="text-center">Unique Visit</h4>
+                <div class="d-flex justify-content-center mt-3">
+                  <div id="unique-visit" style="width: 120px"></div>
+                </div>
+              </div>
+              <div class="p-2 rounded border-top text-center">
+                <h4 class="font-medium mb-0">
+                  <i class="ti-angle-up text-success"></i> 12456
+                </h4>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="card">
+              <div class="card-body text-center">
+                <h4 class="text-center">Total Visit</h4>
+                <div class="d-flex justify-content-center mt-3">
+                  <div id="total-visit" style="width: 120px"></div>
+                </div>
+              </div>
+              <div class="p-2 rounded border-top text-center">
+                <h4 class="font-medium mb-0">
+                  <i class="ti-angle-down text-danger"></i> 456
+                </h4>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="card">
+              <div class="card-body text-center">
+                <h4 class="text-center">Bounce rate</h4>
+                <div class="d-flex justify-content-center mt-3">
+                  <div id="bounce-rate" style="width: 120px"></div>
+                </div>
+              </div>
+              <div class="p-2 rounded border-top text-center">
+                <h4 class="font-medium mb-0">
+                  <i class="ti-angle-up text-success"></i> 12456
+                </h4>
+              </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="card">
+              <div class="card-body text-center">
+                <h4 class="text-center">Page Views</h4>
+                <div class="d-flex justify-content-center mt-3">
+                  <div id="page-views" style="width: 120px"></div>
+                </div>
+              </div>
+              <div class="p-2 rounded border-top text-center">
+                <h4 class="font-medium mb-0">
+                  <i class="ti-angle-down text-danger"></i> 456
+                </h4>
+              </div>
+            </div>
+            <!-- Column -->
+          </div>
+          <!-- Row -->
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Total Visits</h4>
+                  <div id="visitfromworld" style="width: 100% !important; height: 400px"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Browser Stats</h4>
+                  <table class="table mt-3 table-borderless v-middle">
+                    <tbody>
+                      <tr>
+                        <td class="ps-0" style="width: 40px">
+                          <img src="@@webRoot/assets/images/browser/chrome-logo.svg" class="img-fluid" alt="logo" >
+                        </td>
+                        <td class="ps-0">Google Chrome</td>
+                        <td class="ps-0 text-end">
+                          <span class="
+                              badge
+                              bg-info-subtle
+                              text-info
+                              font-weight-medium
+                            ">23%</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-0">
+                          <img src="@@webRoot/assets/images/browser/firefox-logo.svg" class="img-fluid" alt="logo" >
+                        </td>
+                        <td class="ps-0">Mozila Firefox</td>
+                        <td class="ps-0 text-end">
+                          <span class="
+                              badge
+                              bg-danger-subtle
+                              text-danger
+                              font-weight-medium
+                            ">15%</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-0">
+                          <img src="@@webRoot/assets/images/browser/safari-logo.svg" class="img-fluid" alt="logo" >
+                        </td>
+                        <td class="ps-0">Apple Safari</td>
+                        <td class="ps-0 text-end">
+                          <span class="
+                              badge
+                              bg-warning-subtle
+                              text-warning
+                              font-weight-medium
+                            ">07%</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-0">
+                          <img src="@@webRoot/assets/images/browser/internet-logo.png" class="img-fluid" alt="logo" >
+                        </td>
+                        <td class="ps-0">Internet Explorer</td>
+                        <td class="ps-0 text-end">
+                          <span class="
+                              badge
+                              bg-success-subtle
+                              text-success
+                              font-weight-medium
+                            ">23%</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-0">
+                          <img src="@@webRoot/assets/images/browser/opera-logo.svg" class="img-fluid" alt="logo" >
+                        </td>
+                        <td class="ps-0">Opera mini</td>
+                        <td class="ps-0 text-end">
+                          <span class="
+                              badge
+                              bg-primary-subtle
+                              text-primary
+                              font-weight-medium
+                            ">23%</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-0">
+                          <img src="@@webRoot/assets/images/browser/edge-logo.svg" class="img-fluid" alt="logo" >
+                        </td>
+                        <td class="ps-0">Microsoft edge</td>
+                        <td class="ps-0 text-end">
+                          <span class="
+                              badge
+                              bg-info-subtle
+                              text-info
+                              font-weight-medium
+                            ">23%</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ps-0">
+                          <img src="@@webRoot/assets/images/browser/netscape-logo.png" alt="logo" />
+                        </td>
+                        <td class="ps-0" class="text-truncate">
+                          Netscape Navigator
+                        </td>
+                        <td class="ps-0 text-end">
+                          <span class="
+                              badge
+                              bg-danger-subtle
+                              text-danger
+                              font-weight-medium
+                            ">44%</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row -->
+          <div class="row">
+            <!-- Column -->
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-md-flex justify-content-between no-block align-items-center">
+                    <h4 class="card-title">Total Revenue</h4>
+                    <ul class="d-flex align-items-center gap-3 mb-0">
+                      <li class="d-flex">
+                        <div class="text-primary d-flex align-items-center gap-2 fs-3">
+                          <iconify-icon icon="ri:circle-fill" class="fs-2 text-danger"></iconify-icon>2022
+                        </div>
+                      </li>
+                      <li class="d-flex ">
+                        <div class="text-secondary d-flex align-items-center gap-2 fs-3">
+                          <iconify-icon icon="ri:circle-fill" class="fs-2 text-secondary"></iconify-icon>2023
+                        </div>
+                      </li>
+                      <li class="d-flex ">
+                        <div class="text-secondary d-flex align-items-center gap-2 fs-3">
+                          <iconify-icon icon="ri:circle-fill" class="fs-2 text-primary"></iconify-icon>2024
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="total-revenue"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-lg-4">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Sales Prediction</h4>
+                      <div class="row mt-4">
+                        <div class="col-7">
+                          <span class="display-6 fw-normal text-primary">$3528</span>
+                          <h6 class="text-muted">10% Increased</h6>
+                          <h5 class="text-nowrap">(150-165 Sales)</h5>
+                        </div>
+                        <div class="col-5">
+                          <div class="float-end mt-n5">
+                            <div id="sales-prediction"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Sales Difference</h4>
+                      <div class="row mt-4">
+                        <div class="col-7">
+                          <span class="display-6 fw-normal text-success">$4316</span>
+                          <h6 class="text-muted">10% Increased</h6>
+                          <h5 class="text-nowrap">(150-165 Sales)</h5>
+                        </div>
+                        <div class="col-5">
+                          <div class="float-end">
+                            <div id="sales-difference"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+          </div>
+          <!-- Row -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div>
+                  <div class="row gx-0">
+                    <div class="col-lg-12">
+                      <div class="p-4 calender-sidebar app-calendar">
+                        <div id="calendar"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- BEGIN MODAL -->
+              <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="eventModalLabel">
+                        Add / Edit Event
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="">
+                            <label class="form-label">Event Title</label>
+                            <input id="event-title" type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-12 mt-4">
+                          <div><label class="form-label">Event Color</label></div>
+                          <div class="d-flex">
+                            <div class="n-chk">
+                              <div class="form-check form-check-primary form-check-inline">
+                                <input class="form-check-input" type="radio" name="event-level" value="Danger"
+                                  id="modalDanger" />
+                                <label class="form-check-label" for="modalDanger">Danger</label>
+                              </div>
+                            </div>
+                            <div class="n-chk">
+                              <div class="form-check form-check-warning form-check-inline">
+                                <input class="form-check-input" type="radio" name="event-level" value="Success"
+                                  id="modalSuccess" />
+                                <label class="form-check-label" for="modalSuccess">Success</label>
+                              </div>
+                            </div>
+                            <div class="n-chk">
+                              <div class="form-check form-check-success form-check-inline">
+                                <input class="form-check-input" type="radio" name="event-level" value="Primary"
+                                  id="modalPrimary" />
+                                <label class="form-check-label" for="modalPrimary">Primary</label>
+                              </div>
+                            </div>
+                            <div class="n-chk">
+                              <div class="form-check form-check-danger form-check-inline">
+                                <input class="form-check-input" type="radio" name="event-level" value="Warning"
+                                  id="modalWarning" />
+                                <label class="form-check-label" for="modalWarning">Warning</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 d-none">
+                          <div class="">
+                            <label class="form-label">Enter Start Date</label>
+                            <input id="event-start-date" type="text" class="form-control" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 d-none">
+                          <div class="">
+                            <label class="form-label">Enter End Date</label>
+                            <input id="event-end-date" type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn" data-bs-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-success btn-update-event" data-fc-event-public-id="">
+                        Update changes
+                      </button>
+                      <button type="button" class="btn btn-primary btn-add-event">
+                        Add Event
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END MODAL -->
+            </div>
+          </div>
+          <!-- Row -->
+          <!-- Row -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card w-100">
+                <div class="card-body">
+                  <h4 class="card-title">Recent Chats</h4>
+                  <div class="chat-box w-100" data-simplebar style="height: 352px">
+                    <!--chat Row -->
+                    <ul class="chat-list m-0 p-0">
+                      <!--chat Row -->
+                      <li class="mt-4">
+                        <div class="chat-img d-inline-block align-top">
+                          <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user" class="rounded-circle" />
+                        </div>
+                        <div class="chat-content ps-3 d-inline-block">
+                          <h5 class="text-muted fs-3">James Anderson</h5>
+                          <div class="
+                              message
+                              font-weight-medium
+                              bg-info-subtle
+                              d-inline-block
+                              mb-2
+                              text-dark
+                            ">
+                            Lorem Ipsum is simply dummy text of the printing &
+                            type setting industry.
+                          </div>
+                        </div>
+                        <div class="
+                            chat-time
+                            d-inline-block
+                            text-end
+                            fs-2
+                            font-weight-medium
+                          ">
+                          10:56 am
+                        </div>
+                      </li>
+                      <!--chat Row -->
+                      <li class="mt-4">
+                        <div class="chat-img d-inline-block align-top">
+                          <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="user" class="rounded-circle" />
+                        </div>
+                        <div class="chat-content ps-3 d-inline-block">
+                          <h5 class="text-muted">Bianca Doe</h5>
+                          <div class="
+                              message
+                              font-weight-medium
+                              bg-success-subtle
+                              d-inline-block
+                              mb-2
+                              text-dark
+                            ">
+                            It’s Great opportunity to work.
+                          </div>
+                        </div>
+                        <div class="
+                            chat-time
+                            d-inline-block
+                            text-end
+                            fs-2
+                            font-weight-medium
+                          ">
+                          10:57 am
+                        </div>
+                      </li>
+                      <!--chat Row -->
+                      <li class="odd mt-4">
+                        <div class="chat-content ps-3 d-inline-block text-end">
+                          <div class="
+                              message
+                              font-weight-medium
+                              bg-warning-subtle
+                              d-inline-block
+                              mb-2
+                              text-dark
+                            ">
+                            I would love to join the team.
+                          </div>
+                          <br />
+                        </div>
+                        <div class="
+                            chat-time
+                            d-inline-block
+                            text-end
+                            fs-2
+                            font-weight-medium
+                          ">
+                          10:58 am
+                        </div>
+                      </li>
+                      <!--chat Row -->
+                      <li class="odd mt-4">
+                        <div class="chat-content ps-3 d-inline-block text-end">
+                          <div class="
+                              message
+                              font-weight-medium
+                              bg-warning-subtle
+                              d-inline-block
+                              mb-2
+                              text-dark
+                            ">
+                            Whats budget of the new project.
+                          </div>
+                          <br />
+                        </div>
+                        <div class="
+                            chat-time
+                            d-inline-block
+                            text-end
+                            fs-2
+                            font-weight-medium
+                          ">
+                          10:59 am
+                        </div>
+                      </li>
+                      <!--chat Row -->
+                      <li class="mt-4">
+                        <div class="chat-img d-inline-block align-top">
+                          <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user" class="rounded-circle" />
+                        </div>
+                        <div class="chat-content ps-3 d-inline-block">
+                          <h5 class="text-muted fs-3">Angelina Rhodes</h5>
+                          <div class="
+                              message
+                              font-weight-medium
+                              bg-primary-subtle
+                              d-inline-block
+                              mb-2
+                              text-dark
+                            ">
+                            Well we have good budget for the project
+                          </div>
+                        </div>
+                        <div class="
+                            chat-time
+                            d-inline-block
+                            text-end
+                            fs-2
+                            font-weight-medium
+                          ">
+                          11:00 am
+                        </div>
+                      </li>
+                      <!--chat Row -->
+                      <li class="mt-4">
+                        <div class="chat-img d-inline-block align-top">
+                          <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user" class="rounded-circle" />
+                        </div>
+                        <div class="chat-content ps-3 d-inline-block">
+                          <h5 class="text-muted fs-3">James Anderson</h5>
+                          <div class="
+                              message
+                              font-weight-medium
+                              bg-info-subtle
+                              d-inline-block
+                              mb-2
+                              text-dark
+                            ">
+                            Lorem Ipsum is simply dummy text of the printing &
+                            type setting industry.
+                          </div>
+                        </div>
+                        <div class="
+                            chat-time
+                            d-inline-block
+                            text-end
+                            fs-2
+                            font-weight-medium
+                          ">
+                          10:56 am
+                        </div>
+                      </li>
+                      <!--chat Row -->
+                      <li class="odd mt-4">
+                        <div class="chat-content ps-3 d-inline-block text-end">
+                          <div class="
+                              message
+                              font-weight-medium
+                              bg-warning-subtle
+                              d-inline-block
+                              mb-2
+                              text-dark
+                            ">
+                            Whats budget of the new project.
+                          </div>
+                          <br />
+                        </div>
+                        <div class="
+                            chat-time
+                            d-inline-block
+                            text-end
+                            fs-2
+                            font-weight-medium
+                          ">
+                          10:59 am
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-body border-top">
+                  <div class="row">
+                    <div class="col-8">
+                      <textarea placeholder="Type your message here" class="form-control border-0"
+                        style="resize: none"></textarea>
+                    </div>
+                    <div class="col-4 text-end">
+                      <button type="button" class="btn btn-primary btn-circle btn-lg">
+                        <i data-feather="send" class="fill-white"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-body pb-0">
+                  <h4 class="card-title">My Contacts</h4>
+                  <p class="card-subtitle mb-0 op-5">
+                    Checkout my contacts here
+                  </p>
+                </div>
+                <div class="message-box contact-box position-relative">
+                  <div class="message-widget contact-widget position-relative">
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-secondary
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            James Smith
+                          </h5>
+                          <span class="text-muted fs-3">you were in video call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-light-indigo
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            Joseph Garciar
+                          </h5>
+                          <span class="text-muted fs-3">you were in video call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-secondary
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            Henry Hernandez
+                          </h5>
+                          <span class="text-muted fs-3">you were in video call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- contact -->
+                    <a href="#" class="py-4 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-5.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-light-indigo
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            James Johnson
+                          </h5>
+                          <span class="text-muted fs-3">you were in video call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- contact -->
+                    <a href="#" class="py-4 pb-7 hstack px-7 gap-8">
+                      <div class="user-img position-relative d-inline-block">
+                        <img src="@@webRoot/assets/images/profile/user-6.jpg" alt="user"
+                          class="rounded-circle w-100" />
+                        <span class="
+                            profile-status
+                            pull-right
+                            d-inline-block
+                            position-absolute
+                            text-bg-light-indigo
+                            rounded-circle
+                          "></span>
+                      </div>
+                      <div class="v-middle d-md-flex align-items-center w-100">
+                        <div class="text-truncate">
+                          <h5 class="mb-1 text-dark font-weight-medium">
+                            Maria Rodriguez
+                          </h5>
+                          <span class="text-muted fs-3">you missed john call</span>
+                        </div>
+                        <div class="ms-auto d-flex button-group gap-1">
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-danger-subtle text-danger round-sm rounded-pill m-0">
+                            <i data-feather="video" class="feather-sm"></i>
+                          </button>
+                          <button type="button" href="#"
+                            class="btn btn-sm bg-primary-subtle text-primary round-sm rounded-pill m-0">
+                            <i data-feather="phone-incoming" class="feather-sm"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row -->
+        </div>
+      </div>
+      @@include("./partials/customizer.html")
+    </div>
+    @@include("./partials/header-components/dd-searchbar.html")
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("./partials/scripts.html")
+  <script src="@@webRoot/node_modules/fullcalendar/index.global.min.js"></script>
+  <script src="@@webRoot/assets/js/apps/calendar-init.js"></script>
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/assets/js/dashboards/dashboard4.js"></script>
+  <script src="@@webRoot/node_modules/jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="@@webRoot/assets/js/extra-libs/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+</body>
+
+</html>

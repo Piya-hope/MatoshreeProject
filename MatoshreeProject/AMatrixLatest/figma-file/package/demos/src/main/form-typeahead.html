@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Typeahead", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-sm-12 col-lg-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">The Basics</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-subtitle mb-3">
+                    When initializing a <code>typeahead</code>, you pass the
+                    plugin method one or more datasets. The source of a dataset
+                    is responsible for computing a set of suggestions for a
+                    given query.
+                  </p>
+                  <div id="the-basics">
+                    <input class="typeahead form-control" type="text" placeholder="Countries" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Bloodhound</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-subtitle mb-3">
+                    For more advanced use cases, rather than implementing the
+                    source for your dataset yourself, you can take advantage of
+                    <code>Bloodhound</code>, the
+                    <code>typeahead.js</code> suggestion engine. Bloodhound is
+                    stack, flexible, and offers advanced functionalities such as
+                    prefetching, intelligent caching, fast lookups, and
+                    backfilling with remote data.
+                  </p>
+                  <div id="bloodhound">
+                    <input class="typeahead form-control" type="text" placeholder="Countries" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Prefetch</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-subtitle mb-3">
+                    Prefetched data is fetched and processed on initialization.
+                    If the browser supports local storage, the processed data
+                    will be cached there to prevent additional network requests
+                    on subsequent page loads.
+                  </p>
+                  <div id="prefetch">
+                    <input class="typeahead form-control" type="text" placeholder="Countries" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Default Suggestion</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-subtitle mb-3">
+                    Default suggestions can be shown for empty queries by
+                    setting the <code>minLength</code> option to 0 and having
+                    the source return suggestions for empty queries.
+                  </p>
+                  <div id="default-suggestion">
+                    <input class="typeahead form-control" type="text" placeholder="Countries" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Multiple Datasets</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-subtitle mb-3">
+                    Multiple datasets give you visually separated sets of data
+                    inside Dropdown menu with <code>saperate titles</code>,
+                    managed in <code>templates</code> option. This looks like a
+                    <code>&lt;optgroup&gt;</code> titles in selects.
+                  </p>
+                  <div id="multiple-datasets">
+                    <input class="typeahead form-control" type="text" placeholder="Countries" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Scrollable Dropdown Menu</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-subtitle mb-3">
+                    To change the height of your dropdown menu, just wrap your
+                    input in some <code>div</code> with
+                    <code>custom css</code> styles and change necessary css
+                    properties or change it in css directly.
+                  </p>
+                  <div id="scrollable-dropdown-menu" class="scrollable-dropdown">
+                    <input class="typeahead form-control" type="text" placeholder="Countries" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/typeahead.js/dist/typeahead.jquery.min.js"></script>
+  <script src="@@webRoot/node_modules/typeahead.js/dist/bloodhound.min.js"></script>
+  <script src="@@webRoot/assets/js/forms/typeahead/typeahead.init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<div>
+	<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Pur_id</th><th scope="col">Pur_Name</th><th scope="col">Pur_Amount</th><th scope="col">ProjectName</th><th scope="col">Pur_Date</th><th scope="col">Pur_Type</th><th scope="col">BillNo</th><th scope="col">Other</th>
+		</tr><tr>
+			<td>1</td><td>Wooden Wall Art</td><td>56000</td><td>Test </td><td>17/01/2024 00:00:00</td><td>Reimbursement</td><td>INV-0005</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>3</td><td>Polish Wall Art</td><td>78000</td><td>Test </td><td>17/01/2024 00:00:00</td><td>Regular</td><td>INV-00055</td><td>&nbsp;</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,1502 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyMaster.master.cs" Inherits="MatoshreeProject.MyMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajax" %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon icon-->
+    <link rel="shortcut icon"
+        type="image/png"
+        href="Img_logo/M.png" style="width: 50px" />
+
+    <!-- External  Css -->
+    <link href="Scripts/ExternalCss.css" rel="stylesheet" />
+    <!-- Core Css -->
+    <link href="AMatrixLatest/dist/assets/css/styles.css" rel="stylesheet" />
+    <!-- DataTables Css -->
+    <link href="AMatrixLatest/dist/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <!-- tinyeditor CSS -->
+    <script src="Scripts/tinymce/tinymce.min.js"></script>
+
+    <!-- Sweett CSS -->
+    <link rel="stylesheet" href="AMatrixLatest/dist/assets/libs/sweetalert2/dist/sweetalert2.min.css">
+
+    <title>Matoshree Interior</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <%--<img src="Img_logo/M.png" id="preloaderImg" runat="server" alt="loader" class="lds-ripple img-fluid" width="100" />--%>
+
+        <img id="preloaderImg" runat="server" alt="loader" class="lds-ripple img-fluid" width="100" />
+    </div>
+    <!-- Preloader -->
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <div id="main-wrapper">
+            <!-- Sidebar Start -->
+            <aside class="left-sidebar with-vertical">
+                <div>
+                    <!-- ---------------------------------- -->
+                    <!-- Start Vertical Layout Sidebar -->
+                    <!-- ---------------------------------- -->
+                    <!-- Sidebar scroll-->
+                    <nav class="sidebar-nav scroll-sidebar" data-simplebar>
+                        <div id="AdminSidebar" runat="server" visible="false">
+                            <ul id="sidebarnav" runat="server">
+                                <!-- ---------------------------------- -->
+                                <!-- Home -->
+                                <!-- ---------------------------------- -->
+
+                                <li class="nav-small-cap" id="DashboardCap" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Dashboard</span>
+                                </li>
+
+                                <!-------------------------------------->
+                                <!-- Dashboard -->
+                                <!-- ---------------------------------- -->
+                                <li class="sidebar-item" id="DashboardID" runat="server" visible="false">
+                                    <a class="sidebar-link" href="Dashboard.aspx">
+                                        <iconify-icon icon="solar:screencast-2-linear" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Dashboard</span>
+                                    </a>
+                                </li>
+
+                                <!-- ---------------------------------- -->
+                                <!-- Apps -->
+                                <!-- ---------------------------------- -->
+                                <li class="nav-small-cap" id="CustomerCap" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Contents</span>
+                                </li>
+                                <li class="sidebar-item" id="CustomerID" runat="server" visible="false">
+                                    <a class="sidebar-link" href="Customer.aspx">
+                                        <iconify-icon icon="carbon:user-multiple" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Customer</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item" id="VendorID" runat="server" visible="false">
+                                    <a class="sidebar-link" href="Vendor.aspx">
+                                        <iconify-icon icon="solar:user-plus-rounded-linear" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Vendor</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item" id="TenderID" runat="server" visible="false">
+                                    <a class="sidebar-link" href="Tender.aspx">
+                                        <iconify-icon icon="solar:layers-minimalistic-line-duotone" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Tender</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item" id="TASKSID" runat="server" visible="false">
+                                    <a class="sidebar-link" href="TaskDetailsStaff.aspx">
+                                        <iconify-icon icon="solar:archive-minimalistic-linear" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Task</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item" id="ProjectsID" runat="server" visible="false">
+                                    <a class="sidebar-link" href="Projects.aspx">
+                                        <iconify-icon icon="bi:briefcase" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Project</span>
+                                    </a>
+                                </li>
+                                <%-- Sale --%>
+                                <li class="nav-small-cap" id="saleCap" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Sale</span>
+                                </li>
+                                <li class="sidebar-item" id="saleID" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="solar:bill-list-linear" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Sale</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulsaleID" runat="server">
+                                        <li class="sidebar-item" id="ProposalsLi1" runat="server" visible="false">
+                                            <a href="Proposal.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:book-outline" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Proposals</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="EstimatesID" runat="server" visible="false">
+                                            <a href="Estimates_Home.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:file-smile-linear" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Estimates</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="InvoiceID" runat="server" visible="false">
+                                            <a href="Chart_List_Invoice.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="akar-icons:reciept"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Invoices</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="PaymentsID" runat="server" visible="false">
+                                            <a href="Payments.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:file-text-linear" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Payments</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="ItemListID" runat="server" visible="false">
+                                            <a href="Item_List.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:widget-linear" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Items</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%-- Sale --%>
+
+                                <%-- Expenses --%>
+                                <li class="nav-small-cap" id="EXPENSESCAP" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Expenses</span>
+                                </li>
+                                <li class="sidebar-item" id="EXPENSESID" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="mage:credit-card" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Expenses</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulEXPENSESID" runat="server">
+                                        <li class="sidebar-item" id="OfficeEXPENSESID" runat="server" visible="false">
+                                            <a href="Office_Expences.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar-notes-broken" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Office Expenses</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="StaffEXPENSESID" runat="server" visible="false">
+                                            <a href="Staff_Expenses.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:file-smile-linear" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Staff Expenses</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="PurchaseID" runat="server" visible="false">
+                                            <a href="Project_Purchase.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="bi:file-earmark-bar-graph" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Project Purchase</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="PaymentRequestID" runat="server" visible="false">
+                                            <a href="ViewPaymentRequest.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:graph-new-broken" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Payment Request</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="PaymentApprovalID" runat="server" visible="false">
+                                            <a href="PaymentApprove.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="akar-icons:chat-approve" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Payment Approval</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <%-- Support --%>
+                                <li class="nav-small-cap" id="SupportCap" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Support</span>
+                                </li>
+                                <li class="sidebar-item" id="SupportLi" runat="server" visible="false">
+                                    <a class="sidebar-link" href="Ticket_Details.aspx">
+                                        <iconify-icon icon="solar:clapperboard-edit-linear" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Ticket</span>
+                                    </a>
+                                </li>
+                                <%-- Support --%>
+                                <%-- Leads --%>
+                                <li class="sidebar-item" id="LeadsLi1" runat="server" visible="false">
+                                    <a class="sidebar-link" href="ViewLeadModule.aspx">
+                                        <iconify-icon icon="mdi:leads" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Leads</span>
+                                    </a>
+                                </li>
+                                <%-- Leads --%>
+                                <%-- LEGAL --%>
+                                <li class="nav-small-cap" id="LEGALCAP" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Legal</span>
+                                </li>
+                                <li class="sidebar-item" id="LEGALID" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="clarity:contract-line" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Legal</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulLEGALID" runat="server" visible="false">
+                                        <li class="sidebar-item" id="ContractID" runat="server">
+                                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                                <iconify-icon icon="material-symbols-light:contract-outline" class="aside-icon"></iconify-icon>
+                                                <span class="hide-menu">Contract</span>
+                                            </a>
+                                            <ul aria-expanded="false" class="collapse second-level" id="ulContractID" runat="server" visible="false">
+                                                <li class="sidebar-item" id="CustomerContractID" runat="server" visible="false">
+                                                    <a href="Contract.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="ri:contract-line"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Customer</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="VendorContractID" runat="server" visible="false">
+                                                    <a href="Contract_Vendor.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="material-symbols-light:contract-edit-outline-rounded"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Vendor</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="StaffContractID" runat="server" visible="false">
+                                                    <a href="Contract_Staff.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="arcticons:firefoxnotes"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Staff</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="PartnerContractID" runat="server" visible="false">
+                                                    <a href="Contract_Contact.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="material-symbols:clinical-notes-sharp"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Partner</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sidebar-item" id="WorkOrderID" runat="server" visible="false">
+                                            <a class="sidebar-link" href="WorkOrder.aspx">
+                                                <iconify-icon icon="fluent-mdl2:activate-orders" class="aside-icon"></iconify-icon>
+                                                <span class="hide-menu">Work Order</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="PurchaseOrderID" runat="server" visible="false">
+                                            <a class="sidebar-link" href="PurchaseOrder.aspx">
+                                                <iconify-icon icon="solar:sim-card-outline" class="aside-icon"></iconify-icon>
+                                                <span class="hide-menu">Purchase Order</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <%-- LEGAL --%>
+
+                                <%-- Staff --%>
+                                <li class="nav-small-cap" id="EmployeesCapID" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Staff</span>
+                                </li>
+                                <li class="sidebar-item" id="EmployeesID" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="solar:shield-user-outline" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Staff</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulEmployeesID" runat="server">
+                                        <li class="sidebar-item" id="STAFFID" runat="server" visible="false">
+                                            <a href="Setup_StaffDetails.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:user-plus-broken"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Create Staff</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="RolesID" runat="server" visible="false">
+                                            <a href="Roles.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="oui:app-users-roles"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Roles</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <%-- Staff --%>
+
+                                <%-- HRMS --%>
+                                <!-- --------------HRMS---------------------->
+                                <li class="nav-small-cap" id="HRMSCapID" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">HRMS</span>
+                                </li>
+                                <li class="sidebar-item" id="HRMSID" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="solar:mask-happly-linear"></iconify-icon>
+                                        <span class="hide-menu">HRMS</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulHRMSID" runat="server" visible="false">
+                                        <li class="sidebar-item" id="LeaveLiID" runat="server" visible="false">
+                                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                                <iconify-icon icon="solar:bowling-outline" class="aside-icon"></iconify-icon>
+                                                <span class="hide-menu">Leave Management</span>
+                                            </a>
+                                            <ul aria-expanded="false" class="collapse second-level" id="ulLeaveLiID" runat="server" visible="false">
+                                                <li class="sidebar-item" id="LeaveReLiID" runat="server" visible="false">
+                                                    <a href="LeaveRequest.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="solar:feed-outline" class="aside-icon"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Leave Request</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="LeaveAppLiID" runat="server" visible="false">
+                                                    <a href="LeaveApproval.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="solar:file-check-outline"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Leave Approval</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="LeaveTallyLiID" runat="server" visible="false">
+                                                    <a href="LeaveTally.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="icon-park-outline:table-report"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Leave Tally</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sidebar-item" id="ShiftScheLiID" runat="server" visible="false">
+                                            <a href="ShiftScheduling.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:maximize-square-3-linear"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Shift Scheduling</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="sidebar-item" id="AttendenceLiID" runat="server" visible="false">
+                                            <a href="Attendence.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:streets-navigation-broken"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Attendance</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="ImportPresentyExcelSheetLiID" runat="server" visible="false">
+                                            <a href="ImportPresentyExcelSheet.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="mdi:report-box-multiple-outline"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Import Attendance</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="sidebar-item" id="SalaryLiID" runat="server" visible="false">
+                                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                                <iconify-icon icon="solar:wallet-outline"></iconify-icon>
+                                                <span class="hide-menu">Salary Details</span>
+                                            </a>
+                                            <ul aria-expanded="false" class="collapse first-level" id="ulSalaryLiID" runat="server" visible="false">
+                                                <li class="sidebar-item" id="SalaryHeadLiID" runat="server" visible="false">
+                                                    <a href="ViewPreSalStructure.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="arcticons:document-viewer"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Salary PreStructure</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="SalaryInfoLiID" runat="server" visible="false">
+                                                    <a href="EmployeeSalDetails.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="clarity:employee-line"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Employee Salary Details</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="SalarySlipLiID" runat="server" visible="false">
+                                                    <a href="ViewSalarySlip.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="fluent-mdl2:text-document-shared"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">View Salary Slip</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+
+                                        <li class="sidebar-item" id="CareerLiID" runat="server" visible="false">
+                                            <a href="career.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:user-rounded-broken"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Career</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="OfferLetterLiID" runat="server" visible="false">
+                                            <a href="OfferLetter.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="icon-park-outline:table-report"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Offer Letter</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- --------------HRMS-------------------- -->
+
+                                <%-- HRMS --%>
+
+                                <%-- SetUp --%>
+                                <li class="nav-small-cap" id="SETUPCapID" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Setup</span>
+                                </li>
+                                <li class="sidebar-item" id="SETUPID" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="material-symbols-light:wifi-protected-setup" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Setup</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulSETUPID" runat="server">
+                                        <li class="sidebar-item" id="PatnerID" runat="server" visible="false">
+                                            <a href="Patner.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="gis:map-user"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Partner</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="CalenderLi1" runat="server" visible="false">
+                                            <a href="Calender.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="simple-line-icons:calender"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Calender</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="Setting" runat="server" visible="false">
+                                            <a href="Setting.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="uiw:setting-o"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Settings</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="BasicSetting1" runat="server" visible="false">
+                                            <a href="BasicSetting.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="tabler:settings-cog"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Web Settings</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%-- ! SetUp --%>
+                                <!-- ---------------------------------- -->
+                                <!-- UI -->
+                                <!-- ---------------------------------- -->
+                                <li class="nav-small-cap" id="InventoryCap" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Inventory</span>
+                                </li>
+                                <li class="sidebar-item" id="InventoryLi1" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="clarity:contract-line" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Inventory</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulInventory1" runat="server" visible="false">
+                                        <li class="sidebar-item" id="SettingINVENTORYLi" runat="server" visible="false">
+                                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                                <iconify-icon icon="material-symbols-light:contract-outline" class="aside-icon"></iconify-icon>
+                                                <span class="hide-menu">Inventory Setting</span>
+                                            </a>
+                                            <ul aria-expanded="false" class="collapse second-level" id="ulsettInv1" runat="server" visible="false">
+                                                <li class="sidebar-item" id="InventoryDepo" runat="server" visible="false">
+                                                    <a href="InventoryDepoDetails.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="ph:shopping-bag-open-thin"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Depo & Warehouse</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="ProductDepo" runat="server" visible="false">
+                                                    <a href="Inventory_Product.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="fluent-mdl2:product"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Depo Product</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="ProjectDepoAllocate" runat="server" visible="false">
+                                                    <a href="InventoryAllocation.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="fluent-mdl2:assign-policy"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Project Allocate Depo</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar-item" id="StaffDepoAllocate" runat="server" visible="false">
+                                                    <a href="InventoryUserAllocation.aspx" class="sidebar-link sublink">
+                                                        <div class="round-16 d-flex align-items-center justify-content-center">
+                                                            <iconify-icon icon="clarity:employee-line"></iconify-icon>
+                                                        </div>
+                                                        <span class="hide-menu">Staff Allocate Depo</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sidebar-item" id="DistributionINVENTORYLi" runat="server" visible="false">
+                                            <a href="Distribution.aspx" class="sidebar-link">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="fluent:text-align-distributed-20-regular"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Distribution</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="ItemRequestLi1" runat="server" visible="false">
+                                            <a href="ItemRequest.aspx" class="sidebar-link">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="fluent-mdl2:assign-policy" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Request Inventory</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="ReturnInventoryLi" runat="server" visible="false">
+                                            <a href="Item_Return.aspx" class="sidebar-link">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="hugeicons:truck-return" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Return Inventory</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <%-- Reports --%>
+                                <li class="nav-small-cap" id="REPORTCAP" runat="server" visible="false">
+                                    <iconify-icon icon="solar:menu-dots-bold" class="nav-small-cap-icon fs-4"></iconify-icon>
+                                    <span class="hide-menu">Reports</span>
+                                </li>
+                                <li class="sidebar-item" id="REPORTS" runat="server" visible="false">
+                                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                        <iconify-icon icon="carbon:report" class="aside-icon"></iconify-icon>
+                                        <span class="hide-menu">Reports</span>
+                                    </a>
+                                    <ul aria-expanded="false" class="collapse first-level" id="ulREPORTID" runat="server">
+                                        <li class="sidebar-item" id="ExpensesREPORTS" runat="server" visible="false">
+                                            <a href="ExpensesReport.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="mdi:report-line" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Expenses Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="WorkOrderREPORTS" runat="server" visible="false">
+                                            <a href="WorkorderReport.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="mdi:report-box-multiple-outline" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">WorkOrder Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="InvoiceREPORTS" runat="server" visible="false">
+                                            <a href="InvoiceReport.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="tabler:report-money" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Invoice Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="PaymentREPORTS" runat="server" visible="false">
+                                            <a href="PaymentReport.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="tabler:report-search" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Payment Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="ActivityREPORTS" runat="server" visible="false">
+                                            <a href="ActivityLogs.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="icon-park-outline:table-report" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Activity Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="LeaveAnalysisREPORTS" runat="server" visible="false">
+                                            <a href="LeaveAnalysis.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="icon-park-outline:table-report" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Leave Analysis</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-item" id="DeductionREPORTS" runat="server" visible="false">
+                                            <a href="DeductionReport.aspx" class="sidebar-link sublink">
+                                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                                    <iconify-icon icon="solar:documents-bold-duotone" class="aside-icon"></iconify-icon>
+                                                </div>
+                                                <span class="hide-menu">Deduction Report</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <%-- Reports --%>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- End Sidebar scroll-->
+                </div>
+            </aside>
+            <!--  Sidebar End -->
+
+            <div class="page-wrapper">
+                <!--  Header Start -->
+                <header class="topbar rounded-0 border-0 bg-primary">
+                    <div class="with-vertical">
+                        <!-- ---------------------------------- -->
+                        <!-- Start Vertical Layout Header -->
+                        <!-- ---------------------------------- -->
+                        <nav class="navbar navbar-expand-lg px-lg-0 px-3 py-0">
+                            <div class="d-none d-lg-block">
+                                <div class="brand-logo d-flex align-items-center justify-content-between">
+                                    <a href="Dashboard.aspx" class="text-nowrap logo-img">
+                                        <b class="logo-icon">
+                                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                                            <!-- Dark Logo icon -->
+
+                                            <%--  <img src="Img_logo\MI Logo 2.png"
+                                                alt="homepage"
+                                                class="dark-logo" width="45" />
+                                            <!-- Light Logo icon -->
+                                            <img src="Img_logo\MI Logo 2.png"
+                                                alt="homepage"
+                                                class="light-logo" width="45" />--%>
+
+                                            <img id="smImg3" runat="server"
+                                                alt="homepage"
+                                                class="dark-logo" width="45" />
+                                            <!-- Light Logo icon -->
+                                            <img id="smImg4" runat="server"
+                                                alt="homepage"
+                                                class="light-logo" width="45" />
+                                        </b>
+                                        <!--End Logo icon -->
+                                        <!-- Logo text -->
+                                        <span class="logo-text">
+                                            <!-- dark Logo text -->
+                                            <%--<img src="Img_logo\MI Logo.png"
+                                                alt="homepage"
+                                                class="dark-logo ps-2" style="width: 100%; height: 40px;" />
+                                            <!-- Light Logo text -->
+                                            <img src="Img_logo\MI Logo.png"
+                                                class="light-logo ps-2"
+                                                alt="homepagetext" style="width: 100%; height: 40px;" />--%>
+
+                                            <img id="textImglogo3" runat="server"
+                                                alt="homepage"
+                                                class="dark-logo ps-2" style="width: 100%; height: 40px;" />
+                                            <!-- Light Logo text -->
+                                            <img id="textImglogo4" runat="server"
+                                                class="light-logo ps-2"
+                                                alt="homepagetext" style="width: 100%; height: 40px;" />
+                                        </span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+                            <ul class="navbar-nav" runat="server" id="navbardiv" visible="true">
+
+                                <li class="nav-item">
+                                    <a class="nav-link nav-icon-hover sidebartoggler" id="headerCollapse" href="javascript:void(0)">
+                                        <iconify-icon icon="solar:list-bold"></iconify-icon>
+                                    </a>
+                                </li>
+                                <!-- ------------------------------- -->
+                                <!-- start notification Dropdown -->
+                                <!-- ------------------------------- -->
+                                <li class="nav-item d-none d-lg-block search-box">
+                                    <a class="nav-link nav-icon-hover d-none d-md-flex waves-effect waves-dark" href="javascript:void(0)"
+                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <iconify-icon icon="solar:magnifer-linear"></iconify-icon>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="d-block d-lg-none">
+                                <div class="brand-logo d-flex align-items-center justify-content-between">
+                                    <a href="Dashboard.aspx" class="text-nowrap logo-img">
+                                        <b class="logo-icon">
+                                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                                            <!-- Dark Logo icon -->
+
+                                            <%--<img src="Img_logo\MI Logo 2.png"
+                                                alt="homepage"
+                                                class="dark-logo" width="45" />
+
+                                            <!-- Light Logo icon -->
+                                            <img src="Img_logo\MI Logo 2.png"
+                                                alt="homepage"
+                                                class="light-logo" width="45" />--%>
+
+                                            <img id="smlogo1" runat="server"
+                                                alt="homepage"
+                                                class="dark-logo" width="45" />
+                                            <!-- Light Logo icon -->
+                                            <img id="smlogo2" runat="server"
+                                                alt="homepage"
+                                                class="light-logo" width="45" />
+
+                                        </b>
+                                        <!--End Logo icon -->
+                                        <!-- Logo text -->
+                                        <span class="logo-text">
+                                            <!-- dark Logo text -->
+                                            <%-- <img src="Img_logo\MI Logo.png"
+                                                alt="homepage"
+                                                class="dark-logo ps-2" style="width: 100%; height: 40px;" />
+                                            <!-- Light Logo text -->
+                                            <img src="Img_logo\MI Logo.png"
+                                                class="light-logo ps-2"
+                                                alt="homepagetext" style="width: 100%; height: 40px;" />--%>
+
+                                            <img id="textLogo1" runat="server"
+                                                alt="homepage"
+                                                class="dark-logo ps-2" style="width: 100%; height: 40px;" />
+                                            <!-- Light Logo text -->
+                                            <img id="textLogo2" runat="server"
+                                                class="light-logo ps-2"
+                                                alt="homepagetext" style="width: 100%; height: 40px;" />
+
+                                        </span>
+                                    </a>
+                                </div>
+
+
+                            </div>
+                            <ul class="navbar-nav flex-row  align-items-center justify-content-center d-flex d-lg-none" runat="server" id="navbardiv2" visible="true">
+                                <li class="nav-item dropdown">
+                                    <a class="navbar-toggler nav-link text-white nav-icon-hover border-0" href="javascript:void(0)"
+                                        data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span class="">
+                                            <i class="ti ti-dots fs-7"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNav1">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <ul class="navbar-nav flex-row  align-items-center justify-content-center d-flex d-lg-none" runat="server" id="navbardiv3" visible="true">
+                                        <li class="nav-item hover-dd dropdown">
+                                            <a class="nav-link nav-icon-hover waves-effect waves-dark" href="javascript:void(0)" id="drop2"
+                                                aria-expanded="false">
+                                                <iconify-icon icon="solar:bell-bing-line-duotone"></iconify-icon>
+                                                <div class="notify">
+                                                    <span class="heartbit"></span><span class="point"></span>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu py-0 content-dd  dropdown-menu-animate-up overflow-hidden" aria-labelledby="drop2">
+
+                                                <div class="py-3 px-4 bg-primary">
+                                                    <div class="mb-0 fs-6 fw-medium text-white">Notifications</div>
+                                                    <div class="mb-0 fs-2 fw-medium text-white">
+                                                        You have 
+                                                        <asp:Label ID="lblActivityCount" runat="server" Text=""></asp:Label>
+                                                        new Notifications
+                                                    </div>
+
+                                                    <asp:Label ID="lblActiviylogdate" runat="server" Font-Size="12px" Text="Date Posted:" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+                                                    <asp:Label ID="lblActiviylogdate1" runat="server" Font-Size="12px" Text="" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+
+
+                                                    <br />
+                                                </div>
+                                                <div class="message-body" data-simplebar>
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                                            <div class="table-responsive">
+
+                                                                <asp:GridView ID="GridViewActivity" runat="server" CssClass="table table-borderless table-hover " AutoGenerateColumns="false" CellPadding="4"
+                                                                    ClientIDMode="Static" ShowHeader="false" Style="width: 100%" EmptyDataText="No Records found" ShowHeaderWhenEmpty="False" EmptyDataRowStyle-ForeColor="Red" EmptyDataRowStyle-HorizontalAlign="Center" Font-Bold="false" DataKeyNames="ID" BorderStyle="None">
+                                                                    <Columns>
+                                                                        <asp:TemplateField HeaderText="ID" SortExpression="ID" Visible="false">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblID1" runat="server" Text='<%# Bind("ID") %>' Font-Bold="false" Font-Size="12px" Visible="false"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+
+                                                                        <asp:TemplateField HeaderText="Name" SortExpression="name">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblActivityType" runat="server" Text='<%# Bind("ActivityType") %>' Font-Size="12px" ForeColor="Black" Visible="false" CssClass="form-label"></asp:Label>
+                                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                                    <asp:LinkButton ID="linkActivityType1" runat="server" Text='<%# Bind("ActivityType") %>' OnClick="linkActivityType1_Click" Font-Size="12px"></asp:LinkButton>
+
+                                                                                    <asp:Label ID="lblActivityDate" runat="server" Text='<%# Bind("ActivityTime") %>' Font-Bold="false" Font-Size="12px" CssClass="fs-2 text-nowrap d-block"></asp:Label>
+                                                                                </div>
+
+                                                                                <asp:Label ID="lblactBy" runat="server" Text="Activityby" Font-Bold="false" Font-Size="12px" CssClass="mb-0 fs-2 fw-medium"></asp:Label>
+                                                                                <asp:Label ID="lblActivityBy" runat="server" Text='<%#Bind("UserID") %>' Font-Bold="false" Font-Size="12px" CssClass="mb-0 fs-2 fw-medium"></asp:Label>
+
+
+
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                    </Columns>
+                                                                </asp:GridView>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </li>
+                                        <li class="nav-item hover-dd dropdown">
+                                            <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop21" aria-expanded="false">
+                                                <iconify-icon icon="solar:inbox-line-line-duotone"></iconify-icon>
+                                                <div class="notify">
+                                                    <span class="heartbit"></span><span class="point"></span>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu py-0 content-dd dropdown-menu-animate-up overflow-hidden" aria-labelledby="drop2">
+
+                                                <div class="py-3 px-4 bg-secondary">
+                                                    <div class="mb-0 fs-6 fw-medium text-white">Annoucement</div>
+                                                    <div class="mb-0 fs-2 fw-medium text-white">
+                                                        You have 
+                                                        <asp:Label ID="lblAnnouncementCount" runat="server" Text=""></asp:Label>
+                                                        new Annoucement
+                                                    </div>
+                                                    <asp:Label ID="lbldateadded" runat="server" Font-Size="12px" Text="Date Posted:" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+                                                    <asp:Label ID="lbldateadded1" runat="server" Font-Size="12px" Text="" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+
+                                                    <asp:Label ID="lblannounceid1" runat="server" Visible="false" Text=""></asp:Label>
+                                                    <br />
+                                                </div>
+
+                                                <div class="message-body" data-simplebar>
+                                                    <div class="row">
+
+                                                        <div id="Annoucement" runat="server">
+
+                                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+
+
+                                                                <div class="row">
+                                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+
+                                                                        <asp:Label ID="lblsubject" runat="server" Text="" CssClass="form-label"></asp:Label><br />
+                                                                        <asp:Label ID="lblmessage" runat="server" Text="" Font-Size="12px"></asp:Label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="message-body" data-simplebar>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                                                            <div class="table-responsive overflow-auto ">
+
+                                                                                <asp:GridView ID="GridViewAnnounceView" runat="server" CssClass="table table-hover " AutoGenerateColumns="false" CellPadding="4" BorderStyle="None"
+                                                                                    ClientIDMode="Static" ShowHeader="false" Style="width: 100%" EmptyDataText="No Records found" ShowHeaderWhenEmpty="False" EmptyDataRowStyle-ForeColor="Red" EmptyDataRowStyle-HorizontalAlign="Center" Font-Bold="false" DataKeyNames="announcement_id">
+                                                                                    <Columns>
+                                                                                        <asp:TemplateField HeaderText="ID" SortExpression="ID" Visible="false">
+                                                                                            <ItemTemplate>
+                                                                                                <asp:Label ID="lblAnnouncementID" runat="server" Text='<%# Bind("announcement_id") %>' Font-Bold="false" Font-Size="12px" Visible="false"></asp:Label>
+                                                                                            </ItemTemplate>
+                                                                                        </asp:TemplateField>
+
+                                                                                        <asp:TemplateField HeaderText="Name" SortExpression="name">
+                                                                                            <ItemTemplate>
+                                                                                                <asp:Label ID="lblname1" runat="server" Text='<%# Bind("name") %>' Font-Size="12px" ForeColor="Black" Visible="false" CssClass="form-label"></asp:Label>
+                                                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                                                    <asp:LinkButton ID="linkAnnoucementName" runat="server" Text='<%# Bind("name") %>' OnClick="linkAnnoucementName_Click" Font-Size="12px"></asp:LinkButton>
+
+                                                                                                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("addedTime") %>' Font-Bold="false" Font-Size="12px" CssClass="fs-2 text-nowrap d-block"></asp:Label>
+                                                                                                </div>
+                                                                                                <asp:Label ID="lblcreatedBy" runat="server" Text='<%#Bind("Createby") %>' Font-Bold="false" Font-Size="12px" Visible="false" CssClass="d-flex justify-content-end"></asp:Label>
+
+                                                                                                <asp:Label ID="lblSubname" runat="server" Text='<%# Bind("message") %>' Font-Bold="false" Font-Size="12px" Visible="false" ForeColor="Black"></asp:Label>
+
+
+                                                                                            </ItemTemplate>
+                                                                                        </asp:TemplateField>
+                                                                                    </Columns>
+                                                                                </asp:GridView>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <%-- </div>--%>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center" runat="server" id="navbardiv4" visible="true">
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-icon-hover moon dark-layout" href="javascript:void(0)">
+                                                <iconify-icon icon="solar:moon-line-duotone" class="moon"></iconify-icon>
+                                            </a>
+                                            <a class="nav-link nav-icon-hover sun light-layout" href="javascript:void(0)" style="display: none;">
+                                                <iconify-icon icon="solar:sun-2-line-duotone" class="sun"></iconify-icon>
+                                            </a>
+                                        </li>
+
+                                        <%-- Notification lg --%>
+
+                                        <li class="nav-item hover-dd dropdown  d-none d-lg-block">
+                                            <a class="nav-link nav-icon-hover waves-effect waves-dark" href="javascript:void(0)" id="drop2"
+                                                aria-expanded="false">
+                                                <iconify-icon icon="solar:bell-bing-line-duotone"></iconify-icon>
+                                                <div class="notify">
+                                                    <span class="heartbit"></span><span class="point"></span>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu py-0 content-dd  dropdown-menu-animate-up overflow-hidden dropdown-menu-end"
+                                                aria-labelledby="drop2">
+
+                                                <div class="py-3 px-4 bg-primary">
+                                                    <div class="mb-0 fs-6 fw-medium text-white">Notifications</div>
+                                                    <div class="mb-0 fs-2 fw-medium text-white">
+                                                        You have 
+                                                        <asp:Label ID="lblActivitylg" runat="server" Text=""></asp:Label>
+                                                        new Notifications
+                                                    </div>
+
+                                                    <asp:Label ID="Label3" runat="server" Font-Size="12px" Text="Date Posted:" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+                                                    <asp:Label ID="lblActiviylogdate2" runat="server" Font-Size="12px" Text="" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+
+
+                                                    <br />
+                                                </div>
+                                                <div class="message-body" data-simplebar>
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                                            <div class="table-responsive">
+
+                                                                <asp:GridView ID="gvActivity" runat="server" CssClass="table table-borderless table-hover " AutoGenerateColumns="false" CellPadding="4"
+                                                                    ClientIDMode="Static" ShowHeader="false" Style="width: 100%" EmptyDataText="No Records found" ShowHeaderWhenEmpty="False" EmptyDataRowStyle-ForeColor="Red" EmptyDataRowStyle-HorizontalAlign="Center" Font-Bold="false" DataKeyNames="ID" BorderStyle="None">
+                                                                    <Columns>
+                                                                        <asp:TemplateField HeaderText="ID" SortExpression="ID" Visible="false">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblID1" runat="server" Text='<%# Bind("ID") %>' Font-Bold="false" Font-Size="12px" Visible="false"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+
+                                                                        <asp:TemplateField HeaderText="Name" SortExpression="name">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblActivityType" runat="server" Text='<%# Bind("ActivityType") %>' Font-Size="12px" ForeColor="Black" Visible="false" CssClass="form-label"></asp:Label>
+                                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                                    <asp:LinkButton ID="linkActivityType1" runat="server" Text='<%# Bind("ActivityType") %>' OnClick="linkActivityType1_Click" Font-Size="12px"></asp:LinkButton>
+
+                                                                                    <asp:Label ID="lblActivityDate" runat="server" Text='<%# Bind("ActivityTime") %>' Font-Bold="false" Font-Size="12px" CssClass="fs-2 text-nowrap d-block"></asp:Label>
+                                                                                </div>
+
+                                                                                <asp:Label ID="lblactBy" runat="server" Text="Activityby" Font-Bold="false" Font-Size="12px" CssClass="mb-0 fs-2 fw-medium"></asp:Label>
+                                                                                <asp:Label ID="lblActivityBy" runat="server" Text='<%#Bind("UserID") %>' Font-Bold="false" Font-Size="12px" CssClass="mb-0 fs-2 fw-medium"></asp:Label>
+
+
+
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                    </Columns>
+                                                                </asp:GridView>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                        </li>
+                                        <%--! Notification --%>
+
+                                        <%-- Message lg--%>
+                                        <li class="nav-item hover-dd dropdown  d-none d-lg-block">
+                                            <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop211" aria-expanded="false">
+                                                <iconify-icon icon="solar:inbox-line-line-duotone"></iconify-icon>
+                                                <div class="notify">
+                                                    <span class="heartbit"></span><span class="point"></span>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu py-0 content-dd dropdown-menu-animate-up dropdown-menu-end overflow-hidden"
+                                                aria-labelledby="drop2">
+
+                                                <div class="py-3 px-4 bg-secondary">
+                                                    <div class="mb-0 fs-6 fw-medium text-white">Annoucement</div>
+                                                    <div class="mb-0 fs-2 fw-medium text-white">
+                                                        You have 
+                                                        <asp:Label ID="AnnoucementCount" runat="server" Text=""></asp:Label>
+                                                        new Annoucement
+                                                    </div>
+                                                    <asp:Label ID="Label7" runat="server" Font-Size="12px" Text="Date Posted:" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+                                                    <asp:Label ID="datepostAnnoucement" runat="server" Font-Size="12px" Text="" CssClass="mb-0 fs-2 fw-medium text-white"></asp:Label>
+
+                                                    <br />
+                                                </div>
+
+                                                <div class="message-body" data-simplebar>
+                                                    <div class="row">
+
+                                                        <div id="Annoucementdiv" runat="server">
+
+                                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                                                <div class="message-body" data-simplebar>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                                                            <div class="table-responsive overflow-auto ">
+
+                                                                                <asp:GridView ID="gvAnnouncement" runat="server" CssClass="table table-hover " AutoGenerateColumns="false" CellPadding="4" BorderStyle="None"
+                                                                                    ClientIDMode="Static" ShowHeader="false" Style="width: 100%" EmptyDataText="No Records found" ShowHeaderWhenEmpty="False" EmptyDataRowStyle-ForeColor="Red" EmptyDataRowStyle-HorizontalAlign="Center" Font-Bold="false" DataKeyNames="announcement_id">
+                                                                                    <Columns>
+                                                                                        <asp:TemplateField HeaderText="ID" SortExpression="ID" Visible="false">
+                                                                                            <ItemTemplate>
+                                                                                                <asp:Label ID="lblAnnouncementID" runat="server" Text='<%# Bind("announcement_id") %>' Font-Bold="false" Font-Size="12px" Visible="false"></asp:Label>
+                                                                                            </ItemTemplate>
+                                                                                        </asp:TemplateField>
+
+                                                                                        <asp:TemplateField HeaderText="Name" SortExpression="name">
+                                                                                            <ItemTemplate>
+                                                                                                <asp:Label ID="lblname1" runat="server" Text='<%# Bind("name") %>' Font-Size="12px" ForeColor="Black" Visible="false" CssClass="form-label"></asp:Label>
+                                                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                                                    <asp:LinkButton ID="linkAnnoucementName" runat="server" Text='<%# Bind("name") %>' OnClick="linkAnnoucementName_Click" Font-Size="12px"></asp:LinkButton>
+
+                                                                                                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("addedTime") %>' Font-Bold="false" Font-Size="12px" CssClass="fs-2 text-nowrap d-block"></asp:Label>
+                                                                                                </div>
+                                                                                                <asp:Label ID="lblcreatedBy" runat="server" Text='<%#Bind("Createby") %>' Font-Bold="false" Font-Size="12px" Visible="false" CssClass="d-flex justify-content-end"></asp:Label>
+
+                                                                                                <asp:Label ID="lblSubname" runat="server" Text='<%# Bind("message") %>' Font-Bold="false" Font-Size="12px" Visible="false" ForeColor="Black"></asp:Label>
+
+
+                                                                                            </ItemTemplate>
+                                                                                        </asp:TemplateField>
+                                                                                    </Columns>
+                                                                                </asp:GridView>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <%-- </div>--%>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                        <%-- Message --%>
+                                        <!-- ------------------------------- -->
+                                        <!-- end notification Dropdown -->
+                                        <!-- ------------------------------- -->
+
+
+                                        <!-- ------------------------------- -->
+                                        <!-- start profile Dropdown -->
+                                        <!-- ------------------------------- -->
+                                        <li class="nav-item hover-dd dropdown">
+                                            <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" aria-expanded="false">
+                                                <img src="AMatrixLatest/dist/assets/images/profile/user-1.jpg" alt="user"
+                                                    class="profile-pic rounded-circle round-30" />
+                                            </a>
+                                            <div class="dropdown-menu pt-0 content-dd overflow-hidden pt-0 dropdown-menu-end user-dd"
+                                                aria-labelledby="drop2">
+                                                <div class="profile-dropdown position-relative" data-simplebar>
+                                                    <div class=" py-3 border-bottom">
+                                                        <div class="d-flex align-items-center px-3">
+                                                            <img src="AMatrixLatest/dist/assets/images/profile/user-1.jpg" class="rounded-circle round-50" alt="" />
+                                                            <div class="ms-3">
+                                                                <h5 class="mb-1 fs-4">
+                                                                    <asp:Label ID="lblFirstName" runat="server" Text="" CssClass="form-label"></asp:Label></h5>
+                                                                <p class="mb-0 fs-2 d-flex align-items-center text-muted">
+                                                                    <asp:Label ID="lblUserID" runat="server" Text="" Visible="false" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                                                    <asp:Label ID="lblEmailID" runat="server" Text="" Visible="false" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                                                    <asp:Label ID="lblLastName" runat="server" Text="" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                                                    <asp:Label ID="lblRole" runat="server" Text="" Visible="false" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+                                                                    <asp:Label ID="lblPermission" runat="server" Text="" Visible="false" Font-Bold="true" ForeColor="White" Font-Size="12px"></asp:Label>
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="message-body pb-3">
+                                                        <div class="px-3 pt-3">
+                                                            <div class="h6 mb-0 dropdown-item py-8 px-3 rounded-2 link">
+                                                                <a href="MyProfile.aspx"
+                                                                    class=" d-flex  align-items-center ">My Profile
+                                                                </a>
+                                                            </div>
+                                                            <div class="h6 mb-0 dropdown-item py-8 px-3 rounded-2 link">
+                                                                <a href="EditProfile.aspx"
+                                                                    class=" d-flex  align-items-center ">Edit Profile
+                                                                </a>
+                                                            </div>
+                                                            <%-- <div class="h6 mb-0 dropdown-item py-8 px-3 rounded-2 link">
+                                                                <a href="#"
+                                                                    class=" d-flex  align-items-center ">My Projects
+                                                                </a>
+                                                            </div>
+                                                            <div class="h6 mb-0 dropdown-item py-8 px-3 rounded-2 link">
+                                                                <a href="#"
+                                                                    class=" d-flex  align-items-center ">Inbox
+                                                                </a>
+                                                            </div>--%>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="px-3">
+                                                            <div class="py-8 px-3 d-flex justify-content-between dropdown-item align-items-center h6 mb-0  rounded-2 link">
+                                                                <a href="#" class="">Mode
+                                                                </a>
+                                                                <div>
+                                                                    <a class="moon dark-layout" href="javascript:void(0)">
+                                                                        <iconify-icon icon="solar:moon-line-duotone" class="moon"></iconify-icon>
+                                                                    </a>
+                                                                    <a class="sun light-layout" href="javascript:void(0)" style="display: none;">
+                                                                        <iconify-icon icon="solar:sun-2-line-duotone" class="sun"></iconify-icon>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="h6 mb-0 dropdown-item py-8 px-3 rounded-2 link">
+                                                                <asp:LinkButton ID="LinkbtnLogout" runat="server" CausesValidation="false" Text="Sign Out" OnClick="LinkbtnLogout_Click" CssClass="d-flex  align-items-center"></asp:LinkButton>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <!-- ------------------------------- -->
+                                        <!-- end profile Dropdown -->
+                                        <!-- ------------------------------- -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+
+                </header>
+                <!--  Header End -->
+
+
+                <div class="body-wrapper">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <!-- ============================================================== -->
+                    <!-- footer -->
+                    <!-- ============================================================== -->
+                    <footer class="footer text-center">
+                        All Rights Reserved by Lissom Technologies Private Limited.
+                    </footer>
+                    <!-- ============================================================== -->
+                    <!-- End footer -->
+                    <!-- ============================================================== -->
+                </div>
+
+
+
+                <script>
+                    function handleColorTheme(e) {
+                        $("html").attr("data-color-theme", e);
+                        $(e).prop("checked", !0);
+                    }
+                </script>
+                <button class="btn btn-primary p-3 rounded-circle d-flex align-items-center justify-content-center customizer-btn"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="icon ti ti-settings fs-7 text-white"></i>
+                </button>
+
+                <div class="offcanvas customizer offcanvas-end" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="d-flex align-items-center justify-content-between p-3 border-bottom">
+                        <h4 class="offcanvas-title fw-semibold" id="offcanvasExampleLabel">Settings
+                        </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" data-simplebar style="height: calc(100vh - 80px)">
+                        <h6 class="fw-semibold fs-4 mb-2">Theme</h6>
+
+                        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+                            <input type="radio" class="btn-check light-layout" name="theme-layout" id="light-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary " for="light-layout">
+                                <iconify-icon icon="solar:sun-2-outline" class="icon fs-7 me-2"></iconify-icon>
+                                Light</label>
+                            <input type="radio" class="btn-check dark-layout" name="theme-layout" id="dark-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary" for="dark-layout">
+                                <iconify-icon icon="solar:moon-outline" class="icon fs-7 me-2"></iconify-icon>
+                                Dark</label>
+                        </div>
+
+                        <h6 class="mt-5 fw-semibold fs-4 mb-2">Theme Direction</h6>
+                        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+                            <input type="radio" class="btn-check" name="direction-l" id="ltr-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary" for="ltr-layout">
+                                <iconify-icon icon="solar:align-left-linear" class="icon fs-7 me-2"></iconify-icon>
+                                LTR</label>
+
+                            <input type="radio" class="btn-check" name="direction-l" id="rtl-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary" for="rtl-layout">
+                                <iconify-icon icon="solar:align-right-linear" class="icon fs-7 me-2"></iconify-icon>
+                                RTL
+                            </label>
+                        </div>
+
+                        <h6 class="mt-5 fw-semibold fs-4 mb-2">Theme Colors</h6>
+
+                        <div class="d-flex flex-row flex-wrap gap-3 customizer-box color-pallete" role="group">
+                            <input type="radio" class="btn-check" name="color-theme-layout" id="Blue_Theme"
+                                autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme('Blue_Theme')"
+                                for="Blue_Theme" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="BLUE_THEME">
+                                <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-1">
+                                    <i class="ti ti-check text-white d-flex icon fs-5"></i>
+                                </div>
+                            </label>
+
+                            <input type="radio" class="btn-check" name="color-theme-layout" id="Aqua_Theme"
+                                autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme('Aqua_Theme')"
+                                for="Aqua_Theme" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="AQUA_THEME">
+                                <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-2">
+                                    <i class="ti ti-check text-white d-flex icon fs-5"></i>
+                                </div>
+                            </label>
+
+                            <input type="radio" class="btn-check" name="color-theme-layout" id="Purple_Theme" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme('Purple_Theme')"
+                                for="Purple_Theme" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="PURPLE_THEME">
+                                <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-3">
+                                    <i class="ti ti-check text-white d-flex icon fs-5"></i>
+                                </div>
+                            </label>
+
+                            <input type="radio" class="btn-check" name="color-theme-layout" id="green-theme-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme('Green_Theme')"
+                                for="green-theme-layout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="GREEN_THEME">
+                                <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-4">
+                                    <i class="ti ti-check text-white d-flex icon fs-5"></i>
+                                </div>
+                            </label>
+
+                            <input type="radio" class="btn-check" name="color-theme-layout" id="cyan-theme-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme('Cyan_Theme')"
+                                for="cyan-theme-layout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="CYAN_THEME">
+                                <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-5">
+                                    <i class="ti ti-check text-white d-flex icon fs-5"></i>
+                                </div>
+                            </label>
+
+                            <input type="radio" class="btn-check" name="color-theme-layout" id="orange-theme-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary d-flex align-items-center justify-content-center" onclick="handleColorTheme('Orange_Theme')"
+                                for="orange-theme-layout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ORANGE_THEME">
+                                <div class="color-box rounded-circle d-flex align-items-center justify-content-center skin-6">
+                                    <i class="ti ti-check text-white d-flex icon fs-5"></i>
+                                </div>
+                            </label>
+                        </div>
+
+                        <h6 class="mt-5 fw-semibold fs-4 mb-2">Layout Type</h6>
+                        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+                            <div>
+                                <input type="radio" class="btn-check" name="page-layout" id="vertical-layout" autocomplete="off" />
+                                <label class="btn p-9 btn-outline-primary" for="vertical-layout">
+                                    <iconify-icon icon="solar:slider-vertical-minimalistic-linear" class="icon fs-7 me-2"></iconify-icon>
+                                    Vertical
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" class="btn-check" name="page-layout" id="horizontal-layout" autocomplete="off" />
+                                <label class="btn p-9 btn-outline-primary" for="horizontal-layout">
+                                    <iconify-icon icon="solar:slider-minimalistic-horizontal-outline" class="icon fs-7 me-2"></iconify-icon>
+                                    Horizontal
+                                </label>
+                            </div>
+                        </div>
+
+                        <h6 class="mt-5 fw-semibold fs-4 mb-2">Container Option</h6>
+
+                        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+                            <input type="radio" class="btn-check" name="layout" id="boxed-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary" for="boxed-layout">
+                                <iconify-icon icon="solar:cardholder-linear" class="icon fs-7 me-2"></iconify-icon>
+                                Boxed
+                            </label>
+
+                            <input type="radio" class="btn-check" name="layout" id="full-layout" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary" for="full-layout">
+                                <iconify-icon icon="solar:scanner-linear" class="icon fs-7 me-2"></iconify-icon>
+                                Full
+                            </label>
+                        </div>
+
+                        <h6 class="fw-semibold fs-4 mb-2 mt-5">Sidebar Type</h6>
+                        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+                            <a href="javascript:void(0)" class="fullsidebar">
+                                <input type="radio" class="btn-check" name="sidebar-type" id="full-sidebar" autocomplete="off" />
+                                <label class="btn p-9 btn-outline-primary" for="full-sidebar">
+                                    <iconify-icon icon="solar:sidebar-minimalistic-outline" class="icon fs-7 me-2"></iconify-icon>
+                                    Full</label>
+                            </a>
+                            <div>
+                                <input type="radio" class="btn-check " name="sidebar-type" id="mini-sidebar" autocomplete="off" />
+                                <label class="btn p-9 btn-outline-primary" for="mini-sidebar">
+                                    <iconify-icon icon="solar:siderbar-outline" class="icon fs-7 me-2"></iconify-icon>
+                                    Collapse
+                                </label>
+                            </div>
+                        </div>
+
+                        <h6 class="mt-5 fw-semibold fs-4 mb-2">Card With</h6>
+
+                        <div class="d-flex flex-row gap-3 customizer-box" role="group">
+                            <input type="radio" class="btn-check" name="card-layout" id="card-with-border" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary" for="card-with-border">
+                                <iconify-icon icon="solar:library-broken" class="icon fs-7 me-2"></iconify-icon>
+                                Border</label>
+
+                            <input type="radio" class="btn-check" name="card-layout" id="card-without-border" autocomplete="off" />
+                            <label class="btn p-9 btn-outline-primary" for="card-without-border">
+                                <iconify-icon icon="solar:box-outline" class="icon fs-7 me-2"></iconify-icon>
+                                Shadow
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Search Bar -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content rounded-1">
+                        <div class="modal-header border-bottom">
+                            <div class="input-group">
+                                <asp:TextBox ID="txtWebPage" CssClass="form-control" placeholder="Search here" AutoCompleteType="Disabled"
+                                    runat="server"></asp:TextBox>
+                                <asp:LinkButton ID="btnSearch2" runat="server" CssClass="btn btn-sm btn-info" CausesValidation="false" OnClick="btnSearch_Click1"><i class="ti ti-search"></i></asp:LinkButton>
+                            </div>
+                            <a href="javascript:void(0)" data-bs-dismiss="modal" class="lh-1">
+                                <i class="ti ti-x fs-5 ms-3"></i>
+                            </a>
+
+                        </div>
+                        <div class="modal-body message-body" data-simplebar="">
+                            <div id="Divshowdash" runat="server" visible="true">
+                                <h5>Quick Page Links</h5>
+                                <ul class="list mb-0 py-2">
+
+                                    <li class="p-1 mb-1 px-2 rounded bg-hover-light-black">
+                                        <a href="Dashboard.aspx">
+                                            <span class="h6 mb-1">Dashboard</span>
+                                            <span class="fs-2 text-muted d-block">DASHBOARD/Dashboard</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="BTNDIV" runat="server" visible="false">
+
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                        <div class="table-responsive overflow-auto ">
+
+                                            <asp:GridView ID="GVWebPage" runat="server" CssClass="table table-hover " AutoGenerateColumns="false" CellPadding="4" BorderStyle="None"
+                                                ClientIDMode="Static" ShowHeader="false" Style="width: 100%" EmptyDataText="No Records found" ShowHeaderWhenEmpty="False" EmptyDataRowStyle-ForeColor="Red" EmptyDataRowStyle-HorizontalAlign="Center" Font-Bold="false" DataKeyNames="ID">
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="ID" SortExpression="ID" Visible="false">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblWebpageID" runat="server" Text='<%# Bind("ID") %>' Font-Bold="false" Font-Size="12px" Visible="false"></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="Name" SortExpression="name">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblWebpagename1" runat="server" Text='<%# Bind("WebPageName") %>' Font-Size="12px" Visible="false" ForeColor="Black" CssClass="form-label"></asp:Label>
+
+                                                            <asp:Label ID="lblWeblinks" runat="server" Text='<%#Bind("Design") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
+
+
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <%--   <asp:HyperLink runat="server" ID="DASHBOARD" Text="DASHBOARD" NavigateUrl="https://newdesigncrm.lissomtech.in/Dashboard" />
+                        <asp:HyperLink runat="server" ID="Customer" Text="Customer" NavigateUrl="https://newdesigncrm.lissomtech.in/Customer" />--%>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dark-transparent sidebartoggler"></div>
+    </form>
+    <!-- Import Js Files -->
+
+    <script src="AMatrixLatest/dist/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/app.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/app.init.js"></script>
+    <script src="AMatrixLatest/dist/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/libs/simplebar/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/sidebarmenu.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/theme.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/feather.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/breadcrumb/breadcrumbChart.js"></script>
+    <script src="AMatrixLatest/dist/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/dashboards/dashboard1.js"></script>
+
+    <!-- Import Js Datatables -->
+    <script src="AMatrixLatest/dist/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <!-- Import Js bar Chart -->
+    <script src="AMatrixLatest/dist/assets/js/apex-chart/apex.area.init.js"></script>
+    <!-- Import Sweet alert -->
+    <script src="AMatrixLatest/dist/assets/libs/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="AMatrixLatest/dist/assets/js/forms/sweet-alert.init.js"></script>
+
+    <!-- Import Toaster -->
+    <script src="AMatrixLatest/dist/assets/js/plugins/toastr-init.js"></script>
+
+    <script src="AMatrixLatest/dist/assets/js/widget/widgets-charts.js"></script>
+</body>
+
+</html>

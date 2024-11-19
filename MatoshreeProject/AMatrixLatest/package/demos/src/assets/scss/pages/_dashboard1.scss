@@ -1,0 +1,135 @@
+//
+// Chart 1
+//
+.amp-pxl {
+  position: relative;
+
+  .ct-series-a .ct-bar {
+    stroke: var(--bs-info);
+  }
+
+  .ct-series-b .ct-bar {
+    stroke: var(--bs-success);
+  }
+}
+
+//
+// Chart 2
+//
+.campaign {
+  height: 266px;
+  position: relative;
+  .ct-series-a .ct-area {
+    fill-opacity: 0.2;
+    fill: url(#gradient);
+  }
+
+  .ct-series-a .ct-line,
+  .ct-series-a .ct-point {
+    stroke: var(--bs-success);
+    stroke-width: 2px;
+  }
+
+  .ct-series-b .ct-area {
+    fill: var(--bs-info);
+    fill-opacity: 0.1;
+  }
+
+  .ct-series-b .ct-line,
+  .ct-series-b .ct-point {
+    stroke: var(--bs-info);
+    stroke-width: 2px;
+  }
+
+  .ct-series-a .ct-point,
+  .ct-series-b .ct-point {
+    stroke-width: 6px;
+  }
+}
+
+//
+// New Messages
+//
+.add-ct-btn {
+  right: 4px;
+  top: -46px;
+}
+
+//
+// Profile Card
+//
+.little-profile {
+  .pro-img {
+    margin-top: -80px;
+    margin-bottom: 14px;
+  }
+}
+
+// @include media-breakpoint-up(md) {
+//   .profile-bg-height {
+//     max-height: 187px;
+//   }
+
+//   .blog-img-height {
+//     max-height: 238px;
+//   }
+// }
+
+.profile-card .profile-img {
+  max-height: 401px;
+}
+
+//
+// Blog widgets
+//
+// .blog-widget {
+//   margin-top: 30px;
+//   .blog-image img {
+//     border-radius: 4px;
+//     margin-top: -45px;
+//     margin-bottom: 20px;
+//     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+//   }
+// }
+
+//
+// project of the month [common]
+//
+.stylish-table {
+  tbody tr {
+    border-left: 4px solid transparent;
+    &:hover,
+    &.active {
+      border-left: 4px solid var(--bs-info);
+    }
+  }
+  tbody td {
+    small {
+      line-height: 12px;
+    }
+  }
+}
+
+
+.profile-tab,
+.customtab {
+  li {
+    a.nav-link {
+      border-radius: 8px;
+      border: 1px dashed rgba(58, 71, 82, 0.15);
+      padding: 15px 20px;
+      color: var(--bs-dark);
+      font-size: 15px;
+      &.active {
+        border-radius: 8px;
+        border-bottom: 2px solid var(--bs-primary);
+        background: transparent;
+        box-shadow: 0px 0px 0px 1px rgba(58, 71, 82, 0.10) inset;
+        color: var(--bs-primary);
+      }
+      &:hover {
+        color: var(--bs-primary);
+      }
+    }
+  }
+}

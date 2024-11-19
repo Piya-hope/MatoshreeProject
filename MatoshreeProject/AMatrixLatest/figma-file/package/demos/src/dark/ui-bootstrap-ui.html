@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Bootstrap UI", "subtitle": 'Home'})
+          <div class="row">
+            <!-- ------------------------------------- -->
+            <!-- 1. Image rounded -->
+            <!-- ------------------------------------- -->
+            <div class="col-lg-4">
+              <!-- ---------------------
+                                                  start Image with round corner
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-2">
+                    <h5 class="mb-0">Image with round corner</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Use Class for rounded image<mark><code>.rounded</code></mark>
+                  </p>
+                  <div class="text-center">
+                    <img src="@@webRoot/assets/images/blog/blog-img9.jpg" alt="image" class="rounded" width="200" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Image with round corner
+                                              ---------------- -->
+            </div>
+            <!-- ------------------------------------- -->
+            <!-- 2. Image Circle -->
+            <!-- ------------------------------------- -->
+            <div class="col-lg-4">
+              <!-- ---------------------
+                                                  start Image with Circle
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-2">
+                    <h5 class="mb-0">Image with Circle</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Use Class for rounded image<mark><code>.rounded-circle</code></mark>
+                  </p>
+                  <div class="text-center">
+                    <img src="@@webRoot/assets/images/blog/blog-img9.jpg" alt="image" class="rounded-circle" width="200" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Image with Circle
+                                              ---------------- -->
+            </div>
+            <!-- ------------------------------------- -->
+            <!-- 3. Image Thumbnail -->
+            <!-- ------------------------------------- -->
+            <div class="col-lg-4">
+              <!-- ---------------------
+                                                  start Image Thumbnail
+                                              ---------------- -->
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-2">
+                    <h5 class="mb-0">Image Thumbnail</h5>
+                  </div>
+                  <p class="mb-3 card-subtitle">
+                    Use Class for thumbnail image<mark><code>.img-thumbnail</code></mark>
+                  </p>
+                  <div class="text-center">
+                    <img src="@@webRoot/assets/images/blog/blog-img9.jpg" alt="image" class="img-thumbnail" width="200" />
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------
+                                                  end Image Thumbnail
+                                              ---------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+</body>
+
+</html>

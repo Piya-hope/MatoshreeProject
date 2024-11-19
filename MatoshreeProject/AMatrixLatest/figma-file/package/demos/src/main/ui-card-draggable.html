@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/dragula/dist/dragula.min.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Draggable", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-12">
+              <h4 class="mb-3 fs-5">Basic Draggable options</h4>
+              <div class="row draggable-cards" id="draggable-area">
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header text-bg-info">
+                      <h4 class="mb-0 text-white fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-inverse">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header text-bg-danger">
+                      <h4 class="mb-0 text-white fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-inverse">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header text-bg-success">
+                      <h4 class="mb-0 text-white fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-inverse">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header text-bg-warning">
+                      <h4 class="mb-0 text-white fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-inverse">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <h4 class="mb-3 mt-5 fs-5">Move card and apply color</h4>
+              <div class="row draggable-cards" id="card-colors">
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header">
+                      <h4 class="mb-0 text-dark fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-light-primary text-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header">
+                      <h4 class="mb-0 text-dark fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-light-primary text-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header">
+                      <h4 class="mb-0 text-dark fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-light-primary text-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="card card-hover">
+                    <div class="card-header">
+                      <h4 class="mb-0 text-dark fs-5">Card Title</h4>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">Special title treatment</h3>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to
+                        additional content.
+                      </p>
+                      <a href="javascript:void(0)" class="btn btn-light-primary text-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/dragula/dist/dragula.min.js"></script>
+  <script src="@@webRoot/assets/js/forms/draggable-init.js"></script>
+</body>
+
+</html>

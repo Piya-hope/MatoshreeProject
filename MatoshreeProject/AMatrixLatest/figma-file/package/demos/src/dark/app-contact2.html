@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Contact Application", "subtitle": 'Home'})
+          <div class="card overflow-hidden chat-application">
+            <div class="d-flex align-items-center justify-content-between gap-6 m-3 d-lg-none">
+              <button class="btn btn-primary d-flex" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#chat-sidebar" aria-controls="chat-sidebar">
+                <i class="ti ti-menu-2 fs-5"></i>
+              </button>
+              <form class="position-relative w-100">
+                <input type="text" class="form-control search-chat py-2 ps-5" id="text-srh"
+                  placeholder="Search Contact">
+                <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
+              </form>
+            </div>
+            <div class="d-flex w-100">
+              <div class="left-part border-end w-20 flex-shrink-0 d-none d-lg-block">
+                <div class="px-9 pt-4 pb-3">
+                  <button class="btn btn-primary fw-semibold py-8 w-100">Add New Contact</button>
+                </div>
+                <ul class="list-group" style="height: calc(100vh - 400px)" data-simplebar>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-inbox fs-5"></i>All Contacts </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-star"></i>Starred </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-file-text fs-5"></i>Pending </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-alert-circle"></i>Blocked </a>
+                  </li>
+                  <li class="border-bottom my-3"></li>
+                  <li class="fw-semibold text-dark text-uppercase mx-9 my-2 px-3 fs-2">CATEGORIES</li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-bookmark fs-5 text-primary"></i>Engineers </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-bookmark fs-5 text-warning"></i>Support Staff </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-bookmark fs-5 text-success"></i>Sales Team </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-flex w-100">
+                <div class="min-width-340">
+                  <div class="border-end user-chat-box h-100">
+                    <div class="px-4 pt-9 pb-6 d-none d-lg-block">
+                      <form class="position-relative">
+                        <input type="text" class="form-control search-chat py-2 ps-5" id="text-srh"
+                          placeholder="Search" />
+                        <i
+                          class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
+                      </form>
+                    </div>
+                    <div class="app-chat">
+                      <ul class="chat-users" style="height: calc(100vh - 400px)" data-simplebar>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user bg-light-subtle"
+                            id="chat_user_1" data-user-id="1">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="user-4" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Dr. Bonnie Barstow
+                              </h6>
+                              <span class="fs-2 text-body-color d-block">barstow@ modernize.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_2"
+                            data-user-id="2">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="user4" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Jonathan Higgins
+                              </h6>
+                              <span class="fs-2 text-body-color d-block">jonathan_hig@modernize.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_3"
+                            data-user-id="3">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user3" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Michael Knight
+                              </h6>
+                              <span class="fs-2 text-body-color d-block">michale-knight@gmail.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_4"
+                            data-user-id="4">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-8.jpg" alt="user8" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Angus MacGyver</h6>
+                              <span class="fs-2 text-body-color d-block">macgyver@gmail.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_5"
+                            data-user-id="5">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="user2" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Rick Wright</h6>
+                              <span class="fs-2 text-body-color d-block">rockwright@modernize.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_6"
+                            data-user-id="6">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Sledge Hammer</h6>
+                              <span class="fs-2 text-body-color d-block">hammer9@gmail.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_7"
+                            data-user-id="7">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user3" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Peter Thornton</h6>
+                              <span class="fs-2 text-body-color d-block">peter293@modernize.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_8"
+                            data-user-id="8">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Devon Miles</h6>
+                              <span class="fs-2 text-body-color d-block">devon@gmail.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_9"
+                            data-user-id="9">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Michael Knight</h6>
+                              <span class="fs-2 text-body-color d-block">michael_knight@modernize.com</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:void(0)"
+                            class="px-4 py-3 bg-hover-light-black d-flex align-items-center chat-user" id="chat_user_10"
+                            data-user-id="10">
+                            <span class="position-relative">
+                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="40" height="40"
+                                class="rounded-circle">
+                            </span>
+                            <div class="ms-6 d-inline-block w-75">
+                              <h6 class="mb-1 fw-semibold chat-title" data-username="James Anderson">Mike Torello</h6>
+                              <span class="fs-2 text-body-color d-block">torello@gmail.com</span>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-100">
+                  <div class="chat-container h-100 w-100">
+                    <div class="chat-box-inner-part h-100">
+                      <div class="chatting-box app-email-chatting-box">
+                        <div
+                          class="p-9 py-3 border-bottom chat-meta-user d-flex align-items-center justify-content-between">
+                          <h5 class="text-dark mb-0 fs-5">Contact Details</h5>
+                          <ul class="list-unstyled mb-0 d-flex align-items-center">
+                            <li class="d-lg-none d-block">
+                              <a class="text-dark back-btn px-2 fs-5 bg-hover-primary nav-icon-hover position-relative z-index-5"
+                                href="javascript:void(0)">
+                                <i class="ti ti-arrow-left"></i>
+                              </a>
+                            </li>
+                            <li class="position-relative" data-bs-toggle="tooltip" data-bs-placement="top"
+                              data-bs-title="important">
+                              <a class="text-dark px-2 fs-5 bg-hover-primary nav-icon-hover position-relative z-index-5"
+                                href="javascript:void(0)">
+                                <i class="ti ti-star"></i>
+                              </a>
+                            </li>
+                            <li class="position-relative" data-bs-toggle="tooltip" data-bs-placement="top"
+                              data-bs-title="Edit">
+                              <a class="d-block text-dark px-2 fs-5 bg-hover-primary nav-icon-hover position-relative z-index-5"
+                                href="javascript:void(0)">
+                                <i class="ti ti-pencil"></i>
+                              </a>
+                            </li>
+                            <li class="position-relative" data-bs-toggle="tooltip" data-bs-placement="top"
+                              data-bs-title="Delete">
+                              <a class="text-dark px-2 fs-5 bg-hover-primary nav-icon-hover position-relative z-index-5"
+                                href="javascript:void(0)">
+                                <i class="ti ti-trash"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="position-relative overflow-hidden">
+                          <div class="position-relative">
+                            <div class="chat-box p-9" style="height: calc(100vh - 428px)" data-simplebar="init">
+                              <div class="simplebar-wrapper" style="margin: -20px;">
+                                <div class="simplebar-height-auto-observer-wrapper">
+                                  <div class="simplebar-height-auto-observer"></div>
+                                </div>
+                                <div class="simplebar-mask">
+                                  <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                    <div class="simplebar-content-wrapper" tabindex="0" role="region"
+                                      aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;">
+                                      <div class="simplebar-content" style="padding: 20px;">
+                                        <div class="chat-list chat active-chat" data-user-id="1">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="user4" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Dr. Bonnie Barstow </h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2" fdprocessedid="pk6kl8">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2" fdprocessedid="83zpb">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="2">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-4.jpg" alt="user4" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Jonathan Higgins</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="3">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user3" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Michael Knight </h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="4">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-8.jpg" alt="user8" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Angus MacGyver</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="5">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-2.jpg" alt="user2" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Rick Wright</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="6">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Sledge Hammer</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="7">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-3.jpg" alt="user3" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Peter Thornton</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="8">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Devon Miles</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="9">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Michael Knight</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                        <div class="chat-list chat" data-user-id="10">
+                                          <div
+                                            class="hstack align-items-start mb-7 pb-1 align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-3">
+                                              <img src="@@webRoot/assets/images/profile/user-1.jpg" alt="user1" width="72"
+                                                height="72" class="rounded-circle">
+                                              <div>
+                                                <h6 class="fw-semibold fs-4 mb-0">Mike Torello</h6>
+                                                <p class="mb-0">Sales Manager</p>
+                                                <p class="mb-0">Digital Arc Pvt. Ltd.</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">Phone number</p>
+                                              <h6 class="fw-semibold mb-0">+1 (203) 3458</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Email address</p>
+                                              <h6 class="fw-semibold mb-0">alexandra@modernize.com</h6>
+                                            </div>
+                                            <div class="col-12 mb-9">
+                                              <p class="mb-1 fs-2">Address</p>
+                                              <h6 class="fw-semibold mb-0">312, Imperical Arc, New western corner</h6>
+                                            </div>
+                                            <div class="col-4 mb-7">
+                                              <p class="mb-1 fs-2">City</p>
+                                              <h6 class="fw-semibold mb-0">New York</h6>
+                                            </div>
+                                            <div class="col-8 mb-7">
+                                              <p class="mb-1 fs-2">Country</p>
+                                              <h6 class="fw-semibold mb-0">United Stats</h6>
+                                            </div>
+                                          </div>
+                                          <div class="border-bottom pb-7 mb-4">
+                                            <p class="mb-2 fs-2">Notes</p>
+                                            <p class="mb-3 text-dark">
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum
+                                              hendrerit lobortis. Nullam ut lacus eros. Sed at luctus urna, eu fermentum
+                                              diam.
+                                              In et tristique mauris.
+                                            </p>
+                                            <p class="mb-0 text-dark">Ut id ornare metus, sed auctor enim. Pellentesque
+                                              nisi magna, laoreet a augue eget, tempor volutpat diam.</p>
+                                          </div>
+                                          <div class="d-flex align-items-center gap-6">
+                                            <button class="btn btn-primary fs-2">Edit</button>
+                                            <button class="btn bg-danger-subtle text-danger fs-2">Delete</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="simplebar-placeholder" style="width: auto; height: 578px;"></div>
+                              </div>
+                              <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                              </div>
+                              <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                                <div class="simplebar-scrollbar"
+                                  style="height: 128px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="offcanvas offcanvas-start user-chat-box" tabindex="-1" id="chat-sidebar"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel"> Contact </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="px-9 pt-4 pb-3">
+                  <button class="btn btn-primary fw-semibold py-8 w-100">Add New Contact</button>
+                </div>
+                <ul class="list-group" style="height: calc(100vh - 150px)" data-simplebar>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-inbox fs-5"></i>All Contacts </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-star"></i>Starred </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-file-text fs-5"></i>Pening Approval </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-alert-circle"></i>Blocked </a>
+                  </li>
+                  <li class="border-bottom my-3"></li>
+                  <li class="fw-semibold text-dark text-uppercase mx-9 my-2 px-3 fs-2">CATEGORIES</li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-bookmark fs-5 text-primary"></i>Engineers </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-bookmark fs-5 text-warning"></i>Support Staff </a>
+                  </li>
+                  <li class="list-group-item border-0 p-0 mx-9">
+                    <a class="d-flex align-items-center gap-6 list-group-item-action text-dark px-3 py-8 mb-1 rounded-1"
+                      href="javascript:void(0)">
+                      <i class="ti ti-bookmark fs-5 text-success"></i>Sales Team </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/assets/js/apps/chat.js"></script>
+</body>
+
+</html>

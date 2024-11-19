@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+  <link rel="stylesheet" href="@@webRoot/node_modules/pickadate-jalaali/lib/themes/default.css">
+  <link rel="stylesheet" href="@@webRoot/node_modules/pickadate-jalaali/lib/themes/default.date.css">
+  <link rel="stylesheet" href="@@webRoot/node_modules/pickadate-jalaali/lib/themes/default.time.css">
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Datetimepicker", "subtitle": 'Home'})
+          <!-- Row -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Pickadate Picker</h4>
+                </div>
+                <div class="card-body">
+                  <p class="card-subtitle mb-3">
+                    The mobile-friendly, responsive, and lightweight jQuery date
+                    &amp; time input picker.
+                  </p>
+                  <div class="mb-4">
+                    <label class="form-label">Default Pickadate</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate</code> class for default
+                      Pickadate Picker.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                      <input type="text" class="form-control pickadate" placeholder="Default Pickadate" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Hide/Change Buttons</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-clear-buttons</code> class to
+                      change/hide buttons.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-clear-buttons"
+                        placeholder="Hide/Change Buttons" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Select Year</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-select-year</code> class to
+                      choose select year.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-select-year" placeholder="Select Year" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Short string with Pickadate</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-short-string</code> class for
+                      short string with Month &amp; Week.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-short-string"
+                        placeholder="Short String of Month &amp; Week" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Change First Week</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-firstweek</code> class to
+                      change first weekday to Monday.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-firstweek"
+                        placeholder="First Weekday to Monday" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Date Limits</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-datelimits</code> class to
+                      choose date in specific range date.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-datelimits" placeholder="Date Limits" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Change Formats</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-change-format</code> class to
+                      change date formats.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-change-format" placeholder="Change Formats" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Language Translation</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-translations</code> class for
+                      language translation.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickadate-translations"
+                        placeholder="In Different Language" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Change Arrows</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-changearrow</code> class to
+                      change date formats.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-changearrow" placeholder="Change Formats" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Disable arbitrary dates</label>
+                    <p class="card-subtitle mb-3">
+                      To use add
+                      <code>.pickadate-disable-arbitrarydates</code> class to
+                      disable arbitary dates.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickadate-disable-arbitrarydates"
+                        placeholder="Disable Dates" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Disable days of the week</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-disable-week</code> class to
+                      disable days of the week.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickadate-disable-week"
+                        placeholder="Disable days of the week" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Selectors Month &amp; Year</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-selectors</code> class to set
+                      month &amp; year selectors.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickadate-selectors"
+                        placeholder="Selector Month &amp; Year" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Minimum and maximum date range</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-minmax</code> class for
+                      minimum and maximum date range.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickadate-minmax" placeholder="In Another Language" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Dropdown Month &amp; Year</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-monyear-dropdown</code> class
+                      to set select to month and year from the drodown.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickadate-monyear-dropdown"
+                        placeholder="Month &amp; Year Dropdown" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Picker Events</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-events</code> class to check
+                      events in the console.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickadate-events"
+                        placeholder="Open console to verify events" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Native calendar of Disable picker</label>
+                    <p class="card-subtitle mb-3">
+                      To use <code>.datepicker</code> class to change Native
+                      calendar of Disable picker.
+                    </p>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input id="picker_from" class="form-control datepicker" type="date" />
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-calendar fs-5"></i>
+                      </span>
+
+                      <input id="picker_to" class="form-control datepicker" type="date" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row -->
+          <!-- Row -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Pickatime Picker</h4>
+                </div>
+                <div class="card-body">
+                  <div class="mb-4">
+                    <label class="form-label">Default Pickatime</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickatime</code> class for Default
+                      PickaDate Picker.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                      <input type="text" class="form-control pickatime" placeholder="Default Pickatime" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Clear Button</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickadate-clear-buttons</code> class to
+                      hide clear button from calendar.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-clear-buttons" placeholder="Clear Button" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Minimum and maximum time range</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickatime-minmax-range</code> class for
+                      maximum starting time and minimum ending time.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickatime-minmax-range"
+                        placeholder="maximum starting time and minimum ending time" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Change Formats</label>
+                    <p class="card-subtitle mb-3">
+                      Use <code>.pickadate-change-format</code> class to change
+                      time and date display formats.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickadate-change-format" placeholder="Change Formats" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Format of Label</label>
+                    <p class="card-subtitle mb-3">
+                      To use <code>.pickatime-format-label</code> class to
+                      display time label format.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickatime-format-label" placeholder="Format Label" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Time Format Display</label>
+                    <p class="card-subtitle mb-3">
+                      Use <code>.pickatime-formatTime-display</code> class to
+                      display time format.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickatime-formatTime-display" placeholder="Time Format" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Current Time Limit</label>
+                    <p class="card-subtitle mb-3">
+                      Use for to show last 5 time limits and also shows current
+                      time Limitation.
+                    </p>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+
+                      <input type="text" class="form-control pickatime-time-limits" placeholder="Select Time limit" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Disable set of Time</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickatime-disable</code> for disable set
+                      of time.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickatime-disable" placeholder="Disable set of Time" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Intervals</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickatime-intervals</code> class to
+                      display time in Intervals.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickatime-intervals" placeholder="Date Intervals" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Disable set of time using Object</label>
+                    <p class="card-subtitle mb-3">
+                      To use add
+                      <code>.pickatime-timedisable-object</code> class and using
+                      objects as a range of times
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickatime-timedisable-object"
+                        placeholder="Disable set of Time using obeject" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Disable set of time using Integers</label>
+                    <p class="card-subtitle mb-3">
+                      To use add
+                      <code>.pickatime-timedisable-integer</code> class and
+                      using integers as hours (0 to 23)
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickatime-timedisable-integer"
+                        placeholder="Disable set of Time using integers" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Disable All with exceptions</label>
+                    <p class="card-subtitle mb-3">
+                      Just add class <code>.pickatime-disable-all</code>
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickatime-disable-all"
+                        placeholder="Disable All with exceptions" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Close on a user action</label>
+                    <p class="card-subtitle mb-3">
+                      To use add <code>.pickatime-closeuser-action</code> class
+                      and use for When a time is selected or the "clear" button
+                      is pressed, the picker closes.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickatime-closeuser-action"
+                        placeholder="Close on user Action" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Picker Events</label>
+                    <p class="card-subtitle mb-3">
+                      To use add just <code>pickatime-events</code> and to
+                      verify open console.
+                    </p>
+                    <div class="input-group">
+                      <input type="text" class="form-control pickatime-events"
+                        placeholder="Open console to verify events" />
+
+                      <span class="input-group-text">
+                        <i class="ti ti-alarm fs-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">With API</h4>
+                </div>
+                <div class="card-body">
+                 
+                  <div class="mb-4">
+                    <label class="form-label">Clear the Date</label>
+                    <div class="input-group">
+                      <button id="api_button_clear" class="btn btn btn-danger rounded-start" type="button">
+                        Clear date
+                      </button>
+
+                      <input id="api_picker_clear" class="datepicker form-control" value="15 October, 2010"
+                        data-value="2012-10-15" type="text" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">Clear the Date With Inline Button</label>
+                    <div class="input-group">
+                      <input type="text" class="datepicker form-control" id="api_picker_clear_b"
+                        value="15 October, 2010" data-value="2012-10-15" />
+
+                      <button class="btn btn-danger input-clear rounded-end" id="api_button_clear_b" type="button">
+                        <i class="ti ti-circle-x fs-5"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/node_modules/pickadate-jalaali/lib/compressed/picker.js"></script>
+  <script src="@@webRoot/node_modules/pickadate-jalaali/lib/compressed/picker.date.js"></script>
+  <script src="@@webRoot/node_modules/pickadate-jalaali/lib/compressed/picker.time.js"></script>
+  <script src="@@webRoot/node_modules/pickadate-jalaali/lib/compressed/legacy.js"></script>
+  <script src="@@webRoot/assets/js/extra-libs/moment/moment.min.js"></script>
+  <script src="@@webRoot/node_modules/daterangepicker/daterangepicker.js"></script>
+  <script src="@@webRoot/assets/js/forms/datetimepicker.init.js"></script>
+</body>
+
+</html>

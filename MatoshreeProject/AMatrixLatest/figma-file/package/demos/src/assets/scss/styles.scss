@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+@import "./variables/variables";
+@import "./variables/theme_variables";
+@import "./variables/variables-dark";
+
+// theme colors
+@import "./variables/variables-blue";
+@import "./variables/variables-aqua";
+@import "./variables/variables-purple";
+@import "./variables/variables-green";
+@import "./variables/variables-cyan";
+@import "./variables/variables-orange";
+
+// Import Bootstrap source files (Required file)
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./layouts/layouts";
+@import "./layouts/sidebar";
+@import "./layouts/header";
+@import "./layouts/horizontal";
+@import "./layouts/customizer";
+@import "./layouts/spinner";
+@import "./layouts/material";
+
+//Pages
+@import "./pages/blog";
+@import "./pages/dashboard1";
+@import "./pages/dashboard2";
+@import "./pages/dashboard3";
+@import "./pages/layoutPages";
+@import "./pages/shop-details";
+@import "./pages/landingpage";
+
+@import "./components/button";
+@import "./components/cards";
+@import "./components/dropdown-animation";
+@import "./components/tabs";
+@import "./components/form";
+@import "./components/table";   
+
+@import "./utilities/icon-size";
+@import "./utilities/icon-hover";
+@import "./utilities/background";
+@import "./utilities/override";
+@import "./utilities/widgets";
+
+// Plugins
+@import "./vendors/animation";
+@import "./vendors/calender";
+@import "./vendors/kanban";
+@import "./vendors/apps";
+@import "./vendors/jquery-steps";
+@import "./vendors/steps";
+@import "./vendors/checkout";
+@import "./vendors/charts";
+@import "./vendors/nestable";
+@import "./vendors/noui-slider.min";
+@import "./vendors/toastr";
+@import "./vendors/select2";
+@import "./vendors/date-paginator";
+@import "./vendors/typeahead";
+@import "./vendors/datatables";
+@import "./vendors/sweetalert";
+@import "./vendors/animation";
+@import "./vendors/gallery-cards";
+@import "./vendors/shop";
+@import "./vendors/jvectormap";
+@import "./vendors/bootstrap-rangepicker";
+@import "./vendors/bootstrap-switch";
+@import "./vendors/bootstrap-touchspin";
+@import "./vendors/dual_listbox";
+
+@import "./layouts/rtl";
+
+// Scrollbar style (Required file)
+@import "./vendors/simplebar";
+// Tabler Icons style
+@import "../fonts/tabler-icons/tabler-icons.css";

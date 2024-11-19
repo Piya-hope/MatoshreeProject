@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+
+<head>
+  @@include("partials/head.html")
+  <title>MaterialPro Template by WrapPixel</title>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-secondary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to MaterialPro</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="loader" class="lds-ripple img-fluid" />
+  </div>
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>@@include("partials/sidebar.html", { "page": "dashboard", })</div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar rounded-0 border-0 bg-primary">
+        <div class="with-vertical">@@include("partials/header.html")</div>
+        <div class="app-header with-horizontal">
+          @@include("partials/horizontal-header.html")
+        </div>
+      </header>
+      <!--  Header End -->
+
+      <aside class="left-sidebar with-horizontal">
+        @@include("partials/horizontal-sidebar.html", { "page": "dashboard",
+        })
+      </aside>
+
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          @@include("partials/breadcrumb.html", {"title": "Bootstrap-Validation", "subtitle": 'Home'})
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Browser default Validation</h4>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationDefault01">First name</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="First name"
+                          value="Mark" required />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationDefault02">Last name</label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Last name"
+                          value="Otto" required />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationDefaultUsername">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                          <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username"
+                            aria-describedby="inputGroupPrepend2" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label" for="validationDefault03">City</label>
+                        <input type="text" class="form-control" id="validationDefault03" placeholder="City" required />
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationDefault04">State</label>
+                        <input type="text" class="form-control" id="validationDefault04" placeholder="State" required />
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationDefault05">Zip</label>
+                        <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check mr-sm-2">
+                        <input type="checkbox" class="form-check-input" id="customControlAutosizing" />
+                        <label class="form-check-label" for="customControlAutosizing">Agree to terms and
+                          conditions</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary rounded-pill px-4 mt-3" type="submit">
+                      Submit form
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Validation with Custom Styles</h4>
+                </div>
+                <div class="card-body">
+                  <form class="needs-validation" novalidate>
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationCustom01">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+                          value="Mark" required />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationCustom02">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+                          value="Otto" required />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+
+                          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
+                            aria-describedby="inputGroupPrepend" required />
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label" for="validationCustom03">City</label>
+                        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required />
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationCustom04">State</label>
+                        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required />
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationCustom05">Zip</label>
+                        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required />
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check mr-sm-2">
+                        <input type="checkbox" class="form-check-input" id="invalidcheck1" required />
+                        <label class="form-check-label" for="invalidcheck1">Agree to terms and conditions</label>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary mt-3 rounded-pill px-4" type="submit">
+                      Submit form
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Server side Validation</h4>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationServer01">First name</label>
+                        <input type="text" class="form-control is-valid" id="validationServer01"
+                          placeholder="First name" value="Mark" required />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationServer02">Last name</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name"
+                          value="Otto" required />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationServerUsername">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                          <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                            placeholder="Username" aria-describedby="inputGroupPrepend3" required />
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label" for="validationServer03">City</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City"
+                          required />
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationServer04">State</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State"
+                          required />
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationServer05">Zip</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip"
+                          required />
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check mr-sm-2">
+                        <input type="checkbox" class="is-invalid form-check-input" id="invalidcheck2" required />
+                        <label class="form-check-label" for="invalidcheck2">Agree to terms and conditions</label>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary rounded-pill px-4 mt-3" type="submit">
+                      Submit form
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Supported Elements</h4>
+                </div>
+                <div class="card-body">
+                  <form class="was-validated">
+                    <div class="mb-3">
+                      <label class="form-label" for="validationTextarea">Textarea</label>
+                      <textarea class="form-control is-invalid" id="validationTextarea"
+                        placeholder="Required example textarea" required></textarea>
+                      <div class="invalid-feedback">
+                        Please enter a message in the textarea.
+                      </div>
+                    </div>
+                    <div class="mb-3 form-group">
+                      <div class="form-check mr-sm-2">
+                        <input type="checkbox" class="is-invalid form-check-input" id="invalidcheck3" required />
+                        <label class="form-check-label" for="invalidcheck3">Agree to terms and conditions</label>
+                        <div class="invalid-feedback">
+                          Example invalid feedback text
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-check py-2">
+                      <input type="radio" class="form-check-input" id="customControlValidation2" name="radio-stacked"
+                        required />
+                      <label class="form-check-label" for="customControlValidation2">Toggle this custom radio</label>
+                    </div>
+                    <div class="form-check pt-2 mb-3">
+                      <input type="radio" class="form-check-input" id="customControlValidation3" name="radio-stacked"
+                        required />
+                      <label class="form-check-label" for="customControlValidation3">Or toggle this other custom
+                        radio</label>
+                      <div class="invalid-feedback">
+                        More example invalid feedback text
+                      </div>
+                    </div>
+                    <div class="form-group mb-3">
+                      <select class="form-select" required>
+                        <option value="">Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Example invalid custom select feedback
+                      </div>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="form-control" id="validatedCustomFile" required />
+                      <div class="invalid-feedback">
+                        Example invalid custom file feedback
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="card">
+                <div class="border-bottom title-part-padding">
+                  <h4 class="card-title mb-0">Validation with Tooltips</h4>
+                </div>
+                <div class="card-body">
+                  <form class="needs-validation" novalidate>
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationTooltip01">First name</label>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name"
+                          value="Mark" required />
+                        <div class="valid-tooltip">Looks good!</div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationTooltip02">Last name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name"
+                          value="Otto" required />
+                        <div class="valid-tooltip">Looks good!</div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label" for="validationTooltipUsername">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                          <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username"
+                            aria-describedby="validationTooltipUsernamePrepend" required />
+                          <div class="invalid-tooltip">
+                            Please choose a unique and valid username.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label" for="validationTooltip03">City</label>
+                        <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required />
+                        <div class="invalid-tooltip">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationTooltip04">State</label>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required />
+                        <div class="invalid-tooltip">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label" for="validationTooltip05">Zip</label>
+                        <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required />
+                        <div class="invalid-tooltip">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary rounded-pill px-4" type="submit">
+                      Submit form
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include("partials/customizer.html")
+    </div>
+
+    @@include("partials/header-components/dd-searchbar.html")
+    
+    
+  </div>
+  <div class="dark-transparent sidebartoggler"></div>
+  @@include("partials/scripts.html")
+  <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="@@webRoot/assets/js/plugins/bootstrap-validation-init.js"></script>
+</body>
+
+</html>

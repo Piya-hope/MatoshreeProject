@@ -1,0 +1,48 @@
+
+.nav-icon-hover {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  
+  &:hover {
+   
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 50px;
+      border-radius: 50%;
+      padding: 0 25px;
+      z-index: -1;
+      transition: all 0.3s ease-in-out;
+      background: rgba(0,0,0,.05);
+      @media (max-width:1199px) {
+        background: transparent;
+      }
+    }
+  }
+}
+
+// a:hover {
+//   --bs-link-color-rgb: var(--bs-primary);
+// }
+
+a:hover h6, a:hover .h6, a:hover h5, a:hover .h5, a:hover h4, a:hover .h4, a:hover h3, a:hover .h3, a:hover h2, a:hover .h2, a:hover h1, a:hover .h1 {
+  color: var(--bs-primary) !important;
+}
+
+.feather-sm {
+  width: 18px;
+  height: 18px;
+}
+
+.feather-lg {
+  width: 28px;
+  height: 28px;
+}
+
+.feather-xl {
+  width: 35px;
+  height: 35px;
+}

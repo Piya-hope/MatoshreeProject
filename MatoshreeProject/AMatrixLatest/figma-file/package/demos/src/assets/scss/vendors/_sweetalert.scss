@@ -1,0 +1,27 @@
+body {
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+        background-color: var(--bs-primary) !important;
+        border-radius: 25px;
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
+        box-shadow: unset;
+    }
+
+    div:where(.swal2-icon).swal2-success .swal2-success-ring {
+        border: 0.25em solid rgba($color: $success, $alpha: 0.3);
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
+        background-color: var(--bs-success);
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel {
+        background-color: $danger !important;
+        border-radius: 25px;     
+    }
+
+    div:where(.swal2-container) h2:where(.swal2-title) {
+        color: var(--bs-heading-color);
+    }
+}

@@ -1,0 +1,107 @@
+// ----------------------------------------------
+// Shop Datails Style
+// ----------------------------------------------
+body {
+    #sync2 {
+        .item {
+            cursor: pointer;
+        }
+
+        .current .item {
+            border: 2px solid var(--bs-black);
+        }
+    }
+
+    #sync1.owl-theme {
+        position: relative;
+
+        .owl-next,
+        .owl-prev {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgb(43 43 43 / 75%);
+            position: absolute;
+            transform: translateY(-50%);
+        }
+
+        .owl-prev {
+            left: 10px;
+        }
+
+        .owl-next {
+            right: 10px;
+        }
+    }
+
+
+
+    #sync4 {
+        .item {
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .current .item {
+            border: 2px solid var(--bs-primary);
+        }
+    }
+
+    #sync3.owl-theme {
+        position: relative;
+
+        .owl-next,
+        .owl-prev {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgb(43 43 43 / 75%);
+            position: absolute;
+            transform: translateY(-50%);
+        }
+
+        .owl-prev {
+            left: 10px;
+        }
+
+        .owl-next {
+            right: 10px;
+        }
+    }
+
+
+
+
+    .shop-detail-carousel {
+        .owl-carousel {
+            .owl-nav {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                gap: 12px;
+                top: -55px;
+                right: 0;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    font-size: 20px;
+                    color: $dark;
+                    border-radius: 100%;
+                    background-color: var(--bs-black), 0.1;
+                }
+            }
+        }
+    }
+}

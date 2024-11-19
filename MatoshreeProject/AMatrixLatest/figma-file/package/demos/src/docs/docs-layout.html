@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme">
+  <head>
+    @@include("../main/partials/head.html")
+
+    <link
+      rel="stylesheet"
+      href="@@webRoot/node_modules/prismjs/themes/prism-okaidia.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="@@webRoot/assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" class="docs">
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!--Desktop view sidebar menu-->
+      <aside class="left-sidebar with-vertical">
+        @@include("./partials/sidebar.html")
+      </aside>
+
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar position-relative">
+          <div
+            class="navbar navbar-header d-flex align-items-center justify-content-between p-3 fixed-top"
+          >
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <!-- Logo icon -->
+            <a href="@@webRoot/docs/index.html" class="text-nowrap logo-img d-xl-none d-block">
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="@@webRoot/assets/images/logos/logo-icon.svg" alt="homepage">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-text.svg" alt="homepage" class="dark-logo ps-2">
+                <!-- Light Logo text -->
+                <img src="@@webRoot/assets/images/logos/logo-light-text.svg" class="light-logo ps-2" alt="homepage">
+              </span>
+            </a>
+            <div class="d-flex align-items-center">
+              <!---Mobile view canvas button--->
+              <a
+                class="fs-8 text-muted d-xl-none d-block sidebartoggler"
+                href="javascript:void(0)"
+                role="button"
+              >
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div
+          class="body-wrapper"
+          data-bs-spy="scroll"
+          data-bs-target="#navbar-example3"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+          <!-- ============================================================== -->
+          <!-- Container fluid  -->
+          <!-- ============================================================== -->
+          <div class="container-fluid mt-4">
+            <div>
+              <!-- ============================================================== -->
+              <!-- Start Page Content -->
+              <!-- ============================================================== -->
+              <div class="d-sm-flex align-items-center justify-content-between">
+                <h4 class="mb-4 pb-2 fs-5">Layouts</h3>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">Default settings</h4>
+                      <pre>
+                          <code class="language-js">
+    // ----------------------------------------------------
+    // File: package/demos/src/assets/js/app.init.js
+    // ----------------------------------------------------    
+    $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "full", // full / mini-sidebar
+          BoxedLayout: true, // true | false
+          Direction: "ltr", // ltr | rtl
+          Theme: "light", // light | dark
+          ColorTheme: "Blue_Theme", // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme
+          cardBorder: false // true | false
+        });
+      });
+      
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Change Theme Color ?</h4>
+                      <pre>
+                          <code class="language-js">
+      // ----------------------------------------------------
+      // File: package/demos/src/assets/js/app.init.js
+      // ----------------------------------------------------    
+    
+      $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "full", // full / mini-sidebar
+          BoxedLayout: true, // true | false
+          Direction: "ltr", // ltr | rtl
+          Theme: "light", // light | dark
+          ColorTheme: "Aqua_Theme", // Change is here // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme /
+          cardBorder: false // true | false
+        });
+      });
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Set Minisidebar ?</h4>
+                      <pre>
+                          <code class="language-js">
+      // ----------------------------------------------------
+      // File: package/demos/src/assets/js/app.init.js
+      // ----------------------------------------------------    
+    
+      $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "mini-sidebar", // full / mini-sidebar // Change is here
+          BoxedLayout: true, // true | false
+          Direction: "ltr", // ltr | rtl
+          Theme: "light", // light | dark
+          ColorTheme: "Blue_Theme", // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme
+          cardBorder: false // true | false
+        });
+      });
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Set Full Sidebar ?</h4>
+                      <pre>
+                          <code class="language-js">
+      // ----------------------------------------------------
+      // File: package/demos/src/assets/js/app.init.js
+      // ----------------------------------------------------    
+    
+    $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "full", // full / mini-sidebar // Change is here
+          BoxedLayout: true, // true | false
+          Direction: "ltr", // ltr | rtl
+          Theme: "light", // light | dark
+          ColorTheme: "Blue_Theme", // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme
+          cardBorder: false // true | false
+        });
+    });
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Set Fullwidth Layout ?</h4>
+                      <pre>
+                          <code class="language-JS">
+    
+    // ----------------------------------------------------
+    // File: package/demos/src/assets/js/app.init.js
+    // ----------------------------------------------------    
+    
+    $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "full", // full / mini-sidebar
+          BoxedLayout: false, // true | false // Change is here
+          Direction: "ltr", // ltr | rtl
+          Theme: "light", // light | dark
+          ColorTheme: "Blue_Theme", // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme
+          cardBorder: false // true | false
+        });
+    });
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Set Card with Border ?</h4>
+                      <pre>
+                          <code class="language-JS">
+    // ----------------------------------------------------
+    // File: package/demos/src/assets/js/app.init.js
+    // ----------------------------------------------------    
+    $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "full", // full / mini-sidebar
+          BoxedLayout: true, // true | false //
+          Direction: "ltr", // ltr | rtl
+          Theme: "light", // light | dark
+          ColorTheme: "Blue_Theme", // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme
+          cardBorder: true // true | false // Change is here
+        });
+    });
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Set Card with Shadow ?</h4>
+                      <pre>
+                          <code class="language-js">
+    // ----------------------------------------------------
+    // File: package/demos/src/assets/js/app.init.js
+    // ----------------------------------------------------    
+    $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "full", // full / mini-sidebar
+          BoxedLayout: true, // true | false //
+          Direction: "ltr", // ltr | rtl
+          Theme: "light", // light | dark
+          ColorTheme: "Blue_Theme", // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme
+          cardBorder: false // true | false // Change is here
+        });
+    });
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-3">How to Set Dark Theme ?</h4>
+                      <pre>
+                          <code class="language-js">
+    // ----------------------------------------------------
+    // File: package/demos/src/assets/js/app.init.js
+    // ----------------------------------------------------    
+    $(function () {
+        "use strict";
+        $("#main-wrapper").AdminSettings({
+          Layout: "vertical", // vertical | horizontal
+          SidebarType: "full", // full / mini-sidebar
+          BoxedLayout: true, // true | false //
+          Direction: "ltr", // ltr | rtl
+          Theme: "dark", // light | dark // Change is here
+          ColorTheme: "Blue_Theme", // Blue_Theme | Aqua_Theme | Purple_Theme | Green_Theme | Cyan_Theme | Orange_Theme
+          cardBorder: false // true | false
+        });
+    });
+                          </code>
+                        </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Container fluid  -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- End Page -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    @@include("../main/partials/scripts.html")
+    <script src="@@webRoot/node_modules/prismjs/prism.js"></script>
+    <!-- End JS -->
+  </body>
+</html>
