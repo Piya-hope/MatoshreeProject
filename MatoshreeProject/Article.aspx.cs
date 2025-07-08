@@ -70,7 +70,7 @@ namespace MatoshreeProject
         int Result;
         string result, TaskName;
 
-        int UserId = 1;
+        int UserId;
         /*  int UserId='1'; *///empId chya paramaeter la hi string jayla pahije
        /* string UserName = "Admin";*/ //create_by= username
         /*string Designation = "Admin";*/ //Designation=Designation

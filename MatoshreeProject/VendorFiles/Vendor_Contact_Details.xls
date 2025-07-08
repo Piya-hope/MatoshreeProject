@@ -1,0 +1,9 @@
+<div>
+	<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">id</th><th scope="col">FullName</th><th scope="col">email</th><th scope="col">direction</th><th scope="col">Position</th><th scope="col">phonenumber</th>
+		</tr><tr>
+			<td>4</td><td>Sujay Surnar</td><td>sss.sujay212@gmail.com</td><td>RTL</td><td>Director</td><td>9175016118</td>
+		</tr>
+	</table>
+</div>

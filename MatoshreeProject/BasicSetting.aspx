@@ -2045,7 +2045,7 @@
                                                         <hr />
                                                         <asp:GridView ID="GridViewPageName" runat="server" ScrollBars="Both" CssClass="table table-bordered table-hover" AutoGenerateColumns="false" CellPadding="4" ClientIDMode="Static" data-plugin="dataTable" Style="width: 100%"
                                                             EmptyDataText="No Records found" ShowHeaderWhenEmpty="True" EmptyDataRowStyle-ForeColor="Red" EmptyDataRowStyle-HorizontalAlign="Center" Font-Bold="false" DataKeyNames="ID"
-                                                            OnRowDeleting="GridViewPageName_RowDeleting" OnRowEditing="GridViewPageName_RowEditing" OnRowUpdating="GridViewPageName_RowUpdating" OnRowCancelingEdit="GridViewPageName_RowCancelingEdit">
+                                                            OnRowDeleting="GridViewPageName_RowDeleting" OnRowEditing="GridViewPageName_RowEditing" OnRowUpdating="GridViewPageName_RowUpdating" OnRowCancelingEdit="GridViewPageName_RowCancelingEdit" OnRowDataBound="GridViewPageName_RowDataBound">
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="ID" ItemStyle-Width="100" HeaderStyle-Font-Size="12px">
                                                                     <ItemTemplate>
@@ -2098,6 +2098,15 @@
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
                                                                         <asp:Label ID="lblDescrip1" runat="server" Text='<%# Bind("Description") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                 <asp:TemplateField HeaderText="Status" SortExpression="Status" HeaderStyle-Font-Size="12px">
+                                                                    <EditItemTemplate>
+                                                                        <asp:Label ID="lblStats61" runat="server" Text=""></asp:Label>
+                                                                    </EditItemTemplate>
+                                                                    <ItemTemplate>
+                                                                        <asp:Label ID="lblStats6" runat="server" Text='<%# Bind("Status") %>' Visible="false"></asp:Label>
+                                                                        <asp:Button ID="btnWebPageStatus" runat="server" Text='<%# Bind("Status") %>' OnClick="btnWebPageStatus_Click" Style="border-radius: 80px;" Font-Size="12px" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="CreatedBY" SortExpression="CreatedBY" HeaderStyle-Font-Size="12px">
