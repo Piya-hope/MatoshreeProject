@@ -43,8 +43,8 @@ namespace MatoshreeProject
         int Result;
         string result;
 
-        int UserId = 1;
-        string UserName = "Admin", EmailID, Designation = "Admin", RoleType, Permission, DeptID;
+        int UserId;
+        string  UserName , EmailID, Designation , RoleType, Permission, DeptID;
 
         Phrase phrase = null;
         #endregion

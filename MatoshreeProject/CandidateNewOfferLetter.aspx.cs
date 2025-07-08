@@ -62,8 +62,8 @@ namespace MatoshreeProject
         SqlDataReader dr;
         int Result;
         string result;
-        int UserId = 1;
-        string UserName = "Admin", EmailID, Designation = "Admin", RoleType, Permission, DeptID, CareerID, sendMail, EmpNAME;
+        int UserId;
+        string  UserName , EmailID, Designation , RoleType, Permission, DeptID, CareerID, sendMail, EmpNAME;
         Decimal GrandTotal, ComponentTotal, ContributionTotal;
         string UserEmpName, Password, EmailID1, Designation1;
         string Size, Initial, ReceiptFor, Cash, Bank, reminder;

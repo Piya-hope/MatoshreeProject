@@ -154,7 +154,7 @@ namespace MatoshreeProject
                         body += "Service:" + txtservice.Text;
                         body += txtareabody.Text;
 
-                        string urllocal = HttpUtility.HtmlEncode("http://localhost:53687/UserLogIn/LogIn");
+                        string urllocal= HttpUtility.HtmlEncode("https://crm.matoshreeinteriors.com/LogIn");
                         ///string url = HttpUtility.HtmlEncode("https://minteriors.lissomtech.in/LogIn");
                         body += "<html><body><br/><br/><a href=\"" + urllocal + "\">Click here to login </a></body></html>";
                         body += "<br /><br />Thanks";
@@ -248,7 +248,7 @@ namespace MatoshreeProject
                         body += "Service:" + txtservice.Text;
                         body += txtareabody.Text;
 
-                        string urllocal = HttpUtility.HtmlEncode("http://localhost:53687/UserLogIn/LogIn");
+                        string urllocal= HttpUtility.HtmlEncode("https://crm.matoshreeinteriors.com/LogIn");
                         ///string url = HttpUtility.HtmlEncode("https://minteriors.lissomtech.in/LogIn");
                         body += "<html><body><br/><br/><a href=\"" + urllocal + "\">Click here to login </a></body></html>";
                         body += "<br /><br />Thanks";
