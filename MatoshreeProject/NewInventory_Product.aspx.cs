@@ -59,10 +59,10 @@ namespace MatoshreeProject
         SqlDataReader dr;
         int Result;
         string result;
-        int UserId = 1;
+        int UserId;
         string Remark;
         string RoleType, Permission, DeptID;
-        string UserName = "Admin", EmailID, Designation = "Admin";
+        string  UserName , EmailID, Designation ;
         Phrase phrase = null;
 
 

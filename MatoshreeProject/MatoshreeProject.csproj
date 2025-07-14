@@ -7226,12 +7226,15 @@
     <Content Include="EditEstimate.aspx" />
     <Content Include="EditInventory_Product.aspx" />
     <Content Include="EditInvoice.aspx" />
+    <Content Include="EditLead.aspx" />
     <Content Include="EditLeaveManagement.aspx" />
+    <Content Include="EditNewProposal.aspx" />
     <Content Include="EditOfferLetter.aspx" />
     <Content Include="EditPatner.aspx" />
     <Content Include="EditPaymentRequest.aspx" />
     <Content Include="EditProfile.aspx" />
     <Content Include="EditProjectDetails.aspx" />
+    <Content Include="EditPurchaseOrder.aspx" />
     <Content Include="EditRole.aspx" />
     <Content Include="EditSalaryStructure.aspx" />
     <Content Include="EditStaffDetails.aspx" />
@@ -7283,6 +7286,7 @@
     <Content Include="Img_logo\M.png" />
     <Content Include="Img_logo\MI Logo 2.png" />
     <Content Include="Img_logo\MI Logo.png" />
+    <Content Include="ImportLeads.aspx" />
     <Content Include="ImportPresentyExcelSheet.aspx" />
     <Content Include="Interview_Schdule.aspx" />
     <Content Include="InventoryAllocation.aspx" />
@@ -7293,6 +7297,7 @@
     <Content Include="ItemRequest.aspx" />
     <Content Include="Item_List.aspx" />
     <Content Include="Item_Return.aspx" />
+    <Content Include="LeadDetail.aspx" />
     <Content Include="LeaveAnalysis.aspx" />
     <Content Include="LeaveApproval.aspx" />
     <Content Include="LeaveManagementApproval.aspx" />
@@ -7307,10 +7312,13 @@
     <Content Include="NewInventory_Depo.aspx" />
     <Content Include="NewInventory_Product.aspx" />
     <Content Include="NewItemRequest.aspx" />
+    <Content Include="NewLead.aspx" />
     <Content Include="NewLeaveManagement.aspx" />
     <Content Include="NewOfferLetters.aspx" />
     <Content Include="NewPartner.aspx" />
     <Content Include="NewPaymentRequest.aspx" />
+    <Content Include="NewProposal.aspx" />
+    <Content Include="NewPurchaseOrder.aspx" />
     <Content Include="NewTicket.aspx" />
     <Content Include="NewWorkOrder.aspx" />
     <Content Include="New_Vender_Contact.aspx" />
@@ -7325,6 +7333,50 @@
     <Content Include="Practical.aspx" />
     <Content Include="PreSalaryStructure.aspx" />
     <Content Include="ProjectReport.aspx" />
+    <Content Include="Proposal.aspx" />
+    <Content Include="ProposalDetails.aspx" />
+    <Content Include="PurchaseOrder.aspx" />
+    <Content Include="PurchaseOrderDetails.aspx" />
+    <Content Include="PurchaseOrderFile\2024-24_INV-00029 .pdf" />
+    <Content Include="PurchaseOrderFile\Cluster housing.step.pdf" />
+    <Content Include="PurchaseOrderFile\Mahesh Bansode.pdf" />
+    <Content Include="PurchaseOrderFile\PCB DRAWING FILE.PDF" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 15_01.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 15_08.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_12.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_18.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_22.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_27.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_30.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_32.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_33.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_04_09_2024 22_36.pdf" />
+    <Content Include="PurchaseOrderFile\PreStructureList_06_09_2024 12_00.pdf" />
+    <Content Include="PurchaseOrderFile\PurchaseOrderList_01_10_2024 22_37.pdf" />
+    <Content Include="PurchaseOrderFile\PurchaseOrderList_04_10_2024 11_42.pdf" />
+    <Content Include="PurchaseOrderFile\PurchaseOrderList_18_10_2024 11_34.pdf" />
+    <Content Include="PurchaseOrderFile\SalaryStructure_03_08_2024 13_10.pdf" />
+    <Content Include="PurchaseOrderFile\SalaryStructure_04_09_2024 22_38.pdf" />
+    <Content Include="PurchaseOrderFile\SalaryStructure_06_09_2024 12_00.pdf" />
+    <Content Include="PurchaseOrderFile\SalaryStructure_27_08_2024 11_53.pdf" />
+    <Content Include="PurchaseOrderFile\SalaryStructure_27_08_2024 17_08.pdf" />
+    <Content Include="PurchaseOrderFile\TaskStaffList_11_10_2024 16_47 %282%29.pdf" />
+    <Content Include="PurchaseOrderFile\TaskStaffList_11_10_2024 16_47 %283%29.pdf" />
+    <Content Include="PurchaseOrderFile\TaskStaffList_11_10_2024 16_47.pdf" />
+    <Content Include="Leads_Import_Files\Sample_Import_Lead.xlsx" />
+    <Content Include="Lead_File\acknowledgementSlip_S1354956669000.pdf" />
+    <Content Include="Lead_File\Leadlist_19_11_2024 18_02.pdf" />
+    <Content Include="Lead_File\LeadModule_04_10_2024 12_15.pdf" />
+    <Content Include="Lead_File\LeadModule_06_11_2024 12_55.pdf" />
+    <Content Include="Lead_File\LeadModule_30_09_2024 18_21 %282%29.pdf" />
+    <Content Include="Lead_File\LeadModule_30_09_2024 18_21.pdf" />
+    <Content Include="Lead_File\Leads_Details 17_10_2024 10_42_06.xls" />
+    <Content Include="Lead_File\LeadTaskDetails 15_10_2024 12_57_35 %281%29.xls" />
+    <Content Include="Lead_File\LeadTaskDetails 15_10_2024 12_57_35.xls" />
+    <Content Include="Lead_File\Proof of Category %282%29.pdf" />
+    <Content Include="Lead_File\Proof of Non-creamy Layer %282%29.pdf" />
+    <Content Include="Lead_File\TaskLeadsList_17_10_2024 10_48.pdf" />
+    <Content Include="Lead_File\TaskStaffList_04_10_2024 06_43.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -7334,6 +7386,7 @@
     <Content Include="TicketPublicForm.aspx" />
     <Content Include="Ticket_Details.aspx" />
     <Content Include="ViewCareer.aspx" />
+    <Content Include="ViewLead.aspx" />
     <Content Include="ViewLeaveManagement.aspx" />
     <Content Include="ViewOfferLetter.aspx" />
     <Content Include="ViewPrelistProject.aspx" />
@@ -8104,12 +8157,26 @@
     <Compile Include="EditInvoice.aspx.designer.cs">
       <DependentUpon>EditInvoice.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditLead.aspx.cs">
+      <DependentUpon>EditLead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditLead.aspx.designer.cs">
+      <DependentUpon>EditLead.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditLeaveManagement.aspx.cs">
       <DependentUpon>EditLeaveManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EditLeaveManagement.aspx.designer.cs">
       <DependentUpon>EditLeaveManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditNewProposal.aspx.cs">
+      <DependentUpon>EditNewProposal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditNewProposal.aspx.designer.cs">
+      <DependentUpon>EditNewProposal.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditOfferLetter.aspx.cs">
       <DependentUpon>EditOfferLetter.aspx</DependentUpon>
@@ -8145,6 +8212,13 @@
     </Compile>
     <Compile Include="EditProjectDetails.aspx.designer.cs">
       <DependentUpon>EditProjectDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditPurchaseOrder.aspx.cs">
+      <DependentUpon>EditPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>EditPurchaseOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditRole.aspx.cs">
       <DependentUpon>EditRole.aspx</DependentUpon>
@@ -8331,6 +8405,13 @@
     <Compile Include="Group.aspx.designer.cs">
       <DependentUpon>Group.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ImportLeads.aspx.cs">
+      <DependentUpon>ImportLeads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportLeads.aspx.designer.cs">
+      <DependentUpon>ImportLeads.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ImportPresentyExcelSheet.aspx.cs">
       <DependentUpon>ImportPresentyExcelSheet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -8400,6 +8481,13 @@
     </Compile>
     <Compile Include="Item_Return.aspx.designer.cs">
       <DependentUpon>Item_Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadDetail.aspx.cs">
+      <DependentUpon>LeadDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeadDetail.aspx.designer.cs">
+      <DependentUpon>LeadDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="LeaveAnalysis.aspx.cs">
       <DependentUpon>LeaveAnalysis.aspx</DependentUpon>
@@ -8520,6 +8608,13 @@
     <Compile Include="NewItemRequest.aspx.designer.cs">
       <DependentUpon>NewItemRequest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NewLead.aspx.cs">
+      <DependentUpon>NewLead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewLead.aspx.designer.cs">
+      <DependentUpon>NewLead.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewLeaveManagement.aspx.cs">
       <DependentUpon>NewLeaveManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -8554,6 +8649,20 @@
     </Compile>
     <Compile Include="NewProject.aspx.designer.cs">
       <DependentUpon>NewProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewProposal.aspx.cs">
+      <DependentUpon>NewProposal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewProposal.aspx.designer.cs">
+      <DependentUpon>NewProposal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewPurchaseOrder.aspx.cs">
+      <DependentUpon>NewPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>NewPurchaseOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewTicket.aspx.cs">
       <DependentUpon>NewTicket.aspx</DependentUpon>
@@ -8780,6 +8889,34 @@
       <DependentUpon>Project_Purchase.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proposal.aspx.cs">
+      <DependentUpon>Proposal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proposal.aspx.designer.cs">
+      <DependentUpon>Proposal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProposalDetails.aspx.cs">
+      <DependentUpon>ProposalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProposalDetails.aspx.designer.cs">
+      <DependentUpon>ProposalDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrder.aspx.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrder.aspx.designer.cs">
+      <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrderDetails.aspx.cs">
+      <DependentUpon>PurchaseOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrderDetails.aspx.designer.cs">
+      <DependentUpon>PurchaseOrderDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="renewContract.aspx.cs">
       <DependentUpon>renewContract.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -8913,6 +9050,13 @@
     <Compile Include="ViewCareer.aspx.designer.cs">
       <DependentUpon>ViewCareer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewLead.aspx.cs">
+      <DependentUpon>ViewLead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewLead.aspx.designer.cs">
+      <DependentUpon>ViewLead.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewLeaveManagement.aspx.cs">
       <DependentUpon>ViewLeaveManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -9018,6 +9162,14 @@
     <Content Include="Scripts\tinymce\langs\README.md" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="VendorFiles\PaymentReport_04_04_2024 16_57.pdf" />
+    <Content Include="VendorFiles\TenderList_05_04_2024 10_47.pdf" />
+    <Content Include="VendorFiles\TicketDetails_02_04_2024 12_02.pdf" />
+    <Content Include="VendorFiles\TicketDetails_02_04_2024 12_22.pdf" />
+    <Content Include="VendorFiles\VendorContactList05_04_2024 16_35.pdf" />
+    <Content Include="VendorFiles\VendorContactList18_04_2024 10_10.pdf" />
+    <Content Include="VendorFiles\Vendor_Contact_Details %285%29.xls" />
+    <Content Include="VendorFiles\Vendor_Contact_Details.xls" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

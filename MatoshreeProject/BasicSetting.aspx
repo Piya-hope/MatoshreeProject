@@ -2045,7 +2045,7 @@
                                                         <hr />
                                                         <asp:GridView ID="GridViewPageName" runat="server" ScrollBars="Both" CssClass="table table-bordered table-hover" AutoGenerateColumns="false" CellPadding="4" ClientIDMode="Static" data-plugin="dataTable" Style="width: 100%"
                                                             EmptyDataText="No Records found" ShowHeaderWhenEmpty="True" EmptyDataRowStyle-ForeColor="Red" EmptyDataRowStyle-HorizontalAlign="Center" Font-Bold="false" DataKeyNames="ID"
-                                                            OnRowDeleting="GridViewPageName_RowDeleting" OnRowEditing="GridViewPageName_RowEditing" OnRowUpdating="GridViewPageName_RowUpdating" OnRowCancelingEdit="GridViewPageName_RowCancelingEdit">
+                                                            OnRowDeleting="GridViewPageName_RowDeleting" OnRowEditing="GridViewPageName_RowEditing" OnRowUpdating="GridViewPageName_RowUpdating" OnRowCancelingEdit="GridViewPageName_RowCancelingEdit" OnRowDataBound="GridViewPageName_RowDataBound">
                                                             <Columns>
                                                                 <asp:TemplateField HeaderText="ID" ItemStyle-Width="100" HeaderStyle-Font-Size="12px">
                                                                     <ItemTemplate>
@@ -2098,6 +2098,15 @@
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
                                                                         <asp:Label ID="lblDescrip1" runat="server" Text='<%# Bind("Description") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                 <asp:TemplateField HeaderText="Status" SortExpression="Status" HeaderStyle-Font-Size="12px">
+                                                                    <EditItemTemplate>
+                                                                        <asp:Label ID="lblStats61" runat="server" Text=""></asp:Label>
+                                                                    </EditItemTemplate>
+                                                                    <ItemTemplate>
+                                                                        <asp:Label ID="lblStats6" runat="server" Text='<%# Bind("Status") %>' Visible="false"></asp:Label>
+                                                                        <asp:Button ID="btnWebPageStatus" runat="server" Text='<%# Bind("Status") %>' OnClick="btnWebPageStatus_Click" Style="border-radius: 80px;" Font-Size="12px" />
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="CreatedBY" SortExpression="CreatedBY" HeaderStyle-Font-Size="12px">
@@ -2824,10 +2833,10 @@
                                                             </asp:TemplateField>
                                                             <asp:TemplateField HeaderText="Perticulars" SortExpression="Perticular" HeaderStyle-Font-Size="12px">
                                                                 <EditItemTemplate>
-                                                                    <asp:TextBox ID="txtPerticular" runat="server" class=" form-control" Text='<%# Bind("Perticular") %>'></asp:TextBox>
+                                                                    <asp:TextBox ID="txtPerticular" runat="server" class=" form-control" Text='<%# Bind("Perticular") %>' Font-Size="12px"></asp:TextBox>
                                                                 </EditItemTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:Label ID="lblPerticular" runat="server" Text='<%# Bind("Perticular") %>' TabIndex="6" Font-Bold="false"></asp:Label>
+                                                                    <asp:Label ID="lblPerticular" runat="server" Text='<%# Bind("Perticular") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                 </ItemTemplate>
                                                             </asp:TemplateField>
                                                             <asp:TemplateField HeaderText="PerticularType" SortExpression="PerticularType" HeaderStyle-Font-Size="12px">
@@ -2839,24 +2848,24 @@
                                                                     </asp:DropDownList>
                                                                 </EditItemTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:Label ID="lblPerticularType" runat="server" Text='<%# Bind("PerticularType") %>' TabIndex="6" Font-Bold="false"></asp:Label>
+                                                                    <asp:Label ID="lblPerticularType" runat="server" Text='<%# Bind("PerticularType") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                 </ItemTemplate>
                                                             </asp:TemplateField>
 
                                                             <asp:TemplateField HeaderText="Percentage" SortExpression="Percentage" HeaderStyle-Font-Size="12px">
                                                                 <EditItemTemplate>
-                                                                    <asp:TextBox ID="txtPercentage" class="required form-control" runat="server" Text='<%# Bind("Percentage") %>'></asp:TextBox>
+                                                                    <asp:TextBox ID="txtPercentage" class="required form-control" runat="server" Text='<%# Bind("Percentage") %>' Font-Size="12px"></asp:TextBox>
                                                                 </EditItemTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:Label ID="lblPercentage" runat="server" Text='<%# Bind("Percentage") %>' TabIndex="6" Font-Bold="false"></asp:Label>
+                                                                    <asp:Label ID="lblPercentage" runat="server" Text='<%# Bind("Percentage") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                 </ItemTemplate>
                                                             </asp:TemplateField>
                                                             <asp:TemplateField HeaderText="Description" SortExpression="Description" HeaderStyle-Font-Size="12px">
                                                                 <EditItemTemplate>
-                                                                    <asp:TextBox ID="txtDescriptionPerticular" class=" form-control" runat="server" Text='<%# Bind("Description") %>'></asp:TextBox>
+                                                                    <asp:TextBox ID="txtDescriptionPerticular" class=" form-control" runat="server" Text='<%# Bind("Description") %>' Font-Size="12px"></asp:TextBox>
                                                                 </EditItemTemplate>
                                                                 <ItemTemplate>
-                                                                    <asp:Label ID="lblDescriptionPerticular" runat="server" Text='<%# Bind("Description") %>' TabIndex="6" Font-Bold="false"></asp:Label>
+                                                                    <asp:Label ID="lblDescriptionPerticular" runat="server" Text='<%# Bind("Description") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                 </ItemTemplate>
                                                             </asp:TemplateField>
                                                             <asp:TemplateField HeaderText="Edit" ItemStyle-HorizontalAlign="Center" HeaderStyle-Font-Size="12px">
@@ -3601,7 +3610,7 @@
                                                         </div>
 
                                                         <div class="mb-2">
-                                                            <asp:Label ID="lblNoOfleave" runat="server" Text="No Of Leave" CssClass="form-label"></asp:Label>
+                                                            <asp:Label ID="lblNoOfleave" runat="server" Text="Number of Leave" CssClass="form-label"></asp:Label>
                                                             <asp:TextBox ID="txtNoOfleave" runat="server" placeholder="Enter No Of Leave" class="required form-control" TextMode="Number"></asp:TextBox>
                                                         </div>
                                                         <div class="mb-2">
@@ -3639,51 +3648,51 @@
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="ID" SortExpression="ID" Visible="false">
                                                                     <EditItemTemplate>
-                                                                        <asp:Label ID="lblLeaveType_ID" runat="server" Text='<%# Bind("ID") %>' Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblLeaveType_ID" runat="server" Text='<%# Bind("ID") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
-                                                                        <asp:Label ID="lblLeaveType_ID1" runat="server" Text='<%# Bind("ID") %>' Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblLeaveType_ID1" runat="server" Text='<%# Bind("ID") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="LeaveType" SortExpression="LeaveType">
                                                                     <EditItemTemplate>
-                                                                        <asp:TextBox ID="txtLeaveType" runat="server" Text='<%# Bind("LeaveType") %>'></asp:TextBox>
+                                                                        <asp:TextBox ID="txtLeaveType" runat="server" Text='<%# Bind("LeaveType") %>' Font-Size="12px"></asp:TextBox>
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
-                                                                        <asp:Label ID="lblLeaveType1" runat="server" Text='<%# Bind("LeaveType") %>' TabIndex="6" Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblLeaveType1" runat="server" Text='<%# Bind("LeaveType") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
 
                                                                 <asp:TemplateField HeaderText="NoOfLeave" SortExpression="NoOfLeave">
                                                                     <EditItemTemplate>
-                                                                        <asp:TextBox ID="txtNoOfLeave" runat="server" Text='<%# Bind("NoOfLeave") %>'></asp:TextBox>
+                                                                        <asp:TextBox ID="txtNoOfLeave" runat="server" Text='<%# Bind("NoOfLeave") %>' Font-Size="12px"></asp:TextBox>
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
-                                                                        <asp:Label ID="lblNoOfLeave1" runat="server" Text='<%# Bind("NoOfLeave") %>' TabIndex="6" Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblNoOfLeave1" runat="server" Text='<%# Bind("NoOfLeave") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="Description" SortExpression="Description">
                                                                     <EditItemTemplate>
-                                                                        <asp:TextBox ID="txtDescript" runat="server" Text='<%# Bind("Description") %>'></asp:TextBox>
+                                                                        <asp:TextBox ID="txtDescript" runat="server" Text='<%# Bind("Description") %>' Font-Size="12px"></asp:TextBox>
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
-                                                                        <asp:Label ID="lblDescript1" runat="server" Text='<%# Bind("Description") %>' TabIndex="6" Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblDescript1" runat="server" Text='<%# Bind("Description") %>' TabIndex="6" Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="CreatedBY" SortExpression="CreatedBY">
                                                                     <EditItemTemplate>
-                                                                        <asp:Label ID="lblCreateby" runat="server" Text='<%#Bind("CreateBy") %>' Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblCreateby" runat="server" Text='<%#Bind("CreateBy") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
-                                                                        <asp:Label ID="lblCreateby1" runat="server" Text='<%#Bind("CreateBy") %>' Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblCreateby1" runat="server" Text='<%#Bind("CreateBy") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="Created Date" SortExpression="CreateDate">
                                                                     <EditItemTemplate>
-                                                                        <asp:Label ID="lblCreateddate" runat="server" Text='<%#Bind("Create_Date","{0:dd/MM/yyyy}") %>' Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblCreateddate" runat="server" Text='<%#Bind("Create_Date","{0:dd/MM/yyyy}") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </EditItemTemplate>
                                                                     <ItemTemplate>
-                                                                        <asp:Label ID="lblCreateddate1" runat="server" Text='<%#Bind("Create_Date","{0:dd/MM/yyyy}") %>' Font-Bold="false"></asp:Label>
+                                                                        <asp:Label ID="lblCreateddate1" runat="server" Text='<%#Bind("Create_Date","{0:dd/MM/yyyy}") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="Edit" ItemStyle-HorizontalAlign="Center">

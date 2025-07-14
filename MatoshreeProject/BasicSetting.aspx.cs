@@ -30,6 +30,7 @@ using System.Threading;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using Org.BouncyCastle.Ocsp;
 #endregion
 
 namespace MatoshreeProject
@@ -1417,7 +1418,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[7].Visible = true;
                                 GridViewTaxDetails.Columns[6].Visible = true;
                                 GridTenderCategory.Columns[4].Visible = true;
-                                GridViewPageName.Columns[9].Visible = true;
+                                GridViewPageName.Columns[10].Visible = true;
                                 GridDepartment.Columns[4].Visible = true;
                                 GridMeasurmentProd.Columns[6].Visible = true;
                                 GridViewProductType.Columns[5].Visible = true;
@@ -1450,7 +1451,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[7].Visible = false;
                                 GridViewTaxDetails.Columns[6].Visible = false;
                                 GridTenderCategory.Columns[4].Visible = false;
-                                GridViewPageName.Columns[9].Visible = false;
+                                GridViewPageName.Columns[10].Visible = false;
                                 GridDepartment.Columns[4].Visible = false;
                                 GridMeasurmentProd.Columns[6].Visible = false;
                                 GridViewProductType.Columns[5].Visible = false;
@@ -1484,7 +1485,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[8].Visible = true;
                                 GridViewTaxDetails.Columns[7].Visible = true;
                                 GridTenderCategory.Columns[5].Visible = true;
-                                GridViewPageName.Columns[10].Visible = true;
+                                GridViewPageName.Columns[11].Visible = true;
                                 GridDepartment.Columns[5].Visible = true;
                                 GridMeasurmentProd.Columns[7].Visible = true;
                                 GridViewProductType.Columns[6].Visible = true;
@@ -1517,7 +1518,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[8].Visible = false;
                                 GridViewTaxDetails.Columns[7].Visible = false;
                                 GridTenderCategory.Columns[5].Visible = false;
-                                GridViewPageName.Columns[10].Visible = false;
+                                GridViewPageName.Columns[11].Visible = false;
                                 GridDepartment.Columns[5].Visible = false;
                                 GridMeasurmentProd.Columns[7].Visible = false;
                                 GridViewProductType.Columns[6].Visible = false;
@@ -1655,7 +1656,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[7].Visible = true;
                                 GridViewTaxDetails.Columns[6].Visible = true;
                                 GridTenderCategory.Columns[4].Visible = true;
-                                GridViewPageName.Columns[9].Visible = true;
+                                GridViewPageName.Columns[10].Visible = true;
                                 GridDepartment.Columns[4].Visible = true;
                                 GridMeasurmentProd.Columns[6].Visible = true;
                                 GridViewProductType.Columns[5].Visible = true;
@@ -1688,7 +1689,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[7].Visible = false;
                                 GridViewTaxDetails.Columns[6].Visible = false;
                                 GridTenderCategory.Columns[4].Visible = false;
-                                GridViewPageName.Columns[9].Visible = false;
+                                GridViewPageName.Columns[10].Visible = false;
                                 GridDepartment.Columns[4].Visible = false;
                                 GridMeasurmentProd.Columns[6].Visible = false;
                                 GridViewProductType.Columns[5].Visible = false;
@@ -1722,7 +1723,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[8].Visible = true;
                                 GridViewTaxDetails.Columns[7].Visible = true;
                                 GridTenderCategory.Columns[5].Visible = true;
-                                GridViewPageName.Columns[10].Visible = true;
+                                GridViewPageName.Columns[11].Visible = true;
                                 GridDepartment.Columns[5].Visible = true;
                                 GridMeasurmentProd.Columns[7].Visible = true;
                                 GridViewProductType.Columns[6].Visible = true;
@@ -1755,7 +1756,7 @@ namespace MatoshreeProject
                                 GridCity1.Columns[8].Visible = false;
                                 GridViewTaxDetails.Columns[7].Visible = false;
                                 GridTenderCategory.Columns[5].Visible = false;
-                                GridViewPageName.Columns[10].Visible = false;
+                                GridViewPageName.Columns[11].Visible = false;
                                 GridDepartment.Columns[5].Visible = false;
                                 GridMeasurmentProd.Columns[7].Visible = false;
                                 GridViewProductType.Columns[6].Visible = false;
@@ -1859,6 +1860,7 @@ namespace MatoshreeProject
                             ViewTenderCategory();
                             ViewDepartmentDetails();
                             ViewWebPages();
+                            //that the human
                             //------------------------------//
                             ViewMeasurementDetails();
                             ViewProductCategory();
@@ -2338,7 +2340,8 @@ namespace MatoshreeProject
                     UserCommand.Parameters.AddWithValue("@Billing_Type", txtBillingType.Text);
                     UserCommand.Parameters.AddWithValue("@Description", txtDescription.Text);
                     UserCommand.Parameters.AddWithValue("@CreateBy", UserName); //Session value
-                    UserCommand.Parameters.AddWithValue("@UserID", UserId);
+                    UserCommand.Parameters.AddWithValue("@EmpID", UserId);
+                   // UserCommand.Parameters.AddWithValue("@EmpID", EmpId);
                     UserCommand.Parameters.AddWithValue("@Designation", Designation);
                     UserCon.Open();
                     dr = UserCommand.ExecuteReader();
@@ -7274,6 +7277,185 @@ namespace MatoshreeProject
             }
         }
 
+        protected void btnWebPageStatus_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection DeviceCon = new SqlConnection(strconnect))
+                {
+                    UserId = Convert.ToInt32(Session["UserID"]);
+                    UserName = Session["UserName"].ToString();
+                    var rows = GridViewPageName.Rows;
+                    Button Btn = (Button)sender;
+                    GridViewRow row = (GridViewRow)Btn.NamingContainer;
+                    int rowindex = Convert.ToInt32(row.RowIndex);
+                    Button id = ((Button)rows[rowindex].FindControl("btnWebPageStatus"));
+                    string ID = ((Label)rows[rowindex].FindControl("lblPage_ID1")).Text;
+                    if (id.Text.Equals("Active"))
+                    {
+                        SqlCommand cmd = new SqlCommand("SP_UpdateWebPagesStatusChange", DeviceCon);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ID", ID);
+                        cmd.Parameters.AddWithValue("@Status", "False");//Session
+                        cmd.Parameters.AddWithValue("@Createdby", UserName);//Session
+                        cmd.Parameters.AddWithValue("@EmpID", UserId);
+                        cmd.Parameters.AddWithValue("@Designation", Designation);
+                        DeviceCon.Open();
+                        int Result = cmd.ExecuteNonQuery();
+                        if (Result < 0)
+                        {
+                            Toasteralert.Visible = false;
+                            deleteToaster.Visible = true;
+                            lblMesDelete.Text = "WebPages Inactive Successfully";
+                        }
+                        else
+                        {
+                            Toasteralert.Visible = false;
+                            deleteToaster.Visible = true;
+                            lblMesDelete.Text = "WebPages Active Successfully";
+                        }
+                    }
+                    else
+                    {
+                        SqlCommand cmd = new SqlCommand("SP_UpdateWebPagesStatusChange", DeviceCon);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ID", ID);
+                        cmd.Parameters.AddWithValue("@Status", "True");//Session
+                        cmd.Parameters.AddWithValue("@Createdby", UserName);//Session
+                        cmd.Parameters.AddWithValue("@EmpID", UserId);
+                        cmd.Parameters.AddWithValue("@Designation", Designation);
+                        DeviceCon.Open();
+                        int Result = cmd.ExecuteNonQuery();
+                        if (Result < 0)
+                        {
+                            Toasteralert.Visible = false;
+                            deleteToaster.Visible = true;
+                            lblMesDelete.Text = "WebPages Active Successfully";
+                        }
+                        else
+                        {
+                            Toasteralert.Visible = false;
+                            deleteToaster.Visible = true;
+                            lblMesDelete.Text = "WebPages Inactive Successfully";
+                        }
+
+                    }
+
+                }
+                ViewWebPages();
+            }
+            catch (Exception ex)
+            {
+                using (SqlConnection DeviceCon = new SqlConnection(strconnect))
+                {
+                    string ErrorMessgage = ex.Message;
+                    System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(ex, true);
+                    string pagename = trace.GetFrame((trace.FrameCount - 1)).GetFileName();
+                    string method = trace.GetFrame((trace.FrameCount - 1)).GetMethod().ToString();
+                    Int32 lineNumber = trace.GetFrame((trace.FrameCount - 1)).GetFileLineNumber();
+                    SqlCommand cmdex = new SqlCommand("SP_SaveErrorDetails", DeviceCon);
+                    cmdex.CommandType = CommandType.StoredProcedure;
+                    cmdex.Parameters.AddWithValue("@ErroMessage", ErrorMessgage);
+                    cmdex.Parameters.AddWithValue("@ErrorLine", lineNumber);
+                    cmdex.Parameters.AddWithValue("@ErrorPath", pagename);
+                    cmdex.Parameters.AddWithValue("@Method", method);
+                    cmdex.Parameters.AddWithValue("@CreatedBy", UserName); //Session UserLogIn
+                    DeviceCon.Open();
+                    int RowEx = cmdex.ExecuteNonQuery();
+                    if (RowEx < 0)
+                    {
+                        //lblMessage.Visible = false;
+                        //lblMessage.Text = "Error Details Save Successfully";
+                    }
+                    else
+                    {
+                        //lblMessage.Visible = false;
+                        //lblMessage.Text = "Error Details Not Save Successfully";
+                    }
+                }
+            }
+        }
+
+        protected void GridViewPageName_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            try
+            {
+                foreach (GridViewRow gridviedrow in GridViewPageName.Rows)
+                {
+                    // string  Status = Convert.ToString(e.Row.Cells[8].Text);
+
+                    Label lblPage_ID1 = (Label)gridviedrow.FindControl("lblPage_ID1");
+                    Label lblPageName1 = (Label)gridviedrow.FindControl("lblPageName1");
+                    Label lblModule1 = (Label)gridviedrow.FindControl("lblModule1");
+                    Label lblStatusShow1 = (Label)gridviedrow.FindControl("lblStats6");
+                    Label lblSubModule1 = (Label)gridviedrow.FindControl("lblSubModule1");
+                    Label lblDesign1 = (Label)gridviedrow.FindControl("lblDesign1");
+                    Label lblDescrip1 = (Label)gridviedrow.FindControl("lblDescrip1");
+
+                    Button btnStatus = (Button)gridviedrow.FindControl("btnWebPageStatus");
+                    string status = ((Label)gridviedrow.FindControl("lblStats6")).Text;
+                    if (status == "True")
+                    {
+                        btnStatus.Text = "Active";
+                        btnStatus.CssClass = "btn btn-sm btn-outline-success";
+
+                        lblPage_ID1.ForeColor = Color.Blue;
+                        lblPageName1.ForeColor = Color.Blue;
+                        lblModule1.ForeColor = Color.Blue;
+                        lblSubModule1.ForeColor = Color.Blue;
+                        lblStatusShow1.ForeColor = Color.Blue;
+                        lblDesign1.ForeColor = Color.Blue;
+                        lblDescrip1.ForeColor = Color.Blue;
+
+                    }
+                    else
+                    {
+                        btnStatus.Text = "InActive";
+                        btnStatus.CssClass = "btn btn-sm btn-outline-danger";
+
+                        lblPage_ID1.ForeColor = Color.Blue;
+                        lblPageName1.ForeColor = Color.Blue;
+                        lblModule1.ForeColor = Color.Blue;
+                        lblSubModule1.ForeColor = Color.Blue;
+                        lblStatusShow1.ForeColor = Color.Blue;
+                        lblDesign1.ForeColor = Color.Blue;
+                        lblDescrip1.ForeColor = Color.Blue;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                using (SqlConnection DeviceCon = new SqlConnection(strconnect))
+                {
+                    string ErrorMessgage = ex.Message;
+                    System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(ex, true);
+                    string pagename = trace.GetFrame((trace.FrameCount - 1)).GetFileName();
+                    string method = trace.GetFrame((trace.FrameCount - 1)).GetMethod().ToString();
+                    Int32 lineNumber = trace.GetFrame((trace.FrameCount - 1)).GetFileLineNumber();
+                    SqlCommand cmdex = new SqlCommand("SP_SaveErrorDetails", DeviceCon);
+                    cmdex.CommandType = CommandType.StoredProcedure;
+                    cmdex.Parameters.AddWithValue("@ErroMessage", ErrorMessgage);
+                    cmdex.Parameters.AddWithValue("@ErrorLine", lineNumber);
+                    cmdex.Parameters.AddWithValue("@ErrorPath", pagename);
+                    cmdex.Parameters.AddWithValue("@Method", method);
+                    cmdex.Parameters.AddWithValue("@CreatedBy", UserName); //Session UserLogIn
+                    DeviceCon.Open();
+                    int RowEx = cmdex.ExecuteNonQuery();
+                    if (RowEx < 0)
+                    {
+                        //lblMessage.Visible = false;
+                        //lblMessage.Text = "Error Details Save Successfully";
+                    }
+                    else
+                    {
+                        //lblMessage.Visible = false;
+                        //lblMessage.Text = "Error Details Not Save Successfully";
+                    }
+                }
+            }
+        }
+
         //--------------------------------------------------------------------------------------------//
         //Measurements
         //-------------------------------------------------------------------------------------------//
@@ -11839,7 +12021,7 @@ namespace MatoshreeProject
             {
                 DeviceCon = new SqlConnection(strconnect);
                 int tableID = Convert.ToInt32(GridLeave.DataKeys[e.RowIndex].Values["ID"].ToString());
-                SqlCommand cmd = new SqlCommand("SP_DeletePolicy", DeviceCon);
+                SqlCommand cmd = new SqlCommand("SP_DeleteLeaveType", DeviceCon);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ID", tableID);
                 cmd.Parameters.AddWithValue("@CreateBy", UserName);

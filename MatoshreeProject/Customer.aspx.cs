@@ -834,8 +834,6 @@ namespace MatoshreeProject
             }
         }
 
-
-
         protected void btnEditcust_Click(object sender, EventArgs e)
         {
             try
@@ -994,7 +992,6 @@ namespace MatoshreeProject
             }
             finally { }
         }
-
 
         public override void VerifyRenderingInServerForm(Control control)
         {
@@ -1375,7 +1372,7 @@ namespace MatoshreeProject
 
                         _fontStyle = FontFactory.GetFont("Arial", 14f, 2);
                         _pdfPCell = new PdfPCell(new Phrase("", _fontStyle));
-                        _pdfPCell.Colspan = 11;
+                        _pdfPCell.Colspan = 10;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
                         _pdfPCell.Border = 2;
                         _pdfPCell.BorderColorBottom = BaseColor.BLACK;
@@ -1602,12 +1599,12 @@ namespace MatoshreeProject
                             _pdfPCell.ExtraParagraphSpace = 1;
                             _pdfPTable.AddCell(_pdfPCell);
 
-                            _pdfPCell = new PdfPCell(new Phrase(row["ShippingAddress"].ToString(), _fontStyle));
-                            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
-                            _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                            _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                            _pdfPCell.ExtraParagraphSpace = 1;
-                            _pdfPTable.AddCell(_pdfPCell);
+                            //_pdfPCell = new PdfPCell(new Phrase(row["ShippingAddress"].ToString(), _fontStyle));
+                            //_pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                            //_pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
+                            //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                            //_pdfPCell.ExtraParagraphSpace = 1;
+                            //_pdfPTable.AddCell(_pdfPCell);
 
                             //_pdfPCell = new PdfPCell(new Phrase(row["Created_Date"].ToString(), _fontStyle)); 
                             //_pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;

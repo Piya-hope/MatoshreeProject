@@ -1,0 +1,48 @@
+<style> .textmode { mso-number-format:\@; } </style><div>
+	<table class="table border table-bordered table-responsive table-hover text-nowrap align-content-center" cellspacing="0" cellpadding="4" rules="all" ScrollBars="Both" border="1" id="GridTask1" style="font-weight:normal;border-collapse:collapse;width: 150%">
+		<tr style="background-color:White;">
+			<th scope="col">ID</th><th scope="col" style="font-size:12px;">Name</th><th scope="col" style="font-size:12px;">Start_Date</th><th scope="col" style="font-size:12px;">Due_Date</th><th scope="col" style="font-size:12px;">Assigned To</th><th scope="col" style="font-size:12px;">Status</th><th scope="col" style="font-size:12px;">Priority</th><th scope="col" style="font-size:12px;">Edit</th><th scope="col" style="font-size:12px;">Delete</th>
+		</tr><tr style="background-color:White;">
+			<td class="textmode">
+                                                        <span id="lblRowNumber" style="font-size:12px;">1</span>
+                                                    </td><td class="textmode">
+                                                        <span id="lbltaskName1" tabindex="6" style="color:Red;font-size:12px;font-weight:normal;">Task211</span>
+                                                    </td><td class="textmode">
+                                                        <span id="lblStart_Date1" style="color:Red;font-size:12px;font-weight:normal;">2024/10/03</span>
+                                                    </td><td class="textmode">
+                                                        <span id="lblDue_Date1" style="color:Red;font-size:12px;font-weight:normal;">2024/10/10</span>
+                                                    </td><td class="textmode">
+                                                        <div class="m-2">
+                                                            <ul id="bulletlist1" style="list-style-type:circle;font-size:12px;">
+				<li>Suvarna bansode</li>
+			</ul>
+                                                        </div>
+                                                    </td><td class="textmode">
+                                                        <select name="ctl00$ContentPlaceHolder1$GridTask1$ctl02$ddlTaskStatus" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$GridTask1$ctl02$ddlTaskStatus\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlTaskStatus" class="form-control " style="font-size:12px;">
+				<option selected="selected" value="In Progress">Mark as Testing</option>
+				<option value="Mark as Not Started">Mark as Not Started</option>
+				<option value="Mark as Testing">Mark as Testing</option>
+				<option value="Mark as Awaiting Feedback">Mark as Awaiting Feedback</option>
+				<option value="Mark as Complete">Mark as Complete</option>
+
+			</select>
+                                                        
+
+                                                    </td><td class="textmode">
+                                                        <select name="ctl00$ContentPlaceHolder1$GridTask1$ctl02$ddlPriority" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$GridTask1$ctl02$ddlPriority\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlPriority" class="form-control ">
+				<option selected="selected" value="Medium">Medium</option>
+				<option value="High">High</option>
+				<option value="Low">Low</option>
+				<option value="Urgent">Urgent</option>
+
+			</select>
+
+                                                        
+                                                    </td><td class="textmode" align="center">
+                                                        <a id="btnEditTask" class="btn btn-sm btn-outline-info mb-3" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$GridTask1$ctl02$btnEditTask&#39;,&#39;&#39;)"><i class="ti ti-edit"></i></a>
+                                                    </td><td class="textmode" align="center">
+                                                        <a onclick="return confirm(&#39;Are you sure you want to delete?&#39;);" id="btnDeleteTask" class="btn btn-sm btn-outline-danger" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$GridTask1$ctl02$btnDeleteTask&#39;,&#39;&#39;)"><i class="ti ti-trash"></i></a>
+                                                    </td>
+		</tr>
+	</table>
+</div>

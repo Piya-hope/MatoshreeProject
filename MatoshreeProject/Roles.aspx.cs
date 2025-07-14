@@ -315,7 +315,7 @@ namespace MatoshreeProject
                 {
                     RoleType = Session["LoginType"].ToString();
                     Designation = Session["Role"].ToString();
-                    //changes are git
+                    //branch change
                     if (Session["LoginType"].ToString() == "Administrator")
                     {
                         UserId = Convert.ToInt32(Session["UserID"]);

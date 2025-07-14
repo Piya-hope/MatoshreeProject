@@ -41,6 +41,7 @@ using iText.Kernel.Pdf;
 using System.IO.MemoryMappedFiles;
 using System.Dynamic;
 using Color = System.Drawing.Color;
+using System.Text.RegularExpressions;
 
 #endregion
 
@@ -1079,11 +1080,15 @@ namespace MatoshreeProject
                 RoleType = Session["LoginType"].ToString();
                 Designation = Session["Role"].ToString();
                 UserId = Convert.ToInt32(Session["UserID"]);
+                int SerialNumber = 1;
+             
                 if (Session["LoginType"].ToString() == "Administrator")
                 {
                     DataTable dt = ViewProjetctDetails();
                     if (dt != null && dt.Rows.Count > 0)
                     {
+                        
+                        
                         Response.Clear();
                         Response.Buffer = true;
                         Response.ContentType = "application/ms-excel";
@@ -1107,10 +1112,12 @@ namespace MatoshreeProject
                         // Copy the data from the original DataTable to the export DataTable
                         foreach (DataRow row in dt.Rows)
                         {
+                            string htmlDescription = row["Description"].ToString();
+                            string plainText = Regex.Replace(htmlDescription, "<.*?>", "").Trim();
                             DataRow newRow = dtExport.NewRow();
-                            newRow["ID"] = row["ID"];
+                            newRow["ID"] = SerialNumber++.ToString();
                             newRow["ProjectName"] = row["ProjectName"];
-                            newRow["Description"] = row["Description"];
+                            newRow["Description"] = plainText;
                             newRow["StatusName"] = row["StatusName"];
                             newRow["ClientName"] = row["ClientName"];
                             newRow["billing_type"] = row["billing_type"];
@@ -1163,7 +1170,7 @@ namespace MatoshreeProject
                         foreach (DataRow row in dt.Rows)
                         {
                             DataRow newRow = dtExport.NewRow();
-                            newRow["ID"] = row["ID"];
+                            newRow["ID"] = SerialNumber++.ToString();
                             newRow["ProjectName"] = row["ProjectName"];
                             newRow["Description"] = row["Description"];
                             newRow["StatusName"] = row["StatusName"];

@@ -51,7 +51,7 @@ namespace MatoshreeProject
         string result, result1, result2, result3;
 
         string Tenderid, Publish;
-        int UserId = 1;
+        int UserId;
         string UserName = "Trupti G", EmailID, Designation = "Admin", RoleType, Permission, DeptID;
 
 

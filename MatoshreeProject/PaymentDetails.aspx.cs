@@ -1626,7 +1626,7 @@ namespace MatoshreeProject
                             body += "Payment recorded for invoice " + lblInvNo12.Text;
                             body += "You can pay through any of the payment methods stated on the invoice. Please don’t hesitate to reach out in case of any queries.";
                             body += "I look forward to working with you.";
-                            //string urllocal = HttpUtility.HtmlEncode("http://localhost:53687/UserLogIn/LogIn");
+                            // string url = HttpUtility.HtmlEncode("https://newdesigncrm.lissomtech.in/LogIn");
                             string url = HttpUtility.HtmlEncode("https://minteriors.lissomtech.in/LogIn");      
                             body += "Regards,";
                         }

@@ -7455,7 +7455,7 @@ namespace MatoshreeProject
                         if (txtEmailEditor.Text == "")
                         {
                             body += "At your request, please see the link to invoice " + lblInvoiceno.Text + " below.";
-                            //string urllocal = HttpUtility.HtmlEncode("http://localhost:53687/UserLogIn/LogIn");
+                            // string url = HttpUtility.HtmlEncode("https://newdesigncrm.lissomtech.in/LogIn");
                             string url = HttpUtility.HtmlEncode("https://minteriors.lissomtech.in/LogIn");
                             body += "<html><body><br/><br/><a href=\"" + url + "\">Click here to view the invoice online:</a></body></html>";
                             body += "Please contact us for more information.";

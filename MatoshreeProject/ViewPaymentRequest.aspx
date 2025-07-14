@@ -296,12 +296,12 @@
                                         <asp:Label ID="lblApprovalBy1" runat="server" Text='<%#Bind("ApprovalBy") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Status" SortExpression="Status" Visible="false">
+                                <asp:TemplateField HeaderText="Status" SortExpression="Status" HeaderStyle-Font-Size="12px" Visible="false">
                                     <EditItemTemplate>
-                                        <asp:Label ID="lblStatus1" runat="server" Text='<%#Bind("Exp_Status") %>' Font-Bold="false"></asp:Label>
+                                        <asp:Label ID="lblStatus1" runat="server" Text='<%#Bind("Exp_Status") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                     </EditItemTemplate>
                                     <ItemTemplate>
-                                        <asp:Label ID="lblStatus" runat="server" Text='<%#Bind("Exp_Status") %>' Font-Bold="false"></asp:Label>
+                                        <asp:Label ID="lblStatus" runat="server" Text='<%#Bind("Exp_Status") %>' Font-Bold="false" Font-Size="12px"></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Edit" ItemStyle-HorizontalAlign="Center" HeaderStyle-Font-Size="12px">

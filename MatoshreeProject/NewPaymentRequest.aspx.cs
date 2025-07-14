@@ -847,11 +847,13 @@ namespace MatoshreeProject
                 if (Result > 0)
                 {
                     this.Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Payment Request  Save Successfully!')", true);
+                    Response.Redirect("~/ViewPaymentRequest.aspx?svd1=", false);
 
                 }
                 else
                 {
                     this.Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Payment Request  Already Available!')", true);
+                    Response.Redirect("~/ViewPaymentRequest.aspx?svd1=", false);
                 }
 
                 GetMaxID(lblBillNoretrive.Text);

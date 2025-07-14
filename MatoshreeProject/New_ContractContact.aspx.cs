@@ -160,17 +160,50 @@ namespace MatoshreeProject
 
         public void BindPartnerName()//ddl
         {
-            SqlConnection con = new SqlConnection(strconnect);
-            SqlCommand cmd = new SqlCommand("SP_GetPartnerName", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataAdapter adpt = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adpt.Fill(dt);
-            ddlpartnername.DataSource = dt;
-            ddlpartnername.DataTextField = "Patner_Name";
-            ddlpartnername.DataValueField = "Patner_ID";
-            ddlpartnername.DataBind();
-            ddlpartnername.Items.Insert(0, new ListItem("Select Partner", "0"));
+            try
+            {
+                SqlConnection con = new SqlConnection(strconnect);
+                SqlCommand cmd = new SqlCommand("SP_GetPartnerName", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adpt.Fill(dt);
+                ddlpartnername.DataSource = dt;
+                ddlpartnername.DataTextField = "Patner_Name";
+                ddlpartnername.DataValueField = "Patner_ID";
+                ddlpartnername.DataBind();
+                ddlpartnername.Items.Insert(0, new ListItem("Select Partner", "0"));
+            }
+            catch (Exception ex)
+            {
+                using (SqlConnection DeviceCon = new SqlConnection(strconnect))
+                {
+                    string ErrorMessgage = ex.Message;
+                    System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(ex, true);
+                    string pagename = trace.GetFrame((trace.FrameCount - 1)).GetFileName();
+                    string method = trace.GetFrame((trace.FrameCount - 1)).GetMethod().ToString();
+                    Int32 lineNumber = trace.GetFrame((trace.FrameCount - 1)).GetFileLineNumber();
+                    SqlCommand cmdex = new SqlCommand("SP_SaveErrorDetails", DeviceCon);
+                    cmdex.CommandType = CommandType.StoredProcedure;
+                    cmdex.Parameters.AddWithValue("@ErroMessage", ErrorMessgage);
+                    cmdex.Parameters.AddWithValue("@ErrorLine", lineNumber);
+                    cmdex.Parameters.AddWithValue("@ErrorPath", pagename);
+                    cmdex.Parameters.AddWithValue("@Method", method);
+                    cmdex.Parameters.AddWithValue("@CreatedBy", UserName); //Session UserLogIn
+                    DeviceCon.Open();
+                    int RowEx = cmdex.ExecuteNonQuery();
+                    if (RowEx < 0)
+                    {
+                        //lblMessage.Visible = false;
+                        //lblMessage.Text = "Error Details Save Successfully";
+                    }
+                    else
+                    {
+                        //lblMessage.Visible = false;
+                        //lblMessage.Text = "Error Details Not Save Successfully";
+                    }
+                }
+            }
         }
         #endregion
 
@@ -272,7 +305,7 @@ namespace MatoshreeProject
                 }
             }
 
-           
+
         }
 
         protected void btnExport_Click(object sender, EventArgs e)
@@ -310,8 +343,6 @@ namespace MatoshreeProject
             ClearAll();
 
         }
-
-
 
         protected void btnSaveProject_Click(object sender, EventArgs e)
         {
@@ -392,7 +423,7 @@ namespace MatoshreeProject
                             Toasteralert.Visible = false;
                             deleteToaster.Visible = true;
                             lblMesDelete.Text = "Contract Partner Details Not Save Successfully";
-                        }                     
+                        }
                         ClearAll();
                     }
                 }
