@@ -65,11 +65,11 @@ namespace MatoshreeProject
         int Result;
         string result;
         int UserId;
-        string  UserName , EmailID, Designation , RoleType, Permission, DeptID, CareerID, sendMail, EmpNAME, Initial, ReceiptFor, Size, year, Day;
+        string UserName, EmailID, Designation, RoleType, Permission, DeptID, CareerID, sendMail, EmpNAME, Initial, ReceiptFor, Size, year, Day;
 
         decimal TotalProposalCount;
 
-        
+
 
         // Phrase phrase = null;
 
@@ -835,6 +835,11 @@ namespace MatoshreeProject
             }
             finally { }
         }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+
+        }
         private static PdfPCell ImageCell(string path, float scale, int align)
         {
             iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(HttpContext.Current.Server.MapPath(path));
@@ -882,9 +887,9 @@ namespace MatoshreeProject
                         iTextSharp.text.pdf.PdfWriter writer = iTextSharp.text.pdf.PdfWriter.GetInstance(_document, memoryStream);
 
                         _document.Open();
-                        _pdfPTable.SetWidths(new float[] { 4f, 18f, 16f, 16f, 16f, 16f });//column width in doc       
-                                                                                          //----Header PDF--------------------------//
-                                                                                          //Company Logo
+                        _pdfPTable.SetWidths(new float[] { 4f, 8f, 16f, 16f, 16f, 16f, 12f, 14f, 16f, 14f });//column width in doc       
+                                                                                                             //----Header PDF--------------------------//
+                                                                                                             //Company Logo
                         cell = ImageCell("~/Img_logo/M.png", 50f, PdfPCell.ALIGN_CENTER);
                         cell.Colspan = 2;
                         cell.Border = iTextSharp.text.Rectangle.NO_BORDER;
@@ -928,7 +933,7 @@ namespace MatoshreeProject
 
                         _fontStyle = FontFactory.GetFont("Arial", 14f, 2);
                         _pdfPCell = new PdfPCell(new Phrase("Proposal Report", _fontStyle));
-                        _pdfPCell.Colspan = 3;
+                        _pdfPCell.Colspan = 5;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.Border = 0;
                         _pdfPCell.BackgroundColor = BaseColor.WHITE;
@@ -939,7 +944,7 @@ namespace MatoshreeProject
                         DateTime PrintTime = DateTime.Now;
                         _fontStyle = FontFactory.GetFont("Arial", 9f, 2);
                         _pdfPCell = new PdfPCell(new Phrase("Date:" + PrintTime, _fontStyle));
-                        _pdfPCell.Colspan = 1;
+                        _pdfPCell.Colspan = 3;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_RIGHT;
                         _pdfPCell.Border = 0;
                         _pdfPCell.BackgroundColor = BaseColor.WHITE;
@@ -1014,7 +1019,7 @@ namespace MatoshreeProject
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
                         _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
-                        _pdfPTable.CompleteRow();
+
 
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1024,6 +1029,7 @@ namespace MatoshreeProject
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
                         _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
+
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
                         _pdfPCell = new PdfPCell(new Phrase("Project", _fontStyle));
@@ -1059,7 +1065,7 @@ namespace MatoshreeProject
                         {
 
                             Label lblID1 = (Label)gridviedrow.FindControl("lblID1");
-                            Label lblProposalNo1 = (Label)gridviedrow.FindControl("lblProposalNo1");
+                            LinkButton lblProposalNo1 = (LinkButton)gridviedrow.FindControl("lblProposalNo1");
                             Label lblSubject1 = (Label)gridviedrow.FindControl("lblSubject1");
                             Label lblTo1 = (Label)gridviedrow.FindControl("lblTo1");
                             Label lblTotal1 = (Label)gridviedrow.FindControl("lblTotal1");
@@ -1076,12 +1082,12 @@ namespace MatoshreeProject
                             _pdfPCell.ExtraParagraphSpace = 1;
                             _pdfPTable.AddCell(_pdfPCell);
 
-                            _pdfPCell = new PdfPCell(new Phrase(lblID1.Text, _fontStyle));
-                            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
-                            _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                            _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                            _pdfPCell.ExtraParagraphSpace = 1;
-                            _pdfPTable.AddCell(_pdfPCell);
+                            //_pdfPCell = new PdfPCell(new Phrase(lblID1.Text, _fontStyle));
+                            //_pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                            //_pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
+                            //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                            //_pdfPCell.ExtraParagraphSpace = 1;
+                            //_pdfPTable.AddCell(_pdfPCell);
 
                             _pdfPCell = new PdfPCell(new Phrase(lblProposalNo1.Text, _fontStyle));
                             _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -1194,6 +1200,7 @@ namespace MatoshreeProject
                     }
                 }
                 else if (RoleType == Designation)
+
                 {
                     int _totalColumns = 10;//change
                     string path = Image1.ImageUrl;
@@ -1219,9 +1226,9 @@ namespace MatoshreeProject
                         iTextSharp.text.pdf.PdfWriter writer = iTextSharp.text.pdf.PdfWriter.GetInstance(_document, memoryStream);
 
                         _document.Open();
-                        _pdfPTable.SetWidths(new float[] { 4f, 8f, 8f, 8f, 8f, 8f, 8f, 8f, 6f, 6f });//column width in doc       
-                                                                                                     //----Header PDF--------------------------//
-                                                                                                     //Company Logo
+                        _pdfPTable.SetWidths(new float[] { 4f, 8f, 16f, 16f, 16f, 16f, 12f, 14f, 16f, 14f });//column width in doc       
+                                                                                                             //----Header PDF--------------------------//
+                                                                                                             //Company Logo
                         cell = ImageCell("~/Img_logo/M.png", 50f, PdfPCell.ALIGN_CENTER);
                         cell.Colspan = 2;
                         cell.Border = iTextSharp.text.Rectangle.NO_BORDER;
@@ -1240,7 +1247,7 @@ namespace MatoshreeProject
                         phrase.Add(new Chunk("Pin:" + lblcompanyaddZIPCode11.Text + "\n", FontFactory.GetFont("Arial", 10, Font.NORMAL, BaseColor.BLACK)));
                         phrase.Add(new Chunk("MobileNo:" + lblphoneNo1.Text + "\n", FontFactory.GetFont("Arial", 10, Font.NORMAL, BaseColor.BLACK)));
                         _pdfPCell = new PdfPCell(phrase);
-                        _pdfPCell.Colspan = 8;
+                        _pdfPCell.Colspan = 11;
                         _pdfPCell.BorderColor = BaseColor.WHITE;
                         _pdfPCell.VerticalAlignment = PdfPCell.ALIGN_TOP;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_RIGHT;
@@ -1254,28 +1261,19 @@ namespace MatoshreeProject
 
                         _fontStyle = FontFactory.GetFont("Arial", 14f, 2);
                         _pdfPCell = new PdfPCell(new Phrase("", _fontStyle));
-                        _pdfPCell.Colspan = _totalColumns;
-                        _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
+                        _pdfPCell.Colspan = 2;
+                        _pdfPCell.HorizontalAlignment = Element.ALIGN_RIGHT;
                         _pdfPCell.Border = 2;
                         _pdfPCell.BorderColorBottom = BaseColor.BLACK;
                         _pdfPCell.BackgroundColor = BaseColor.WHITE;
                         _pdfPCell.ExtraParagraphSpace = 4;
                         _pdfPTable.AddCell(_pdfPCell);
-                        _pdfPTable.CompleteRow();
 
-
-                        _pdfPCell = new PdfPCell(new Phrase(""));
-                        _pdfPCell.Colspan = 4;
-                        _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
-                        _pdfPCell.Border = 0;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.ExtraParagraphSpace = 4;
-                        _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Arial", 14f, 2);
-                        _pdfPCell = new PdfPCell(new Phrase("ProposalList", _fontStyle));
-                        _pdfPCell.Colspan = 3;
-                        _pdfPCell.HorizontalAlignment = Element.ALIGN_MIDDLE;
+                        _pdfPCell = new PdfPCell(new Phrase("Proposal Report", _fontStyle));
+                        _pdfPCell.Colspan = 5;
+                        _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.Border = 0;
                         _pdfPCell.BackgroundColor = BaseColor.WHITE;
                         _pdfPCell.ExtraParagraphSpace = 4;
@@ -1318,7 +1316,7 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1326,7 +1324,7 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1334,7 +1332,7 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1342,7 +1340,7 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1350,7 +1348,7 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1358,23 +1356,26 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
+
+
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
                         _pdfPCell = new PdfPCell(new Phrase("OpenTill", _fontStyle));
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
+
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
                         _pdfPCell = new PdfPCell(new Phrase("Project", _fontStyle));
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1382,7 +1383,7 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
 
                         _fontStyle = FontFactory.GetFont("Tahoma", 9f, 1, BaseColor.WHITE);
@@ -1390,7 +1391,7 @@ namespace MatoshreeProject
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                         _pdfPCell.BackgroundColor = BaseColor.GRAY;
-                        _pdfPCell.ExtraParagraphSpace = 1;
+                        _pdfPCell.ExtraParagraphSpace = 2;
                         _pdfPTable.AddCell(_pdfPCell);
                         _pdfPTable.CompleteRow();
                         #endregion
@@ -1403,7 +1404,7 @@ namespace MatoshreeProject
                         {
 
                             Label lblID1 = (Label)gridviedrow.FindControl("lblID1");
-                            Label lblProposalNo1 = (Label)gridviedrow.FindControl("lblProposalNo1");
+                            LinkButton lblProposalNo1 = (LinkButton)gridviedrow.FindControl("lblProposalNo1");
                             Label lblSubject1 = (Label)gridviedrow.FindControl("lblSubject1");
                             Label lblTo1 = (Label)gridviedrow.FindControl("lblTo1");
                             Label lblTotal1 = (Label)gridviedrow.FindControl("lblTotal1");
@@ -1419,6 +1420,13 @@ namespace MatoshreeProject
                             _pdfPCell.BackgroundColor = BaseColor.WHITE;
                             _pdfPCell.ExtraParagraphSpace = 1;
                             _pdfPTable.AddCell(_pdfPCell);
+
+                            //_pdfPCell = new PdfPCell(new Phrase(lblID1.Text, _fontStyle));
+                            //_pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                            //_pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
+                            //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                            //_pdfPCell.ExtraParagraphSpace = 1;
+                            //_pdfPTable.AddCell(_pdfPCell);
 
                             _pdfPCell = new PdfPCell(new Phrase(lblProposalNo1.Text, _fontStyle));
                             _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -1482,7 +1490,6 @@ namespace MatoshreeProject
                             _pdfPCell.BackgroundColor = BaseColor.WHITE;
                             _pdfPCell.ExtraParagraphSpace = 1;
                             _pdfPTable.AddCell(_pdfPCell);
-
                         }
                         #endregion
 
@@ -1530,7 +1537,6 @@ namespace MatoshreeProject
                         Response.BinaryWrite(bytes);
                         Response.End();
                     }
-
                 }
                 else
                 {
@@ -1875,14 +1881,14 @@ namespace MatoshreeProject
             {
                 foreach (GridViewRow gridviedrow in GridPropsal.Rows)
                 {
-                    
+
                     Label lblID1 = (Label)gridviedrow.FindControl("lblID1");
-                   
+
                     Label Status1 = (Label)gridviedrow.FindControl("lblStatus1");
                     string Status = ((Label)gridviedrow.FindControl("lblStatus1")).Text;
 
                     //Label lblStatus = (Label)gridviedrow.FindControl("lblStatus");
-                   
+
 
                     //Label lblProposalNo1 = (Label)gridviedrow.FindControl("lblProposalNo1");
                     //Label lblSubject1 = (Label)gridviedrow.FindControl("lblSubject1");
@@ -1898,11 +1904,11 @@ namespace MatoshreeProject
                     {
                         Status1.CssClass = "btn btn-sm btn-outline-info";
                     }
-                    else if(Status == "Revised")
+                    else if (Status == "Revised")
                     {
                         Status1.CssClass = "btn btn-sm btn-outline-secondary";
                     }
-                    else if(Status== "Send")
+                    else if (Status == "Send")
                     {
                         Status1.CssClass = "btn btn-sm btn-outline-primary";
                     }

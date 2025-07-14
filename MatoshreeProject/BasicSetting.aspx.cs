@@ -30,6 +30,7 @@ using System.Threading;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using Org.BouncyCastle.Ocsp;
 #endregion
 
 namespace MatoshreeProject
@@ -2339,7 +2340,8 @@ namespace MatoshreeProject
                     UserCommand.Parameters.AddWithValue("@Billing_Type", txtBillingType.Text);
                     UserCommand.Parameters.AddWithValue("@Description", txtDescription.Text);
                     UserCommand.Parameters.AddWithValue("@CreateBy", UserName); //Session value
-                    UserCommand.Parameters.AddWithValue("@UserID", UserId);
+                    UserCommand.Parameters.AddWithValue("@EmpID", UserId);
+                   // UserCommand.Parameters.AddWithValue("@EmpID", EmpId);
                     UserCommand.Parameters.AddWithValue("@Designation", Designation);
                     UserCon.Open();
                     dr = UserCommand.ExecuteReader();

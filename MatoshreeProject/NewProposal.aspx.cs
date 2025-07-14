@@ -2376,6 +2376,7 @@ namespace MatoshreeProject
                         Toasteralert.Visible = false;
                         deleteToaster.Visible = true;
                         lblMesDelete.Text = "Proposal Details Save Successfully";
+                        Response.Redirect("~/Proposal.aspx?svd1=", false);
 
                     }
                     else

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMaster.Master" AutoEventWireup="true" CodeBehind="Proposal.aspx.cs" Inherits="MatoshreeProject.Proposal" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMaster.Master" AutoEventWireup="true" CodeBehind="Proposal.aspx.cs" Inherits="MatoshreeProject.Proposal" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="AMatrixLatest/dist/assets/libs/jquery/dist/jquery.min.js"></script>

@@ -631,8 +631,6 @@ namespace MatoshreeProject
             finally { }
         }
 
-
-
         protected void ddlBillingdistrict_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

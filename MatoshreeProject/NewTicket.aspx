@@ -146,7 +146,6 @@
                                         <div class="mb-2">
                                             <asp:Label ID="lblassignticket" runat="server" Text="Assign ticket" Font-Bold="true" CssClass="form-label"></asp:Label>&nbsp;<span style="color: #FF0000">*</span>
                                             <asp:DropDownList ID="ddlassign" runat="server" CssClass="form-control form-select">
-                                                <asp:ListItem>Nothing Selected</asp:ListItem>
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="Requiredassign1" runat="server" ErrorMessage="Select Assined" ControlToValidate="ddlassign" ForeColor="Red" Font-Bold="false" ValidationGroup="Save" InitialValue="0" Display="Dynamic" Font-Size="12px"></asp:RequiredFieldValidator>
                                         </div>

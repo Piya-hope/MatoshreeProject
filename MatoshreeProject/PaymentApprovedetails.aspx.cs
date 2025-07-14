@@ -3117,7 +3117,7 @@ namespace MatoshreeProject
                             if (lblRelatedTo1.Text == "Payment Request")
                             {
                                 cmd.Parameters.AddWithValue("@OfficeID", "0");
-                                cmd.Parameters.AddWithValue("@SatffExpID", "0");
+                                cmd.Parameters.AddWithValue("@StaffExpID", "0");
                                 cmd.Parameters.AddWithValue("@ProjectPurID", "0");
                                 cmd.Parameters.AddWithValue("@PayMentReqID", lblexpid2.Text);
 

@@ -941,9 +941,6 @@ namespace MatoshreeProject
                         if (!IsPostBack)
                         {
 
-                            // string ProjectID;
-                            //ViewProjectProcurement();
-                            //ViewPOProjectProcurement(ProjectID);
                             string ReceiptNumner = GETReceiptINITIAL();
                             txtPONumber.Text = ReceiptNumner;
                             string Todaydate = Convert.ToString(DateTime.Today);
@@ -953,7 +950,6 @@ namespace MatoshreeProject
 
                             BindStateDetails();
                             BindStatusDetails();
-
                             bindcustomer();
                             bindStaff();
                             bindTax();
