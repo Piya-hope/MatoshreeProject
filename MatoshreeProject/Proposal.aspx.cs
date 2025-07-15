@@ -1614,7 +1614,7 @@ namespace MatoshreeProject
                         {
 
                             Label lblID1 = (Label)gridviedrow.FindControl("lblID1");
-                            Label lblProposalNo1 = (Label)gridviedrow.FindControl("lblProposalNo1");
+                            LinkButton lblProposalNo1 = (LinkButton)gridviedrow.FindControl("lblProposalNo1");
                             Label lblSubject1 = (Label)gridviedrow.FindControl("lblSubject1");
                             Label lblTo1 = (Label)gridviedrow.FindControl("lblTo1");
                             Label lblTotal1 = (Label)gridviedrow.FindControl("lblTotal1");
@@ -1633,7 +1633,7 @@ namespace MatoshreeProject
                             newRow["Date"] = lblDate1.Text;
                             newRow["OpenTill"] = lblOpenTill.Text;
                             newRow["Project"] = lblProject1.Text;
-                            newRow["PFNumber"] = lblRealetedTo1.Text;
+
                             newRow["RealetedTo"] = lblRealetedTo1.Text;
                             newRow["CreateDate"] = lblCreateDate1.Text;
                             dtExport.Rows.Add(newRow);
@@ -1654,16 +1654,16 @@ namespace MatoshreeProject
 
                 }
                 else if (RoleType == Designation)
-                {
-                    DataTable ds = (DataTable)ViewState["Proposal"];
 
-                    if (ds != null && ds.Rows.Count > 0)
+                {
+                    DataTable dt = (DataTable)ViewState["Proposal"];
+                    if (dt != null && dt.Rows.Count > 0)
                     {
                         Response.Clear();
                         Response.Buffer = true;
                         Response.ContentType = "application/ms-excel";
                         //Response.AddHeader("Content-Disposition", "attachment;filename=Customer_Details.xls");
-                        Response.AddHeader("content-disposition", string.Format("attachment; filename={0}", "Customer_Details " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + ".xls"));
+                        Response.AddHeader("content-disposition", string.Format("attachment; filename={0}", "Proposal_Details " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + ".xls"));
 
                         Response.Charset = " ";
 
@@ -1687,7 +1687,7 @@ namespace MatoshreeProject
                         {
 
                             Label lblID1 = (Label)gridviedrow.FindControl("lblID1");
-                            Label lblProposalNo1 = (Label)gridviedrow.FindControl("lblProposalNo1");
+                            LinkButton lblProposalNo1 = (LinkButton)gridviedrow.FindControl("lblProposalNo1");
                             Label lblSubject1 = (Label)gridviedrow.FindControl("lblSubject1");
                             Label lblTo1 = (Label)gridviedrow.FindControl("lblTo1");
                             Label lblTotal1 = (Label)gridviedrow.FindControl("lblTotal1");
@@ -1706,6 +1706,7 @@ namespace MatoshreeProject
                             newRow["Date"] = lblDate1.Text;
                             newRow["OpenTill"] = lblOpenTill.Text;
                             newRow["Project"] = lblProject1.Text;
+
                             newRow["RealetedTo"] = lblRealetedTo1.Text;
                             newRow["CreateDate"] = lblCreateDate1.Text;
                             dtExport.Rows.Add(newRow);
@@ -1723,6 +1724,7 @@ namespace MatoshreeProject
                         Response.Write(sw.ToString());
                         Response.End();
                     }
+
                 }
                 else
                 {

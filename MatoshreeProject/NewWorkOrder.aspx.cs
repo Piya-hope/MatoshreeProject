@@ -621,7 +621,7 @@ namespace MatoshreeProject
                     ddltenderNumber.DataTextField = "TenderNo";
                     ddltenderNumber.DataValueField = "ID";
                     ddltenderNumber.DataBind();
-                    ddltenderNumber.Items.Insert(0, new ListItem("NA", "0"));
+                    ddltenderNumber.Items.Insert(0, new ListItem("NA", "1"));
                 }
             }
             catch (Exception ex)
