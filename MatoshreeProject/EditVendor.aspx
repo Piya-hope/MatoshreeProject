@@ -1560,7 +1560,7 @@
 
                                                 <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1">
                                                 </div>
-
+                                                <br />
                                                 <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
                                                     <asp:Button ID="Btn_Upload" runat="server" Text="Upload" CssClass="btn btn-primary " ValidationGroup="Tender1" OnClick="Btn_Upload_Click" />
                                                 </div>
